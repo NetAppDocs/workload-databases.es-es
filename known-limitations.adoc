@@ -1,0 +1,110 @@
+---
+sidebar: sidebar 
+permalink: known-limitations.html 
+keywords: limitations, databases 
+summary: Las limitaciones conocidas identifican plataformas, dispositivos o funciones que no son compatibles con esta versión del producto o cuya interoperabilidad con esta no es óptima. Revise estas limitaciones detenidamente. 
+---
+= Limitaciones conocidas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Las limitaciones conocidas identifican plataformas, dispositivos o funciones que no son compatibles con esta versión del producto o cuya interoperabilidad con esta no es óptima. Revise estas limitaciones detenidamente.
+
+
+
+== Compatibilidad con la versión de imagen AMI
+
+Solo mostramos hasta cuatro versiones recientes o revisiones de imágenes AMI para cada versión SQL. No permitimos la instalación desde una imagen AMI que sea más antigua que las últimas cuatro versiones.
+
+
+
+== AMI personalizada
+
+La implementación con una AMI personalizada supone que hay medios de instalación en la imagen. Esto es necesario para la configuración de FCI por los siguientes motivos:
+
+* Para desinstalar y volver a configurar el clúster de FCI
+* Al seleccionar una intercalación distinta del conjunto de intercalación en la imagen para el despliegue independiente
+
+
+Como parte de la puesta en marcha, Workload Factory no instala una AMI personalizada con varias instancias de Microsoft SQL Server. Solo se selecciona y configura la instancia predeterminada de Microsoft SQL Server como parte de la implementación.
+
+
+
+== Realice un rollback y vuelva a intentarlo para los despliegues fallidos
+
+La reversión y los reintentos para implementaciones con errores no se admiten en Workload Factory. Puede revertir o volver a intentar una pila fallida desde la consola de CloudFormation en AWS.
+
+
+
+== Reversión de recursos de DNS y Active Directory
+
+Los siguientes recursos de DNS no se eliminan de Active Directory y DNS al revertir una prueba o una implementación fallida desde la consola de CloudFormation en AWS:
+
+* Cada nodo de la implementación de SQL a su dirección IP de gestión
+* Nombre del cluster de Windows a las direcciones IP secundarias reservadas de las instancias EC2 en casos de FCI
+* Nombre de FCI de SQL a las dos direcciones IP reservadas de ambas instancias EC2 en FCI
+
+
+Tendrás que limpiarlos manualmente o esperar a que el dominio purgue las entradas obsoletas.
+
+
+
+== Soporte de configuración de grupos de disponibilidad permanente
+
+La gestión de las configuraciones de grupos de disponibilidad permanente no es compatible con Workload Factory.
+
+
+
+== Grupos de seguridad de Active Directory gestionados por el usuario
+
+Si selecciona “Active Directory gestionado por el usuario” durante la implementación de Microsoft SQL Server en Workload Factory, debe proporcionar un grupo de seguridad que permita el tráfico entre las instancias EC2 al servicio de directorio para la implementación. Workload Factory no conecta automáticamente el grupo de seguridad para Active Directory gestionado por el usuario como lo hace para AWS Managed Microsoft AD.
+
+
+
+== Claves de cifrado personalizadas
+
+Las claves de cifrado personalizadas para FSx para ONTAP no figuran en la lista en función de la aplicabilidad del servicio. Debe elegir la clave adecuada. Las claves gestionadas de AWS se filtran según la aplicabilidad al servicio.
+
+
+
+== Detección de Microsoft SQL Server
+
+La detección de Microsoft SQL Server no se ha guardado. Cada vez que accede a bases de datos en Workload Factory, la detección de Microsoft SQL Server se ejecuta de nuevo para identificar las instalaciones SQL en la región.
+
+
+
+== Plantilla de CloudFormation
+
+Una plantilla CloudFormation (archivo YAML) descargada o copiada generada por CodeBox tiene un período de retención limitado de siete días.
+
+
+
+== Soporte de sandbox
+
+* El número máximo de clones de sandbox que se pueden crear desde un servidor de base de datos es 50.
+* La creación de sandbox no se admite en los siguientes casos:
++
+** Los archivos de datos y de registro residen en el mismo disco.
+** La base de datos de origen tiene varios archivos de datos.
+
+
+
+
+
+
+== Detección y gestión de Microsoft SQL Server
+
+* La detección y gestión de instancias de Microsoft SQL no son compatibles cuando se utiliza una red privada sin conectividad externa.
+* Cuando las instancias de Microsoft SQL bloquean la autenticación basada en Windows y solo permiten la autenticación de usuario de Microsoft SQL, se admite la detección de Microsoft SQL Server, pero no se admiten las operaciones de administración.
+
+
+
+
+== Explora el ahorro
+
+* En la pestaña Inventario, el coste estimado que se muestra para cada instancia de Microsoft SQL se calcula en el nivel de sistema de archivos de FSx para ONTAP, no en los volúmenes que alojan la instancia de SQL.
+* Los cálculos de ahorro no son compatibles con FSx para el servidor de archivos de Windows.
+

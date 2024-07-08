@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="08c1bf6e31ef174ff608b5eb3d282063" category="summary">Puede automatizar la implementación de host, la creación de bases de datos y mucho más con CodeBox.</block>
+  <block id="2ea6aca63123969c1931cd33bf4619a0" category="doc">Automatice con CodeBox</block>
+  <block id="b20a3702e469d533caddf21766655326" category="paragraph">Puede automatizar la implementación de host, la creación de bases de datos y mucho más con CodeBox. CodeBox es un copiloto de infraestructura como código (IAC) que le ayuda a generar código para ejecutar cualquier operación soportada por Workload Factory.</block>
+  <block id="bd282943a337f4287ca0d70f9a836261" category="inline-link-macro">Automatización de CodeBox</block>
+  <block id="7954c9f6b266222ad558a397a97a8531" category="paragraph">Obtenga más información sobre <block ref="d6a91743d83ea88006a3d66c27289981" category="inline-link-macro-rx"></block> y cómo usarlo.</block>
+  <block id="ac7284049e3ee45d84a53391c4f756c6" category="summary">Realice una comprobación de integridad para determinar si los datos de clonado de sandbox están intactos o dañados.</block>
+  <block id="7a5c12f2d0d30b237d1a31e54803d0f8" category="doc">Compruebe la integridad de los datos en un clon de sandbox</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Acerca de esta tarea</block>
+  <block id="6a2235a7d08e9218e23793c114adf3a3" category="paragraph">Cuando crea un clon de sandbox desde una base de datos de origen mientras está ocupado, es posible que los datos del clon no estén sincronizados con la snapshot más reciente de la base de datos de origen. Esta operación comprueba la integridad de todos los objetos del clon del sandbox para determinar si los datos clonados del sandbox son actuales.</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Pasos</block>
+  <block id="8fd935558171bd50056871ef9ee7bd05" category="inline-link-macro">Consola de Workload Factory</block>
+  <block id="219bd6a410f8c490dbc0ffbcf504910f" category="list-text">Inicie sesión en el <block ref="ed002915dbbbf90a20b3d8fdf4cc2390" category="inline-link-macro-rx"></block>.</block>
+  <block id="a22aeb541c430c47c35bcc20690ea51a" category="list-text">En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.</block>
+  <block id="a1029809e498e81eaada752a6b08cd7c" category="list-text">En las bases de datos, seleccione la pestaña *sandboxes*.</block>
+  <block id="627f12b5ce917853e0580a84a419249f" category="list-text">En la pestaña sandboxes, haga clic en el menú de tres puntos del clon del sandbox para comprobar la integridad.</block>
+  <block id="4959cbb15c588c0b15ed2cb6bf243a79" category="list-text">Selecciona *Ejecutar comprobación de integridad*.</block>
+  <block id="655a2ef85749dcbb368e1b8b32300552" category="list-text">En el cuadro de diálogo Comprobación de integridad, haga clic en *Comprobación de integridad*.</block>
+  <block id="d2212da19c03bb2b369faeaf9d65f109" category="list-text">Compruebe el estado de la comprobación de integridad en sandboxes o en Supervisión de trabajos.</block>
+  <block id="8ea37d89915fca644158ae5283f70e68" category="paragraph">Si la comprobación de integridad falla, se recomienda no utilizar el clon de sandbox y crear un nuevo clon de sandbox.</block>
+  <block id="4d347b6072ee47e025ccdfd378498ab5" category="summary">Conecte un clon de sandbox a una canalización de CI/CD con código de API REST para mejorar la entrega de software mediante la automatización.</block>
+  <block id="2af2cf99863645202599afd2708773e2" category="doc">Conecte un clon de entorno aislado a herramientas CI/CD</block>
+  <block id="51697baa6e97b2ce6c7f23840ca2ca0d" category="paragraph">Conecte un clon de sandbox a una canalización de integración y entrega continua (CI/CD) con el código de API REST para mejorar la entrega de software a través de la automatización.</block>
+  <block id="bc71cf96586c8edb703f886cce218a0c" category="paragraph">Para entregar una nueva versión del software automáticamente al clon de la base de datos, debe conectarse a una canalización de CI/CD. Utilice el código de API DE REST proporcionado desde esta operación para realizar la conexión.</block>
+  <block id="efb5b5e68dc2811878125ac310982a90" category="list-text">En la pestaña sandboxes, haga clic en el menú de tres puntos del clon del sandbox para conectarse a las herramientas CI/CD.</block>
+  <block id="452804eac893658bcf658126b3087551" category="list-text">Selecciona *Conectar a las herramientas CI/CD*.</block>
+  <block id="8191f4b1aee7fafe827afe8814de01a6" category="list-text">En el cuadro de diálogo CI/CD, copie o descargue el código de API DE REST que necesite para conectarse a las herramientas CI/CD.</block>
+  <block id="00a06b08857b60c805bcaf007a9ddc9c" category="list-text">Haga clic en *Cerrar*.</block>
+  <block id="392ed963483d69a8e63e73d35e0d94b2" category="summary">Cree un nuevo Microsoft SQL Server en Workload Factory para bases de datos.</block>
+  <block id="380125ed55bd2d330edbd99ae6cf41be" category="doc">Cree un servidor de bases de datos en Workload Factory para bases de datos</block>
+  <block id="d1ac2708b0ee841a10544360a09ab608" category="paragraph">Para crear un nuevo servidor de Microsoft SQL Server o host de base de datos en bases de datos, se requiere la puesta en marcha del sistema de archivos FSx para ONTAP y recursos para Active Directory.</block>
+  <block id="f60fded57b2858e25ed1e7b7544f0543" category="paragraph">Necesitará las credenciales de la cuenta de AWS y los permisos _automate_.</block>
+  <block id="9a0d07e2b680cee18314090ce1313234" category="paragraph">Antes de comenzar, obtenga información sobre los tipos de implementación de almacenamiento disponibles para la configuración del host de la base de datos, la implementación de Active Directory, los modos de operación de Workload Factory y los requisitos para completar esta operación.</block>
+  <block id="4011a937f681a8e908e8f70efba55370" category="inline-xref">Active la conexión remota en Microsoft SQL Server</block>
+  <block id="cd0ca71df74d472da908105120ebeda6" category="paragraph">Después de la implementación, deberá <block ref="818d2f7834c8414926cca53583c2472c" category="inline-xref-macro-rx"></block>.</block>
+  <block id="5149e96cf7ba21fb672788deb7e52f4c" category="list-text">FSX para puestas en marcha del sistema de archivos ONTAP</block>
+  <block id="432996ca9d8b98d98618a3ae333a5e19" category="list-text">Para crear un nuevo servidor Microsoft SQL Server, se requiere un sistema de archivos FSx para ONTAP como back-end de almacenamiento. Puede utilizar un sistema de archivos FSX for ONTAP existente o crear un nuevo sistema de archivos. Si selecciona un sistema de archivos FSx para ONTAP existente como back-end de almacenamiento de servidor de bases de datos, creamos un nuevo equipo virtual de almacenamiento para las cargas de trabajo de Microsoft SQL.</block>
+  <block id="62cc1830ea671ff0a49c111847f3aa99" category="paragraph">Los sistemas de archivos FSX para ONTAP tienen dos modelos de implementación de Microsoft SQL Server: _Failover Cluster Instance (FCI)_ o _Standalone_. Se crean distintos recursos para el sistema de archivos FSx para ONTAP en función del modelo de puesta en marcha de FSx para ONTAP que seleccione.</block>
+  <block id="9f655fd96391ef4ea50d73553acdb894" category="list-text">*Implementación de Microsoft SQL de instancia de clúster de conmutación por error (FCI): Se implementa un sistema de archivos FSX para NetApp ONTAP de zona de disponibilidad múltiple cuando se selecciona un nuevo sistema de archivos FSX para ONTAP para la implementación de FCI. Se crean volúmenes y LUN independientes para archivos de datos, registros y tempdb para una implementación de FCI. Se crean un volumen y LUN adicionales para el disco de quórum o de testigo para el clúster de Windows.</block>
+  <block id="90215509e85ac6d78676f148e46c484f" category="list-text">*Implementación independiente de Microsoft SQL*: Se crea un sistema de archivos FSX de zona de disponibilidad única para ONTAP cuando se crea un nuevo servidor Microsoft SQL. Además, se crean volúmenes y LUN independientes para archivos de datos, registros y tempdb.</block>
+  <block id="4fbbbcdfcdfad5270a20167c67509f0b" category="list-text">Active Directory</block>
+  <block id="a63ca0fccfd9f281ab5cc4a603178ae8" category="list-text">Lo siguiente ocurre en Active Directory (AD) durante la implementación:</block>
+  <block id="bb73fe1381499c37aae0cc2a626cc34e" category="list-text">Se crea una nueva cuenta de servicio de Microsoft SQL en el dominio si no proporciona una cuenta de servicio SQL existente.</block>
+  <block id="5c8a0e6f8f0d0eaf43a89fbcadc61a51" category="list-text">El clúster de Windows, los nombres de host de nodo y el nombre de FCI de Microsoft SQL se agregan como equipos gestionados a la cuenta de servicio Microsoft SQL.</block>
+  <block id="b0f68710f10b777e8a3a6a05cbe22baf" category="list-text">A la entrada del clúster de Windows se le asignan permisos para agregar equipos al dominio.</block>
+  <block id="83a71d87a2027be5b38c84208aca35a6" category="list-text">Reversión de recursos</block>
+  <block id="80758d39cf7722920381bc3a17b4fc99" category="list-text">Si decide revertir los recursos del sistema de nombres de dominio (DNS), los registros de recursos en AD y DNS no se eliminan automáticamente. Puede eliminar los registros del servidor DNS y AD de la siguiente manera.</block>
+  <block id="2f6957866520b1e1ee16fbdc66ca59d0" category="inline-link-macro">Extraiga el equipo AD</block>
+  <block id="5f7bcf655fe16613a9e06de8707a851b" category="inline-link-macro">Elimine los registros de recursos DNS</block>
+  <block id="9c807e63fa15554f7ae178b53fcb126a" category="list-text">Para AD gestionado por el usuario, primero <block ref="8c8c5f6325dee0afa8ed87ded1981e91" category="inline-link-macro-rx"></block>. A continuación, conéctese al servidor DNS desde el administrador DNS y <block ref="4fc06ea24abf03c6244463030ecbed01" category="inline-link-macro-rx"></block>.</block>
+  <block id="7e386d122b1c96c1323a293908fd7a70" category="inline-link-macro">Instale las herramientas de administración de AD</block>
+  <block id="a6668851eb1b1b621e1d1030ed6ad0d5" category="list-text">Para AWS Managed Microsoft AD, <block ref="3e2e7ba22ff1ed0d5158cb4cd69909cc" category="inline-link-macro-rx"></block>. A continuación, <block ref="8c8c5f6325dee0afa8ed87ded1981e91" category="inline-link-macro-rx"></block>. Por último, conéctese al servidor DNS desde el administrador DNS y <block ref="4fc06ea24abf03c6244463030ecbed01" category="inline-link-macro-rx"></block>.</block>
+  <block id="22330365af0d59bfe8fc09b45647109b" category="list-text">Modos de operación de Fábrica de carga de trabajo</block>
+  <block id="decd3aa3f727a62561d9e4f042a51d83" category="list-text">Workload Factory ofrece tres modos operativos en función de lo cómodo que sea al permitir que Workload Factory administre sus recursos de AWS.</block>
+  <block id="ab665ef2c2283aeabe49f74c3aea5e1e" category="paragraph">*_Basic_ MODE*: En este modo de operación, no es necesario asociar ninguna credencial de cuenta de AWS en Workload Factory. Puede copiar o descargar una plantilla YAML parcialmente llena desde el CodeBox para que se complete fuera de Workload Factory.</block>
+  <block id="8ba114a57f6ce4ebda666a99fa83ec8e" category="paragraph">*_Read_ MODE*: En este modo de operación, proporciona credenciales de cuenta de AWS con permisos de lectura que le permite completar el formulario _Quick create_ o _Advanced create_ y luego copiarlo o descargarlo. También puede redirigir a CloudFormation desde Workload Factory con los detalles del formulario completo. Y podrá gestionar el servidor de bases de datos desplegado en Workload Factory.</block>
+  <block id="ef2ca3f28f5e7d8c76e257d801fe8b55" category="paragraph">*_AUTOMATIC_ MODE*: En este modo de operación, proporciona credenciales de cuenta de AWS con permisos automatizados que le permiten crear y administrar recursos de AWS dentro de Workload Factory.</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Antes de empezar</block>
+  <block id="b2f899f972527ed53c986fff0ea809c9" category="paragraph">Asegúrese de tener los siguientes requisitos previos antes de crear un nuevo host de base de datos.</block>
+  <block id="ee87d4c496da752f756c502bf6d73599" category="list-text">Credenciales y permisos</block>
+  <block id="1b3eca0f21789e391339e536902a0773" category="inline-link-macro">Credenciales de la cuenta de AWS y permisos del modo de automatización</block>
+  <block id="1027001c3c9edc142515a498b1a0e763" category="list-text">Debe <block ref="6d0e9cd8cac3e1654b2b4423d6d0dc45" category="inline-link-macro-rx"></block> crear un nuevo host de base de datos en Workload Factory.</block>
+  <block id="4e79c01286f2a10af230320a37d7ce30" category="inline-link-macro">Obtenga más información sobre la automatización de CodeBox</block>
+  <block id="f88042761b360a1068bd7cbff48dfa7e" category="paragraph">Como alternativa, puede usar CodeBox para copiar una plantilla vacía o crear una plantilla completada para poder implementar una base de datos fuera de Workload Factory mediante la API REST, la CLI de AWS o AWS CloudFormation. <block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>.</block>
+  <block id="6aa474bc798ba983a2979f974d7af008" category="list-text">Al conectarse a Active Directory, debe tener acceso administrativo con permisos para hacer lo siguiente:</block>
+  <block id="711b4926fa677fe43f56947d4d5cafe7" category="list-text">Únase al dominio</block>
+  <block id="c0b14bebaf39c4dec5b15a38784a4949" category="list-text">Crear objetos de computadora</block>
+  <block id="cb7601f611115c1e63a99e77a4bf24fe" category="list-text">Crear objetos en la unidad de organización (OU) por defecto</block>
+  <block id="b6daf1d46969dcf0df188883b92605fe" category="list-text">Leer todas las propiedades</block>
+  <block id="8b018b615821339740a7c79a7473918a" category="list-text">Convierta al usuario de dominio en un administrador local en los nodos de AD</block>
+  <block id="045b984ac75a0da892fea6afe6b83555" category="list-text">Cree un usuario de servicio de Microsoft SQL Server en AD, si aún no existe</block>
+  <block id="15d1ade99815746ab0088981bd7585d3" category="section-title">Paso 1: Crear un servidor de base de datos</block>
+  <block id="e501215e9258fda8d54793a123ed721f" category="paragraph">Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ para completar esta tarea en Workload Factory con permisos de modo _Automate_.</block>
+  <block id="956eaa6186169471a13345860cad0757" category="open-title">Creación rápida</block>
+  <block id="542af019e2aa3ef9ca4b187a71c918bb" category="admonition">En _Quick create_, FCI es el modelo de implementación predeterminado, Windows 2016 es la versión predeterminada de Windows y SQL 2019 Standard Edition es la versión predeterminada de SQL.</block>
+  <block id="b26136a388864ee3f9e813ac8f6109ee" category="list-text">En el mosaico Bases de datos, seleccione *Implementar host de base de datos*.</block>
+  <block id="6139861719bbe0b1fa9017ee94fd4e8e" category="list-text">Seleccione *Quick create*.</block>
+  <block id="cc3305aa1264f3bb3f5edf4bbf7f1ab1" category="list-text">En *AWS settings*, proporcione lo siguiente:</block>
+  <block id="0ddee9622b04a20edcfe59424067f924" category="list-text">*Credenciales de AWS*: Seleccione las credenciales de AWS con permisos automatizados para implementar el nuevo host de base de datos.</block>
+  <block id="989658c74715bb420a02b641bca5e3ee" category="paragraph">Las credenciales de AWS con permisos _Automate_ permiten a Workload Factory implementar y administrar el nuevo host de base de datos desde su cuenta de AWS en Workload Factory.</block>
+  <block id="0ea9ee93b8e9fe37a8d633ce2b820307" category="paragraph">Las credenciales de AWS con permisos _read_ permiten a Workload Factory generar una plantilla de CloudFormation para que la utilice en la consola de AWS CloudFormation.</block>
+  <block id="cad0fb748127e362535a3eb9558531ae" category="paragraph">Si no tiene las credenciales de AWS asociadas en Workload Factory y desea crear el nuevo servidor en Workload Factory, siga la opción *1* para ir a la página Credenciales. Agregue manualmente las credenciales y permisos necesarios para el modo _Automate_ para cargas de trabajo de base de datos.</block>
+  <block id="4d02ad7172dc82d3b0274a4825836a82" category="paragraph">Si desea completar el formulario Crear nuevo servidor en Workload Factory para poder descargar una plantilla de archivo YAML completa para su implementación en AWS CloudFormation, siga *Opción 2* para asegurarse de que tiene los permisos necesarios para crear el nuevo servidor en AWS CloudFormation. Agregue manualmente las credenciales y los permisos necesarios para el modo _READ_ para las cargas de trabajo de la base de datos.</block>
+  <block id="58e20c30835c21bc7ea424ffc1fc9c8d" category="paragraph">Opcionalmente, puede descargar una plantilla de archivo YAML parcialmente completada desde CodeBox para crear la pila fuera de Workload Factory sin credenciales ni permisos. Seleccione *CloudFormation* en el menú desplegable del CodeBox para descargar el archivo YAML.</block>
+  <block id="09928615d6693b314732c4c51a4dd4a0" category="list-text">*Región y VPC*: Seleccione una región y una red de VPC.</block>
+  <block id="e48a41ea46283193ab3f0eb34ba2a601" category="paragraph">Asegúrese de que los grupos de seguridad para un extremo de interfaz existente permiten el acceso al protocolo HTTPS (443) a las subredes seleccionadas.</block>
+  <block id="cca1c409476405cf34b159f2604adeb6" category="paragraph">Extremos de la interfaz de servicio de AWS (SQS, FSx, EC2, CloudWatch, CloudFormation, SSM) y el punto final de la puerta de enlace S3 se crean durante el despliegue si no se encuentra.</block>
+  <block id="bb05fdf5fa555ab0eb5c1ad195d346ba" category="paragraph">Los atributos DNS de VPC<block ref="cb0df2380d372b70fd568d139d704794" prefix=" " category="inline-code"></block> y<block ref="df550516571c5adda5f49cb0f14d22f1" prefix=" " category="inline-code"></block> se modifican para activar la resolución de direcciones de punto final si aún no están establecidos en<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>.</block>
+  <block id="074972cc2eeb54158d45cf3ead1ba8b5" category="list-text">*Zonas de disponibilidad*: Seleccione zonas de disponibilidad y subredes de acuerdo con el modelo de implementación de Failover Cluster Instance (FCI).</block>
+  <block id="4f7f1429fd3acd32e1f66457b4d605d7" category="admonition">Las implementaciones de FCI solo se admiten en configuraciones FSx para ONTAP de varias zonas de disponibilidad (MAZ).</block>
+  <block id="d2805d0c25036c343445306b5e3ea81c" category="paragraph">Las subredes no deben compartir la misma tabla de rutas para alta disponibilidad.</block>
+  <block id="0fbe3449756361c6d594c565a2009157" category="list-text">En el campo *Configuración de clúster - Nodo 1*, seleccione la zona de disponibilidad principal para la configuración de MAZ FSX para ONTAP en el menú desplegable *Zona de disponibilidad* y una subred de la zona de disponibilidad principal desde el menú desplegable *Subred*.</block>
+  <block id="dc67031d01ba3577fe2760ad82a640df" category="list-text">En el campo *Configuración de clúster - Nodo 2*, seleccione la zona de disponibilidad secundaria para la configuración de MAZ FSX para ONTAP en el menú desplegable *Zona de disponibilidad* y una subred de la zona de disponibilidad secundaria desde el menú desplegable *Subred*.</block>
+  <block id="2f022bed5250436b90771285f1f6a9df" category="list-text">En *Configuración de la aplicación*, introduzca un nombre de usuario y una contraseña para *Credenciales de la base de datos*.</block>
+  <block id="88b2fc06992e980baf9199d497fb30ab" category="list-text">En *Conectividad*, proporcione lo siguiente:</block>
+  <block id="b9f4ef730385cad4811d976802af654c" category="list-text">*Par claves*: Selecciona un par de claves.</block>
+  <block id="dd0ba3d66b6f5cc15f6f5c56e1c6d448" category="list-text">*Active Directory*:</block>
+  <block id="7b931672482908e0f2749ed886d9980a" category="list-text">En el campo *Nombre de dominio*, seleccione o introduzca un nombre para el dominio.</block>
+  <block id="7abc8b3d8c0ac7ad04dc0d8aca98f2cb" category="list-text">En el caso de Active Directories gestionados por AWS, los nombres de dominio aparecen en el menú desplegable.</block>
+  <block id="7fed51b9fff2ae648f50803610ff429b" category="list-text">Para un Active Directory gestionado por el usuario, introduzca un nombre en el campo *Buscar y Agregar* y haga clic en *Agregar*.</block>
+  <block id="2a0d7ec425838346cfebda7db76d2977" category="list-text">En el campo *DNS address*, ingrese la dirección IP DNS para el dominio. Puede añadir hasta 3 direcciones IP.</block>
+  <block id="5870520716564c2878d89201c15b751d" category="paragraph">Para los directorios activos gestionados por AWS, las direcciones IP de DNS aparecen en el menú desplegable.</block>
+  <block id="90c43a42e05e6c50aaaf430e4c4f1d7a" category="list-text">En el campo *Nombre de usuario*, introduzca el nombre de usuario para el dominio de Active Directory.</block>
+  <block id="15433f61816ea86787a6ceb5febc37c6" category="list-text">En el campo *Contraseña*, introduzca una contraseña para el dominio de Active Directory.</block>
+  <block id="6edf8a68d918685d74e5c3ab48d8044f" category="list-text">En *Configuración de infraestructura*, proporcione lo siguiente:</block>
+  <block id="9c5e50ea001b69e2f51eb58ac703b659" category="list-text">*FSX para el sistema ONTAP*: Crea un nuevo sistema de archivos FSX para ONTAP o usa un sistema de archivos FSX para ONTAP existente.</block>
+  <block id="4f670f6a49f149724742e59aa64d20d3" category="list-text">* Crear nuevo FSX para ONTAP*: Introduzca el nombre de usuario y la contraseña.</block>
+  <block id="cb91b70111a4b80dbaca125491a11e6f" category="paragraph">Un nuevo sistema de archivos FSX para ONTAP puede agregar 30 minutos o más de tiempo de instalación.</block>
+  <block id="9c4c4a74e809d66c62df4153c9d1fa16" category="list-text">*Seleccione un FSX para ONTAP*: Seleccione FSX para el nombre de ONTAP en el menú desplegable, e introduzca un nombre de usuario y una contraseña para el sistema de archivos.</block>
+  <block id="7ad9b6ff1a0ef5933f70efdfce675896" category="list-text">*Tamaño de la unidad de datos*: Ingrese la capacidad de la unidad de datos y seleccione la unidad de capacidad.</block>
+  <block id="1300f86974cafc2d65eb1f082a26bdf1" category="list-text">Resumen:</block>
+  <block id="356f59d9f97fd1e41067dba7467dc768" category="list-text">*Vista previa predeterminada*: Revise las configuraciones predeterminadas establecidas por Quick Create.</block>
+  <block id="5e96fbfd25b5bc5a26328566be9c79e3" category="list-text">*Costo estimado*: Proporciona una estimación de los cargos en los que podría incurrir si implementa los recursos mostrados.</block>
+  <block id="f2a42a68e067e481d094b018459ef895" category="list-text">Haga clic en *Crear*.</block>
+  <block id="eecdcbc4c1ede0e1634023ae31b70561" category="paragraph">Como alternativa, si desea cambiar cualquiera de estos valores por defecto ahora, cree el servidor de base de datos con Advanced CREATE.</block>
+  <block id="f6b1c2d6e49d4a0229e9b0bde1ad3236" category="paragraph">También puede seleccionar *Guardar configuración* para implementar el host más tarde.</block>
+  <block id="28cdc97b1969c0c544a77fde4457a7e5" category="open-title">Creación avanzada</block>
+  <block id="089584ffc23019d87cbdef44b1671be2" category="list-text">Selecciona *Creación avanzada*.</block>
+  <block id="93b004a62753aa3ecb7a47929a80309e" category="list-text">Para *Modelo de implementación*, seleccione *Instancia de clúster de conmutación por error* o *Instancia única*.</block>
+  <block id="cd1a078082e7012671955f628fc5a709" category="paragraph">Extremos de la interfaz del servicio de AWS (SQS, FSx, EC2, CloudWatch, formación de la nube, SSM) y el punto final de la puerta de enlace S3 se crean durante el despliegue si no se encuentra.</block>
+  <block id="4f8707176b7235252f943ef6ef597d55" category="paragraph">Los atributos DNS de VPC<block ref="cb0df2380d372b70fd568d139d704794" prefix=" " category="inline-code"></block> y<block ref="df550516571c5adda5f49cb0f14d22f1" prefix=" " category="inline-code"></block> se modifican para activar la resolución de la dirección de punto final si no se ha establecido ya en<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>.</block>
+  <block id="4a7e9ea93c0e42c9eebad0069ff58fa9" category="list-text">*Zonas de disponibilidad*: Selecciona zonas de disponibilidad y subredes según el modelo de implementación que hayas seleccionado.</block>
+  <block id="d2547fab6cf9d1064e2c017687d213c5" category="list-text">Para implementaciones de instancia única</block>
+  <block id="8738f299dd52a2650f23bf1ae30694fa" category="list-text">En el campo *Configuración del clúster - Nodo 1*, seleccione una zona de disponibilidad de la *Zona de disponibilidad* del menú desplegable y una subred del menú desplegable *Subred*.</block>
+  <block id="9c622025b2f6aaf628ede7de56df481b" category="list-text">Para implementaciones de FCI</block>
+  <block id="5ac7c1b392927ce429f17a8855e854b5" category="list-text">*Grupo de seguridad*: Seleccione un grupo de seguridad existente o cree un nuevo grupo de seguridad.</block>
+  <block id="a2c08d4b7f2bbde30396036629003448" category="paragraph">Tres grupos de seguridad se conectan a los nodos SQL (instancias EC2) durante el despliegue del nuevo servidor.</block>
+  <block id="ba4f09fe932ad91d759a5dd3636acec6" category="list-text">Se crea un grupo de seguridad de cargas de trabajo para permitir la comunicación de los puertos y protocolos necesarios para la comunicación de los clústeres de Microsoft SQL y Windows en los nodos.</block>
+  <block id="1f653bdd2a02e3ebdc4f28328a96b00f" category="list-text">En el caso de Active Directory gestionado por AWS, el grupo de seguridad asociado al servicio de directorio se agrega automáticamente a los nodos de Microsoft SQL para permitir la comunicación con Active Directory.</block>
+  <block id="84c62c2707904a024819612ef450ef1d" category="list-text">Para un sistema de archivos FSX for ONTAP existente, el grupo de seguridad asociado con él se agrega automáticamente a los nodos SQL, lo que permite la comunicación con el sistema de archivos. Cuando se crea un nuevo sistema FSx para ONTAP, se crea un nuevo grupo de seguridad para el sistema de archivos FSx para ONTAP y el mismo grupo de seguridad también se conecta a los nodos SQL.</block>
+  <block id="9379b88943e79d06a7624e886bcd4ea3" category="paragraph">Para un Active Directory gestionado por el usuario, puede seleccionar un grupo de seguridad que permita el tráfico de los sistemas existentes que necesitan conectarse a la base de datos. El grupo de seguridad debe permitir la comunicación con los controladores de dominio de Active Directory desde las subredes donde se configuran EC2 instancias para Microsoft SQL.</block>
+  <block id="1001245fbd8a96ced15590168ee50912" category="list-text">En *Configuración de la aplicación*, proporcione lo siguiente:</block>
+  <block id="5f90cc9084764f349d384957856b0b40" category="list-text">En *Tipo de instalación de SQL Server*, selecciona *Licencia incluida AMI* o *Usar AMI personalizada*.</block>
+  <block id="51af4699ded2f99936c69e9d355ac856" category="list-text">Si selecciona *Licencia incluida AMI*, proporcione lo siguiente:</block>
+  <block id="c8663d2accf7a3841b333a494fef96b8" category="list-text">*Sistema operativo*: Seleccione *Servidor Windows 2016*, *Servidor Windows 2019* o *Servidor Windows 2022*.</block>
+  <block id="fc885995de6490f8a85b4df7420752c4" category="list-text">*Edición de base de datos*: Seleccione *SQL Server Standard Edition* o *SQL Server Enterprise Edition*.</block>
+  <block id="82ca52a606de078c560022a638200727" category="list-text">*Versión de base de datos*: Seleccione *SQL Server 2016*, *SQL Server 2019* o *SQL Server 2022*.</block>
+  <block id="5e8d3d709fd671620935054b84e5af34" category="list-text">*SQL Server AMI*: Seleccione un AMI de SQL Server en el menú desplegable.</block>
+  <block id="dffb61bff3a89c2a5db1dca05670f262" category="list-text">Si selecciona *Usar AMI personalizada*, seleccione una AMI en el menú desplegable.</block>
+  <block id="3dd91497136cfa20f800dae22c9ecd0f" category="list-text">*SQL Server collation*: Seleccione un juego de intercalación para el servidor.</block>
+  <block id="33138d7e6684674bb338acb1551c10b8" category="admonition">Si el juego de intercalación seleccionado no es compatible para la instalación, se recomienda seleccionar la intercalación por defecto SQL_Latin1_General_CP1_CI_AS.</block>
+  <block id="d913a0735d4b73aea5387a05984d1494" category="list-text">*Nombre de la base de datos*: Introduzca el nombre del cluster de la base de datos.</block>
+  <block id="b39aea14ebbc4064f4e04e6d992d1a1a" category="list-text">*Credenciales de la base de datos*: Introduzca un nombre de usuario y una contraseña para una nueva cuenta de servicio o utilice las credenciales de la cuenta de servicio existentes en Active Directory.</block>
+  <block id="832a326b93ed81646cc7d84e4be33192" category="list-text">*Par claves*: Selecciona un par de claves para conectarte de forma segura a tu instancia.</block>
+  <block id="04d8d8fa2e9081fa8f16bc804c467ff1" category="list-text">*Active Directory*: Proporcione los siguientes detalles de Active Directory:</block>
+  <block id="da04d472e177489fce5d8bdf8433c0d2" category="list-text">*Tipo de instancia de DB*: Seleccione el tipo de instancia de base de datos en el menú desplegable.</block>
+  <block id="3ab69cd085bc314ab1583cc9c5154b64" category="list-text">*Política de instantáneas*: Habilitado por defecto. Las copias Snapshot se realizan diariamente y tienen un período de retención de 7 días.</block>
+  <block id="39d8e23262d2fe67579167ecd8a57b99" category="paragraph">Las Snapshot se asignan a volúmenes creados para las cargas de trabajo de SQL.</block>
+  <block id="f59cdcbbbfff432c998b9a6832f9687c" category="list-text">*IOPS provisionadas*: Selecciona *Automático* o *Provisioned por el usuario*. Si selecciona *Provisioned por el usuario*, introduzca el valor de IOPS.</block>
+  <block id="fc851ed7f45bda5714237ba9a67a7c28" category="list-text">*Capacidad de rendimiento*: Seleccione la capacidad de rendimiento en el menú desplegable.</block>
+  <block id="9b68f6da92a250a28b5722b9b0d1eedf" category="paragraph">En algunas regiones, puede seleccionar una capacidad de rendimiento de 4 Gbps. Para aprovisionar 4 Gbps de capacidad de rendimiento, su sistema de archivos FSx para ONTAP debe configurarse con un mínimo de 5.120 GiB de capacidad de almacenamiento SSD y 160.000 IOPS SSD.</block>
+  <block id="e425fbbda95b27f4febb4cb53da4adaa" category="list-text">*Cifrado*: Selecciona una clave de tu cuenta o una clave de otra cuenta. Debe introducir la clave de cifrado ARN desde otra cuenta.</block>
+  <block id="14830aaa14b83ecf09d726cad53016e9" category="paragraph">Las claves de cifrado personalizadas de FSx para ONTAP no se incluyen en la aplicación del servicio. Seleccione una clave de cifrado FSX adecuada. Las claves de cifrado no FSX provocarán un error en la creación del servidor.</block>
+  <block id="1fa9e3c24535ee6f1854ca64ba63dac4" category="paragraph">Las claves gestionadas por AWS se filtran en función de la aplicabilidad del servicio.</block>
+  <block id="2b53a86cbafdb4b83cbab64885039fd5" category="list-text">*Etiquetas*: Opcionalmente, puedes añadir hasta 40 etiquetas.</block>
+  <block id="fd8ebfaf2540ade79e0ba78e4eceddb2" category="list-text">*Servicio de Notificación Simple*: Opcionalmente, puede habilitar el Servicio de Notificación Simple (SNS) para esta configuración seleccionando un tema de SNS para Microsoft SQL Server en el menú desplegable.</block>
+  <block id="d86500a8e53ffaefc94b047f54149bf3" category="list-text">Active Simple Notification Service.</block>
+  <block id="9a7296e5162ebbf57df7f45a0fb2da0c" category="list-text">Seleccione un ARN en el menú desplegable.</block>
+  <block id="1bcb8771a35af9fc5219b534925d1d87" category="list-text">*Monitoreo de CloudWatch*: Opcionalmente, puede habilitar el monitoreo de CloudWatch.</block>
+  <block id="89d6bb6efbcd338f4267b8654f5dc154" category="paragraph">Recomendamos habilitar CloudWatch para la depuración en caso de fallo. Los eventos que aparecen en la consola de AWS CloudFormation son de alto nivel y no especifican la causa raíz. Todos los registros detallados se guardan en<block ref="7f396c1a3745270a7f2b1a19e5adb578" prefix=" " category="inline-code"></block> la carpeta de las instancias de EC2.</block>
+  <block id="4a1e1b42efe2bd7284aa7c0c5431b535" category="paragraph">En CloudWatch, se crea un grupo de registros con el nombre de la pila. En el grupo de registros aparece un flujo de registro para cada nodo de validación y nodo SQL. CloudWatch muestra el progreso del script y proporciona información para ayudarle a comprender si falla la implementación y cuándo.</block>
+  <block id="e221bb9868688b2de47614a7375f4b53" category="list-text">*Retroceder recursos*: Esta característica no es compatible actualmente.</block>
+  <block id="290612199861c31d1036b185b4e69b75" category="list-text">Resumen</block>
+  <block id="4ccb7f07ed88979e7d922e8ca47d0b66" category="list-text">Haga clic en *Crear* para implementar el nuevo host de base de datos.</block>
+  <block id="a070d14ddb3496f7acf3a639f1253fd2" category="paragraph">También puede guardar la configuración.</block>
+  <block id="4f603a7b143bb4422df39ee8286cd42d" category="section-title">Paso 2: Habilite la conexión remota en Microsoft SQL Server</block>
+  <block id="dd47a29282cb01a03505df7eafe39815" category="paragraph">Una vez que se despliega el servidor, Workload Factory no habilita la conexión remota en Microsoft SQL Server. Para activar la conexión remota, realice los siguientes pasos.</block>
+  <block id="701dfd287f4bd5b26fb9bbfd5bdad402" category="inline-link-macro">Seguridad de red: Permite que el sistema local utilice la identidad de equipo para NTLM</block>
+  <block id="daebb668da3731a16be970ea0c6ec4e8" category="list-text">Utilice la identidad de equipo para NTLM consultando <block ref="e9640e51aa5d938334e80d8a15f50622" category="inline-link-macro-rx"></block> la documentación de Microsoft.</block>
+  <block id="b09af3ec2d0b1fcd3adf33186f9ee76a" category="inline-link-macro">Se ha producido un error relacionado con la red o específico de la instancia al establecer una conexión con SQL Server</block>
+  <block id="ffef3ac5a9fd0c8804db95a99784a71d" category="list-text">Consulte la documentación de Microsoft para comprobar la configuración dinámica del puerto <block ref="b30b6ec2388a7fc9fdc852f17e9a82ad" category="inline-link-macro-rx"></block> .</block>
+  <block id="298702b12ebe631e3987c7bf6f8d6c8a" category="list-text">Permita la IP o subred de cliente requerida en el grupo de seguridad.</block>
+  <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">El futuro</block>
+  <block id="cecba1c08cd956bd8efc84e03fe0051b" category="inline-link-macro">Cree una base de datos en Workload Factory</block>
+  <block id="4be7f4c9ee72f7d9ff329e34f8516426" category="paragraph">Ahora usted puede <block ref="dd25846ee2f23b5705b078fd5b3e0a08" category="inline-link-macro-rx"></block>.</block>
+  <block id="1ff40e7ecab50f1eac1d1559206dc1cb" category="summary">Crear una base de datos de Microsoft SQL con bases de datos de Workload Factory.</block>
+  <block id="9864328db0fb814f0ec67f16ad765411" category="doc">Cree una base de datos de Microsoft SQL en Workload Factory para bases de datos</block>
+  <block id="b17224e7c59ba4af1e7dfa0cabc2d8ec" category="paragraph">La creación de una nueva base de datos Microsoft SQL en la consola Workload Factory permite gestionar el recurso en Workload Factory.</block>
+  <block id="6f03d6ad36824b69611930dbe2fb4d42" category="paragraph">Tras la creación de la base de datos, se crean dos nuevos volúmenes en el sistema de archivos FSx para ONTAP que consta de LUN independientes para alojar datos y archivos de registro de la base de datos. Los archivos de base de datos de la nueva base de datos están aprovisionados mediante thin provisioning y consumen sólo unos MB del tamaño total asignado a la nueva base de datos.</block>
+  <block id="6d7b2a50e46356cb2ecf2805e3b5bb59" category="paragraph">Si desea segregar el almacenamiento para la base de datos, puede hacerlo mediante un _punto de montaje virtual_. El punto de montaje virtual permite consolidar bases de datos en unas pocas unidades comunes en el host.</block>
+  <block id="1b4c344cbe2ee72aa44b7f0ac1a2d68c" category="inline-link-macro">Obtenga información sobre los modos operativos en Workload Factory</block>
+  <block id="a9d8e9fd10870af41307f40f633824d3" category="paragraph">La creación de una base de datos en Workload Factory requiere permisos de modo Automate. Como alternativa, en el modo básico, puede copiar o descargar una plantilla de código parcialmente completada para completar la operación fuera de Workload Factory. <block ref="d512574672e174dde3ce54b17df0d9b0" category="inline-link-macro-rx"></block> para decidir qué modo desea utilizar.</block>
+  <block id="92e04fe5d2a269f38993f394f5b1eb9b" category="admonition">Los servidores Microsoft SQL Server que utilizan el protocolo SMB no admiten la creación de bases de datos.</block>
+  <block id="7dd1095f5b5a654fc784015352d1066d" category="paragraph">Asegúrese de completar los siguientes requisitos previos antes de crear una nueva base de datos.</block>
+  <block id="5c42fb317128e01d6e1476bcde042be1" category="inline-link-macro">Credenciales de cuenta de AWS y permisos de modo _read_ o _automate_</block>
+  <block id="cfaa59ee1538a75c56439e69e19ac0c9" category="list-text">Debe <block ref="2d1718ee7160678739db1128b08d1c1f" category="inline-link-macro-rx"></block> crear una nueva base de datos en Workload Factory.</block>
+  <block id="3aaf7efcd209a4ee760edca7e000ef0c" category="paragraph">Como alternativa, puede utilizar el CodeBox para copiar una plantilla de forma que pueda implementar una base de datos fuera de Workload Factory mediante la API REST. <block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>.</block>
+  <block id="0b059e758179ae9106a6228fd71a42cb" category="list-text">Host Windows</block>
+  <block id="db205765ba81a6c0d96687e971328059" category="list-text">Debe tener suficientes letras de unidad disponibles en Microsoft SQL Server para crear unidades nuevas para la nueva base de datos si utiliza el modo _Quick create_.</block>
+  <block id="78898e52fcbdc5337204a384f2456d4f" category="list-text">Microsoft SQL Server</block>
+  <block id="428d91baa4d6169eda3886bd9f33651b" category="list-text">Debe haber gestionado Microsoft SQL Server en Workload Factory para que las bases de datos alojen la nueva base de datos.</block>
+  <block id="113b1ad9ce6cdc3a37ad8475bc9bb2b2" category="list-text">Administrador de sistemas de AWS</block>
+  <block id="eb9283ad3309785d5def8a502da2a5fa" category="list-text">Asegúrese de que<block ref="83cdffdaa23e1c6056018d21fda6ed6d" prefix=" " category="inline-code"></block> el privilegio está habilitado en el host de Microsoft SQL a través de AWS System Manager.</block>
+  <block id="1271a3d360115d2332889fc326f89944" category="section-title">Cree una base de datos</block>
+  <block id="85ea77b3506d3360eddcaf94ae057314" category="paragraph">Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ para completar esta tarea en Workload Factory con permisos de modo _read_ o _automate_.</block>
+  <block id="ceef677928e7c6188983fdf4dd271a6e" category="list-text">En Bases de datos, seleccione la pestaña *Inventario*.</block>
+  <block id="8b882c3fbdc1d7d9a3892836061c41c2" category="list-text">En el separador Inventory, seleccione un servidor de base de datos con una instancia de SQL Server gestionada para crear la base de datos en.</block>
+  <block id="d5db8d6216dad5bc8022812b7a525fca" category="list-text">Haz clic en el menú de tres puntos de la instancia administrada y luego selecciona *Crear base de datos de usuario*.</block>
+  <block id="16b7e1ed68be5b41e619ec00b93a3de0" category="list-text">En la página Crear base de datos de usuario, en Información de base de datos, proporcione lo siguiente:</block>
+  <block id="a657ad1c8328b5552791626de3484dcb" category="list-text">*Nombre de la base de datos*: Introduzca el nombre de la base de datos.</block>
+  <block id="16aa8185bcc829996f58f9ef641ffca9" category="list-text">*Collation*: Seleccione una clasificación para la base de datos. Se ha seleccionado la intercalación predeterminada SQL_Latin1_General_CP1_CI_AS en Microsoft SQL Server.</block>
+  <block id="9252f84e8941f540136a48296314c46f" category="list-text">En Configuración de archivo, proporcione lo siguiente:</block>
+  <block id="2a672acc350dafaf0c2bb3f9d2c25230" category="list-text">*Modo de configuración de archivo*: Selecciona *Quick create*.</block>
+  <block id="c02dffc47685c6186911093f4648a672" category="list-text">*Nombres de archivo y ruta*:</block>
+  <block id="43dd818c47ec340c5541768786b82a5b" category="list-text">*Nombre del archivo de datos*: Introduzca el nombre del archivo de datos.</block>
+  <block id="8f881c0aef4cb8a658c1664ab32d2a44" category="list-text">*Nombre del archivo de registro*: Introduzca el nombre del archivo de registro.</block>
+  <block id="efdcff467b96e67bc1503aded841f49d" category="list-text">* Tamaños de archivo*: Introduzca el tamaño de los datos y el tamaño del registro para la base de datos.</block>
+  <block id="5014a6954bce63317492b68348e51670" category="paragraph">Alternativamente, si desea cambiar cualquiera de estos ajustes predeterminados ahora, cambie el *Modo de configuración de archivo* a *Creación avanzada*.</block>
+  <block id="237089459c3619339c30fa9c5eb5a934" category="list-text">Seleccione *Crear base de datos de usuario*.</block>
+  <block id="a942ed39152c21f9cd671a056a9e59b6" category="list-text">*Collation*: Seleccione la intercalación para la base de datos. Se ha seleccionado la intercalación predeterminada SQL_Latin1_General_CP1_CI_AS en Microsoft SQL Server.</block>
+  <block id="a56a556ec4c3b242949e1997e5e88e6d" category="list-text">*Modo de configuración de archivo*: Selecciona *Creación avanzada*.</block>
+  <block id="d11e3169a86667b0ce0de9508d6546d2" category="list-text">*Archivo de datos*: Seleccione una letra de unidad e introduzca el nombre del archivo de datos.</block>
+  <block id="10ad652c7f447af44990df8e9828a0a2" category="paragraph">Opcionalmente, haga clic en la casilla de *Punto de montaje virtual*.</block>
+  <block id="7f5feea9a3187d324d3efdfbdae2477a" category="list-text">*Archivo de registro*: Seleccione una letra de unidad e introduzca el nombre del archivo de registro.</block>
+  <block id="1679e79d01cec56d49e52ccb811c967f" category="paragraph">Si creó el host de la base de datos, puede comprobar el progreso del trabajo en la pestaña *Supervisión de trabajos*.</block>
+  <block id="9f54c49471da83bd6f911be3f1e09893" category="summary">Crear un clon de sandbox en Workload Factory para bases de datos.</block>
+  <block id="6adb9945165eb23a5f9bb28ebf840e7a" category="doc">Crear un clon de sandbox en Workload Factory para bases de datos</block>
+  <block id="4d648b143fcbfebd1d26af3a5c9dfd0a" category="paragraph">Crear un clon de espacio aislado de una base de datos en Workload Factory para bases de datos permite usar el clon para desarrollo, pruebas, integración, análisis, formación, QA y más sin alterar la base de datos de origen.</block>
+  <block id="944311d4a84e7d454ea59856dc26eae6" category="paragraph">Se crea un clon de sandbox a partir de la snapshot más reciente en la base de datos de origen. Puede clonarse en el mismo servidor Microsoft SQL Server que la base de datos de origen o clonarse en otro Microsoft SQL Server, siempre y cuando compartan el mismo sistema de archivos FSx para ONTAP.</block>
+  <block id="e40afef0cb2c3b82a9c6800c8c2f0f8a" category="paragraph">Asegúrese de completar los siguientes requisitos previos antes de crear un clon de sandbox.</block>
+  <block id="4ab92ab47b2d3e85e9c5028965903181" category="list-text">Debe <block ref="2d1718ee7160678739db1128b08d1c1f" category="inline-link-macro-rx"></block> crear un clon de sandbox en Workload Factory.</block>
+  <block id="19d25173728d8d76e86a76626ff0e340" category="paragraph">Como alternativa, puede usar CodeBox para copiar una plantilla parcialmente completada o crear una plantilla completada para que pueda crear el clon de sandbox fuera de Workload Factory mediante la API REST. <block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>.</block>
+  <block id="a4e02a27092dabbe95de913f392dcf07" category="list-text">Debe haber gestionado Microsoft SQL Server en Workload Factory para que las bases de datos alojen el nuevo clon de sandbox.</block>
+  <block id="643d722e4b683cc7d65a0dca14d8df6e" category="list-text">Asegúrese de que<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> el privilegio de usuario está activado en el host de Microsoft SQL a través de AWS Systems Manager.</block>
+  <block id="6d75a53f3497a91632eb53863b237177" category="list-text">Base de datos de origen</block>
+  <block id="099ef1d3b9d5d76aafe25fa74a879a54" category="list-text">Necesita una base de datos de origen disponible para el clon.</block>
+  <block id="7a4ee61e686f7a2654e0de589bb56945" category="list-text">En la pestaña sandboxes, selecciona *Crear nuevo sandbox*.</block>
+  <block id="a52444590926ede8f4c66b5fa95a9dcc" category="list-text">En la página Crear nuevo sandbox, en Origen de base de datos, proporcione lo siguiente:</block>
+  <block id="d63aa00e9cb281e7cc97e4e0a6bd3e85" category="list-text">*Host de la base de datos de origen*: Seleccione el host de la base de datos de origen.</block>
+  <block id="8aec4b247979ba796bbfe1b11f7b0b7e" category="list-text">*Instancia de base de datos de origen*: Seleccione la instancia de base de datos de origen.</block>
+  <block id="e6c4f21a510bdf6e040779f7c7bb57b3" category="list-text">*Base de datos de origen*: Seleccione la base de datos de origen desde la que desea clonar.</block>
+  <block id="136a3c07dff694327852945e7661c252" category="list-text">En Destino de base de datos, proporcione lo siguiente:</block>
+  <block id="b6b9aec3a98d2a803dfd7a3e7b836cb2" category="list-text">*Host de base de datos de destino*: Seleccione un host de base de datos de destino para el clon de sandbox que esté en la misma VPC y tenga el mismo sistema de archivos FSX for ONTAP que el host de origen.</block>
+  <block id="04bd2b110b2a3aaa82dccc7fe837f151" category="list-text">*Instancia de base de datos de destino*: Seleccione la instancia de base de datos de destino para el clon de sandbox.</block>
+  <block id="26e615a604b088a660581f026763c30b" category="list-text">*Base de datos de destino*: Introduzca un nombre para el clon de sandbox.</block>
+  <block id="7f63d4b83f27b850d1eb970cfa4666b3" category="list-text">*Mount*: Selecciona *Auto-assign mount point* o *define la ruta del punto de montaje*. Si selecciona *Definir ruta de punto de montaje*, introduzca la ruta del punto de montaje.</block>
+  <block id="f3346b0efa80289c47d4e6113a73a3ab" category="list-text">*Definir etiqueta*: Seleccione una etiqueta para definir el clon de sandbox.</block>
+  <block id="34775e5e4b0b832c45a2707ae9b18f95" category="paragraph">Para comprobar el progreso del trabajo, vaya a la pestaña *Control de trabajos*.</block>
+  <block id="18a852f2a54ab28755adc6bcf4897e75" category="summary">Elimine un clon de sandbox cuando ya no lo necesite.</block>
+  <block id="5697f3fa0c3bfd3435b1268d395d044b" category="doc">Dividir un clon de sandbox desde la base de datos de origen</block>
+  <block id="27f9c597ec304cf826c7ed4e780c6c34" category="paragraph">Elimine un clon de sandbox cuando ya no lo necesite y desee liberar capacidad de almacenamiento.</block>
+  <block id="cae7cdfa55ee9d21054e32871fcf98f8" category="list-text">En el mosaico Bases de datos, haga clic en *Ir a Inventario de Bases de Datos*.</block>
+  <block id="60fd4df454072e2b3067c30385649e4a" category="list-text">Haz clic en el menú de tres puntos del clon del sandbox que quieras eliminar.</block>
+  <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">Seleccione *Eliminar*.</block>
+  <block id="1aef21babcea64bea2aff92468198535" category="list-text">En el cuadro de diálogo Eliminar, haga clic en *Eliminar*.</block>
+  <block id="fa10c83d33b34bb97fc2a7dad1f2e4cb" category="summary">Detectar una instancia de Microsoft SQL Server en Workload Factory para bases de datos.</block>
+  <block id="107c83bbd5efd331077f3ba178a657b5" category="doc">Detectar una instancia de Microsoft SQL Server</block>
+  <block id="89d4e8decf00d1ba7948a89df7b705a6" category="paragraph">Esta tarea es para detectar una instancia _no detectada_.</block>
+  <block id="d56f5e6bdac7aa1986011738ada6f98e" category="paragraph">Cuando las credenciales de AWS se asocian a Workload Factory, las bases de datos permiten la detección automatizada de Microsoft SQL Server que comienzan con SQL Server 2016 con los siguientes tipos de almacenamiento de AWS:</block>
+  <block id="36df1b975561708b246ef1801ea416e5" category="list-text">FSX para ONTAP</block>
+  <block id="4b222d59a012c5cc128037a5a473cde7" category="list-text">Almacén de bloques elásticos (EBS)</block>
+  <block id="abef82f89770aefd53c1cafe296c05f7" category="list-text">FSX para Windows File Server</block>
+  <block id="0c58524f460d0dca6bc74f75070e81b4" category="paragraph">En las bases de datos, las instancias detectadas se clasifican de la siguiente manera:</block>
+  <block id="ef94176eb3d9b5d7bac8387c4427a66b" category="list-text">_Instancias no detectadas_: Instancias no detectadas que Workload Factory ha detectado automáticamente. Las instancias no se detectan en los siguientes casos:</block>
+  <block id="8482966e54e535a17c37e8a9e60719d9" category="list-text">Error en la autenticación de Microsoft SQL Server.</block>
+  <block id="8265f911f4a9e6da8845af6bed179958" category="list-text">El sistema de archivos FSx para ONTAP de Microsoft SQL Server no está registrado en tu cuenta en Workload Factory.</block>
+  <block id="05ee37d98e176091e09283409f5c3311" category="list-text">_Instancias no administradas_: Instancias detectadas que no están gestionadas por Workload Factory</block>
+  <block id="c308e91ba915ce0131545996e584679a" category="list-text">_Instancias administradas_: Instancias detectadas gestionadas por Workload Factory</block>
+  <block id="36583ffdfd0a47e5d60aa8b6ab716d80" category="paragraph">El primer paso para gestionar una instancia de Microsoft SQL Server, o instancia de host, en Workload Factory para bases de datos es detectar una instancia de servidor de base de datos no detectada.</block>
+  <block id="d7d2bdfad20e8678423a16803cafd735" category="paragraph">Los requisitos para detectar una instancia de servidor de base de datos no detectada son los siguientes:</block>
+  <block id="38a12b37ae4221c5fda46c9430a61d47" category="inline-link-macro">Credenciales de cuenta de AWS</block>
+  <block id="d1f85e78e0ae269b8d5d2f8ec807e86c" category="list-text">Debe <block ref="8daf2318f1eb74a04bc7cb12c8d5f7c1" category="inline-link-macro-rx"></block> detectar una instancia de servidor de base de datos en Workload Factory.</block>
+  <block id="dc009403919a36e84e394bfc7dac9390" category="list-text">El tipo de almacenamiento para la instancia debe ser uno de los siguientes:</block>
+  <block id="3962b6fab28418ee6542523fce705073" category="list-text">Las instancias EC2 deben tener un perfil de rol/instancia que permita que la conexión SSM funcione.</block>
+  <block id="5dff7dc03e6adf7d4ca469820cdba620" category="inline-link-macro">Obtenga más información sobre la solución de problemas de SSM</block>
+  <block id="a218784743407787312891b174efa23d" category="paragraph">Cuando se detecta una instancia de Microsoft SQL, el entorno existente no se modifica. La detección se produce a través de AWS Systems Manager Session Manager (SSM). Sin el perfil de instancia de IAM correcto, la detección fallará. <block ref="6d65103434cb07e7afb870839cad8f12" category="inline-link-macro-rx"></block>.</block>
+  <block id="95b565a5e9864d62ea1fb7e39b926b3b" category="list-text">Haga clic en la flecha desplegable para expandir la fila del host que se va a detectar.</block>
+  <block id="8dbec57fc4c47759d905a8c83da70c0f" category="paragraph">El host se expande y aparecen las instancias del host.</block>
+  <block id="2cb6ba113505ade5a7c3bcb4dd91f24a" category="list-text">Haga clic en el menú de tres puntos de la instancia que desee detectar.</block>
+  <block id="a01b2b217874340f2cbed78113cf3f07" category="list-text">Haga clic en *Detectar*.</block>
+  <block id="52f93363b11de846f37617dc280f35b6" category="list-text">En el cuadro de diálogo *Detectar instancia*, proporcione el nombre de usuario y la contraseña de Microsoft SQL Server o el nombre de usuario y la contraseña de FSX for ONTAP.</block>
+  <block id="9658587ec96bf37cc94d75d662fe91d1" category="paragraph">Workload Factory intenta validar sus credenciales de Microsoft SQL o FSx para ONTAP.</block>
+  <block id="ebd63afb95c4e8de3d3cce81ea20f103" category="paragraph">Si cualquiera de estas credenciales no está disponible, Workload Factory intenta instalar<block ref="80caa08185fe6ba2da6b227f3c292956" prefix=" " category="inline-code"></block> el módulo en PowerShell.</block>
+  <block id="aee0a08114ee057480ece887eabe9d05" category="paragraph">Aparece la información de instancia detectada.</block>
+  <block id="1fed0bc2c72e36c6e777e5a1e7def8f8" category="list-text">Seleccione *Sí, Administrar instancia a través de Workload Factory* o *No*.</block>
+  <block id="e13a15252a4dbf9779c44afe477e3343" category="list-text">Haga clic en *Listo*.</block>
+  <block id="9e9448a6d1fd2450a4d206c8b1b51faf" category="inline-link-macro">Gestione la instancia a través de Workload Factory</block>
+  <block id="21deafc6f9746f4f6c79c24fd4433020" category="paragraph">Cuando el tipo de almacenamiento de la instancia de host es FSx para ONTAP, puede <block ref="eb4f13ee4ce82a926f1570589adcc507" category="inline-link-macro-rx"></block>.</block>
+  <block id="2c413a839846c70f3e347572379e59eb" category="summary">Explore el ahorro para las cargas de trabajo de base de datos con el almacenamiento de Amazon Elastic Block Store (EBS).</block>
+  <block id="b9c536d894e64c5ba02e664043160322" category="doc">Explore el ahorro en Workload Factory para las bases de datos</block>
+  <block id="aa535236468b661f18e6382175c6c685" category="paragraph">Workload Factory proporciona una calculadora para que puedas comparar diferentes componentes de coste de la ejecución de cargas de trabajo de Microsoft SQL Server, como almacenamiento, computación, licencia de SQL, snapshots y clones para las cargas de trabajo de bases de datos en sistemas de archivos FSx para ONTAP frente al almacenamiento de bloques elásticos (EBS). Dependiendo de sus requisitos de almacenamiento, puede darse cuenta de que los sistemas de archivos de FSx para ONTAP son los más rentables para las cargas de trabajo de sus bases de datos.</block>
+  <block id="2c84d2f326a80650e1f5b43257e48421" category="paragraph">La calculadora muestra si el almacenamiento para las cargas de trabajo de base de datos en estos servidores Microsoft SQL Server costaría menos si se utiliza un sistema de archivos FSx para ONTAP.</block>
+  <block id="2171dfd3cf6eceef09743d94bd21cc81" category="paragraph">Si Workload Factory determina que podría ahorrar dinero ejecutando estas cargas de trabajo en un sistema de archivos FSx para ONTAP, puede poner en marcha Microsoft SQL over FSx para ONTAP directamente desde la calculadora de Workload Factory. En algunos casos, Workload Factory puede recomendar implementar varios sistemas de archivos según la cantidad de almacenamiento que esté utilizando actualmente y según las características de rendimiento de las cargas de trabajo de la base de datos. En algunos casos, Workload Factory puede recomendar implementar varios sistemas de archivos según la cantidad de almacenamiento que esté utilizando actualmente y según las características de rendimiento de las cargas de trabajo de la base de datos.</block>
+  <block id="181e3284c48fd57addc02c9c3cecca81" category="section-title">Proporcione los requisitos del sistema</block>
+  <block id="2a94b287f3d99e0e52e81c4f752895f6" category="inline-link-macro">más información sobre los modos</block>
+  <block id="c8add51a412bd14b1fa8548ea7d4cc9c" category="paragraph">Si habilitó el modo _Automate_ (<block ref="3ac12273abf0be5e05b49ceaac600ad4" category="inline-link-macro-rx"></block>) añadiendo credenciales de AWS a su cuenta Workload Factory, Workload Factory puede identificar todos los sistemas de almacenamiento disponibles en su cuenta de AWS y mostrar las características de los volúmenes en esos sistemas en la página de inventario de almacenamiento. La cuenta de AWS que se busca se basa en las credenciales que ha definido en su cuenta de Workload Factory.</block>
+  <block id="0281a53baaa49bd24211566406a670bd" category="paragraph">En esta figura, se muestran los volúmenes en FSx para los sistemas de servidor de archivos de Windows que se han detectado en una cuenta de AWS.</block>
+  <block id="5d607e96f80f5e0c54fe4550ff3646df" category="inline-image-macro">La página de inventario de almacenamiento que muestra su inventario actual de volúmenes en FSx para servidores de archivos de Windows.</block>
+  <block id="1b6b615e774f37106845ba90d2603b7c" category="paragraph"><block ref="1b6b615e774f37106845ba90d2603b7c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="16203b7e08e16041d0c8fdff61a3a4f3" category="paragraph">Si no ha agregado credenciales para vincular su cuenta de Workload Factory con una cuenta de AWS (denominada modo _BASIC_), puede introducir manualmente las características necesarias para un sistema de almacenamiento que planea poner en marcha y la calculadora de almacenamiento determinará el mejor sistema de archivos en función del coste. Puedes usar este método para abarcar un nuevo sistema de archivos FSX for ONTAP mientras también usas el modo _Automate_.</block>
+  <block id="358b1837aae1be80f9df6667968fb7dd" category="paragraph">En esta figura se muestra la página de la calculadora de almacenamiento con una comparación entre FSx para ONTAP y el almacenamiento de EBS.</block>
+  <block id="770b3813731da1b92ad91e1b7d040019" category="inline-image-macro">La página de la calculadora de almacenamiento con una comparación entre FSx para ONTAP y el almacenamiento de Elastic Block Store.</block>
+  <block id="0804cd2e6d379bedf0c48b78b009bac3" category="paragraph"><block ref="0804cd2e6d379bedf0c48b78b009bac3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bfe3baeb9acd99f2f2bce618befc4139" category="paragraph">Complete los siguientes requisitos previos antes de comenzar:</block>
+  <block id="ed8b2920ddc5b14cb6c0ba24c4b6c3af" category="inline-link-macro">otorgar permisos _automatic_</block>
+  <block id="fb9d6e1577faaf2582c56f2b6e871a0e" category="list-text">Asegúrese de que <block ref="d9270f60c282b5496f17a4b48a6da305" category="inline-link-macro-rx"></block> en su cuenta de AWS detecta los sistemas Elastic Block Store (EBS) en su inventario de bases de datos.</block>
+  <block id="def9511b261c88922ac5674a45135773" category="inline-link-macro">Descubra cómo detectar hosts</block>
+  <block id="00cfda556057e95fb5c041a6d6e864eb" category="list-text">Detecta hosts en el almacenamiento de EBS en tu inventario de bases de datos. <block ref="c3d02703f332265b4bfd19fd03e6dd21" category="inline-link-macro-rx"></block>.</block>
+  <block id="f319ba887c03b66fa6a83807c78f65e9" category="list-text">En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.</block>
+  <block id="e721578ef71057f68d9b8f95eaa8a01b" category="list-text">Seleccione la pestaña *Explorar ahorros*.</block>
+  <block id="a9a4b0133e73452e9114b1d65b1a03c5" category="list-text">Haga clic en *Explorar ahorros* para el servidor de base de datos que utiliza el almacenamiento de EBS.</block>
+  <block id="b6934442f27355012b8f3897d317094b" category="list-text">De manera opcional, proporciona los siguientes detalles sobre los clones y las copias Snapshot en el almacenamiento EBS para obtener una estimación más precisa del ahorro en costes.</block>
+  <block id="892b05a8b32a4e09e4e991c1c453d0ec" category="list-text">*Frecuencia de instantánea*: Seleccione una frecuencia de instantánea en el menú desplegable.</block>
+  <block id="6ca8fb2d85dfb104bf65c1de74c7fe8e" category="list-text">*Clonar frecuencia de actualización*: Seleccione una frecuencia de actualización del clon en el menú desplegable.</block>
+  <block id="201c4d58b6fa62f021a1865e894234ef" category="list-text">*Tasa de cambio mensual*: Ingrese el porcentaje que los datos de clonación y instantánea cambian en promedio por mes.</block>
+  <block id="6b08b43202e1e504a7c87375b1a13b76" category="list-text">Revise los cálculos y recomendaciones proporcionados en la página.</block>
+  <block id="c06f81033cfa9dba0a118343022622ca" category="paragraph">Además, desplácese hacia abajo hasta la parte inferior de la página hasta *Exportar PDF*.</block>
+  <block id="aca77c97dcf29f670f572a7129863195" category="section-title">Pon en marcha FSx para sistemas de archivos ONTAP</block>
+  <block id="d41ee345c8d0261fd097678a17139b63" category="paragraph">Si desea cambiar a FSX para ONTAP para obtener ahorros de costos, haga clic en *Crear* para crear los sistemas de archivos directamente desde el Asistente para crear un FSX para el sistema de archivos ONTAP o haga clic en *Guardar* para guardar las configuraciones recomendadas para más adelante.</block>
+  <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">Métodos de despliegue</block>
+  <block id="11ed0b3202d6d086758a8d450bf14383" category="list-text">En el modo _Automate_, puede implementar el sistema de archivos FSx para ONTAP directamente desde Workload Factory. También puede copiar el contenido de la ventana CodeBox e implementar el sistema utilizando uno de los métodos CodeBox.</block>
+  <block id="543b29a63a3d070c0ff920d687259dfc" category="paragraph">En el modo _BASIC_, puede copiar el contenido de la ventana CodeBox e implementar el sistema de archivos FSX for ONTAP utilizando uno de los métodos CodeBox.</block>
+  <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="summary">NetApp ofrece compatibilidad con Workload Factory y sus servicios de cloud de diversas maneras. Hay disponibles amplias opciones de auto soporte gratuito las 24 horas del día, los 7 días de la semana, como artículos de la base de conocimiento (KB) y un foro de la comunidad. Su registro de soporte incluye soporte técnico remoto a través de tickets web.</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Obtenga ayuda</block>
+  <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">Obtenga soporte para FSx for ONTAP</block>
+  <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">Para obtener soporte técnico relacionado con FSx para ONTAP, su infraestructura o cualquier solución que utilice el servicio, consulte la sección «Obtener ayuda» en la documentación de Workload Factory para ese producto.</block>
+  <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSX para ONTAP</block>
+  <block id="9d06990508d25d367d9158c6558eb9c8" category="paragraph"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
+  <block id="35f9849ffdd809bda11d0fc56e1e3583" category="paragraph">Para recibir soporte técnico específico para Workload Factory y sus soluciones y servicios de almacenamiento, utilice las opciones de soporte descritas a continuación.</block>
+  <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">Utilice opciones de soporte automático</block>
+  <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">Estas opciones están disponibles de forma gratuita, las 24 horas del día, los 7 días de la semana:</block>
+  <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">Documentación</block>
+  <block id="d935525f4850c4638cbf48ae53fb4686" category="paragraph">La documentación de Workload Factory que está viendo en ese momento.</block>
+  <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">Base de conocimientos</block>
+  <block id="436f63b446dba5a418c698d49bd39718" category="list-text"><block ref="436f63b446dba5a418c698d49bd39718" category="inline-link-rx"></block></block>
+  <block id="ba6274b9c9d1f81bb3a648fa289986b8" category="paragraph">Busque en la base de conocimientos de Workload Factory para encontrar artículos útiles para solucionar problemas.</block>
+  <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">Comunidades</block>
+  <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
+  <block id="7faef90df03399696ba9d4815b37171a" category="paragraph">Únase a la comunidad de Workload Factory para seguir las discusiones en curso o crear otras nuevas.</block>
+  <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Cree un caso con el soporte de NetApp</block>
+  <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">Además de las opciones de autosoporte anteriores, puede trabajar con un especialista de soporte de NetApp para resolver cualquier problema después de activar el soporte de.</block>
+  <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">Antes de empezar</block>
+  <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">Aprenda a registrarse para obtener soporte</block>
+  <block id="a12ea39ddf1c98adfd7f751299705efa" category="paragraph">Para utilizar la capacidad de *Crear un caso*, primero debe registrarse para recibir soporte. Asocie sus credenciales del sitio de soporte de NetApp a su inicio de sesión de fábrica de cargas de trabajo. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
+  <block id="356c88ac4b0ec3f7689cc91f54701fef" category="list-text">En la parte superior derecha de la consola Workload Factory, selecciona *Ayuda &gt; Soporte*.</block>
+  <block id="aadd86a3fadf19221852692c6e4adc2f" category="paragraph">Al seleccionar esta opción, se abre la consola de BlueXP una nueva pestaña del navegador y se carga la consola de soporte.</block>
+  <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">En la página *Recursos*, elija una de las opciones disponibles en Soporte técnico:</block>
+  <block id="6a1b74969231967ed071d465206b15c7" category="list-text">Selecciona *Llámanos* si quieres hablar con alguien por teléfono. Se le dirigirá a una página de netapp.com que enumera los números de teléfono a los que puede llamar.</block>
+  <block id="d65a2a6fc9caad1867728d4382eeb989" category="list-text">Selecciona *Crear un caso* para abrir un ticket con un especialista en Soporte NetApp:</block>
+  <block id="d7d0da18fbb8f8f85c1364883fbdf4c7" category="list-text">*Servicio*: Selecciona *Fábrica de carga de trabajo*.</block>
+  <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*Prioridad de caso*: Elija la prioridad para el caso, que puede ser Baja, Media, Alta o crítica.</block>
+  <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">Para obtener más información sobre estas prioridades, pase el ratón sobre el icono de información situado junto al nombre del campo.</block>
+  <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">*Descripción del problema*: Proporcione una descripción detallada del problema, incluidos los mensajes de error aplicables o los pasos de solución de problemas que haya realizado.</block>
+  <block id="002c6f26fb01affb37b8cf3cef7a1fb0" category="list-text">*Direcciones de correo electrónico adicionales*: Introduzca direcciones de correo electrónico adicionales si desea que alguien más conozca este problema.</block>
+  <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">*Accesorio (opcional)*: Cargue hasta cinco archivos adjuntos, uno a la vez.</block>
+  <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">Los archivos adjuntos están limitados a 25 MB por archivo. Se admiten las siguientes extensiones de archivo: Txt, log, pdf, jpg/jpeg, rtf, doc/docx, xls/xlsx y csv.</block>
+  <block id="baaf0e61add7d12cf8d12e023d5aef18" category="inline-image-macro">Captura de pantalla del formulario Crear un caso que le permite crear un caso con el soporte de NetApp.</block>
+  <block id="b0c6c3ee60a29925d3f09cd609b79483" category="paragraph"><block ref="b0c6c3ee60a29925d3f09cd609b79483" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">Después de terminar</block>
+  <block id="18f487556417bb6d9721a7005ae097c9" category="paragraph">Aparecerá una ventana emergente con el número de caso de soporte. Un especialista de soporte de NetApp revisará su caso y le pondrá en contacto con usted próximamente.</block>
+  <block id="0ff9b4b8684b9e03c9c1e1320935eae3" category="paragraph">Para obtener un historial de sus casos de soporte, puede seleccionar *Ajustes &gt; Línea de tiempo* y buscar acciones denominadas “Crear caso de soporte”. Un botón situado en el extremo derecho le permite ampliar la acción para ver los detalles.</block>
+  <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">Es posible que se encuentre el siguiente mensaje de error al intentar crear un caso:</block>
+  <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">"No está autorizado a crear un caso en el servicio seleccionado"</block>
+  <block id="c7b7a5ae9f37fd7d24e4d641b9186fe9" category="paragraph">Este error podría significar que la cuenta NSS y la compañía de registro con la que está asociada no es la misma compañía de registro para el número de serie de la cuenta de BlueXP (es decir, 960xxxx) o el número de serie del entorno de trabajo. Puede solicitar ayuda utilizando una de las siguientes opciones:</block>
+  <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">Usar el chat en el producto</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
+  <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">Envíe un caso no técnico a<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
+  <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">Gestione sus casos de soporte (vista previa)</block>
+  <block id="8b74b053fbeeff5c3b6f4991cb1d028d" category="paragraph">Puede ver y gestionar los casos de soporte activos y resueltos directamente desde BlueXP. Es posible gestionar los casos asociados con su cuenta de NSS y con su empresa.</block>
+  <block id="394ef093ad3259b9ff0fe7406f015b83" category="paragraph">La gestión de casos está disponible como vista previa. Tenemos pensado perfeccionar esta experiencia y añadir mejoras en próximos lanzamientos. Envíenos sus comentarios mediante el chat en el producto.</block>
+  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">Tenga en cuenta lo siguiente:</block>
+  <block id="5e4e7672ec2ba2b8a763da7f6714e212" category="list-text">La consola de gestión de casos en la parte superior de la página ofrece dos vistas:</block>
+  <block id="01c3ffea552d74a5ae390b10e71a1f26" category="list-text">La vista de la izquierda muestra el total de casos abiertos en los últimos 3 meses por la cuenta de usuario NSS que ha proporcionado.</block>
+  <block id="e3b6c09a5686233f72ce1ea60a1eb088" category="list-text">La vista de la derecha muestra el total de casos abiertos en los últimos 3 meses a nivel de su compañía en función de su cuenta NSS de usuario.</block>
+  <block id="b19b168cc8a2b8c984465e140256b3a2" category="paragraph">Los resultados de la tabla reflejan los casos relacionados con la vista seleccionada.</block>
+  <block id="56dcadeee6b0e5c47a52673f9b5a0bb3" category="list-text">Puede agregar o quitar columnas de interés y filtrar el contenido de columnas como prioridad y estado. Otras columnas proporcionan funciones de clasificación.</block>
+  <block id="6f936762e1223311f031685422fcd3a4" category="paragraph">Consulte los pasos a continuación para obtener más información.</block>
+  <block id="b14929795a61440e9b4ec9f8a4885ae3" category="list-text">En el nivel por caso, ofrecemos la posibilidad de actualizar las notas de un caso o cerrar un caso que no esté ya en estado cerrado o pendiente de cierre.</block>
+  <block id="0a4050ac39772e9281a9aba225254bf8" category="list-text">Selecciona *Gestión de casos* y, si se te solicita, agrega tu cuenta de NSS a BlueXP.</block>
+  <block id="d8ce1865cf1fe3cffd60300b4b86ad63" category="paragraph">La página *Administración de casos* muestra casos abiertos relacionados con la cuenta NSS asociada con su cuenta de usuario de BlueXP. Esta es la misma cuenta NSS que aparece en la parte superior de la página *NSS Management*.</block>
+  <block id="2ae5ae78bdb2d222f15fd8e89248709c" category="list-text">Si lo desea, puede modificar la información que se muestra en la tabla:</block>
+  <block id="1d39d3ab518e1e3f16cbafb2a56e1fd9" category="list-text">En *Casos de la organización*, selecciona *Ver* para ver todos los casos asociados a tu empresa.</block>
+  <block id="059e856250b59be3069246887b74a23c" category="list-text">Modifique el rango de fechas eligiendo un rango de fechas exacto o eligiendo un marco de tiempo diferente.</block>
+  <block id="dfb3764bce2548df4e06357403f9c7d0" category="inline-image-macro">Captura de pantalla de la opción situada encima de la tabla en la página de gestión de casos que permite elegir un intervalo de fechas exacto o los últimos 7 días, 30 días o 3 meses.</block>
+  <block id="4f7062c5c309a833cf46e4a1a5a5d366" category="paragraph"><block ref="4f7062c5c309a833cf46e4a1a5a5d366" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a1bb576be9e5a356290f231efb51b3f5" category="list-text">Filtre el contenido de las columnas.</block>
+  <block id="3753f10a59e21f58b30e3e67d416453e" category="inline-image-macro">Captura de pantalla de la opción de filtro de la columna Estado que permite filtrar casos que coinciden con un estado específico, como activo o cerrado.</block>
+  <block id="8f624dee500d9670a27c4404084a7a62" category="paragraph"><block ref="8f624dee500d9670a27c4404084a7a62" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1c6ea5ef583389e18e7d7bda70beaa71" category="inline-image-macro">El icono más que se muestra en la tabla</block>
+  <block id="002f1c0a8cf4a68b888010ddef3a7f7e" category="list-text">Para cambiar las columnas que aparecen en la tabla, seleccione <block ref="e55ec8dc42ae68d9326c51261c8a5f4f" category="inline-image-macro-rx" type="image"></block> y, a continuación, elija las columnas que desea mostrar.</block>
+  <block id="370b44009f1b82d0b6b178bb80cc62fa" category="inline-image-macro">Captura de pantalla que muestra las columnas que puede mostrar en la tabla.</block>
+  <block id="72c5c65442a2c44e7f2546b8b4c957df" category="paragraph"><block ref="72c5c65442a2c44e7f2546b8b4c957df" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad0ae9ea1f2e8d973a9a0f6bb169f494" category="inline-image-macro">Icono con tres puntos que aparece en la última columna de la tabla</block>
+  <block id="000a1376035909240f559b8ab724030c" category="list-text">Para gestionar un caso existente, <block ref="54181d1b918b28e5f92545f8b3b4a30c" category="inline-image-macro-rx" type="image"></block> seleccione y seleccione una de las opciones disponibles:</block>
+  <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">*Ver caso*: Ver todos los detalles sobre un caso específico.</block>
+  <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*Actualizar notas de caso*: Proporcione detalles adicionales sobre su problema o seleccione *cargar archivos* para adjuntar hasta un máximo de cinco archivos.</block>
+  <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*Cerrar caso*: Proporciona detalles sobre por qué estás cerrando el caso y selecciona *Cerrar caso*.</block>
+  <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">Captura de pantalla que muestra las acciones que puede realizar después de seleccionar el menú de la última columna de la tabla.</block>
+  <block id="6f7cf78e14aa346236a87d9541221fb2" category="paragraph"><block ref="6f7cf78e14aa346236a87d9541221fb2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1eba71d64e6c5e410e558530711e835b" category="summary">Las limitaciones conocidas identifican plataformas, dispositivos o funciones que no son compatibles con esta versión del producto o cuya interoperabilidad con esta no es óptima. Revise estas limitaciones detenidamente.</block>
+  <block id="482723983a4f2af954e36ff41e567451" category="doc">Limitaciones conocidas</block>
+  <block id="ef338156e543ebe7d256b6d8f22f9e85" category="section-title">Compatibilidad con la versión de imagen AMI</block>
+  <block id="b45d2f01140a8438773e64e031e1034d" category="paragraph">Solo mostramos hasta cuatro versiones recientes o revisiones de imágenes AMI para cada versión SQL. No permitimos la instalación desde una imagen AMI que sea más antigua que las últimas cuatro versiones.</block>
+  <block id="17817d9ebecefa73cfa5f281bd12bda0" category="section-title">AMI personalizada</block>
+  <block id="3e8378d52f1b29a77eda46e2080cc12a" category="paragraph">La implementación con una AMI personalizada supone que hay medios de instalación en la imagen. Esto es necesario para la configuración de FCI por los siguientes motivos:</block>
+  <block id="42eed7fbc29558ead5943c21ff6ccd23" category="list-text">Para desinstalar y volver a configurar el clúster de FCI</block>
+  <block id="38d570bac53577943aa45cc2faecb81c" category="list-text">Al seleccionar una intercalación distinta del conjunto de intercalación en la imagen para el despliegue independiente</block>
+  <block id="a798873e710657564aa8785b54567904" category="paragraph">Como parte de la puesta en marcha, Workload Factory no instala una AMI personalizada con varias instancias de Microsoft SQL Server. Solo se selecciona y configura la instancia predeterminada de Microsoft SQL Server como parte de la implementación.</block>
+  <block id="8eaca2a1775da148197249302df3a48e" category="section-title">Realice un rollback y vuelva a intentarlo para los despliegues fallidos</block>
+  <block id="b4eda91cb9cfd770c8fe6fd1fbba8622" category="paragraph">La reversión y los reintentos para implementaciones con errores no se admiten en Workload Factory. Puede revertir o volver a intentar una pila fallida desde la consola de CloudFormation en AWS.</block>
+  <block id="a8db05f211fc300c9067ae545363770c" category="section-title">Reversión de recursos de DNS y Active Directory</block>
+  <block id="9cb9f514238b54d29a883c0023dea05f" category="paragraph">Los siguientes recursos de DNS no se eliminan de Active Directory y DNS al revertir una prueba o una implementación fallida desde la consola de CloudFormation en AWS:</block>
+  <block id="97d161e9138710f13b20232b3994b61b" category="list-text">Cada nodo de la implementación de SQL a su dirección IP de gestión</block>
+  <block id="88ed858c862be91e7fb8e6110db8a7db" category="list-text">Nombre del cluster de Windows a las direcciones IP secundarias reservadas de las instancias EC2 en casos de FCI</block>
+  <block id="c02230cc7ae4768be220cae485a92f5a" category="list-text">Nombre de FCI de SQL a las dos direcciones IP reservadas de ambas instancias EC2 en FCI</block>
+  <block id="fa0e735ec30b8d46ef287abb49f81115" category="paragraph">Tendrás que limpiarlos manualmente o esperar a que el dominio purgue las entradas obsoletas.</block>
+  <block id="050f76e7ea0d72ee5f314133fc2f2ea0" category="section-title">Soporte de configuración de grupos de disponibilidad permanente</block>
+  <block id="24b348c8bd07496b62afd8994bae270d" category="paragraph">La gestión de las configuraciones de grupos de disponibilidad permanente no es compatible con Workload Factory.</block>
+  <block id="67452f95912effa4aa65611cfdc03c1e" category="section-title">Grupos de seguridad de Active Directory gestionados por el usuario</block>
+  <block id="510b43743eda65eede671d1132c8ae46" category="paragraph">Si selecciona “Active Directory gestionado por el usuario” durante la implementación de Microsoft SQL Server en Workload Factory, debe proporcionar un grupo de seguridad que permita el tráfico entre las instancias EC2 al servicio de directorio para la implementación. Workload Factory no conecta automáticamente el grupo de seguridad para Active Directory gestionado por el usuario como lo hace para AWS Managed Microsoft AD.</block>
+  <block id="eaa7c0518c6da1cd852899e0ac6e2378" category="section-title">Claves de cifrado personalizadas</block>
+  <block id="7a54f916884cb200639bac0c32ef1bec" category="paragraph">Las claves de cifrado personalizadas para FSx para ONTAP no figuran en la lista en función de la aplicabilidad del servicio. Debe elegir la clave adecuada. Las claves gestionadas de AWS se filtran según la aplicabilidad al servicio.</block>
+  <block id="cb3bcee5e2029f06ad38b81d08ad4170" category="section-title">Detección de Microsoft SQL Server</block>
+  <block id="5424656079a2831a2c08effc8c949f00" category="paragraph">La detección de Microsoft SQL Server no se ha guardado. Cada vez que accede a bases de datos en Workload Factory, la detección de Microsoft SQL Server se ejecuta de nuevo para identificar las instalaciones SQL en la región.</block>
+  <block id="8705a3301d5f73e6ea84b65029e83433" category="section-title">Plantilla de CloudFormation</block>
+  <block id="744086615b7afe69eb64b5ed9b1b2fc2" category="paragraph">Una plantilla CloudFormation (archivo YAML) descargada o copiada generada por CodeBox tiene un período de retención limitado de siete días.</block>
+  <block id="0d966ee7b6d851b13a0a1f2ed24a24f2" category="section-title">Soporte de sandbox</block>
+  <block id="db3c885c5e8af2c0a6d13c3c191c6317" category="list-text">El número máximo de clones de sandbox que se pueden crear desde un servidor de base de datos es 50.</block>
+  <block id="5d607187a8dfda63b556426b96ca4433" category="list-text">La creación de sandbox no se admite en los siguientes casos:</block>
+  <block id="29b82a6a22751f3fb1ee2f3272c4ebd0" category="list-text">Los archivos de datos y de registro residen en el mismo disco.</block>
+  <block id="26d49aa4fda6be53d0166489827d4d7e" category="list-text">La base de datos de origen tiene varios archivos de datos.</block>
+  <block id="16af4c40ef745904a4b9f7f47ce1554d" category="section-title">Detección y gestión de Microsoft SQL Server</block>
+  <block id="b51c61da776514997803f3c2d879f6cd" category="list-text">La detección y gestión de instancias de Microsoft SQL no son compatibles cuando se utiliza una red privada sin conectividad externa.</block>
+  <block id="b7e66788f3dbbc1f39b770c356e6b0bb" category="list-text">Cuando las instancias de Microsoft SQL bloquean la autenticación basada en Windows y solo permiten la autenticación de usuario de Microsoft SQL, se admite la detección de Microsoft SQL Server, pero no se admiten las operaciones de administración.</block>
+  <block id="cf48d7891f28d92c4308fb5debb574b0" category="section-title">Explora el ahorro</block>
+  <block id="dc1fe4aeb4ef49ddd2886b9ad39d5fa0" category="list-text">En la pestaña Inventario, el coste estimado que se muestra para cada instancia de Microsoft SQL se calcula en el nivel de sistema de archivos de FSx para ONTAP, no en los volúmenes que alojan la instancia de SQL.</block>
+  <block id="15e6f9d1eeb705afffca65fbfcab4fb8" category="list-text">Los cálculos de ahorro no son compatibles con FSx para el servidor de archivos de Windows.</block>
+  <block id="08a80e13fd6056e3676428e5f462bea2" category="summary">Databases es un servicio integral de puesta en marcha y mantenimiento de bases de datos con mejores prácticas integradas para optimización, thin cloning automático y funcionalidades de supervisión y resolución.</block>
+  <block id="da799d994391b08e1d7460381c98559f" category="doc">Más información sobre Workload Factory para bases de datos</block>
+  <block id="84f91afd14d8353e5afe232c3387e4ca" category="paragraph">Workload Factory para bases de datos es un servicio integral de puesta en marcha y mantenimiento de bases de datos con mejores prácticas integradas para optimización, thin cloning automático y funciones de supervisión y resolución.</block>
+  <block id="7ce6bc9cdba7682a4a441a03e40d503c" category="section-title">¿Qué es Workload Factory para bases de datos?</block>
+  <block id="a72b771aab79f247f6de493cbb441b0c" category="paragraph">Workload Factory para bases de datos detecta, evalúa, planifica, aprovisiona y mueve datos de Microsoft SQL Server a implementaciones de Amazon FSx para NetApp ONTAP (FSx para ONTAP) optimizadas para satisfacer tus expectativas de rendimiento y costes mientras sigues las prácticas recomendadas del sector. A lo largo del ciclo de vida, Workload Factory ofrece una optimización y una gestión continuas para las bases de datos en FSx para ONTAP.</block>
+  <block id="6ae8e58cb52cd45b321927bcb2961f4e" category="inline-link-macro">Descripción general de Workload Factory</block>
+  <block id="1de2994a7e96b0f9f5ffc5fbf74c7cfe" category="paragraph">Para obtener más información sobre Workload Factory, consulte la <block ref="74c54dbaee345ad32db577029257fe31" category="inline-link-macro-rx"></block>sección .</block>
+  <block id="b6e94273667fda2a79903f22b68e8dfd" category="section-title">Ventajas de Workload Factory para bases de datos autogestionadas</block>
+  <block id="e64b68425fc9016aa12a0706d8ce873b" category="paragraph">Workload Factory ofrece las siguientes prácticas recomendadas y automatización para bases de datos autogestionadas.</block>
+  <block id="c2ffe02d76c4f089648f1647b43e4ee5" category="section-title">Mejores prácticas</block>
+  <block id="8c13e82e1f3b94b558fc62725c62e275" category="list-text">Conocimiento integrado de la nube de AWS, servidores de Microsoft Windows y SQL, y NetApp ONTAP para puestas en marcha de SQL Server en instancias EC2.</block>
+  <block id="3c346a6e5b8bfffe9f594d4b570f64b2" category="list-text">Coste total de propiedad Implementación optimizada.</block>
+  <block id="95b422671139518fef625dc57caa75d6" category="list-text">Automatización de puesta en marcha integral que sigue las prácticas recomendadas de AWS, Microsoft y ONTAP.</block>
+  <block id="a5bf0aed4e29e1013fda731bbe113130" category="list-text">El modo de implementación “Quick create” te ayuda a evitar posibles errores con la configuración manual.</block>
+  <block id="5354d1e9ecaabd928d4235d17bb92d9e" category="section-title">Automatización con Workload Factory CodeBox</block>
+  <block id="d9c90e086fcb11b72cc6731b0bd016c2" category="paragraph">Workload Factory introduce la automatización integrada con _CodeBox_. CodeBox ofrece las siguientes ventajas de automatización:</block>
+  <block id="b6cb73add7d1e5bdd9c209cdffe99073" category="list-text">*Generación de fragmentos de código*: Los fragmentos de infraestructura como código (IAC) se generan durante la creación de recursos, lo que permite una integración perfecta con los flujos de trabajo de orquestación existentes.</block>
+  <block id="3b9355b880979c4a10f7d88ded288364" category="list-text">*Copiloto de infraestructura como código*: El CodeBox es un copiloto de infraestructura como código (IAC) que ayuda a los desarrolladores y DevOps a generar código para ejecutar cualquier operación soportada por Workload Factory.</block>
+  <block id="d8135e6fae6748dcba5e9d108c9af427" category="list-text">*Visor de código y catálogo de automatización*: El CodeBox proporciona un visor de código para un análisis rápido de la automatización y un catálogo de automatización para una rápida reutilización futura.</block>
+  <block id="1dfcc4058d887e51547cd071ae73d5ca" category="section-title">Workloads Factory para funciones de bases de datos</block>
+  <block id="0494ceb57b82f2b9e1bd730752e840ff" category="paragraph">Workload Factory para bases de datos ofrece las siguientes funciones:</block>
+  <block id="bd3efbff9056d0d06b47ed96623fda0d" category="list-text">* Implementaciones sencillas y rápidas*: Simplifique y optimice su experiencia de aprovisionamiento seleccionando respuestas a preguntas de especificación y eliminando el tiempo que normalmente se requiere para investigar cómo aprovisionar y configurar su Microsoft SQL Server en AWS.</block>
+  <block id="c84184a44160f51b596f38b61353a112" category="list-text">*Orquestación automatizada*: Disponible a través de la interfaz de usuario de Workload Factory con los modos de implementación _Quick_ y _Advanced_, Chatbot de Workload Factory y API con AWS CloudFormation.</block>
+  <block id="7cefdd05c6620bfdf3062de5a70831ff" category="list-text">* Funciones incorporadas*: Utilice las mejores prácticas de NetApp, Microsoft y Amazon y selecciones de recursos de AWS integradas en la configuración de implementación.</block>
+  <block id="7adc4f191e47df4c954a86e42c12345b" category="list-text">* Estimación de costes*: Evalúe el ahorro de costes potencial con la calculadora de almacenamiento de Workload Factory que calcula y detalla los costes de almacenamiento, computación, licencias SQL, instantáneas y clones detallados para implementaciones existentes de Microsoft SQL Server con Elastic Block Store en comparación con FSx para ONTAP.</block>
+  <block id="00642e68a741fc0fb7b3297f3d85e094" category="list-text">*Plantillas de automatización reutilizables*: Crea, reutiliza y personaliza plantillas de CloudFormation desde el CodeBox de Workload Factory para futuras implementaciones de Microsoft SQL Server en múltiples entornos.</block>
+  <block id="6a38d48a56c8cf63764ec7a649aee027" category="list-text">* Descubrimiento y aprovisionamiento de recursos de AWS*: Detecte automáticamente Microsoft SQL Server en FSx para ONTAP, FSx para servidores de archivos de Windows y Elastic Block Store desplegados desde su cuenta de AWS. El Inventario de Bases de Datos sirve como punto de partida para explorar oportunidades de ahorro de costes para servidores en otros sistemas de almacenamiento de AWS o una herramienta de gestión para instancias y servidores basados en FSx para ONTAP.</block>
+  <block id="7d90beb1bb8e5bcdda770d6f48cd32a0" category="list-text">*Creación de Sandbox*: Cree un entorno de base de datos aislado y bajo demanda que se pueda utilizar para pruebas, integración, diagnóstico y capacitación, sin afectar a los datos de producción.</block>
+  <block id="33b7686f3230da73b8d9f40afd7a5f0b" category="list-text">* Creación de bases de datos*: Cree una base de datos de usuario para sus servidores Microsoft SQL Server existentes con los modos _Quick_ o _Advanced_ para configurar la clasificación de la base de datos, los nombres de los archivos y los tamaños. Se incluye la configuración del almacenamiento.</block>
+  <block id="e8c2713d52e7c0b242eb104ecd1ab10d" category="list-text">*Monitoreo de trabajos*: Monitoree y rastree el progreso de la ejecución de trabajos de la base de datos y diagnostique y solucione problemas en caso de que ocurra algún fallo.</block>
+  <block id="8badaf3a6e7dceba915a34b1cb4f0380" category="section-title">Beneficios de Amazon FSx para ONTAP para las bases de datos autogestionadas</block>
+  <block id="3f6d25a55efe97b6946734de9f11179a" category="list-text">* Durabilidad, disponibilidad y fiabilidad*: FSX for ONTAP ofrece múltiples características que mejoran la durabilidad y disponibilidad de las bases de datos autogestionadas alojadas en FSx for ONTAP, como la alta disponibilidad compatible con implementaciones de zonas de disponibilidad únicas y múltiples, instantáneas para aplicaciones, recuperación de desastres mejorada mediante replicación y copias de seguridad eficientes.</block>
+  <block id="8a1827433b93fc37d164f704e5105ae4" category="list-text">*Rendimiento y escalabilidad*: FSX para ONTAP ofrece optimización del rendimiento con alto rendimiento, baja latencia, conexiones de red de alta velocidad y escalabilidad con múltiples sistemas de archivos para escalar el rendimiento agregado requerido para una carga de trabajo.</block>
+  <block id="831029cddd4860adff9325d95aeb21bf" category="list-text">* Gestión de datos y eficiencia*: FSX para ONTAP ofrece múltiples funciones que mejoran la gestión y la eficiencia de los datos, como clones ligeros con gestión eficiente del espacio, thin provisioning, compresión y deduplicación y organización en niveles de los datos a los que se accede con poca frecuencia en el pool de capacidad.</block>
+  <block id="b637a3cf08f073bba2452017262c6f0e" category="inline-link-macro">Más información sobre FSx for ONTAP para la fábrica de cargas de trabajo</block>
+  <block id="5451b14a2cc0c73081374e5d49684660" category="paragraph"><block ref="c8d2af036244cbf733f21cfd3484b898" category="inline-link-macro-rx"></block>.</block>
+  <block id="4f7eefbe2de22aca4f898d56772c8c9f" category="section-title">Modos operativos en Fábrica de carga de trabajo</block>
+  <block id="31944e919fe42c8abb03674ffd29b57c" category="paragraph">Tres modos operativos diferentes - _BASIC_, _READ_ y _AUTOMATIC_ - ofrecen opciones flexibles para la implementación dentro y fuera de Workload Factory. Obtenga valor inmediato en el modo _BASIC_ con fragmentos de código para usar fuera de Workload Factory. Obtenga valor incremental con confianza incremental en los modos _READ_ y _AUTOMATIC_.</block>
+  <block id="d7df29879844d570a3e64b343a7227e2" category="inline-link-macro">Modos operativos en Fábrica de carga de trabajo</block>
+  <block id="dde084f0d745ae579f63b79d128d3cac" category="paragraph">Más información sobre <block ref="006fa329b97a0e61c793bc816f297534" category="inline-link-macro-rx"></block>.</block>
+  <block id="ac4cc23ff41c1cade709408d699aa76e" category="section-title">Detalles de la implementación</block>
+  <block id="1f0b82560627b660c6c6958a1df834b8" category="section-title">Configuraciones admitidas</block>
+  <block id="93cc72dd51765bcbce5d06693efbf636" category="paragraph">Workload Factory para Microsoft SQL Server admite tanto implementaciones de alta disponibilidad (instancias de clúster de conmutación por error siempre activas) como de instancias individuales según las prácticas recomendadas de AWS, NetApp ONTAP y SQL Server.</block>
+  <block id="b014dec561cac856e6794b24ddf4e0ae" category="cell">Versión de SQL Server</block>
+  <block id="ed590cb2453f0683b64cb528f78610a2" category="cell">Windows Server 2016</block>
+  <block id="31f8757839909e87266f2b53482c86ef" category="cell">Windows Server 2019</block>
+  <block id="de547bcab0e20f54ec4d5e95ba44b0b1" category="cell">Windows Server 2022</block>
+  <block id="6398e4fc7f27908af1536ab8fc6a8a8c" category="paragraph">SQL Server 2016</block>
+  <block id="93cba07454f06a4a960172bbd6e2a435" category="paragraph">Sí</block>
+  <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="paragraph">No</block>
+  <block id="e40ceeaead715c564e85bdc9b183e491" category="paragraph">SQL Server 2019</block>
+  <block id="4299db16db1e4a3a88d3942050ce43f2" category="paragraph">SQL Server 2022</block>
+  <block id="1db243dea70edead0d0207ad0a6fcf03" category="section-title">Arquitecturas de puesta en marcha</block>
+  <block id="116c94009b6bbaaad10e64be0dc2ae6e" category="paragraph">Las arquitecturas de despliegue de Zona de disponibilidad única y Zonas de disponibilidad múltiples son compatibles con las bases de datos.</block>
+  <block id="213cb4fa8613615178e793d9dcd42165" category="paragraph-title">Zona de disponibilidad única</block>
+  <block id="eceb487f9210f0e2c685f44aa826a428" category="paragraph">El siguiente diagrama muestra la arquitectura autónoma con una sola zona de disponibilidad en una sola región.</block>
+  <block id="3a208403e9b3bdc3d47e8d86caa46a2d" category="inline-image-macro">Diagrama de arquitectura independiente con una única implementación de zona de disponibilidad de Amazon FSx para NetApp ONTAP en una sola región</block>
+  <block id="2605703227c311becf078f90ead130a4" category="paragraph"><block ref="2605703227c311becf078f90ead130a4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bc2a46f921494df9fc5f911909c03874" category="paragraph-title">Múltiples zonas de disponibilidad</block>
+  <block id="45ff909c10981ab6ad483d76f5f0eb91" category="paragraph">El siguiente diagrama muestra la arquitectura de alta disponibilidad (HA) de dos nodos con clúster de instancia de clúster de conmutación por error (FCI) en una sola región.</block>
+  <block id="d1839628bae5aadf28be4f64d597e494" category="inline-image-macro">diagrama de arquitectura de alta disponibilidad de dos nodos con cluster de instancia de cluster de conmutación por error en una única región</block>
+  <block id="19ed9a0af6785ad2fee15941251e87c1" category="paragraph"><block ref="19ed9a0af6785ad2fee15941251e87c1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="49d814834d377dce6b3bd66dc0f18083" category="section-title">Servicios de AWS integrados</block>
+  <block id="da0a192f6b5c69db0c8e520f16669cc8" category="paragraph">Las bases de datos incluyen los siguientes servicios integrados de AWS:</block>
+  <block id="58e3bfbabf904de43a6a22aca509b0d8" category="list-text">Formación CloudFormation</block>
+  <block id="7ba6eb634dd2e14688216874c0948a82" category="list-text">Servicio de notificación simple</block>
+  <block id="311bdda432aba736b8dcb987523c0c92" category="list-text">CloudWatch</block>
+  <block id="8e75b153e61c22a8ea4e14aadc7cb4ee" category="list-text">Administrador de sistemas</block>
+  <block id="6557196a178a8218ef6c930021f81c27" category="list-text">Administrador de secretos</block>
+  <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">Regiones admitidas</block>
+  <block id="d5b1044cbc510048a5dac270bde89ed5" category="inline-link">Consulte las regiones de Amazon admitidas.</block>
+  <block id="ad308330f566581c7c1ac5769e060883" category="paragraph">Las bases de datos están soportadas en todas las regiones comerciales en las que se soporta FSX para ONTAP.<block ref="54b85ac4e794c565ea8c7aad421e6e67" category="inline-link-rx"></block></block>
+  <block id="186585d175a4fff1722ac82a5520c584" category="paragraph">No se admiten las siguientes regiones de AWS:</block>
+  <block id="cc6dcf46ebcb08f1caa420526cc0ab18" category="list-text">Regiones de China</block>
+  <block id="1411debdb32e6b128ca27ec92a708cbd" category="list-text">Regiones GovCloud (EE. UU.</block>
+  <block id="ecd96786b112acf6970d6aaf3be575ca" category="list-text">Cloud secreto</block>
+  <block id="151ef168e17772f7a361db78a0c86552" category="list-text">Cloud secreto superior</block>
+  <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">Obtener ayuda</block>
+  <block id="da444b283df699667b2316206972bdfe" category="paragraph">Amazon FSX para ONTAP de NetApp es una solución de primera parte de AWS. Para preguntas o problemas de soporte técnico asociados con tu ONTAP sistema de archivos, infraestructura o cualquier solución que use este servicio, usa el Centro de soporte de tu consola de administración de AWS para abrir un caso de soporte con AWS. Seleccione el servicio "FSX for ONTAP" y la categoría adecuada. Proporcione la información restante necesaria para crear su caso de soporte de AWS.</block>
+  <block id="fc00732c3b79a8178cfd0556a8722a13" category="inline-link-macro">Obtener ayuda para las bases de datos de Workload Factory</block>
+  <block id="5a0bab72bf8800539ee19d4ebfcb6501" category="paragraph">Para preguntas generales acerca de las aplicaciones y servicios de Workload Factory o Workload Factory, consulte <block ref="4318b5ec74addc6e7964ffb1638ebe63" category="inline-link-macro-rx"></block>.</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Avisos legales</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">Los avisos legales proporcionan acceso a las declaraciones de copyright, marcas comerciales, patentes y mucho más.</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Copyright</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marcas comerciales</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP, el logotipo de NETAPP y las marcas enumeradas en la página de marcas comerciales de NetApp son marcas comerciales de NetApp, Inc. Los demás nombres de empresas y productos son marcas comerciales de sus respectivos propietarios.</block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Estadounidenses</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Puede encontrar una lista actual de las patentes propiedad de NetApp en:</block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Política de privacidad</block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Código abierto</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Los archivos de notificación proporcionan información sobre los derechos de autor y las licencias de terceros que se utilizan en software de NetApp.</block>
+  <block id="22e5a7336ebe77138f0282cedcb069ab" category="inline-link">Fábrica de carga de trabajo</block>
+  <block id="7ffcbeca3b450b8d05f9cf0eedb617f8" category="list-text"><block ref="7ffcbeca3b450b8d05f9cf0eedb617f8" category="inline-link-rx"></block></block>
+  <block id="887f800d53dc2cd5a7894464a6f60a6b" category="inline-link">Workloads Factory para bases de datos</block>
+  <block id="7e505d4c691d86e5bd415f9ccb849966" category="list-text"><block ref="7e505d4c691d86e5bd415f9ccb849966" category="inline-link-rx"></block></block>
+  <block id="9591e2d54c998ae1c9d48fd5be7762e9" category="inline-link">Workload Factory para GenAI</block>
+  <block id="f38c7416013fc239c3dd3288d40a40c0" category="list-text"><block ref="f38c7416013fc239c3dd3288d40a40c0" category="inline-link-rx"></block></block>
+  <block id="404a5efb62a3a3f22b02593091042608" category="inline-link">Workload Factory para VMware</block>
+  <block id="9a211183d3fa82368d76fdbab5abdeda" category="list-text"><block ref="9a211183d3fa82368d76fdbab5abdeda" category="inline-link-rx"></block></block>
+  <block id="aee6f8bed903be1fd0e588691dc83ee2" category="summary">Gestione instancias de Microsoft SQL Server en Workload Factory para bases de datos.</block>
+  <block id="9d971c2b6396eeae14d925b1644bb589" category="doc">Gestione instancias de Microsoft SQL Server</block>
+  <block id="128a387db84d21648193a1164f2b6275" category="paragraph">Gestione instancias de Microsoft SQL Server para supervisar el estado de la instancia y la base de datos, la utilización de recursos, la protección y el rendimiento del almacenamiento en Workload Factory para bases de datos.</block>
+  <block id="6130b5542240619621b88baf10547d84" category="paragraph">Las bases de datos solo pueden gestionar instancias de Microsoft SQL Server con el almacenamiento del sistema de archivos FSx para ONTAP.</block>
+  <block id="b43307219a7b65a8301c057d6f6b5478" category="section-title">Gestión de instancias de Microsoft SQL Server</block>
+  <block id="7c6c9edd9611134efa9dc1ed2f630486" category="paragraph">La gestión de instancias de Microsoft SQL Server incluye las siguientes tareas:</block>
+  <block id="4c2074388cf4ff8bed676ca933f2b317" category="list-text">Gestione una instancia de host</block>
+  <block id="994fd8f490177306769be0a7cbfcc3e6" category="list-text">Ver una instancia gestionada</block>
+  <block id="948d113c0ab3cb85650dda6912a734c5" category="list-text">Ver bases de datos</block>
+  <block id="516bc1905150a9c47ed4ba785d304c08" category="list-text">Anular la gestión de una instancia de host</block>
+  <block id="327ffbd91edd4e33d5518e4e2ffe32a7" category="inline-link-macro">detectar una o más instancias de host</block>
+  <block id="f55f72ac990fbff5b0fa9fa6ef2a43f8" category="paragraph">Para completar cualquiera de estas tareas, debe <block ref="7590173c3966c31656f7462bb5d71596" category="inline-link-macro-rx"></block>.</block>
+  <block id="9ee949a52ce818bc3dc8adf7994630ff" category="paragraph">Gestionar instancias de Microsoft SQL Server detectadas o no gestionadas para un host.</block>
+  <block id="cd78ff90ddf6720085af92558142d117" category="list-text">Debe haber detectado una instancia en el host que está disponible para la gestión.</block>
+  <block id="ec23fcbca926c2c56578aa4b009e5426" category="inline-link-macro">Documentación de Microsoft PowerShell para Windows</block>
+  <block id="0a2076265c3748f47dd0af532c7aface" category="list-text">Se necesita PowerShell7 para gestionar la instancia de la base de datos. Instale PowerShell7 manualmente consultando <block ref="83fcecee5da20c347486b34eede460ed" category="inline-link-macro-rx"></block>.</block>
+  <block id="14018e7d1ee628c58a60c375fd95df80" category="list-text">Todas las operaciones de gestión las ejecuta el agente de AWS System Manager mediante<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> privilegios de usuario. Proporcione los siguientes permisos para<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> el usuario en el servidor de bases de datos:</block>
+  <block id="c502f2bcb11d9b0ae9cc04006ed9085c" category="list-text"><block ref="f3df1667f9c6ceb0ff9503ed0049f55c" prefix="" category="inline-code"></block></block>
+  <block id="901633010bf118aaf6f388141cdd64f9" category="list-text"><block ref="e3181656ffc465b7de7742ba402b2527" prefix="" category="inline-code"></block></block>
+  <block id="0806315ac4bdc0f00042fe455dd8dfeb" category="list-text"><block ref="f787572bd533c2e129b8fe16237eb4bf" prefix="" category="inline-code"></block></block>
+  <block id="5051d68578089ab9d5878b78fa2dffe3" category="list-text"><block ref="651c416ccdee61d9b2abf2d88f4a4e97" prefix="" category="inline-code"></block></block>
+  <block id="afd582c0b2df85a795497b5f15267fc2" category="list-text"><block ref="ef6ac19c607206bb40d2ebb779ec2c8c" prefix="" category="inline-code"></block></block>
+  <block id="69ef3028600d545d3574c333e7ca55b2" category="list-text"><block ref="056ceeb0ee0b0e9d88285e8e483f5943" prefix="" category="inline-code"></block></block>
+  <block id="aac2a7646728f5a7e043cf96134ccdb3" category="list-text">Haga clic en *Administrar* en la fila del host para administrar.</block>
+  <block id="2fb4e3404c1ed4190dc6ef818393c670" category="list-text">Seleccione una o más instancias de host para gestionar.</block>
+  <block id="5a71da60e1bd3ad61adeed4b3b25dfd4" category="list-text">Haga clic en *Administrar*.</block>
+  <block id="142e8c494504dba40c34648c3aee0f93" category="paragraph">Se produce un error en la operación cuando Microsoft SQL Server carece de ciertos módulos PowerShell y scripts de gestión. Oracle Workload Factory activa un trabajo de preparación de recursos para instalar los módulos y scripts que faltan, que puede ver en la pestaña Supervisión de trabajos. Cuando finalice el trabajo, vuelva a intentarlo para gestionar la instancia de host.</block>
+  <block id="c08e85e895d76938ea6dece5bb44d66e" category="paragraph">Puede ver una instancia gestionada siguiendo estos pasos.</block>
+  <block id="8719fc3365176d7b81bdcbf4c1ff4a2f" category="list-text">Haga clic en la flecha desplegable para expandir la fila del host y ver sus instancias gestionadas.</block>
+  <block id="7a85061671bf8d085efe2cb8dfd1c79e" category="paragraph">El host se expande y aparecen las instancias del host.</block>
+  <block id="d389f01b8dde275b0dcea0f5988294e9" category="list-text">Haz clic en el menú de tres puntos de la instancia para ver y luego selecciona *Ver instancia*.</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Resultado</block>
+  <block id="124a4b88b8d9e1fc268a022789dfa437" category="paragraph">La visión general de la instancia aparece en el separador Inventario.</block>
+  <block id="12d2adb5a33b1aa2d5dffa5f023e36e4" category="paragraph">Puede ver las bases de datos gestionadas por la instancia gestionada siguiendo estos pasos.</block>
+  <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">Haga clic en la flecha desplegable para expandir la fila del host para ver sus bases de datos.</block>
+  <block id="80dfa1b683b7a7caa12e2cd38f13eb9e" category="list-text">Haga clic en el menú de tres puntos de la instancia que contiene las bases de datos que desea ver.</block>
+  <block id="bab47e98a40b74089a0df1373390d048" category="list-text">Seleccione *Ver bases de datos*.</block>
+  <block id="c86b7424c07159a13fb442303997ee5e" category="paragraph">La lista de bases de datos de la instancia aparece en la pestaña Inventory.</block>
+  <block id="1654b38c29f5708868d01a77911262a6" category="paragraph">Anule la gestión de una instancia de host siguiendo estos pasos.</block>
+  <block id="65cc39a76868117dd307472ad16886fe" category="list-text">Haga clic en la flecha desplegable para ampliar la fila de la instancia de host que desea anular la gestión.</block>
+  <block id="2c5e94e7fb3f058dd79551c37346e05f" category="list-text">Haga clic en el menú de tres puntos de la instancia para desgestionar.</block>
+  <block id="15dbb4d45ce02c5b74e74fc25c85c667" category="list-text">Seleccione *Desgestionar*.</block>
+  <block id="96a30701e83b6fe09ce36fcd863cb65b" category="paragraph">La instancia de host ahora no está gestionada.</block>
+  <block id="653f8072d269cfaef8cb67c5329e4429" category="summary">Realice un seguimiento de los trabajos de base de datos y supervise las bases de datos en Workload Factory para las bases de datos.</block>
+  <block id="252215232d636a7c096b2327e9a20b42" category="doc">Supervisar bases de datos</block>
+  <block id="3b686e6b914c6cbbc0c51a086c2bac15" category="paragraph">Realice un seguimiento de los trabajos de base de datos y supervise las bases de datos con Workload Factory para las bases de datos.</block>
+  <block id="8e6a6b95adffc91a47a882f2247cc6b3" category="paragraph">Database proporciona supervisión de trabajos para que pueda realizar un seguimiento del progreso de los trabajos, así como diagnosticar y solucionar problemas en caso de que se produzca algún fallo. Además, los filtros por tipo y estado, la función de búsqueda y la opción para descargar la tabla de trabajos ayudan con la navegación y los informes de los trabajos de base de datos.</block>
+  <block id="67b0a66954400448325457f930e0f82b" category="paragraph">La supervisión de trabajos admite hasta tres niveles de supervisión en función del trabajo. Por ejemplo, para la creación de clones de una nueva base de datos y un espacio de pruebas, la supervisión de trabajos realiza un seguimiento de los trabajos primarios y los subtrabajos.</block>
+  <block id="b830a8f027299af6d1d8ffbb130bcc58" category="list-text">Niveles de supervisión de trabajos</block>
+  <block id="f52bf93027629736a089ef7f590091e0" category="list-text">Nivel 1 (trabajo principal): Realiza un seguimiento del trabajo de despliegue del host.</block>
+  <block id="0954e42bf0119b1189263290f1e567d2" category="list-text">Nivel 2 (subtrabajo): Realiza un seguimiento de los subtrabajos relacionados con el trabajo padre de despliegue del host.</block>
+  <block id="df942ff3756f5cbd24f42b521acc64f8" category="list-text">Nivel 3 (tarea): Enumera la secuencia de acciones realizadas en cada recurso.</block>
+  <block id="79ea79a1991592553b64d7ab6d30bdc0" category="list-text">Estado del trabajo</block>
+  <block id="b281132bb97bdf5fa0ee45a03264aa8b" category="list-text">La función de supervisión de trabajos realiza un seguimiento de los trabajos _in progress_, _completed_ y _failed_ diarios, semanales, quincenales y mensuales.</block>
+  <block id="5c7a83ffcacee6b5f8b97e61c20dc908" category="list-text">Retención de eventos de trabajo</block>
+  <block id="a4c455fbdb91b6c5a283d4a40626cd5b" category="list-text">Los eventos de supervisión de trabajos se conservan en la interfaz de usuario durante 30 días.</block>
+  <block id="4639d0e2e2909a747265c2f704128bca" category="section-title">Supervisar trabajos</block>
+  <block id="96ea9efb359a91a00480c8f67e682c8f" category="list-text">En Bases de datos, seleccione la pestaña *Supervisión de trabajos*.</block>
+  <block id="59d6e1b8f6bd894db211d6ad27845f97" category="list-text">En la pestaña Supervisión del trabajo, utilice los filtros o busque para restringir los resultados del trabajo. También es posible descargar un informe de trabajos.</block>
+  <block id="3edf792d0146bcfb61f393f728075b2a" category="list-text">Haga clic en el menú de tres puntos del trabajo y haga clic en *Ir a CloudFormation* para ver el registro de trabajo en la consola de AWS CloudFormation.</block>
+  <block id="22358702cb945913fe9b03fc1642777a" category="summary">Las bases de datos tienen tres modos diferentes que tienen requisitos diferentes.</block>
+  <block id="dea4dab62098ccd6801827376d992a3d" category="doc">Inicio rápido para bases de datos</block>
+  <block id="74c38aced7ecd3644388954bed39db62" category="paragraph">Con las bases de datos, puede comenzar inmediatamente en el modo _BASIC_. Si desea utilizar Workload Factory para detectar hosts, administrar recursos y mucho más, puede comenzar con unos pocos pasos.</block>
+  <block id="837dba0f12ab5569290872fa3522be2b" category="paragraph">Debe tener una cuenta de AWS para empezar.</block>
+  <block id="5d9619a28eecf7942aa537cd7938d8e1" category="paragraph">Siga estos pasos para comenzar con las bases de datos de Workload Factory.</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Una</block>
+  <block id="3d784fb83da69a092542ad97e84229a1" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Inicie sesión en Workload Factory</block>
+  <block id="e3f4d5b3a0d16b68c0f95c7031bbab0f" category="inline-link-macro">Configure una cuenta con Workload Factory</block>
+  <block id="0d6187a6dbf87b209ebf23f8fee502f9" category="inline-link-macro">inicie sesión</block>
+  <block id="21f5ea0bd2c3e06693357df598869216" category="paragraph">Tendrá que <block ref="9144f2d687cdfc71041a1a85068f8ab7" category="inline-link-macro-rx"></block> y. <block ref="10204cc30f2f30795b6ce82a21da7b1a" category="inline-link-macro-rx"></block></block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Dos</block>
+  <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Agregue credenciales y permisos</block>
+  <block id="ef10fd0583cb29fae9962398dccb7949" category="inline-link-macro">modos operativos _basic_, _read_ y _automatic_</block>
+  <block id="bdb2387bd633174e2bf3ed30c7e23fcd" category="paragraph">Elija entre <block ref="c3b5a6253a0d0b0237f0d9c1e9a7dfa2" category="inline-link-macro-rx"></block>.</block>
+  <block id="f13bb46705b371ce5ebc0ccc10f09bb0" category="inline-link-macro">Aprenda a desplegar un servidor de base de datos</block>
+  <block id="ec7d5e9cf31139aff85fee41410fc280" category="paragraph">Si opera en modo _BASIC_, no necesita ir más allá. Puede empezar a utilizar las bases de datos de Workload Factory para copiar muestras de código parcialmente completadas. En el mosaico Bases de datos, haga clic en *Implementar host de base de datos*. <block ref="cf724fcba48c8dc4cbe06a87f2c5df99" category="inline-link-macro-rx"></block>.</block>
+  <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">agregar credenciales a una cuenta manualmente</block>
+  <block id="9b0784be448bb1dc8f08485434f9a91a" category="paragraph">Si opera en modo _READ_ o _AUTOMATIC_, necesitará <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> seleccionar capacidades de carga de trabajo, como bases de datos e IA, y crear las políticas de IAM para asegurarse de que tiene los permisos correctos para operar en modo _READ_ o _AUTOMATIC_.</block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Tres</block>
+  <block id="6f6390592b833a81a0bda8c296a3c5b6" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Desplegar un servidor de bases de datos</block>
+  <block id="078f40fa23e0672777adc7c05d4773dd" category="inline-link-macro">puesta en marcha</block>
+  <block id="84c21b8cc296c1da3bb78060284eaac1" category="inline-link-macro">detectar un servidor de base de datos</block>
+  <block id="fb4bdf4175298f0102e06e87845aa4d6" category="paragraph">Por último, si elige operar en el modo _Automate_, debe <block ref="59bd3d71ec0b7c2f2cdc48f826101be3" category="inline-link-macro-rx"></block> o <block ref="ce52b47cf84b17846dfd2d3004a17efa" category="inline-link-macro-rx"></block> administrar los recursos del host y antes de agregar bases de datos de usuario.</block>
+  <block id="76e0353f7732c65129a16b1dee5f98f2" category="inline-link-macro">crear una base de datos de usuario</block>
+  <block id="9099614931eafcd02d62211a634872c7" category="inline-link-macro">clone el host para crear un espacio de pruebas</block>
+  <block id="64cae7d199a0b43d21cb5921156fe660" category="paragraph">Cuando tienes hosts gestionados de FSx para ONTAP en tu inventario de bases de datos, puedes <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block> o <block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block>.</block>
+  <block id="62fb4ddd9c2ed78b886998ecd2d0e7c9" category="inline-link-macro">Explore el ahorro con la calculadora de ahorro en almacenamiento</block>
+  <block id="46e1e62b294ac077d36c03536775e77e" category="paragraph">Cuando tenga hosts de Elastic Block Store en el inventario de bases de datos, puede <block ref="83cf511a46d8dbc3be6811900e4a471e" category="inline-link-macro-rx"></block>.</block>
+  <block id="01e2aa96525681771afc8a780e68ac21" category="summary">Actualice un clon de sandbox en Workload Factory para las bases de datos.</block>
+  <block id="4bf23107249668a7430988813a4ca710" category="doc">Actualice un clon de sandbox en Workload Factory para las bases de datos</block>
+  <block id="ba10e3e27f28a2dc29897fda5f22e311" category="paragraph">Actualice un clon de la base de datos para que sea equivalente a la base de datos de origen en el momento actual o en un momento específico anterior.</block>
+  <block id="24ba9febbdf4f0bdec223ad9cf7f746f" category="paragraph">Actualizar un clon actualiza el clon en la base de datos de origen en el momento actual o en una copia de Snapshot de la base de datos de origen realizada en un momento específico anterior. Se eliminarán todos los cambios realizados en el clon del sandbox.</block>
+  <block id="397fb4bed63b1f030827aee0d3d2a9f3" category="paragraph">La actualización sólo se puede realizar cuando la base de datos de origen está activa.</block>
+  <block id="745d72e1ba4e4047caaf9e8b73eca0e0" category="paragraph">Para actualizar un clon de base de datos a partir de una instantánea, la base de datos de origen debe tener al menos una instantánea para la operación.</block>
+  <block id="cab3779344e3617fc74d747eece40a4b" category="list-text">En la pestaña sandboxes, haz clic en el menú de tres puntos del clon del sandbox que quieras actualizar.</block>
+  <block id="112777b2a7f0a6d4155f3e87ae0eb154" category="list-text">Selecciona *Refrescar*.</block>
+  <block id="8d614611d1796186ed0a5e31381198f3" category="list-text">En el cuadro de diálogo Refrescar, seleccione una de las siguientes opciones:</block>
+  <block id="566e9d53702323dfc23f81cbdc95c142" category="list-text">*Refrescar a la hora actual*</block>
+  <block id="d8d2ddd0343da02a81aaa9fd2bb270e7" category="list-text">*Refrescar al punto en el tiempo*</block>
+  <block id="a9b30d5aec7c9f917986ea976c3be0c1" category="paragraph">Para esta opción, seleccione la instantánea de la base de datos en el menú desplegable a la que desea refrescar.</block>
+  <block id="d687cb57e7c0a2bc72631659265b9d28" category="list-text">Haga clic en *Actualizar*.</block>
+  <block id="b035db432577d47ec268d940961fcf04" category="summary">Revierte un clon de sandbox en Workload Factory para bases de datos.</block>
+  <block id="8c47d6d63e7f24e4db4a86b8caab2370" category="doc">Revierte un clon de sandbox en Workload Factory para bases de datos</block>
+  <block id="119092644393b63350941f731f4e02dd" category="paragraph">Revierte un clon de base de datos a su versión original en el momento de la creación.</block>
+  <block id="36bfe5aa9dbfbad068e6721ddea626bb" category="paragraph">Cuando se clona una base de datos, el clon que se creó es un clon _baseline_. Los datos de la base de datos clonada son los mismos que los de la base de datos de origen en el momento de la creación. A medida que los datos del clon de una base de datos de un recuadro de pruebas cambian con el tiempo, tal vez desee revertir los datos de nuevo a la línea de base cuando el clon se creó por primera vez. Esta operación se denomina volver a establecer la base de referencia de un clon. Volver a establecer la base de referencia de un clon en lugar de crear un clon nuevo ahorra espacio; sin embargo, se eliminará cualquier cambio realizado al clon de sandbox.</block>
+  <block id="e25b967c54d3008b230ffd4e18be90cb" category="list-text">En la pestaña sandboxes, haz clic en el menú de tres puntos del clon del sandbox que quieras revertir.</block>
+  <block id="0975db7a2f5f2be54dab36d8b76af890" category="list-text">Seleccione *Re-baseline*.</block>
+  <block id="ee39d3157a6b84476b1e530c43e7e0af" category="list-text">En el cuadro de diálogo Volver a establecer la base, haga clic en *Volver a establecer la base*.</block>
+  <block id="60662f13dd467742de00d5852483a73d" category="summary">Divida un clon de sandbox de la base de datos de origen para crear una nueva base de datos.</block>
+  <block id="7e63ac86d460cf0995a5ac132e4c8092" category="paragraph">Al dividir un clon de espacio aislado de la base de datos de origen se crea una nueva base de datos que consume una cierta cantidad de capacidad de almacenamiento. El clon se elimina cuando se completa la división y la nueva base de datos aparece en el inventario.</block>
+  <block id="bad5772919d73bf3b17433524b58ead6" category="inline-link-macro">aumente la capacidad del sistema de archivos</block>
+  <block id="eed30e1e95c32e95da513640e3e7e215" category="paragraph">Considere la capacidad de almacenamiento que se necesita para la nueva base de datos. Si es necesario, <block ref="ecf193ca0846a4137269dac878e92281" category="inline-link-macro-rx"></block> para el sistema de archivos FSx para ONTAP antes de empezar.</block>
+  <block id="be0c57159940db106da8c592b3a6f1a7" category="list-text">En la pestaña sandboxes, haz clic en el menú de tres puntos del clon del sandbox que quieras dividir.</block>
+  <block id="54e2c4dd2b9e992b761540f131754e81" category="list-text">Selecciona *Split*.</block>
+  <block id="05b751f4cbd4ae2611783e6ab193a961" category="list-text">En el cuadro de diálogo Dividir, haga clic en *Dividir*.</block>
+  <block id="b334128403ed60ff931947907046e1f0" category="summary">Para poder abrir un caso de soporte con el soporte técnico de NetApp, debe añadir una cuenta del sitio de soporte de NetApp a Workload Factory y, a continuación, registrarse para recibir soporte.</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">Regístrese para recibir soporte</block>
+  <block id="996ad73a480311d4f86d6946935389d2" category="paragraph">Se requiere el registro de soporte para recibir soporte técnico específico para Workload Factory y sus soluciones y servicios de almacenamiento. Tienes que registrarte para recibir soporte de la consola BlueXP, que es una consola web independiente de Workload Factory.</block>
+  <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">Al registrarse para recibir soporte, no se habilita el soporte de NetApp para un servicio de archivos de proveedor de cloud. Para obtener soporte técnico relacionado con un servicio de archivos de un proveedor de cloud, su infraestructura o cualquier solución que utilice el servicio, consulte «Obtener ayuda» en la documentación de Workload Factory para ese producto.</block>
+  <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Información general del registro de soporte</block>
+  <block id="d7e4bb081bf4ec4814d83edcfbdb8b96" category="paragraph">Registrar la suscripción de soporte de tu ID de cuenta (tu número de serie 960xxxxxxxxx de 20 dígitos, ubicado en la página de recursos de soporte de BlueXP) sirve como tu ID de suscripción de soporte único. Debe registrarse cada suscripción de asistencia técnica a nivel de cuenta de BlueXP.</block>
+  <block id="f9e05c2b383e3f11e3b4bebbe8952225" category="paragraph">El registro permite funcionalidades como la apertura de tickets de soporte y la generación automática de casos. Para completar el registro, añade cuentas del sitio de soporte de NetApp (NSS) a BlueXP, como se describe a continuación.</block>
+  <block id="856edc4caec68fece6859c4be9360f3c" category="section-title">Registre su cuenta de soporte de NetApp</block>
+  <block id="2d6573b6ae4c51dc24e58109473f2490" category="paragraph">Para registrarte para obtener soporte y activar el soporte, un usuario en tu cuenta debe asociar una cuenta en el sitio de soporte de NetApp a su inicio de sesión en BlueXP. La forma de registrarse para recibir soporte de NetApp depende de si ya tiene una cuenta del sitio de soporte de NetApp (NSS).</block>
+  <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">Cliente existente con una cuenta de NSS</block>
+  <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">Si es cliente de NetApp con una cuenta de NSS, solo tiene que registrarse para recibir soporte a través de BlueXP.</block>
+  <block id="0307a12e5749f8dd930472ee78f69d2c" category="list-text">En la parte superior derecha de la consola de BlueXP, seleccione el icono Configuración y seleccione *credenciales*.</block>
+  <block id="f19ab635e6d5f884a22ee4ce067fdbfd" category="list-text">Seleccione *Credenciales de usuario*.</block>
+  <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">Seleccione *Agregar credenciales NSS* y siga el aviso de autenticación del sitio de soporte de NetApp (NSS).</block>
+  <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">Para confirmar que el proceso de registro se ha realizado correctamente, seleccione el icono Ayuda y seleccione *Soporte*.</block>
+  <block id="8add4eb0d3f6ce61d374f3df3ee4eadf" category="paragraph">La página *Recursos* debe mostrar que su cuenta está registrada para soporte.</block>
+  <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">Una captura de pantalla que muestra un número de serie de cuenta y una casilla de verificación verde y el texto registrado para soporte.</block>
+  <block id="fa7897454f637026faa3e00ccbfec239" category="paragraph"><block ref="fa7897454f637026faa3e00ccbfec239" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d9a01bdcfab6f0a10fc126999b4d5988" category="paragraph">Tenga en cuenta que los otros usuarios de BlueXP no verán este mismo estado de registro de soporte si no han asociado una cuenta del sitio de soporte de NetApp con su inicio de sesión de BlueXP. Sin embargo, eso no significa que tu cuenta de BlueXP no esté registrada para el soporte técnico. Siempre y cuando un usuario de la cuenta haya seguido estos pasos, su cuenta se ha registrado.</block>
+  <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">Cliente existente pero no cuenta NSS</block>
+  <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">Si eres un cliente existente de NetApp con licencias y números de serie existentes, pero _no_ NSS, deberás crear una cuenta NSS y asociarla al inicio de sesión de BlueXP.</block>
+  <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">Formulario de registro de usuarios del sitio de soporte de NetApp</block>
+  <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">Cree una cuenta del sitio de soporte de NetApp completando el<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
+  <block id="d61c9f72493817776f392db42ac446a2" category="list-text">Asegúrese de seleccionar el nivel de usuario adecuado, que normalmente es *Cliente/Usuario final de NetApp*.</block>
+  <block id="5226d4ec1f4f81b740cbbd27635b441f" category="list-text">Asegúrese de copiar el número de serie de la cuenta BlueXP (960xxxx) utilizado anteriormente para el campo de número de serie. Esto agilizará el procesamiento de la cuenta.</block>
+  <block id="0499bba105f8a891a2c671f1ba99dd34" category="list-text">Asocia tu nueva cuenta de NSS con tu inicio de sesión de BlueXP completando los pasos que se indican en <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">Totalmente nuevo en NetApp</block>
+  <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">Si es totalmente nuevo en NetApp y no tiene una cuenta de NSS, siga cada paso que se indica a continuación.</block>
+  <block id="f5d7029ed18f998c0a9d780b2554e538" category="list-text">Busque el número de serie de su ID de cuenta en la página Recursos de soporte.</block>
+  <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">Una captura de pantalla del menú Ayuda en el que Soporte es la primera opción de la lista</block>
+  <block id="55adf589d087b17fca134b34f65498ed" category="paragraph"><block ref="55adf589d087b17fca134b34f65498ed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">Sitio de registro de soporte de NetApp</block>
+  <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">Navegue<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block> y seleccione *No soy un Cliente de NetApp Registrado*.</block>
+  <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">Rellene los campos obligatorios (aquellos con asteriscos rojos).</block>
+  <block id="1128fc8d5ec64880f4d49337ed798d31" category="list-text">En el campo *línea de productos*, seleccione *Cloud Manager* y, a continuación, seleccione el proveedor de facturación correspondiente.</block>
+  <block id="50a1dc01b7312307c34a888071586955" category="list-text">Copie el número de serie de su cuenta desde el paso 2 anterior, complete la comprobación de seguridad y confirme que ha leído la Política de privacidad de datos global de NetApp.</block>
+  <block id="3a24c87c9971d2011b4df223718f84b4" category="paragraph">Se envía inmediatamente un correo electrónico al buzón de correo para finalizar esta transacción segura. Asegúrese de comprobar sus carpetas de spam si el correo electrónico de validación no llega en pocos minutos.</block>
+  <block id="03413baeca1ff7222737d8ce299bd4e8" category="list-text">Confirme la acción desde el correo electrónico.</block>
+  <block id="201080500e946070a2e4873042507c77" category="paragraph">Confirmar envía su solicitud a NetApp y recomienda que cree una cuenta en la página de soporte de NetApp.</block>
+  <block id="cc8b0535948da368f832027c19b7f853" category="list-text">Asegúrese de copiar el número de serie de la cuenta (960xxxx) utilizado anteriormente para el campo de número de serie. Esto agilizará el procesamiento de la cuenta.</block>
+  <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">NetApp debería ponerse en contacto con usted durante este proceso. Este es un ejercicio de incorporación puntual para nuevos usuarios.</block>
+  <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">Una vez que tengas tu cuenta en el sitio de soporte de NetApp, asocia la cuenta con el inicio de sesión de BlueXP completando los pasos que se muestran en <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="d22b15618e51b122d71ea62d0c31cfdb" category="summary">Ver y copiar la información de conexión de un clon de sandbox.</block>
+  <block id="5e121c3e57ce0f4b69bb4130bd318d27" category="doc">Ver información de conexión de un clon de sandbox</block>
+  <block id="5a329dc3d14f5744534c14ef1f73aee2" category="list-text">En la pestaña sandboxes, haz clic en el menú de tres puntos del clon del sandbox para ver la información de conexión.</block>
+  <block id="43c2cf40a7db4f77b2c6c793066c47a5" category="list-text">Selecciona *Mostrar información de conexión*.</block>
+  <block id="383d22dfa0525ab8f4cf0db98c16e30f" category="list-text">En el cuadro de diálogo Mostrar información de conexión, copie la información de conexión si es necesario.</block>
+  <block id="d3e4e4eeddf743f9d82a0c8532d7731c" category="summary">Descubra las novedades de Workload Factory para bases de datos.</block>
+  <block id="490414e0366b091220802d406e52c076" category="doc">Lo nuevo</block>
+  <block id="e180b7ca8fea43e3b6bee94a5f547753" category="paragraph">Descubra las novedades de las bases de datos.</block>
+  <block id="755eba92a1ce7cdbaf7f5be63339d16d" category="section-title">7 de julio</block>
+  <block id="ed54fefae379fac8157c0d466e30a150" category="section-title">Lanzamiento inicial de Workload Factory para bases de datos</block>
+  <block id="7737adcb101b7285a3a8567ae4d22021" category="paragraph">La versión inicial incluye la funcionalidad de explorar el ahorro con Amazon FSx para NetApp ONTAP como entorno de almacenamiento para tus cargas de trabajo de bases de datos, detectar, gestionar e implementar servidores de Microsoft SQL, implementar y clonar bases de datos, y supervisar estos trabajos en Workload Factory.</block>
+  <block id="76d820a16128270adf6a061b253cca06" category="inline-link-macro">Obtenga más información sobre las bases de datos</block>
+  <block id="c8b559206fbe2064f93b1a567d84e637" category="paragraph"><block ref="eda6f6881c0c5cc5180d85b417e4f376" category="inline-link-macro-rx"></block>.</block>
+  <block id="701d958bca3a33a19f563321cfb869c3" category="sidebar">Pon en marcha las configuraciones de Microsoft SQL Server y gestiona entornos de base de datos sobre el almacenamiento del sistema de archivos FSx para ONTAP en BlueXP Workload Factory.</block>
+  <block id="e3e11adbab76168641c9e2c9a8f51784" category="sidebar">Documentación sobre Workload Factory para cargas de trabajo de bases de datos</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Manos a la obra</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Notas de la versión</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">Inicio rápido</block>
+  <block id="68522a08da2b47b97c0f927b7dc471b9" category="sidebar">Utilizar bases de datos</block>
+  <block id="83f5267b900a40e93e73e9ace47d4412" category="sidebar">Cree un servidor de base de datos</block>
+  <block id="47f5bdacbf3f064bc2cd6ba54baf7150" category="sidebar">Supervisar una base de datos</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conocimiento y apoyo</block>
+  <block id="aef814f0c9c4dccfb365b3322172cb51" category="sidebar">Documentación de las cargas de trabajo de bases de datos</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Novedades</block>
+  <block id="991fc877b6135bcda7435016745ae066" category="sidebar">Usar cargas de trabajo de base de datos</block>
+  <block id="fbe27670bf06b7e38d268c77e7f002f0" category="sidebar">Cree un nuevo servidor de base de datos</block>
+  <block id="4564dd7bc0da251c3d18fb2269904a81" category="sidebar">Detectar un servidor de base de datos</block>
+  <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">Administración y supervisión</block>
+  <block id="077bbf8da979e97e9f7ec7239eb76073" category="sidebar">Gestionar un servidor de Microsoft SQL Server</block>
+  <block id="6ea5d3d06add60328b6497a58edc5878" category="sidebar">Gestionar clones</block>
+  <block id="7375873088079584bbffaf102f0fdae4" category="sidebar">Cree un clon de sandbox</block>
+  <block id="566d7361c862d8d2bd63be4cb3f852cd" category="sidebar">Comprobar la integridad de un clon de sandbox</block>
+  <block id="6de665240f982d480aa54b5ebea09683" category="sidebar">Revertir un clon de sandbox</block>
+  <block id="6f78b6d7089b4700a6ce9674115ea116" category="sidebar">Actualizar un clon de sandbox</block>
+  <block id="93aaedd59af13c8ec678bc053a076fe4" category="sidebar">Conéctese a la canalización CI/CD</block>
+  <block id="d1512bc8e97fad026d3a9604a38eafeb" category="sidebar">Ver información de conexión de clon</block>
+  <block id="3ed62cfc8918e6f101daf8572a05eac8" category="sidebar">Dividir un clon de sandbox</block>
+  <block id="651b8da486ba685aa80d9dd4866d0171" category="sidebar">Eliminar un clon de sandbox</block>
+</blocks>

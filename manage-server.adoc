@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: manage-server.html 
+keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage 
+summary: Gestione instancias de Microsoft SQL Server en Workload Factory para bases de datos. 
+---
+= Gestione instancias de Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gestione instancias de Microsoft SQL Server para supervisar el estado de la instancia y la base de datos, la utilización de recursos, la protección y el rendimiento del almacenamiento en Workload Factory para bases de datos.
+
+Las bases de datos solo pueden gestionar instancias de Microsoft SQL Server con el almacenamiento del sistema de archivos FSx para ONTAP.
+
+
+
+== Gestión de instancias de Microsoft SQL Server
+
+La gestión de instancias de Microsoft SQL Server incluye las siguientes tareas:
+
+* Gestione una instancia de host
+* Ver una instancia gestionada
+* Ver bases de datos
+* Anular la gestión de una instancia de host
+
+
+Para completar cualquiera de estas tareas, debe link:detect-host.html["detectar una o más instancias de host"^].
+
+
+
+== Gestione una instancia de host
+
+Gestionar instancias de Microsoft SQL Server detectadas o no gestionadas para un host.
+
+.Antes de empezar
+Complete los siguientes requisitos previos antes de comenzar:
+
+* Debe haber detectado una instancia en el host que está disponible para la gestión.
+* Se necesita PowerShell7 para gestionar la instancia de la base de datos. Instale PowerShell7 manualmente consultando link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4["Documentación de Microsoft PowerShell para Windows"^].
+* Todas las operaciones de gestión las ejecuta el agente de AWS System Manager mediante `NT Authority\SYSTEM` privilegios de usuario. Proporcione los siguientes permisos para `NT Authority\SYSTEM` el usuario en el servidor de bases de datos:
++
+** `“ALTER SETTINGS”`
+** `“CONTROL SERVER”`
+** `“ALTER ANY DATABASE”`
+** `“VIEW ANY DEFINITION”`
+** `“CONNECT ANY DATABASE”`
+** `“CREATE ANY DATABASE”`
+
+
+
+
+.Pasos
+. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En Bases de datos, seleccione la pestaña *Inventario*.
+. Haga clic en *Administrar* en la fila del host para administrar.
+. Seleccione una o más instancias de host para gestionar.
+. Haga clic en *Administrar*.
+
+
+Se produce un error en la operación cuando Microsoft SQL Server carece de ciertos módulos PowerShell y scripts de gestión. Oracle Workload Factory activa un trabajo de preparación de recursos para instalar los módulos y scripts que faltan, que puede ver en la pestaña Supervisión de trabajos. Cuando finalice el trabajo, vuelva a intentarlo para gestionar la instancia de host.
+
+
+
+== Ver una instancia gestionada
+
+Puede ver una instancia gestionada siguiendo estos pasos.
+
+.Pasos
+. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En Bases de datos, seleccione la pestaña *Inventario*.
+. Haga clic en la flecha desplegable para expandir la fila del host y ver sus instancias gestionadas.
++
+El host se expande y aparecen las instancias del host.
+
+. Haz clic en el menú de tres puntos de la instancia para ver y luego selecciona *Ver instancia*.
+
+
+.Resultado
+La visión general de la instancia aparece en el separador Inventario.
+
+
+
+== Ver bases de datos
+
+Puede ver las bases de datos gestionadas por la instancia gestionada siguiendo estos pasos.
+
+.Pasos
+. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En Bases de datos, seleccione la pestaña *Inventario*.
+. Haga clic en la flecha desplegable para expandir la fila del host para ver sus bases de datos.
++
+El host se expande y aparecen las instancias del host.
+
+. Haga clic en el menú de tres puntos de la instancia que contiene las bases de datos que desea ver.
+. Seleccione *Ver bases de datos*.
+
+
+.Resultado
+La lista de bases de datos de la instancia aparece en la pestaña Inventory.
+
+
+
+== Anular la gestión de una instancia de host
+
+Anule la gestión de una instancia de host siguiendo estos pasos.
+
+.Pasos
+. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En Bases de datos, seleccione la pestaña *Inventario*.
+. Haga clic en la flecha desplegable para ampliar la fila de la instancia de host que desea anular la gestión.
++
+El host se expande y aparecen las instancias del host.
+
+. Haga clic en el menú de tres puntos de la instancia para desgestionar.
+. Seleccione *Desgestionar*.
+
+
+.Resultado
+La instancia de host ahora no está gestionada.

@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: monitor-databases.html 
+keywords: monitor databases, monitor jobs, track database jobs 
+summary: Realice un seguimiento de los trabajos de base de datos y supervise las bases de datos en Workload Factory para las bases de datos. 
+---
+= Supervisar bases de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Realice un seguimiento de los trabajos de base de datos y supervise las bases de datos con Workload Factory para las bases de datos.
+
+.Acerca de esta tarea
+Database proporciona supervisión de trabajos para que pueda realizar un seguimiento del progreso de los trabajos, así como diagnosticar y solucionar problemas en caso de que se produzca algún fallo. Además, los filtros por tipo y estado, la función de búsqueda y la opción para descargar la tabla de trabajos ayudan con la navegación y los informes de los trabajos de base de datos.
+
+La supervisión de trabajos admite hasta tres niveles de supervisión en función del trabajo. Por ejemplo, para la creación de clones de una nueva base de datos y un espacio de pruebas, la supervisión de trabajos realiza un seguimiento de los trabajos primarios y los subtrabajos.
+
+Niveles de supervisión de trabajos::
++
+--
+* Nivel 1 (trabajo principal): Realiza un seguimiento del trabajo de despliegue del host.
+* Nivel 2 (subtrabajo): Realiza un seguimiento de los subtrabajos relacionados con el trabajo padre de despliegue del host.
+* Nivel 3 (tarea): Enumera la secuencia de acciones realizadas en cada recurso.
+
+
+--
+Estado del trabajo:: La función de supervisión de trabajos realiza un seguimiento de los trabajos _in progress_, _completed_ y _failed_ diarios, semanales, quincenales y mensuales.
+Retención de eventos de trabajo:: Los eventos de supervisión de trabajos se conservan en la interfaz de usuario durante 30 días.
+
+
+
+
+== Supervisar trabajos
+
+.Pasos
+. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En Bases de datos, seleccione la pestaña *Supervisión de trabajos*.
+. En la pestaña Supervisión del trabajo, utilice los filtros o busque para restringir los resultados del trabajo. También es posible descargar un informe de trabajos.
+. Haga clic en el menú de tres puntos del trabajo y haga clic en *Ir a CloudFormation* para ver el registro de trabajo en la consola de AWS CloudFormation.
+

@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: split-clone.html 
+keywords: split, clone, source, new database 
+summary: Divida un clon de sandbox de la base de datos de origen para crear una nueva base de datos. 
+---
+= Dividir un clon de sandbox desde la base de datos de origen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Al dividir un clon de espacio aislado de la base de datos de origen se crea una nueva base de datos que consume una cierta cantidad de capacidad de almacenamiento. El clon se elimina cuando se completa la división y la nueva base de datos aparece en el inventario.
+
+.Antes de empezar
+Considere la capacidad de almacenamiento que se necesita para la nueva base de datos. Si es necesario, link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html["aumente la capacidad del sistema de archivos"^] para el sistema de archivos FSx para ONTAP antes de empezar.
+
+.Pasos
+. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En las bases de datos, seleccione la pestaña *sandboxes*.
+. En la pestaña sandboxes, haz clic en el menú de tres puntos del clon del sandbox que quieras dividir.
+. Selecciona *Split*.
+. En el cuadro de diálogo Dividir, haga clic en *Dividir*.
+

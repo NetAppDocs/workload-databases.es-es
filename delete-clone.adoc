@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: delete-clone.html 
+keywords: delete, clone 
+summary: Elimine un clon de sandbox cuando ya no lo necesite. 
+---
+= Dividir un clon de sandbox desde la base de datos de origen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Elimine un clon de sandbox cuando ya no lo necesite y desee liberar capacidad de almacenamiento.
+
+.Pasos
+. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. En el mosaico Bases de datos, haga clic en *Ir a Inventario de Bases de Datos*.
+. En las bases de datos, seleccione la pestaña *sandboxes*.
+. Haz clic en el menú de tres puntos del clon del sandbox que quieras eliminar.
+. Seleccione *Eliminar*.
+. En el cuadro de diálogo Eliminar, haga clic en *Eliminar*.
+

@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: explore-savings.html 
+keywords: cost, savings, compare costs, EBS, FSx for ONTAP 
+summary: 'Explore el ahorro para las cargas de trabajo de base de datos con el almacenamiento de Amazon Elastic Block Store (EBS).' 
+---
+= Explore el ahorro en Workload Factory para las bases de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Explore el ahorro para las cargas de trabajo de base de datos con el almacenamiento de Amazon Elastic Block Store (EBS).
+
+Workload Factory proporciona una calculadora para que puedas comparar diferentes componentes de coste de la ejecución de cargas de trabajo de Microsoft SQL Server, como almacenamiento, computación, licencia de SQL, snapshots y clones para las cargas de trabajo de bases de datos en sistemas de archivos FSx para ONTAP frente al almacenamiento de bloques elásticos (EBS). Dependiendo de sus requisitos de almacenamiento, puede darse cuenta de que los sistemas de archivos de FSx para ONTAP son los más rentables para las cargas de trabajo de sus bases de datos.
+
+La calculadora muestra si el almacenamiento para las cargas de trabajo de base de datos en estos servidores Microsoft SQL Server costaría menos si se utiliza un sistema de archivos FSx para ONTAP.
+
+Si Workload Factory determina que podría ahorrar dinero ejecutando estas cargas de trabajo en un sistema de archivos FSx para ONTAP, puede poner en marcha Microsoft SQL over FSx para ONTAP directamente desde la calculadora de Workload Factory. En algunos casos, Workload Factory puede recomendar implementar varios sistemas de archivos según la cantidad de almacenamiento que esté utilizando actualmente y según las características de rendimiento de las cargas de trabajo de la base de datos. En algunos casos, Workload Factory puede recomendar implementar varios sistemas de archivos según la cantidad de almacenamiento que esté utilizando actualmente y según las características de rendimiento de las cargas de trabajo de la base de datos.
+
+
+
+== Proporcione los requisitos del sistema
+
+Si habilitó el modo _Automate_ (link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["más información sobre los modos"]) añadiendo credenciales de AWS a su cuenta Workload Factory, Workload Factory puede identificar todos los sistemas de almacenamiento disponibles en su cuenta de AWS y mostrar las características de los volúmenes en esos sistemas en la página de inventario de almacenamiento. La cuenta de AWS que se busca se basa en las credenciales que ha definido en su cuenta de Workload Factory.
+
+En esta figura, se muestran los volúmenes en FSx para los sistemas de servidor de archivos de Windows que se han detectado en una cuenta de AWS.
+
+image:screenshot-storage-inventory.png["La página de inventario de almacenamiento que muestra su inventario actual de volúmenes en FSx para servidores de archivos de Windows."]
+
+Si no ha agregado credenciales para vincular su cuenta de Workload Factory con una cuenta de AWS (denominada modo _BASIC_), puede introducir manualmente las características necesarias para un sistema de almacenamiento que planea poner en marcha y la calculadora de almacenamiento determinará el mejor sistema de archivos en función del coste. Puedes usar este método para abarcar un nuevo sistema de archivos FSX for ONTAP mientras también usas el modo _Automate_.
+
+En esta figura se muestra la página de la calculadora de almacenamiento con una comparación entre FSx para ONTAP y el almacenamiento de EBS.
+
+image:screenshot-ebs-calculator.png["La página de la calculadora de almacenamiento con una comparación entre FSx para ONTAP y el almacenamiento de Elastic Block Store."]
+
+.Antes de empezar
+Complete los siguientes requisitos previos antes de comenzar:
+
+* Asegúrese de que link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos _automatic_"^] en su cuenta de AWS detecta los sistemas Elastic Block Store (EBS) en su inventario de bases de datos.
+* Detecta hosts en el almacenamiento de EBS en tu inventario de bases de datos. link:detect-host.html["Descubra cómo detectar hosts"].
+
+
+.Pasos
+. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione la pestaña *Explorar ahorros*.
+. Haga clic en *Explorar ahorros* para el servidor de base de datos que utiliza el almacenamiento de EBS.
+. De manera opcional, proporciona los siguientes detalles sobre los clones y las copias Snapshot en el almacenamiento EBS para obtener una estimación más precisa del ahorro en costes.
++
+.. *Frecuencia de instantánea*: Seleccione una frecuencia de instantánea en el menú desplegable.
+.. *Clonar frecuencia de actualización*: Seleccione una frecuencia de actualización del clon en el menú desplegable.
+.. *Tasa de cambio mensual*: Ingrese el porcentaje que los datos de clonación y instantánea cambian en promedio por mes.
+
+
+. Revise los cálculos y recomendaciones proporcionados en la página.
++
+Además, desplácese hacia abajo hasta la parte inferior de la página hasta *Exportar PDF*.
+
+
+
+
+
+== Pon en marcha FSx para sistemas de archivos ONTAP
+
+Si desea cambiar a FSX para ONTAP para obtener ahorros de costos, haga clic en *Crear* para crear los sistemas de archivos directamente desde el Asistente para crear un FSX para el sistema de archivos ONTAP o haga clic en *Guardar* para guardar las configuraciones recomendadas para más adelante.
+
+Métodos de despliegue:: En el modo _Automate_, puede implementar el sistema de archivos FSx para ONTAP directamente desde Workload Factory. También puede copiar el contenido de la ventana CodeBox e implementar el sistema utilizando uno de los métodos CodeBox.
++
+--
+En el modo _BASIC_, puede copiar el contenido de la ventana CodeBox e implementar el sistema de archivos FSX for ONTAP utilizando uno de los métodos CodeBox.
+
+--
+

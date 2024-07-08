@@ -1,0 +1,29 @@
+---
+indexpage:
+  title: Documentación sobre Workload Factory para cargas de trabajo de bases de datos
+  lead: Pon en marcha las configuraciones de Microsoft SQL Server y gestiona entornos
+    de base de datos sobre el almacenamiento del sistema de archivos FSx para ONTAP
+    en BlueXP Workload Factory.
+  tiles:
+  - title: Manos a la obra
+    links:
+    - title: Notas de la versión
+      url: "/whats-new.html"
+    - title: Obtenga más información sobre las bases de datos
+      url: "/learn-databases.html"
+    - title: Inicio rápido
+      url: "/quick-start-databases.html"
+  - title: Utilizar bases de datos
+    links:
+    - title: Cree un servidor de base de datos
+      url: "/create-database-server.html"
+    - title: Cree una base de datos
+      url: "/create-database.html"
+    - title: Supervisar una base de datos
+      url: "/monitor-databases.html"
+  - title: Conocimiento y apoyo
+    links:
+    - title: Regístrese para recibir soporte
+      url: "/support-registration-databases.html"
+    - title: Obtenga ayuda
+      url: "/get-help-databases.html"

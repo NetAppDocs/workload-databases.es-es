@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: quick-start-databases.html 
+keywords: requirements, basic mode, read mode, automate mode 
+summary: Las bases de datos tienen tres modos diferentes que tienen requisitos diferentes. 
+---
+= Inicio rápido para bases de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Con las bases de datos, puede comenzar inmediatamente en el modo _BASIC_. Si desea utilizar Workload Factory para detectar hosts, administrar recursos y mucho más, puede comenzar con unos pocos pasos.
+
+Debe tener una cuenta de AWS para empezar.
+
+Siga estos pasos para comenzar con las bases de datos de Workload Factory.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Una"] Inicie sesión en Workload Factory
+[role="quick-margin-para"]
+Tendrá que link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Configure una cuenta con Workload Factory"^] y. link:https://console.workloads.netapp.com["inicie sesión"^]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] Agregue credenciales y permisos
+[role="quick-margin-para"]
+Elija entre link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modos operativos _basic_, _read_ y _automatic_"^].
+
+[role="quick-margin-para"]
+Si opera en modo _BASIC_, no necesita ir más allá. Puede empezar a utilizar las bases de datos de Workload Factory para copiar muestras de código parcialmente completadas. En el mosaico Bases de datos, haga clic en *Implementar host de base de datos*. link:create-database-server.html["Aprenda a desplegar un servidor de base de datos"].
+
+[role="quick-margin-para"]
+Si opera en modo _READ_ o _AUTOMATIC_, necesitará link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["agregar credenciales a una cuenta manualmente"^] seleccionar capacidades de carga de trabajo, como bases de datos e IA, y crear las políticas de IAM para asegurarse de que tiene los permisos correctos para operar en modo _READ_ o _AUTOMATIC_.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"] Desplegar un servidor de bases de datos
+[role="quick-margin-para"]
+Por último, si elige operar en el modo _Automate_, debe link:create-database-server.html["puesta en marcha"] o link:detect-host.html["detectar un servidor de base de datos"] administrar los recursos del host y antes de agregar bases de datos de usuario.
+
+.El futuro
+Cuando tienes hosts gestionados de FSx para ONTAP en tu inventario de bases de datos, puedes link:create-database.html["crear una base de datos de usuario"] o link:create-sandbox-clone.html["clone el host para crear un espacio de pruebas"].
+
+Cuando tenga hosts de Elastic Block Store en el inventario de bases de datos, puede link:explore-savings.html["Explore el ahorro con la calculadora de ahorro en almacenamiento"].
