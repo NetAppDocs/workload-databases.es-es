@@ -140,12 +140,12 @@ Las arquitecturas de despliegue de Zona de disponibilidad única y Zonas de disp
 .Zona de disponibilidad única
 El siguiente diagrama muestra la arquitectura autónoma con una sola zona de disponibilidad en una sola región.
 
-image:diagram-SAZ-database-architecture.png["Diagrama de arquitectura independiente con una única implementación de zona de disponibilidad de Amazon FSx para NetApp ONTAP en una sola región"]
+image:diagram-SAZ-database-architecture.png["Un diagrama de arquitectura independiente con una única implementación de zona de disponibilidad de Amazon FSx para NetApp ONTAP en una sola región"]
 
 .Múltiples zonas de disponibilidad
 El siguiente diagrama muestra la arquitectura de alta disponibilidad (HA) de dos nodos con clúster de instancia de clúster de conmutación por error (FCI) en una sola región.
 
-image:diagram-MAZ-database-architecture.png["diagrama de arquitectura de alta disponibilidad de dos nodos con cluster de instancia de cluster de conmutación por error en una única región"]
+image:diagram-MAZ-database-architecture.png["Un diagrama de arquitectura de alta disponibilidad de dos nodos con cluster de instancia de cluster de conmutación por error en una única región"]
 
 
 
