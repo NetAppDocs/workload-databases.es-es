@@ -30,6 +30,11 @@ Los sistemas de archivos FSX para ONTAP tienen dos modelos de implementación de
 
 
 --
+Configuración de E/S multirruta de Microsoft:: Ambos modelos de implementación de Microsoft SQL Server requieren la creación de LUN mediante el protocolo de almacenamiento iSCSI. Workload Factory configura la I/O multivía (MPIO) de Microsoft como parte de la configuración de LUN para SQL Server mediante FSx para ONTAP. MPIO se configura según las prácticas recomendadas de AWS y NetApp.
+
+
+Para obtener más información, consulte link:https://aws.amazon.com/blogs/modernizing-with-aws/sql-server-high-availability-amazon-fsx-for-netapp-ontap/["Implementaciones de alta disponibilidad de SQL Server mediante Amazon FSx para NetApp ONTAP"^].
+
 Active Directory:: Lo siguiente ocurre en Active Directory (AD) durante la implementación:
 +
 --
@@ -173,6 +178,14 @@ Para los directorios activos gestionados por AWS, las direcciones IP de DNS apar
 Un nuevo sistema de archivos FSX para ONTAP puede agregar 30 minutos o más de tiempo de instalación.
 
 ... *Seleccione un FSX para ONTAP*: Seleccione FSX para el nombre de ONTAP en el menú desplegable, e introduzca un nombre de usuario y una contraseña para el sistema de archivos.
++
+Para los sistemas de archivos FSx para ONTAP existentes, asegúrate de lo siguiente:
+
++
+**** El grupo de enrutamiento conectado a FSx para ONTAP permite que las rutas a las subredes se utilicen para la implementación.
+**** El grupo de seguridad permite el tráfico de las subredes utilizadas para la puesta en marcha, específicamente los puertos TCP HTTPS (443) e iSCSI (3260).
+
+
 
 
 .. *Tamaño de la unidad de datos*: Ingrese la capacidad de la unidad de datos y seleccione la unidad de capacidad.
@@ -264,7 +277,7 @@ Tres grupos de seguridad se conectan a los nodos SQL (instancias EC2) durante el
 ... En el caso de Active Directory gestionado por AWS, el grupo de seguridad asociado al servicio de directorio se agrega automáticamente a los nodos de Microsoft SQL para permitir la comunicación con Active Directory.
 ... Para un sistema de archivos FSX for ONTAP existente, el grupo de seguridad asociado con él se agrega automáticamente a los nodos SQL, lo que permite la comunicación con el sistema de archivos. Cuando se crea un nuevo sistema FSx para ONTAP, se crea un nuevo grupo de seguridad para el sistema de archivos FSx para ONTAP y el mismo grupo de seguridad también se conecta a los nodos SQL.
 +
-Para un Active Directory gestionado por el usuario, puede seleccionar un grupo de seguridad que permita el tráfico de los sistemas existentes que necesitan conectarse a la base de datos. El grupo de seguridad debe permitir la comunicación con los controladores de dominio de Active Directory desde las subredes donde se configuran EC2 instancias para Microsoft SQL.
+Para un Active Directory gestionado por el usuario, asegúrese de que el grupo de seguridad configurado en la instancia de AD permite el tráfico de las subredes utilizadas para la implementación. El grupo de seguridad debe permitir la comunicación con los controladores de dominio de Active Directory desde las subredes donde se configuran EC2 instancias para Microsoft SQL.
 
 
 
@@ -325,6 +338,14 @@ Para los directorios activos gestionados por AWS, las direcciones IP de DNS apar
 Un nuevo sistema de archivos FSX para ONTAP puede agregar 30 minutos o más de tiempo de instalación.
 
 ... *Seleccione un FSX para ONTAP*: Seleccione FSX para el nombre de ONTAP en el menú desplegable, e introduzca un nombre de usuario y una contraseña para el sistema de archivos.
++
+Para los sistemas de archivos FSx para ONTAP existentes, asegúrate de lo siguiente:
+
++
+**** El grupo de enrutamiento conectado a FSx para ONTAP permite que las rutas a las subredes se utilicen para la implementación.
+**** El grupo de seguridad permite el tráfico de las subredes utilizadas para la puesta en marcha, específicamente los puertos TCP HTTPS (443) e iSCSI (3260).
+
+
 
 
 .. *Política de instantáneas*: Habilitado por defecto. Las copias Snapshot se realizan diariamente y tienen un período de retención de 7 días.
