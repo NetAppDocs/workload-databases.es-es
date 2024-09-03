@@ -70,12 +70,6 @@ Las claves de cifrado personalizadas para FSx para ONTAP no figuran en la lista 
 
 
 
-== Detección de Microsoft SQL Server
-
-La detección de Microsoft SQL Server no se ha guardado. Cada vez que accede a bases de datos en Workload Factory, la detección de Microsoft SQL Server se ejecuta de nuevo para identificar las instalaciones SQL en la región.
-
-
-
 == Plantilla de CloudFormation
 
 Una plantilla CloudFormation (archivo YAML) descargada o copiada generada por CodeBox tiene un período de retención limitado de siete días.
@@ -85,12 +79,7 @@ Una plantilla CloudFormation (archivo YAML) descargada o copiada generada por Co
 == Soporte de sandbox
 
 * El número máximo de clones de sandbox que se pueden crear desde un servidor de base de datos es 50.
-* La creación de sandbox no se admite en los siguientes casos:
-+
-** Los archivos de datos y de registro residen en el mismo disco.
-** La base de datos de origen tiene varios archivos de datos.
-
-
+* La creación de sandbox no está soportada cuando la base de datos de origen tiene varios archivos de datos distribuidos en más de 2 discos.
 
 
 
@@ -98,7 +87,7 @@ Una plantilla CloudFormation (archivo YAML) descargada o copiada generada por Co
 == Detección y gestión de Microsoft SQL Server
 
 * La detección y gestión de instancias de Microsoft SQL no son compatibles cuando se utiliza una red privada sin conectividad externa.
-* Cuando las instancias de Microsoft SQL bloquean la autenticación basada en Windows y solo permiten la autenticación de usuario de Microsoft SQL, se admite la detección de Microsoft SQL Server, pero no se admiten las operaciones de administración.
+* La detección de Microsoft SQL Server no se ha guardado. Cada vez que accede a bases de datos en Workload Factory, la detección de Microsoft SQL Server se ejecuta de nuevo para identificar las instalaciones SQL en la región.
 
 
 
