@@ -49,7 +49,23 @@ Base de datos de origen:: Necesita una base de datos de origen disponible para e
 .. *Base de datos de destino*: Introduzca un nombre para el clon de sandbox.
 
 
-. *Mount*: Selecciona *Auto-assign mount point* o *define la ruta del punto de montaje*. Si selecciona *Definir ruta de punto de montaje*, introduzca la ruta del punto de montaje.
+. *Mount*: Al clonar una base de datos SQL que tiene varios archivos de datos y/o de registro, Workload Factory clona todos los archivos bajo la letra de unidad asignada automáticamente o definida.
++
+Seleccione una de las siguientes opciones:
+
++
+.. *Auto-asignar punto de montaje*
+.. *Definir ruta de punto de montaje*
++
+Proporcione lo siguiente para definir la ruta del punto de montaje:
+
++
+*** Introduzca la letra de unidad para la ruta del archivo de datos.
+*** Introduzca la letra de unidad para la ruta del archivo de registro.
+
+
+
+
 . *Definir etiqueta*: Seleccione una etiqueta para definir el clon de sandbox.
 . Haga clic en *Crear*.
 

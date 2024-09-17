@@ -233,7 +233,6 @@
   <block id="b6b9aec3a98d2a803dfd7a3e7b836cb2" category="list-text">*Host de base de datos de destino*: Seleccione un host de base de datos de destino para el clon de sandbox que esté en la misma VPC y tenga el mismo sistema de archivos FSX for ONTAP que el host de origen.</block>
   <block id="04bd2b110b2a3aaa82dccc7fe837f151" category="list-text">*Instancia de base de datos de destino*: Seleccione la instancia de base de datos de destino para el clon de sandbox.</block>
   <block id="26e615a604b088a660581f026763c30b" category="list-text">*Base de datos de destino*: Introduzca un nombre para el clon de sandbox.</block>
-  <block id="7f63d4b83f27b850d1eb970cfa4666b3" category="list-text">*Mount*: Selecciona *Auto-assign mount point* o *define la ruta del punto de montaje*. Si selecciona *Definir ruta de punto de montaje*, introduzca la ruta del punto de montaje.</block>
   <block id="f3346b0efa80289c47d4e6113a73a3ab" category="list-text">*Definir etiqueta*: Seleccione una etiqueta para definir el clon de sandbox.</block>
   <block id="34775e5e4b0b832c45a2707ae9b18f95" category="paragraph">Para comprobar el progreso del trabajo, vaya a la pestaña *Control de trabajos*.</block>
   <block id="18a852f2a54ab28755adc6bcf4897e75" category="summary">Elimine un clon de sandbox cuando ya no lo necesite.</block>
@@ -781,4 +780,11 @@
   <block id="e6ae9aa516c09658fbcbb0830276915c" category="paragraph">En el modo _BASIC_, puede copiar el contenido de la ventana CodeBox e implementar la configuración recomendada utilizando uno de los métodos CodeBox.</block>
   <block id="0bbe82b56668e820bcb7722aa8566ea5" category="list-text">La creación de sandbox no está soportada cuando la base de datos de origen tiene varios archivos de datos distribuidos en más de 2 discos.</block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">1 de septiembre de 2024</block>
+  <block id="969e7140d33129e87f01e95c59fed40f" category="list-text">*Mount*: Al clonar una base de datos SQL que tiene varios archivos de datos y/o de registro, Workload Factory clona todos los archivos bajo la letra de unidad asignada automáticamente o definida.</block>
+  <block id="ed09bad7864ec765b3bccff9b87f25fb" category="paragraph">Seleccione una de las siguientes opciones:</block>
+  <block id="f5154bf526cc04b2839db0c72b2a7c22" category="list-text">*Auto-asignar punto de montaje*</block>
+  <block id="c9e660490143e459ec13d72934832f2c" category="list-text">*Definir ruta de punto de montaje*</block>
+  <block id="8dc9fd2e016e27559302505db1795c2c" category="paragraph">Proporcione lo siguiente para definir la ruta del punto de montaje:</block>
+  <block id="431673d13b715d86ce4d92ad7cf17f75" category="list-text">Introduzca la letra de unidad para la ruta del archivo de datos.</block>
+  <block id="d8cf051243077cb10ccd52dd0de9d181" category="list-text">Introduzca la letra de unidad para la ruta del archivo de registro.</block>
 </blocks>
