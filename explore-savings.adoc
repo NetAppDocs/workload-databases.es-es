@@ -23,11 +23,11 @@ Si Workload Factory determina que podría ahorrar dinero ejecutando estas cargas
 
 == Opciones de calculadora
 
-Hay dos opciones de calculadora disponibles para comparar costes entre tus sistemas y FSx for ONTAP: Personalización y detección automática para tus entornos de almacenamiento de Amazon.
+Hay dos opciones de calculadora disponibles para comparar costes entre tus sistemas y FSx para ONTAP: Personalización y detección.
 
 Explore el ahorro mediante la personalización: Proporcione los ajustes de configuración para Microsoft SQL Server en Amazon EC2 con EBS o FSx para Windows File Server, incluida la región, el modelo de implementación, la edición del servidor SQL, la tasa de cambio de datos mensual, la frecuencia de instantáneas y mucho más.
 
-Explore el ahorro de los entornos de almacenamiento detectados: Workload Factory se conecta a los entornos de almacenamiento de AWS existentes y añade los detalles a la calculadora para realizar una comparación automática. Tendrás que conceder permisos de automatización para usar esta opción de calculadora. Puede cambiar el caso de uso, pero todos los demás detalles se determinan automáticamente en el cálculo.
+Explore el ahorro para los hosts detectados: Workload Factory se enlaza con sus servidores Microsoft SQL existentes y extrae los detalles de la calculadora para la comparación automática. Tendrás que conceder permisos de automatización para usar esta opción de calculadora. Puede cambiar el caso de uso, pero todos los demás detalles se determinan automáticamente en el cálculo.
 
 
 
@@ -111,23 +111,31 @@ Además, desplácese hacia abajo hasta la parte inferior de la página hasta *Ex
 ====
 
 
-== Explora el ahorro para los hosts EBS detectados
+== Explora el ahorro para los hosts detectados
 
-Workload Factory introduce las características de host de Elastic Block Store detectadas para que pueda explorar los ahorros automáticamente.
+Workload Factory introduce las características de host de Elastic Block Store y FSx para el servidor de archivos de Windows para que puedas explorar el ahorro automáticamente.
 
 .Antes de empezar
 Complete los siguientes requisitos previos antes de comenzar:
 
-* Asegúrese de que link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos _automatic_"^] en su cuenta de AWS detecta los sistemas Elastic Block Store (EBS) en su inventario de bases de datos.
-* Detecta hosts en el almacenamiento de EBS en tu inventario de bases de datos. link:detect-host.html["Descubra cómo detectar hosts"].
+* Asegúrate de que link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos _automatic_"^] en tu cuenta de AWS detectas los sistemas Elastic Block Store (EBS) y FSx para Windows en tu inventario de bases de datos.
+* Detecta hosts en almacenamiento de EBS y FSx para Windows en tu inventario de bases de datos. link:detect-host.html["Descubra cómo detectar hosts"].
 
 
+Siga los pasos de la pestaña para su tipo de almacenamiento.
+
+[role="tabbed-block"]
+====
+.Elastic Block Store (EBS) de Amazon
+--
 .Pasos
 . Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
-. En Bases de datos, selecciona *Ir al inventario de Bases de datos*.
-. Seleccione la pestaña *Explorar ahorros*.
-. Haga clic en *Explorar ahorros* para el servidor de base de datos que utiliza el almacenamiento de EBS.
-. De manera opcional, proporciona los siguientes detalles sobre los clones y las copias Snapshot en el almacenamiento EBS para obtener una estimación más precisa del ahorro en costes.
+. En el mosaico Bases de datos, seleccione *Explorar ahorros* y luego *Microsoft SQL Server en FSx para Windows* en el menú desplegable.
++
+Si Workload Factory detecta hosts EBS, se le redirigirá a la pestaña Explorar ahorro. Si Workload Factory no detecta hosts de EBS, se le redirigirá a la calculadora a <<Explora el ahorro a través de la personalización,explora el ahorro a través de la personalización>>.
+
+. En la pestaña Explorar ahorros, haga clic en *Explorar ahorros* del servidor de base de datos usando el almacenamiento de EBS.
+. De forma opcional, en la calculadora de ahorro proporciona los siguientes detalles sobre los clones y las copias Snapshot en el almacenamiento de EBS para obtener una estimación más precisa del ahorro de costes.
 +
 .. *Frecuencia de instantánea*: Seleccione una frecuencia de instantánea en el menú desplegable.
 .. *Clonar frecuencia de actualización*: Seleccione la frecuencia con la que los clones refrescan desde el menú desplegable.
@@ -141,6 +149,35 @@ Además, desplácese hacia abajo hasta la parte inferior de la página hasta *Ex
 
 
 
+--
+.Amazon FSx para Windows File Server
+--
+.Pasos
+. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. En el mosaico Bases de datos, seleccione *Explorar ahorros* y luego *Microsoft SQL Server en FSx para Windows* en el menú desplegable.
++
+Si Workload Factory detecta FSX para hosts de Windows, se le redirigirá a la pestaña Explorar ahorro. Si Workload Factory no detecta FSX para hosts de Windows, se le redirigirá a la calculadora a <<Explora el ahorro a través de la personalización,explora el ahorro a través de la personalización>>.
+
+. En la pestaña Explorar ahorros, haga clic en *Explorar ahorros* del servidor de bases de datos usando FSx para el almacenamiento del servidor de archivos de Windows.
+. En la calculadora de ahorro, opcionalmente, proporciona los siguientes detalles sobre los clones (copias en la sombra) y las copias Snapshot en el almacenamiento de FSx para Windows para obtener una estimación más precisa del ahorro en costes.
++
+.. *Frecuencia de instantánea*: Seleccione una frecuencia de instantánea en el menú desplegable.
++
+Si se detectan las copias de sombra de FSX para Windows, el valor predeterminado es *daily*. Si no se detectan copias de sombra, el valor predeterminado es *Sin frecuencia de instantánea*.
+
+.. *Clonar frecuencia de actualización*: Seleccione la frecuencia con la que los clones refrescan desde el menú desplegable.
+.. *Número de copias clonadas*: Introduce el número de copias clonadas en la configuración de FSX para Windows.
+.. *Tasa de cambio mensual*: Ingrese el porcentaje que los datos de clonación y instantánea cambian en promedio por mes.
+
+
+. Revise los cálculos y recomendaciones proporcionados en la página.
++
+Además, desplácese hacia abajo hasta la parte inferior de la página hasta *Exportar PDF* o *Ver cálculos*.
+
+
+
+--
+====
 
 
 == Pon en marcha Microsoft SQL Server en AWS EC2 mediante FSx para ONTAP

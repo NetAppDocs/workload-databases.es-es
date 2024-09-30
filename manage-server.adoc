@@ -35,6 +35,14 @@ Para completar cualquiera de estas tareas, debe link:detect-host.html["detectar 
 
 Gestionar instancias de Microsoft SQL Server detectadas o no gestionadas para un host.
 
+Para administrar una instancia de host en una red privada sin conectividad externa, los siguientes puntos finales deben estar disponibles en la VPC con asociación a las subredes donde están presentes los servidores SQL. Asegúrese de que los extremos de interfaz permiten el puerto 443 en el grupo de seguridad conectado.
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
+
+
 .Antes de empezar
 Complete los siguientes requisitos previos antes de comenzar:
 

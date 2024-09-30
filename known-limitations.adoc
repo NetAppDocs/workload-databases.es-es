@@ -78,25 +78,19 @@ Una plantilla CloudFormation (archivo YAML) descargada o copiada generada por Co
 
 == Soporte de sandbox
 
-* El número máximo de clones de sandbox que se pueden crear desde un servidor de base de datos es 50.
-* La creación de sandbox no está soportada cuando la base de datos de origen tiene varios archivos de datos distribuidos en más de 2 discos.
-
+El número máximo de clones de sandbox que se pueden crear desde un servidor de base de datos es 50.
 
 
 
 == Detección y gestión de Microsoft SQL Server
 
-* La detección y gestión de instancias de Microsoft SQL no son compatibles cuando se utiliza una red privada sin conectividad externa.
-* La detección de Microsoft SQL Server no se ha guardado. Cada vez que accede a bases de datos en Workload Factory, la detección de Microsoft SQL Server se ejecuta de nuevo para identificar las instalaciones SQL en la región.
-
+La detección de Microsoft SQL Server no se ha guardado. Cada vez que accede a bases de datos en Workload Factory, la detección de Microsoft SQL Server se ejecuta de nuevo para identificar las instalaciones SQL en la región.
 
 
 
 == Explora el ahorro
 
-* En la pestaña Inventario, el coste estimado que se muestra para cada instancia de Microsoft SQL se calcula en el nivel de sistema de archivos de FSx para ONTAP, no en los volúmenes que alojan la instancia de SQL.
-* Los cálculos de ahorro no son compatibles con FSx para el servidor de archivos de Windows.
-
+En la pestaña Inventario, el coste estimado que se muestra para cada instancia de Microsoft SQL se calcula en el nivel de sistema de archivos de FSx para ONTAP, no en los volúmenes que alojan la instancia de SQL.
 
 
 
