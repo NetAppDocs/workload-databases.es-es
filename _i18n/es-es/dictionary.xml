@@ -386,7 +386,6 @@
   <block id="8705a3301d5f73e6ea84b65029e83433" category="section-title">Plantilla de CloudFormation</block>
   <block id="744086615b7afe69eb64b5ed9b1b2fc2" category="paragraph">Una plantilla CloudFormation (archivo YAML) descargada o copiada generada por CodeBox tiene un período de retención limitado de siete días.</block>
   <block id="0d966ee7b6d851b13a0a1f2ed24a24f2" category="section-title">Soporte de sandbox</block>
-  <block id="db3c885c5e8af2c0a6d13c3c191c6317" category="list-text">El número máximo de clones de sandbox que se pueden crear desde un servidor de base de datos es 50.</block>
   <block id="16af4c40ef745904a4b9f7f47ce1554d" category="section-title">Detección y gestión de Microsoft SQL Server</block>
   <block id="cf48d7891f28d92c4308fb5debb574b0" category="section-title">Explora el ahorro</block>
   <block id="dc1fe4aeb4ef49ddd2886b9ad39d5fa0" category="list-text">En la pestaña Inventario, el coste estimado que se muestra para cada instancia de Microsoft SQL se calcula en el nivel de sistema de archivos de FSx para ONTAP, no en los volúmenes que alojan la instancia de SQL.</block>
@@ -798,4 +797,5 @@
   <block id="9a178ca3815f6aeb284a65e10447f086" category="paragraph"><block ref="9a178ca3815f6aeb284a65e10447f086" category="inline-link-macro-rx"></block></block>
   <block id="7d6d6d8a97f883d860bff04c0be1019c" category="inline-link-macro">Explora el ahorro con FSx para ONTAP para tus cargas de trabajo de base de datos</block>
   <block id="293758d509326f8da42abf75db2d37e6" category="paragraph"><block ref="293758d509326f8da42abf75db2d37e6" category="inline-link-macro-rx"></block></block>
+  <block id="fbcbba8054f71f57fa8e2b950179bb23" category="paragraph">El número máximo de clones de sandbox que se pueden crear desde un servidor de base de datos es 90.</block>
 </blocks>

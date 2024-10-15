@@ -78,7 +78,7 @@ Una plantilla CloudFormation (archivo YAML) descargada o copiada generada por Co
 
 == Soporte de sandbox
 
-El número máximo de clones de sandbox que se pueden crear desde un servidor de base de datos es 50.
+El número máximo de clones de sandbox que se pueden crear desde un servidor de base de datos es 90.
 
 
 
