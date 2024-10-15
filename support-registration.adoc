@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: support-registration-databases.html 
+permalink: support-registration.html 
 keywords: support registration, register for support, support, nss account, add nss account 
 summary: Para poder abrir un caso de soporte con el soporte técnico de NetApp, debe añadir una cuenta del sitio de soporte de NetApp a Workload Factory y, a continuación, registrarse para recibir soporte. 
 ---

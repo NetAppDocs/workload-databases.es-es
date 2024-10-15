@@ -465,7 +465,6 @@
   <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">Obtener ayuda</block>
   <block id="da444b283df699667b2316206972bdfe" category="paragraph">Amazon FSX para ONTAP de NetApp es una solución de primera parte de AWS. Para preguntas o problemas de soporte técnico asociados con tu ONTAP sistema de archivos, infraestructura o cualquier solución que use este servicio, usa el Centro de soporte de tu consola de administración de AWS para abrir un caso de soporte con AWS. Seleccione el servicio "FSX for ONTAP" y la categoría adecuada. Proporcione la información restante necesaria para crear su caso de soporte de AWS.</block>
   <block id="fc00732c3b79a8178cfd0556a8722a13" category="inline-link-macro">Obtener ayuda para las bases de datos de Workload Factory</block>
-  <block id="5a0bab72bf8800539ee19d4ebfcb6501" category="paragraph">Para preguntas generales acerca de las aplicaciones y servicios de Workload Factory o Workload Factory, consulte <block ref="4318b5ec74addc6e7964ffb1638ebe63" category="inline-link-macro-rx"></block>.</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Avisos legales</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">Los avisos legales proporcionan acceso a las declaraciones de copyright, marcas comerciales, patentes y mucho más.</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Copyright</block>
@@ -798,4 +797,5 @@
   <block id="7d6d6d8a97f883d860bff04c0be1019c" category="inline-link-macro">Explora el ahorro con FSx para ONTAP para tus cargas de trabajo de base de datos</block>
   <block id="293758d509326f8da42abf75db2d37e6" category="paragraph"><block ref="293758d509326f8da42abf75db2d37e6" category="inline-link-macro-rx"></block></block>
   <block id="fbcbba8054f71f57fa8e2b950179bb23" category="paragraph">El número máximo de clones de sandbox que se pueden crear desde un servidor de base de datos es 90.</block>
+  <block id="642917b2f642764c3a6f56b4bd9b6b24" category="paragraph">Para preguntas generales acerca de las aplicaciones y servicios de Workload Factory o Workload Factory, consulte <block ref="cdcdf14c020a2cc1f9ea3df8ed40ccf4" category="inline-link-macro-rx"></block>.</block>
 </blocks>

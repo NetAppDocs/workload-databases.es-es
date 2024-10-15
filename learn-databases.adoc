@@ -180,4 +180,4 @@ No se admiten las siguientes regiones de AWS:
 
 Amazon FSX para ONTAP de NetApp es una solución de primera parte de AWS. Para preguntas o problemas de soporte técnico asociados con tu ONTAP sistema de archivos, infraestructura o cualquier solución que use este servicio, usa el Centro de soporte de tu consola de administración de AWS para abrir un caso de soporte con AWS. Seleccione el servicio "FSX for ONTAP" y la categoría adecuada. Proporcione la información restante necesaria para crear su caso de soporte de AWS.
 
-Para preguntas generales acerca de las aplicaciones y servicios de Workload Factory o Workload Factory, consulte link:get-help-databases.html["Obtener ayuda para las bases de datos de Workload Factory"].
+Para preguntas generales acerca de las aplicaciones y servicios de Workload Factory o Workload Factory, consulte link:get-help.html["Obtener ayuda para las bases de datos de Workload Factory"].
