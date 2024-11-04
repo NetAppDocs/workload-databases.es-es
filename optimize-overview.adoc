@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: optimize-overview.html 
+keywords: continuous optimization, optimize, assess, assessment, scan, optimization, Microsoft SQL Server, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
+summary: El centro de cargas de trabajo de BlueXP  para bases de datos proporciona una optimización continua para las puestas en marcha de Microsoft SQL Server en el almacenamiento de Amazon FSx para NetApp ONTAP. 
+---
+= Optimización continua del centro de cargas de trabajo de BlueXP  para las bases de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+El centro de cargas de trabajo de BlueXP  para bases de datos proporciona una optimización continua para las puestas en marcha de Microsoft SQL Server en el almacenamiento de Amazon FSx para NetApp ONTAP.
+
+La optimización continua analiza y evalúa automáticamente la infraestructura de bases de datos a escala para garantizar que las grandes poblaciones logran el máximo rendimiento, la rentabilidad y el cumplimiento de las prácticas recomendadas. La función le proporciona un completo informe de información y recomendaciones para la optimización.
+
+Gracias a la optimización continua, puedes detectar problemas en tu infraestructura de base de datos, entender qué necesita cambiar y actuar.
+
+Estas son algunas funcionalidades clave:
+
+* Evaluación continua
+* Validaciones automáticas de prácticas recomendadas
+* Recomendaciones de tamaño correcto
+* Capacidad de observación proactiva
+* Información para la acción
+* Asesor de buen diseño de marco de trabajo de AWS
+
+
+El alcance de la optimización es diferente dependiendo del componente que se esté evaluando. Por ejemplo, la optimización del almacenamiento se produce en el nivel de instancia de SQL mientras que la optimización de computación se produce en el nivel de host.
+
+link:optimize-configurations.html["Optimice las configuraciones para puestas en marcha de Microsoft SQL Server"]

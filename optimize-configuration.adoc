@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: optimize-configurations.html 
+keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
+summary: Database analiza las configuraciones de almacenamiento de Microsoft SQL Server y proporciona información y recomendaciones para ayudarle a lograr la excelencia operativa. 
+---
+= Optimice las configuraciones para puestas en marcha de Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La fábrica de cargas de trabajo de BlueXP  para bases de datos analiza y evalúa continuamente las configuraciones de puesta en marcha de Microsoft SQL Server que se ejecutan en Amazon FSx para NetApp ONTAP. Las evaluaciones proporcionan información, recomendaciones y optimizaciones para que pueda lograr la excelencia operativa.
+
+.Acerca de esta tarea
+La evaluación se ejecuta automáticamente y de forma continua una vez al día para las instancias de Microsoft SQL Server con almacenamiento FSx para ONTAP y gestionado en fábrica de cargas de trabajo. Los informes de evaluación están disponibles en el panel de optimización sólo si se ha ejecutado un trabajo programado diario después del despliegue o después de gestionar una instancia.
+
+La fábrica de cargas de trabajo proporciona recomendaciones detalladas para optimizar las configuraciones basadas en prácticas recomendadas para el almacenamiento de FSx para ONTAP.
+
+Qué se escanea:: Workload Factory evalúa el estado de optimización de las siguientes configuraciones para las instancias de Microsoft SQL Server:
++
+--
+* Ajuste de tamaño del almacenamiento: Incluye nivel de almacenamiento, margen adicional del sistema de archivos, tamaño de la unidad de registro y tamaño de la unidad TempDB
+* Distribución de almacenamiento: Incluye la ubicación de los archivos de datos del usuario, la ubicación de los archivos de registro y la ubicación de TempDB
+* Configuración del almacenamiento: Incluye la gestión de la capacidad, el thin provisioning, la política de organización en niveles, la snapshot y el estado de I/O multivía, la política y las sesiones, etc.
+* Computación: Incluye el ajuste de tamaño
+
+
+--
+
+
+.Antes de empezar
+* Debe tener credenciales con permisos de lectura o automatización.
+* Para evaluar el almacenamiento de una instancia de Microsoft SQL Server, la instancia debe gestionarse mediante fábrica de cargas de trabajo y el tipo de almacenamiento debe ser FSx para ONTAP.
+* Asegúrese de revisar cada recomendación cuidadosamente antes de seleccionar para optimizar un ajuste o una configuración.
+
+
+.Pasos
+. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En Bases de datos, seleccione la pestaña *Inventario*.
+. Haga clic en la flecha desplegable para expandir la fila del host y ver sus instancias gestionadas.
++
+El host se expande y aparecen las instancias del host.
+
+. Seleccione el menú de tres puntos de la instancia para escanear y luego seleccione *Optimizar*.
+. En la página Optimize Instance del host, revise los hallazgos de la evaluación del almacenamiento.
++
+Los filtros están disponibles para ordenar por categorías, subcategorías, estado, gravedad y etiquetas.
+
++
+Si es necesario, puede descargar un informe de los hallazgos seleccionando *Exportar PDF*.
+
+. Seleccione la flecha desplegable para ver la recomendación de cualquier configuración. Asegúrese de revisar la recomendación cuidadosamente.
++
+La recomendación explica las prácticas recomendadas y las posibles dificultades de las configuraciones no optimizadas.
+
+. Seleccione para *Optimizar* configuraciones no optimizadas.
+. Revise el resumen de optimización y los elementos de acción que aparecen en el cuadro de diálogo de optimización para saber qué sucederá si decide optimizar. Algunas operaciones de optimización pueden provocar tiempos de inactividad de instancias o interrupciones del servicio.
+. Selecciona *Continuar* para optimizar la configuración.
+
+
+.Resultado
+Se inicia el proceso de optimización. Seleccione la pestaña *Supervisión de trabajos* para ver el estado de la operación.

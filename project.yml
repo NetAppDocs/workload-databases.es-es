@@ -11,7 +11,7 @@ settings:
   rss_page: whats-new.html
   release_notes_autogen:
     release_notes_repo: workload-relnotes
-  langs: es-es,us-en,de-de,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
+  langs: es-es,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,fr-fr,it-it
 sidebar:
   entries:
   - title: Documentación de las cargas de trabajo de bases de datos
@@ -64,6 +64,12 @@ sidebar:
         url: "/delete-clone.html"
     - title: Supervisar bases de datos
       url: "/monitor-databases.html"
+    - title: Optimice el servidor SQL
+      entries:
+      - title: Información general sobre optimización continua
+        url: optimize-overview.html
+      - title: Optimice las configuraciones
+        url: optimize-configurations.html
   - title: Conocimiento y apoyo
     entries:
     - title: Regístrese para recibir soporte

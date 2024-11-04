@@ -97,3 +97,9 @@ En la pestaña Inventario, el coste estimado que se muestra para cada instancia 
 == Múltiples FSx para sistemas de archivos ONTAP
 
 Workload Factory no admite la creación o el almacenamiento de configuraciones para Microsoft SQL Server con varios sistemas de archivos FSx para ONTAP. Solo se admite una implementación de configuración del sistema de archivos FSx para ONTAP.
+
+
+
+== Disponibilidad regional para la instalación de Microsoft SQL Server en una red privada con Terraform
+
+La implementación de Microsoft SQL Server en una red privada sin conectividad saliente mediante Terraform solo es compatible con la región US-east-1 (N. Virginia).

@@ -91,7 +91,10 @@ Active Directory:: Al conectarse a Active Directory, debe tener acceso administr
 
 == Paso 1: Crear un servidor de base de datos
 
-Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ para completar esta tarea en Workload Factory con permisos de modo _Automate_.
+Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ para completar esta tarea en Workload Factory con permisos de modo _Automate_. También puede utilizar las siguientes herramientas disponibles en CodeBox: API REST, CloudFormation y Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Aprende a usar CodeBox para la automatización"^].
+
+
+NOTE: Al usar Terraform de CodeBox, el código que copie o descargue oculta `fsxadmin` y `vsadmin` las contraseñas. Deberá volver a introducir las contraseñas cuando ejecute el código. Deberá incluir los siguientes permisos para la cuenta de usuario además de los permisos del modo _Automate_: `iam:TagRole` Y `iam:TagInstanceProfile`.
 
 [role="tabbed-block"]
 ====
