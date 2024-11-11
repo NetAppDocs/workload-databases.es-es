@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-server.html 
 keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage 
-summary: Gestione instancias de Microsoft SQL Server en Workload Factory para bases de datos. 
+summary: Gestione instancias de Microsoft SQL Server en la fábrica de cargas de trabajo de BlueXP  para bases de datos. 
 ---
-= Gestione instancias de Microsoft SQL Server
+= Gestione instancias de Microsoft SQL Server en la fábrica de cargas de trabajo de BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Gestione instancias de Microsoft SQL Server para supervisar el estado de la instancia y la base de datos, la utilización de recursos, la protección y el rendimiento del almacenamiento en Workload Factory para bases de datos.
+Gestione instancias de Microsoft SQL Server para supervisar el estado de la instancia y la base de datos, la utilización de recursos, la protección y el rendimiento del almacenamiento en el fábrica de cargas de trabajo de BlueXP  para bases de datos.
 
 Las bases de datos solo pueden gestionar instancias de Microsoft SQL Server con el almacenamiento del sistema de archivos FSx para ONTAP.
 
@@ -61,7 +61,7 @@ Complete los siguientes requisitos previos antes de comenzar:
 
 
 .Pasos
-. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . Haga clic en *Administrar* en la fila del host para administrar.
@@ -69,7 +69,7 @@ Complete los siguientes requisitos previos antes de comenzar:
 . Haga clic en *Administrar*.
 
 
-Se produce un error en la operación cuando Microsoft SQL Server carece de ciertos módulos PowerShell y scripts de gestión. Oracle Workload Factory activa un trabajo de preparación de recursos para instalar los módulos y scripts que faltan, que puede ver en la pestaña Supervisión de trabajos. Cuando finalice el trabajo, vuelva a intentarlo para gestionar la instancia de host.
+Se produce un error en la operación cuando Microsoft SQL Server carece de ciertos módulos PowerShell y scripts de gestión. La fábrica de cargas de trabajo activa un trabajo de preparación de recursos para instalar los módulos y scripts que faltan, que puede ver en el separador Supervisión de trabajos. Cuando finalice el trabajo, vuelva a intentarlo para gestionar la instancia de host.
 
 
 
@@ -78,7 +78,7 @@ Se produce un error en la operación cuando Microsoft SQL Server carece de ciert
 Puede ver una instancia gestionada siguiendo estos pasos.
 
 .Pasos
-. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . Haga clic en la flecha desplegable para expandir la fila del host y ver sus instancias gestionadas.
@@ -98,7 +98,7 @@ La visión general de la instancia aparece en el separador Inventario.
 Puede ver las bases de datos gestionadas por la instancia gestionada siguiendo estos pasos.
 
 .Pasos
-. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . Haga clic en la flecha desplegable para expandir la fila del host para ver sus bases de datos.
@@ -119,7 +119,7 @@ La lista de bases de datos de la instancia aparece en la pestaña Inventory.
 Anule la gestión de una instancia de host siguiendo estos pasos.
 
 .Pasos
-. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . Haga clic en la flecha desplegable para ampliar la fila de la instancia de host que desea anular la gestión.

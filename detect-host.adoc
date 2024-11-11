@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: detect-host.html 
 keywords: detect, detect server instance, instance, detect a database host, instance 
-summary: Detectar una instancia de Microsoft SQL Server en Workload Factory para bases de datos. 
+summary: Detectar una instancia de Microsoft SQL Server en el centro de cargas de trabajo de BlueXP  para bases de datos. 
 ---
 = Detectar una instancia de Microsoft SQL Server
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: Detectar una instancia de Microsoft SQL Server en Workload Factory para
 
 
 [role="lead"]
-Detectar una instancia de Microsoft SQL Server en Workload Factory para bases de datos.
+Detectar una instancia de Microsoft SQL Server en el centro de cargas de trabajo de BlueXP  para bases de datos.
 
 Esta tarea es para detectar una instancia _no detectada_.
 
 .Acerca de esta tarea
-Cuando las credenciales de AWS se asocian a Workload Factory, las bases de datos permiten la detección automatizada de Microsoft SQL Server que comienzan con SQL Server 2016 con los siguientes tipos de almacenamiento de AWS:
+Cuando las credenciales de AWS se asocian a la fábrica de cargas de trabajo, las bases de datos permiten la detección automatizada de Microsoft SQL Server que comienzan con SQL Server 2016 con los siguientes tipos de almacenamiento de AWS:
 
 * FSX para ONTAP
 * Almacén de bloques elásticos (EBS)
@@ -25,22 +25,22 @@ Cuando las credenciales de AWS se asocian a Workload Factory, las bases de datos
 
 En las bases de datos, las instancias detectadas se clasifican de la siguiente manera:
 
-* _Instancias no detectadas_: Instancias no detectadas que Workload Factory ha detectado automáticamente. Las instancias no se detectan en los siguientes casos:
+* _Instancias no detectadas_: Instancias no detectadas que han sido detectadas automáticamente por la fábrica de cargas de trabajo. Las instancias no se detectan en los siguientes casos:
 +
 ** Error en la autenticación de Microsoft SQL Server.
-** El sistema de archivos FSx para ONTAP de Microsoft SQL Server no está registrado en tu cuenta en Workload Factory.
+** El sistema de archivos FSx para ONTAP de Microsoft SQL Server no está registrado en tu cuenta en la fábrica de cargas de trabajo.
 
 
-* _Instancias no administradas_: Instancias detectadas que no están gestionadas por Workload Factory
-* _Instancias administradas_: Instancias detectadas gestionadas por Workload Factory
+* _Instancias no administradas_: Instancias detectadas que no están gestionadas por la fábrica de cargas de trabajo
+* _Instancias administradas_: Instancias detectadas gestionadas por la fábrica de cargas de trabajo
 
 
-El primer paso para gestionar una instancia de Microsoft SQL Server, o instancia de host, en Workload Factory para bases de datos es detectar una instancia de servidor de base de datos no detectada.
+El primer paso para gestionar una instancia de Microsoft SQL Server, o una instancia de host, en la fábrica de cargas de trabajo para bases de datos es detectar una instancia de servidor de base de datos no detectada.
 
 .Antes de empezar
 Los requisitos para detectar una instancia de servidor de base de datos no detectada son los siguientes:
 
-* Debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de cuenta de AWS"^] detectar una instancia de servidor de base de datos en Workload Factory.
+* Debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de cuenta de AWS"^]detectar una instancia de servidor de base de datos en la fábrica de cargas de trabajo.
 * El tipo de almacenamiento para la instancia debe ser uno de los siguientes:
 +
 ** FSX para ONTAP
@@ -55,7 +55,7 @@ Cuando se detecta una instancia de Microsoft SQL, el entorno existente no se mod
 
 
 .Pasos
-. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . Haga clic en la flecha desplegable para expandir la fila del host que se va a detectar.
@@ -66,10 +66,10 @@ El host se expande y aparecen las instancias del host.
 . Haga clic en *Detectar*.
 . En el cuadro de diálogo *Detectar instancia*, proporcione el nombre de usuario y la contraseña de Microsoft SQL Server o el nombre de usuario y la contraseña de FSX for ONTAP.
 +
-Workload Factory intenta validar sus credenciales de Microsoft SQL o FSx para ONTAP.
+La fábrica de cargas de trabajo valida sus credenciales de Microsoft SQL o las credenciales de FSx para ONTAP.
 
 +
-Si cualquiera de estas credenciales no está disponible, Workload Factory intenta instalar `aws.tools.SimpleSystemsManagement` el módulo en PowerShell.
+Si cualquiera de estas credenciales no está disponible, la fábrica de carga de trabajo intenta instalar `aws.tools.SimpleSystemsManagement` el módulo en PowerShell.
 
 . Haga clic en *Detectar*.
 +
@@ -80,4 +80,4 @@ Aparece la información de instancia detectada.
 
 
 .El futuro
-Cuando el tipo de almacenamiento de la instancia de host es FSx para ONTAP, puede link:manage-server.html["Gestione la instancia a través de Workload Factory"].
+Cuando el tipo de almacenamiento de la instancia de host es FSx para ONTAP, puede link:manage-server.html["gestione la instancia a través de fábrica de cargas de trabajo"].

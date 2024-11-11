@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: Realice un seguimiento de los trabajos de base de datos y supervise las bases de datos en Workload Factory para las bases de datos. 
+summary: Realice un seguimiento de los trabajos de base de datos y supervise las bases de datos en la fábrica de cargas de trabajo de BlueXP  para las 
 ---
-= Supervisar bases de datos
+= Supervisión de bases de datos en la fábrica de cargas de trabajo de BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Realice un seguimiento de los trabajos de base de datos y supervise las bases de datos con Workload Factory para las bases de datos.
+Realice un seguimiento de los trabajos de base de datos y supervise las bases de datos en la fábrica de cargas de trabajo de BlueXP  para las
 
 .Acerca de esta tarea
 Database proporciona supervisión de trabajos para que pueda realizar un seguimiento del progreso de los trabajos, así como diagnosticar y solucionar problemas en caso de que se produzca algún fallo. Además, los filtros por tipo y estado, la función de búsqueda y la opción para descargar la tabla de trabajos ayudan con la navegación y los informes de los trabajos de base de datos.
@@ -36,7 +36,7 @@ Retención de eventos de trabajo:: Los eventos de supervisión de trabajos se co
 == Supervisar trabajos
 
 .Pasos
-. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
 . En Bases de datos, seleccione la pestaña *Supervisión de trabajos*.
 . En la pestaña Supervisión del trabajo, utilice los filtros o busque para restringir los resultados del trabajo. También es posible descargar un informe de trabajos.

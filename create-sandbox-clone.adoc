@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-sandbox-clone.html 
 keywords: create, clone, sandbox 
-summary: Crear un clon de sandbox en Workload Factory para bases de datos. 
+summary: Crea un clon de sandbox en la fábrica de cargas de trabajo de BlueXP  para bases de datos. 
 ---
-= Crear un clon de sandbox en Workload Factory para bases de datos
+= Crea un clon de sandbox en la fábrica de cargas de trabajo de BlueXP  para bases de datos
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Crear un clon de espacio aislado de una base de datos en Workload Factory para bases de datos permite usar el clon para desarrollo, pruebas, integración, análisis, formación, QA y más sin alterar la base de datos de origen.
+La creación de un clon de espacio limitado de una base de datos en la fábrica de cargas de trabajo de BlueXP  para bases de datos permite usar el clon para las tareas de desarrollo, pruebas, integración, análisis, formación, control de calidad y mucho más sin alterar la base de datos de origen.
 
 .Acerca de esta tarea
 Se crea un clon de sandbox a partir de la snapshot más reciente en la base de datos de origen. Puede clonarse en el mismo servidor Microsoft SQL Server que la base de datos de origen o clonarse en otro Microsoft SQL Server, siempre y cuando compartan el mismo sistema de archivos FSx para ONTAP.
@@ -19,19 +19,19 @@ Se crea un clon de sandbox a partir de la snapshot más reciente en la base de d
 .Antes de empezar
 Asegúrese de completar los siguientes requisitos previos antes de crear un clon de sandbox.
 
-Credenciales y permisos:: Debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de cuenta de AWS y permisos de modo _read_ o _automate_"^] crear un clon de sandbox en Workload Factory.
+Credenciales y permisos:: Debe tener link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de cuenta de AWS y permisos de modo _read_ o _automate_"^] que crear un clon de filtrado en la fábrica de cargas de trabajo.
 +
 --
-Como alternativa, puede usar CodeBox para copiar una plantilla parcialmente completada o crear una plantilla completada para que pueda crear el clon de sandbox fuera de Workload Factory mediante la API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Obtenga más información sobre la automatización de CodeBox"^].
+Como alternativa, puede usar CodeBox para copiar una plantilla parcialmente completada o crear una plantilla completada para poder crear el clon de sandbox fuera de la fábrica de cargas de trabajo mediante la API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Obtenga más información sobre la automatización de CodeBox"^].
 
 --
-Microsoft SQL Server:: Debe haber gestionado Microsoft SQL Server en Workload Factory para que las bases de datos alojen el nuevo clon de sandbox.
+Microsoft SQL Server:: Debe haber gestionado Microsoft SQL Server en la fábrica de cargas de trabajo para que las bases de datos alojen el nuevo clon de sandbox.
 Administrador de sistemas de AWS:: Asegúrese de que `NT Authority\SYSTEM` el privilegio de usuario está activado en el host de Microsoft SQL a través de AWS Systems Manager.
 Base de datos de origen:: Necesita una base de datos de origen disponible para el clon.
 
 
 .Pasos
-. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
 . En las bases de datos, seleccione la pestaña *sandboxes*.
 . En la pestaña sandboxes, selecciona *Crear nuevo sandbox*.
@@ -49,7 +49,7 @@ Base de datos de origen:: Necesita una base de datos de origen disponible para e
 .. *Base de datos de destino*: Introduzca un nombre para el clon de sandbox.
 
 
-. *Mount*: Al clonar una base de datos SQL que tiene varios archivos de datos y/o de registro, Workload Factory clona todos los archivos bajo la letra de unidad asignada automáticamente o definida.
+. *Mount*: Cuando se clona una base de datos SQL que tiene varios archivos de datos y/o de registro, la fábrica de carga de trabajo clona todos los archivos bajo la letra de unidad asignada automáticamente o definida.
 +
 Seleccione una de las siguientes opciones:
 

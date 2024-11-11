@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: delete-clone.html 
 keywords: delete, clone 
-summary: Elimine un clon de sandbox cuando ya no lo necesite. 
+summary: Elimine un clon de espacio aislado en la fábrica de cargas de trabajo BlueXP  cuando ya no lo necesite. 
 ---
 = Dividir un clon de sandbox desde la base de datos de origen
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: Elimine un clon de sandbox cuando ya no lo necesite.
 
 
 [role="lead"]
-Elimine un clon de sandbox cuando ya no lo necesite y desee liberar capacidad de almacenamiento.
+Elimine un clon del sandbox en la fábrica de cargas de trabajo de BlueXP  para bases de datos cuando ya no lo necesita y desee liberar capacidad de almacenamiento.
 
 .Pasos
-. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, haga clic en *Ir a Inventario de Bases de Datos*.
 . En las bases de datos, seleccione la pestaña *sandboxes*.
 . Haz clic en el menú de tres puntos del clon del sandbox que quieras eliminar.

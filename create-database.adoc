@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: create-database.html 
 keywords: create, database, creation, Microsoft SQL 
-summary: Crear una base de datos de Microsoft SQL con bases de datos de Workload Factory. 
+summary: Crear una base de datos de Microsoft SQL con la fábrica de cargas de trabajo de BlueXP  para bases de datos. 
 ---
-= Cree una base de datos de Microsoft SQL en Workload Factory para bases de datos
+= Crear una base de datos de Microsoft SQL en la fábrica de cargas de trabajo de BlueXP  para bases de datos
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La creación de una nueva base de datos Microsoft SQL en la consola Workload Factory permite gestionar el recurso en Workload Factory.
+La creación de una nueva base de datos de Microsoft SQL permite gestionar el recurso dentro del fábrica de cargas de trabajo de BlueXP  para bases de datos.
 
 .Acerca de esta tarea
 Tras la creación de la base de datos, se crean dos nuevos volúmenes en el sistema de archivos FSx para ONTAP que consta de LUN independientes para alojar datos y archivos de registro de la base de datos. Los archivos de base de datos de la nueva base de datos están aprovisionados mediante thin provisioning y consumen sólo unos MB del tamaño total asignado a la nueva base de datos.
 
 Si desea segregar el almacenamiento para la base de datos, puede hacerlo mediante un _punto de montaje virtual_. El punto de montaje virtual permite consolidar bases de datos en unas pocas unidades comunes en el host.
 
-La creación de una base de datos en Workload Factory requiere permisos de modo Automate. Como alternativa, en el modo básico, puede copiar o descargar una plantilla de código parcialmente completada para completar la operación fuera de Workload Factory. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Obtenga información sobre los modos operativos en Workload Factory"^] para decidir qué modo desea utilizar.
+La creación de una base de datos en fábrica de cargas de trabajo requiere permisos de modo Automate. Como alternativa, en el modo básico, puede copiar o descargar una plantilla de código parcialmente completada para completar la operación fuera de la fábrica de cargas de trabajo. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Obtenga información sobre los modos operativos de fábrica de cargas de trabajo"^] para decidir qué modo desea utilizar.
 
 
 NOTE: Los servidores Microsoft SQL Server que utilizan el protocolo SMB no admiten la creación de bases de datos.
@@ -26,14 +26,14 @@ NOTE: Los servidores Microsoft SQL Server que utilizan el protocolo SMB no admit
 .Antes de empezar
 Asegúrese de completar los siguientes requisitos previos antes de crear una nueva base de datos.
 
-Credenciales y permisos:: Debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de cuenta de AWS y permisos de modo _read_ o _automate_"^] crear una nueva base de datos en Workload Factory.
+Credenciales y permisos:: Debe tener link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de cuenta de AWS y permisos de modo _read_ o _automate_"^]que crear una nueva base de datos en la fábrica de carga de trabajo.
 +
 --
-Como alternativa, puede utilizar el CodeBox para copiar una plantilla de forma que pueda implementar una base de datos fuera de Workload Factory mediante la API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Obtenga más información sobre la automatización de CodeBox"^].
+Como alternativa, puede utilizar CodeBox para copiar una plantilla de forma que pueda implementar una base de datos fuera de la fábrica de cargas de trabajo mediante la API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Obtenga más información sobre la automatización de CodeBox"^].
 
 --
 Host Windows:: Debe tener suficientes letras de unidad disponibles en Microsoft SQL Server para crear unidades nuevas para la nueva base de datos si utiliza el modo _Quick create_.
-Microsoft SQL Server:: Debe haber gestionado Microsoft SQL Server en Workload Factory para que las bases de datos alojen la nueva base de datos.
+Microsoft SQL Server:: Debe haber gestionado Microsoft SQL Server en la fábrica de cargas de trabajo para que las bases de datos alojen la nueva base de datos.
 Administrador de sistemas de AWS:: Asegúrese de que `NT Authority\SYSTEM user` el privilegio está habilitado en el host de Microsoft SQL a través de AWS System Manager.
 
 
@@ -41,14 +41,14 @@ Administrador de sistemas de AWS:: Asegúrese de que `NT Authority\SYSTEM user` 
 
 == Cree una base de datos
 
-Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ para completar esta tarea en Workload Factory con permisos de modo _read_ o _automate_.
+Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ para completar esta tarea en la fábrica de cargas de trabajo con permisos de modo _read_ o _automate_.
 
 [role="tabbed-block"]
 ====
 .Creación rápida
 --
 .Pasos
-. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . En el separador Inventory, seleccione un servidor de base de datos con una instancia de SQL Server gestionada para crear la base de datos en.
@@ -81,7 +81,7 @@ Alternativamente, si desea cambiar cualquiera de estos ajustes predeterminados a
 .Creación avanzada
 --
 .Pasos
-. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . En el separador Inventory, seleccione un servidor de base de datos con una instancia de SQL Server gestionada para crear la base de datos en.

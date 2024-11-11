@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: check-clone-integrity.html 
 keywords: integrity check, data corruption 
-summary: Realice una comprobación de integridad para determinar si los datos de clonado de sandbox están intactos o dañados. 
+summary: Ejecutar una comprobación de integridad para determinar si los datos de clones de sandbox están intactos o dañados en la fábrica de cargas de trabajo de BlueXP  para las bases de datos. 
 ---
 = Compruebe la integridad de los datos en un clon de sandbox
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: Realice una comprobación de integridad para determinar si los datos de
 
 
 [role="lead"]
-Realice una comprobación de integridad para determinar si los datos de clonado de sandbox están intactos o dañados.
+Ejecutar una comprobación de integridad para determinar si los datos de clones de sandbox están intactos o dañados en la fábrica de cargas de trabajo de BlueXP  para las bases de datos.
 
 .Acerca de esta tarea
 Cuando crea un clon de sandbox desde una base de datos de origen mientras está ocupado, es posible que los datos del clon no estén sincronizados con la snapshot más reciente de la base de datos de origen. Esta operación comprueba la integridad de todos los objetos del clon del sandbox para determinar si los datos clonados del sandbox son actuales.
 
 .Pasos
-. Inicie sesión en el link:https://console.workloads.netapp.com["Consola de Workload Factory"^].
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
 . En las bases de datos, seleccione la pestaña *sandboxes*.
 . En la pestaña sandboxes, haga clic en el menú de tres puntos del clon del sandbox para comprobar la integridad.

@@ -1,9 +1,10 @@
 ---
 indexpage:
-  title: Documentación sobre Workload Factory para cargas de trabajo de bases de datos
-  lead: Pon en marcha las configuraciones de Microsoft SQL Server y gestiona entornos
-    de base de datos sobre el almacenamiento del sistema de archivos FSx para ONTAP
-    en BlueXP Workload Factory.
+  title: El fábrica de cargas de trabajo de BlueXP  para documentación de bases de
+    datos
+  lead: Implementa configuraciones de Microsoft SQL Server y gestiona entornos de
+    bases de datos sobre el almacenamiento del sistema de archivos FSx para ONTAP
+    en la fábrica de cargas de trabajo de BlueXP .
   tiles:
   - title: Manos a la obra
     links:
