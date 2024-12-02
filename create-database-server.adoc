@@ -65,11 +65,6 @@ Modos de operación de fábrica de carga de trabajo:: La fábrica de cargas de t
 Asegúrese de tener los siguientes requisitos previos antes de crear un nuevo host de base de datos.
 
 Credenciales y permisos:: Debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos del modo de automatización"^]crear un nuevo host de base de datos en la fábrica de cargas de trabajo.
-+
---
-Como alternativa, puede usar CodeBox para copiar una plantilla vacía o crear una plantilla completada para poder implementar una base de datos fuera de la fábrica de cargas de trabajo mediante la API REST, la CLI de AWS y AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Obtenga más información sobre la automatización de CodeBox"^].
-
---
 Active Directory:: Al conectarse a Active Directory, debe tener acceso administrativo con permisos para hacer lo siguiente:
 +
 --
@@ -88,7 +83,7 @@ Active Directory:: Al conectarse a Active Directory, debe tener acceso administr
 
 == Paso 1: Crear un servidor de base de datos
 
-Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ para completar esta tarea en la fábrica de cargas de trabajo con permisos de modo _automate_. También puede utilizar las siguientes herramientas disponibles en CodeBox: API REST, CloudFormation y Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Aprende a usar CodeBox para la automatización"^].
+Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ para completar esta tarea en la fábrica de cargas de trabajo con permisos de modo _automate_. También puede usar las siguientes herramientas disponibles en CodeBox: API REST, CLI de AWS, AWS CloudFormation y Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Aprende a usar CodeBox para la automatización"^].
 
 
 NOTE: Al usar Terraform de CodeBox, el código que copie o descargue oculta `fsxadmin` y `vsadmin` las contraseñas. Deberá volver a introducir las contraseñas cuando ejecute el código. Deberá incluir los siguientes permisos para la cuenta de usuario además de los permisos del modo _Automate_: `iam:TagRole` Y `iam:TagInstanceProfile`.

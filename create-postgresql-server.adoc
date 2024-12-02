@@ -19,37 +19,34 @@ Necesitará las credenciales de la cuenta de AWS y los permisos _automate_.
 Antes de comenzar, obtenga información sobre los tipos de implementación de almacenamiento disponibles para la configuración del host de la base de datos, la implementación de Active Directory, los modos de operación de fábrica de carga de trabajo, y los requisitos para completar esta operación.
 
 FSX para puestas en marcha del sistema de archivos ONTAP:: Para crear un nuevo servidor PostgreSQL, se requiere un sistema de archivos FSx para ONTAP como back-end de almacenamiento. Puede utilizar un sistema de archivos FSX for ONTAP existente o crear un nuevo sistema de archivos. Si selecciona un sistema de archivos FSx para ONTAP existente como back-end de almacenamiento de servidor de bases de datos, creamos una nueva máquina virtual de almacenamiento para las cargas de trabajo de PostgreSQL.
-
-
++
+--
 Los sistemas de archivos FSX para ONTAP admiten implementaciones _standalone_ para PostgreSQL. La fábrica de cargas de trabajo crea un sistema de archivos FSx de zona de disponibilidad única para ONTAP, además de volúmenes y LUN independientes para archivos de datos, registro y tempdb.
 
+--
 Modos de operación de fábrica de carga de trabajo:: La fábrica de cargas de trabajo ofrece tres modos operativos en función de lo cómodo que sea al permitir que la fábrica de cargas de trabajo administre sus recursos de AWS.
-
-
++
+--
 *_Basic_ MODE*: En este modo de operación, no es necesario asociar ninguna credencial de cuenta de AWS en la fábrica de cargas de trabajo. Puede copiar o descargar una plantilla YAML parcialmente llena desde el CodeBox para que se complete fuera de la fábrica de cargas de trabajo.
 
 *_Read_ MODE*: En este modo de operación, proporciona credenciales de cuenta de AWS con permisos de lectura que le permite completar el formulario _Quick create_ o _Advanced create_ y luego copiarlo o descargarlo. También puede redirigir a CloudFormation desde la fábrica de cargas de trabajo con los detalles del formulario completado. Y podrá gestionar el servidor de bases de datos desplegado en la fábrica de cargas de trabajo.
 
 *_AUTOMATIC_ MODE*: En este modo de operación, proporciona credenciales de cuenta de AWS con permisos automatizados que le permiten crear y administrar recursos de AWS dentro de la fábrica de cargas de trabajo.
 
+--
+
+
 .Antes de empezar
 Asegúrese de tener los siguientes requisitos previos antes de crear un nuevo host de base de datos.
 
 Credenciales y permisos:: Debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos del modo de automatización"^]crear un nuevo host de base de datos en la fábrica de cargas de trabajo.
-+
---
-Como alternativa, puede usar CodeBox para copiar una plantilla vacía o crear una plantilla completada para poder implementar una base de datos fuera de la fábrica de cargas de trabajo mediante la API REST, la CLI de AWS o AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Obtenga más información sobre la automatización de CodeBox"^].
-
---
 
 
 
 
 == Cree un servidor de base de datos
 
-Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ para completar esta tarea en la fábrica de cargas de trabajo con permisos de modo _automate_. También puede utilizar las siguientes herramientas disponibles en CodeBox: API REST y CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Aprende a usar CodeBox para la automatización"^].
-
-+
+Puede utilizar el modo _Advanced create_ deployment para completar esta tarea en la fábrica de cargas de trabajo con permisos de modo _automate_. También puede usar las siguientes herramientas disponibles en CodeBox: API REST, CLI de AWS y AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Aprende a usar CodeBox para la automatización"^].
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -179,6 +176,3 @@ En CloudWatch, se crea un grupo de registros con el nombre de la pila. En el gru
 También puede guardar la configuración.
 
 
-
-.El futuro
-Ahora usted puede link:create-database.html["Crear una base de datos en la fábrica de cargas de trabajo de BlueXP  para bases de datos"].
