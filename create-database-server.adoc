@@ -67,7 +67,7 @@ Asegúrese de tener los siguientes requisitos previos antes de crear un nuevo ho
 Credenciales y permisos:: Debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos del modo de automatización"^]crear un nuevo host de base de datos en la fábrica de cargas de trabajo.
 +
 --
-Como alternativa, puede usar CodeBox para copiar una plantilla vacía o crear una plantilla completada para poder implementar una base de datos fuera de la fábrica de cargas de trabajo mediante la API REST, la CLI de AWS o AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Obtenga más información sobre la automatización de CodeBox"^].
+Como alternativa, puede usar CodeBox para copiar una plantilla vacía o crear una plantilla completada para poder implementar una base de datos fuera de la fábrica de cargas de trabajo mediante la API REST, la CLI de AWS y AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Obtenga más información sobre la automatización de CodeBox"^].
 
 --
 Active Directory:: Al conectarse a Active Directory, debe tener acceso administrativo con permisos para hacer lo siguiente:
@@ -102,7 +102,7 @@ NOTE: En _Quick create_, FCI es el modelo de implementación predeterminado, Win
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Implementar host de base de datos*.
+. En el mosaico Bases de datos, seleccione *Implementar host de base de datos* y luego seleccione *Microsoft SQL Server* en el menú desplegable.
 . Seleccione *Quick create*.
 . En *AWS settings*, proporcione lo siguiente:
 +
@@ -136,9 +136,6 @@ Los atributos DNS de VPC `EnableDnsSupport` y `EnableDnsHostnames` se modifican 
 +
 
 NOTE: Las implementaciones de FCI solo se admiten en configuraciones FSx para ONTAP de varias zonas de disponibilidad (MAZ).
-
-+
-Las subredes no deben compartir la misma tabla de rutas para alta disponibilidad.
 
 +
 ... En el campo *Configuración de clúster - Nodo 1*, seleccione la zona de disponibilidad principal para la configuración de MAZ FSX para ONTAP en el menú desplegable *Zona de disponibilidad* y una subred de la zona de disponibilidad principal desde el menú desplegable *Subred*.
@@ -211,7 +208,7 @@ También puede seleccionar *Guardar configuración* para implementar el host má
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Implementar host de base de datos*.
+. En el mosaico Bases de datos, seleccione *Implementar host de base de datos* y luego seleccione *Microsoft SQL Server* en el menú desplegable.
 . Selecciona *Creación avanzada*.
 . Para *Modelo de implementación*, seleccione *Instancia de clúster de conmutación por error* o *Instancia única*.
 . En *AWS settings*, proporcione lo siguiente:

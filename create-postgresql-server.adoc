@@ -1,0 +1,184 @@
+---
+sidebar: sidebar 
+permalink: create-postgresql-server.html 
+keywords: create, server, PostgreSQL, deploy, host, deploy a database host, database host 
+summary: Cree un nuevo SQL Server PostgreSQL en el centro de cargas de trabajo de BlueXP  para bases de datos. 
+---
+= Cree un servidor PostgreSQL en la fábrica de cargas de trabajo BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para crear un nuevo servidor PostgreSQL, o host de base de datos, en la fábrica de cargas de trabajo de BlueXP  para bases de datos se requiere la puesta en marcha del sistema de archivos FSx para ONTAP y recursos para Active Directory.
+
+.Acerca de esta tarea
+Necesitará las credenciales de la cuenta de AWS y los permisos _automate_.
+
+Antes de comenzar, obtenga información sobre los tipos de implementación de almacenamiento disponibles para la configuración del host de la base de datos, la implementación de Active Directory, los modos de operación de fábrica de carga de trabajo, y los requisitos para completar esta operación.
+
+FSX para puestas en marcha del sistema de archivos ONTAP:: Para crear un nuevo servidor PostgreSQL, se requiere un sistema de archivos FSx para ONTAP como back-end de almacenamiento. Puede utilizar un sistema de archivos FSX for ONTAP existente o crear un nuevo sistema de archivos. Si selecciona un sistema de archivos FSx para ONTAP existente como back-end de almacenamiento de servidor de bases de datos, creamos una nueva máquina virtual de almacenamiento para las cargas de trabajo de PostgreSQL.
+
+
+Los sistemas de archivos FSX para ONTAP admiten implementaciones _standalone_ para PostgreSQL. La fábrica de cargas de trabajo crea un sistema de archivos FSx de zona de disponibilidad única para ONTAP, además de volúmenes y LUN independientes para archivos de datos, registro y tempdb.
+
+Modos de operación de fábrica de carga de trabajo:: La fábrica de cargas de trabajo ofrece tres modos operativos en función de lo cómodo que sea al permitir que la fábrica de cargas de trabajo administre sus recursos de AWS.
+
+
+*_Basic_ MODE*: En este modo de operación, no es necesario asociar ninguna credencial de cuenta de AWS en la fábrica de cargas de trabajo. Puede copiar o descargar una plantilla YAML parcialmente llena desde el CodeBox para que se complete fuera de la fábrica de cargas de trabajo.
+
+*_Read_ MODE*: En este modo de operación, proporciona credenciales de cuenta de AWS con permisos de lectura que le permite completar el formulario _Quick create_ o _Advanced create_ y luego copiarlo o descargarlo. También puede redirigir a CloudFormation desde la fábrica de cargas de trabajo con los detalles del formulario completado. Y podrá gestionar el servidor de bases de datos desplegado en la fábrica de cargas de trabajo.
+
+*_AUTOMATIC_ MODE*: En este modo de operación, proporciona credenciales de cuenta de AWS con permisos automatizados que le permiten crear y administrar recursos de AWS dentro de la fábrica de cargas de trabajo.
+
+.Antes de empezar
+Asegúrese de tener los siguientes requisitos previos antes de crear un nuevo host de base de datos.
+
+Credenciales y permisos:: Debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos del modo de automatización"^]crear un nuevo host de base de datos en la fábrica de cargas de trabajo.
++
+--
+Como alternativa, puede usar CodeBox para copiar una plantilla vacía o crear una plantilla completada para poder implementar una base de datos fuera de la fábrica de cargas de trabajo mediante la API REST, la CLI de AWS o AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Obtenga más información sobre la automatización de CodeBox"^].
+
+--
+
+
+
+
+== Cree un servidor de base de datos
+
+Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ para completar esta tarea en la fábrica de cargas de trabajo con permisos de modo _automate_. También puede utilizar las siguientes herramientas disponibles en CodeBox: API REST y CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Aprende a usar CodeBox para la automatización"^].
+
++
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Bases de datos, seleccione *Implementar host de base de datos* y luego seleccione *PostgreSQL* en el menú desplegable.
+. Selecciona *Creación avanzada*.
+. Para *Modelo de implementación*, *Instancia independiente* es el valor predeterminado.
+. En *AWS settings*, proporcione lo siguiente:
++
+.. *Credenciales de AWS*: Seleccione las credenciales de AWS con permisos automatizados para implementar el nuevo host de base de datos.
++
+Las credenciales de AWS con permisos _Automate_ permiten que la fábrica de cargas de trabajo implemente y administre el nuevo host de base de datos desde su cuenta de AWS dentro de la fábrica de cargas de trabajo.
+
++
+Las credenciales de AWS con permisos _read_ permiten que la fábrica de cargas de trabajo genere una plantilla de CloudFormation para que la utilice en la consola de AWS CloudFormation.
+
++
+Si no tiene las credenciales de AWS asociadas en la fábrica de cargas de trabajo y desea crear el nuevo servidor en la fábrica de cargas de trabajo, siga la opción *1* para ir a la página Credenciales. Agregue manualmente las credenciales y permisos necesarios para el modo _Automate_ para cargas de trabajo de base de datos.
+
++
+Si desea completar el formulario Crear nuevo servidor en la fábrica de cargas de trabajo para poder descargar una plantilla de archivo YAML completa para su implementación en AWS CloudFormation, siga *Opción 2* para asegurarse de que tiene los permisos necesarios para crear el nuevo servidor en AWS CloudFormation. Agregue manualmente las credenciales y los permisos necesarios para el modo _READ_ para las cargas de trabajo de la base de datos.
+
++
+Opcionalmente, puede descargar una plantilla de archivo YAML parcialmente completada desde CodeBox para crear la pila fuera de la fábrica de cargas de trabajo sin credenciales ni permisos. Seleccione *CloudFormation* en el menú desplegable del CodeBox para descargar el archivo YAML.
+
+.. *Región y VPC*: Seleccione una región y una red de VPC.
++
+Asegúrese de que los grupos de seguridad para un extremo de interfaz existente permiten el acceso al protocolo HTTPS (443) a las subredes seleccionadas.
+
++
+Extremos de la interfaz del servicio de AWS (SQS, FSx, EC2, CloudWatch, formación de la nube, SSM) y el punto final de la puerta de enlace S3 se crean durante el despliegue si no se encuentra.
+
++
+Los atributos DNS de VPC `EnableDnsSupport` y `EnableDnsHostnames` se modifican para activar la resolución de la dirección de punto final si no se ha establecido ya en `true`.
+
+.. *Zonas de disponibilidad*: Seleccione zonas de disponibilidad y subredes.
++
+Para implementaciones de instancia única::
++
+--
+... En el campo *Configuración del clúster - Nodo 1*, seleccione una zona de disponibilidad en el menú desplegable *Zona de disponibilidad* y una subred en el menú desplegable *Subred*.
+
+
+--
+
+
+.. *Grupo de seguridad*: Seleccione un grupo de seguridad existente o cree un nuevo grupo de seguridad.
++
+Dos grupos de seguridad se conectan a los nodos SQL (instancias EC2) durante el despliegue del nuevo servidor.
+
++
+... Se crea un grupo de seguridad de carga de trabajo para permitir los puertos y protocolos necesarios para PostgreSQL.
+... Para un sistema de archivos FSX for ONTAP existente, el grupo de seguridad asociado con él se agrega automáticamente al nodo PostgreSQL que permite la comunicación con el sistema de archivos. Cuando se crea un nuevo sistema FSx para ONTAP, se crea un nuevo grupo de seguridad para el sistema de archivos FSx para ONTAP y el mismo grupo de seguridad también se conecta al nodo SQL.
+
+
+
+
+. En *Configuración de la aplicación*, proporcione lo siguiente:
++
+.. Seleccione el *Sistema operativo* en el menú desplegable.
+.. Seleccione la *versión PostgreSQL* del menú desplegable.
+.. *Nombre del servidor de base de datos*: Introduzca el nombre del cluster de base de datos.
+.. *Credenciales de la base de datos*: Introduzca un nombre de usuario y una contraseña para una nueva cuenta de servicio o utilice las credenciales de la cuenta de servicio existentes en Active Directory.
+
+
+. En *Conectividad*, selecciona un par de claves para conectarte de forma segura a tu instancia.
+. En *Configuración de infraestructura*, proporcione lo siguiente:
++
+.. *Tipo de instancia de DB*: Seleccione el tipo de instancia de base de datos en el menú desplegable.
+.. *FSX para el sistema ONTAP*: Crea un nuevo sistema de archivos FSX para ONTAP o usa un sistema de archivos FSX para ONTAP existente.
++
+... * Crear nuevo FSX para ONTAP*: Introduzca el nombre de usuario y la contraseña.
++
+Un nuevo sistema de archivos FSX para ONTAP puede agregar 30 minutos o más de tiempo de instalación.
+
+... *Seleccione un FSX para ONTAP*: Seleccione FSX para el nombre de ONTAP en el menú desplegable, e introduzca un nombre de usuario y una contraseña para el sistema de archivos.
++
+Para los sistemas de archivos FSx para ONTAP existentes, asegúrate de lo siguiente:
+
++
+**** El grupo de enrutamiento conectado a FSx para ONTAP permite que las rutas a las subredes se utilicen para la implementación.
+**** El grupo de seguridad permite el tráfico de las subredes utilizadas para la puesta en marcha, específicamente los puertos TCP HTTPS (443) e iSCSI (3260).
+
+
+
+
+.. *Política de instantáneas*: Habilitado por defecto. Las copias Snapshot se realizan diariamente y tienen un período de retención de 7 días.
++
+Las snapshots se asignan a volúmenes creados para las cargas de trabajo PostgreSQL.
+
+.. *Tamaño de la unidad de datos*: Ingrese la capacidad de la unidad de datos y seleccione la unidad de capacidad.
+.. *IOPS provisionadas*: Selecciona *Automático* o *Provisioned por el usuario*. Si selecciona *Provisioned por el usuario*, introduzca el valor de IOPS.
+.. *Capacidad de rendimiento*: Seleccione la capacidad de rendimiento en el menú desplegable.
++
+En algunas regiones, puede seleccionar una capacidad de rendimiento de 4 Gbps. Para aprovisionar 4 Gbps de capacidad de rendimiento, su sistema de archivos FSx para ONTAP debe configurarse con un mínimo de 5.120 GiB de capacidad de almacenamiento SSD y 160.000 IOPS SSD.
+
+.. *Cifrado*: Selecciona una clave de tu cuenta o una clave de otra cuenta. Debe introducir la clave de cifrado ARN desde otra cuenta.
++
+Las claves de cifrado personalizadas de FSx para ONTAP no se incluyen en la aplicación del servicio. Seleccione una clave de cifrado FSX adecuada. Las claves de cifrado no FSX provocarán un error en la creación del servidor.
+
++
+Las claves gestionadas por AWS se filtran en función de la aplicabilidad del servicio.
+
+.. *Etiquetas*: Opcionalmente, puedes añadir hasta 40 etiquetas.
+.. *Servicio de Notificación Simple*: Opcionalmente, puede habilitar el Servicio de Notificación Simple (SNS) para esta configuración seleccionando un tema de SNS para Microsoft SQL Server en el menú desplegable.
++
+... Active Simple Notification Service.
+... Seleccione un ARN en el menú desplegable.
+
+
+.. *Monitoreo de CloudWatch*: Opcionalmente, puede habilitar el monitoreo de CloudWatch.
++
+Recomendamos habilitar CloudWatch para la depuración en caso de fallo. Los eventos que aparecen en la consola de AWS CloudFormation son de alto nivel y no especifican la causa raíz. Todos los registros detallados se guardan en `C:\cfn\logs` la carpeta de las instancias de EC2.
+
++
+En CloudWatch, se crea un grupo de registros con el nombre de la pila. En el grupo de registros aparece un flujo de registro para cada nodo de validación y nodo SQL. CloudWatch muestra el progreso del script y proporciona información para ayudarle a comprender si falla la implementación y cuándo.
+
+.. *Retroceder recursos*: Esta característica no es compatible actualmente.
+
+
+. Resumen
++
+.. *Costo estimado*: Proporciona una estimación de los cargos en los que podría incurrir si implementa los recursos mostrados.
+
+
+. Haga clic en *Crear* para implementar el nuevo host de base de datos.
++
+También puede guardar la configuración.
+
+
+
+.El futuro
+Ahora usted puede link:create-database.html["Crear una base de datos en la fábrica de cargas de trabajo de BlueXP  para bases de datos"].
