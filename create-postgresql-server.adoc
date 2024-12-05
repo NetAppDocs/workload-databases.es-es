@@ -176,3 +176,6 @@ En CloudWatch, se crea un grupo de registros con el nombre de la pila. En el gru
 También puede guardar la configuración.
 
 
+
+.El futuro
+Puede configurar manualmente usuarios, acceso remoto y bases de datos en el servidor PostgreSQL desplegado.
