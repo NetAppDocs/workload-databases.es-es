@@ -18,7 +18,7 @@ Para entregar una nueva versión del software automáticamente al clon de la bas
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En las bases de datos, seleccione la pestaña *sandboxes*.
 . En la pestaña sandboxes, haga clic en el menú de tres puntos del clon del sandbox para conectarse a las herramientas CI/CD.
 . Selecciona *Conectar a las herramientas CI/CD*.

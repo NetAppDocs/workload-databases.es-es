@@ -32,7 +32,7 @@ Base de datos de origen:: Necesita una base de datos de origen disponible para e
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En las bases de datos, seleccione la pestaña *sandboxes*.
 . En la pestaña sandboxes, selecciona *Crear nuevo sandbox*.
 . En la página Crear nuevo sandbox, en Origen de base de datos, proporcione lo siguiente:

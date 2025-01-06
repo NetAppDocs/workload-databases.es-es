@@ -49,10 +49,10 @@ Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ p
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . En el separador Inventory, seleccione un servidor de base de datos con una instancia de SQL Server gestionada para crear la base de datos en.
-. Haz clic en el menú de tres puntos de la instancia administrada y luego selecciona *Crear base de datos de usuario*.
+. Haga clic en el menú de tres puntos de la instancia administrada y luego seleccione *Crear base de datos de usuario*.
 . En la página Crear base de datos de usuario, en Información de base de datos, proporcione lo siguiente:
 +
 .. *Nombre de la base de datos*: Introduzca el nombre de la base de datos.
@@ -82,10 +82,10 @@ Alternativamente, si desea cambiar cualquiera de estos ajustes predeterminados a
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . En el separador Inventory, seleccione un servidor de base de datos con una instancia de SQL Server gestionada para crear la base de datos en.
-. Haz clic en el menú de tres puntos de la instancia administrada y luego selecciona *Crear base de datos de usuario*.
+. Haga clic en el menú de tres puntos de la instancia administrada y luego seleccione *Crear base de datos de usuario*.
 . Seleccione *Crear base de datos de usuario*.
 . En la página Crear base de datos de usuario, en Información de base de datos, proporcione lo siguiente:
 +

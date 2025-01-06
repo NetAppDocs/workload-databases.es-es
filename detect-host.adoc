@@ -56,7 +56,7 @@ Cuando se detecta una instancia de Microsoft SQL, el entorno existente no se mod
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . Haga clic en la flecha desplegable para expandir la fila del host que se va a detectar.
 +

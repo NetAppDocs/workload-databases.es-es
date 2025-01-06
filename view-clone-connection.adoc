@@ -15,9 +15,9 @@ Ver y copiar la información de conexión de un clon del entorno aislado en la f
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En las bases de datos, seleccione la pestaña *sandboxes*.
-. En la pestaña sandboxes, haz clic en el menú de tres puntos del clon del sandbox para ver la información de conexión.
+. En la pestaña sandboxes, haga clic en el menú de tres puntos del clon del sandbox para ver la información de conexión.
 . Selecciona *Mostrar información de conexión*.
 . En el cuadro de diálogo Mostrar información de conexión, copie la información de conexión si es necesario.
 . Haga clic en *Cerrar*.

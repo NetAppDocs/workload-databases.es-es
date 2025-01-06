@@ -18,9 +18,9 @@ Cuando se clona una base de datos, el clon que se creó es un clon _baseline_. L
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En las bases de datos, seleccione la pestaña *sandboxes*.
-. En la pestaña sandboxes, haz clic en el menú de tres puntos del clon del sandbox que quieras revertir.
+. En la pestaña sandboxes, haga clic en el menú de tres puntos del clon del sandbox que desea revertir.
 . Seleccione *Re-baseline*.
 . En el cuadro de diálogo Volver a establecer la base, haga clic en *Volver a establecer la base*.
 

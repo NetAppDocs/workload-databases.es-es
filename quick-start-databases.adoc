@@ -38,4 +38,4 @@ Por último, si elige operar en el modo _Automate_, debe link:create-database-se
 .El futuro
 Cuando tienes hosts gestionados de FSx para ONTAP en tu inventario de bases de datos, puedes link:create-database.html["crear una base de datos de usuario"] o link:create-sandbox-clone.html["clone el host para crear un espacio de pruebas"].
 
-Cuando tenga hosts de Elastic Block Store en el inventario de bases de datos, puede link:explore-savings.html["Explore el ahorro con la calculadora de ahorro en almacenamiento"].
+Cuando tienes hosts de Elastic Block Store o FSx para Windows File Server en tu inventario de bases de datos, puedes link:explore-savings.html["explora el ahorro con la calculadora de ahorro"].

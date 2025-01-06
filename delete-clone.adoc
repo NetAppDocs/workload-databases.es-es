@@ -15,9 +15,9 @@ Elimine un clon del sandbox en la fábrica de cargas de trabajo de BlueXP  para
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, haga clic en *Ir a Inventario de Bases de Datos*.
+. En el mosaico Bases de datos, haga clic en *Ir al inventario de Bases de datos*.
 . En las bases de datos, seleccione la pestaña *sandboxes*.
-. Haz clic en el menú de tres puntos del clon del sandbox que quieras eliminar.
+. Haga clic en el menú de tres puntos del clon del sandbox que desee eliminar.
 . Seleccione *Eliminar*.
 . En el cuadro de diálogo Eliminar, haga clic en *Eliminar*.
 

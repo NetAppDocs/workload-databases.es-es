@@ -102,10 +102,4 @@ Workload Factory no admite la creación o el almacenamiento de configuraciones p
 
 == Disponibilidad regional para la instalación de Microsoft SQL Server en una red privada con Terraform
 
-La implementación de Microsoft SQL Server en una red privada sin conectividad saliente mediante Terraform solo es compatible con la región US-east-1 (N. Virginia).
-
-
-
-== Soporte PostgreSQL
-
-PostgreSQL no es compatible con Amazon CloudWatch ni con la implementación en una red privada.
+La implementación de Microsoft SQL Server en una red privada sin conectividad saliente mediante Terraform solo es compatible con la región US-east-1 (N. Virginia). PostgreSQL no es compatible con Amazon CloudWatch ni con la implementación en una red privada.

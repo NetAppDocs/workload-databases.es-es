@@ -18,9 +18,9 @@ Considere la capacidad de almacenamiento que se necesita para la nueva base de d
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En las bases de datos, seleccione la pestaña *sandboxes*.
-. En la pestaña sandboxes, haz clic en el menú de tres puntos del clon del sandbox que quieras dividir.
+. En la pestaña sandboxes, haga clic en el menú de tres puntos del clon del sandbox que desea dividir.
 . Selecciona *Split*.
 . En el cuadro de diálogo Dividir, haga clic en *Dividir*.
 

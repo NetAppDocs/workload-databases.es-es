@@ -62,7 +62,7 @@ Complete los siguientes requisitos previos antes de comenzar:
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . Haga clic en *Administrar* en la fila del host para administrar.
 . Seleccione una o más instancias de host para gestionar.
@@ -79,13 +79,13 @@ Puede ver una instancia gestionada siguiendo estos pasos.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . Haga clic en la flecha desplegable para expandir la fila del host y ver sus instancias gestionadas.
 +
 El host se expande y aparecen las instancias del host.
 
-. Haz clic en el menú de tres puntos de la instancia para ver y luego selecciona *Ver instancia*.
+. Haga clic en el menú de tres puntos de la instancia para ver y luego seleccione *Ver instancia*.
 
 
 .Resultado
@@ -99,7 +99,7 @@ Puede ver las bases de datos gestionadas por la instancia gestionada siguiendo e
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . Haga clic en la flecha desplegable para expandir la fila del host para ver sus bases de datos.
 +
@@ -120,13 +120,13 @@ Anule la gestión de una instancia de host siguiendo estos pasos.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . Haga clic en la flecha desplegable para ampliar la fila de la instancia de host que desea anular la gestión.
 +
 El host se expande y aparecen las instancias del host.
 
-. Haga clic en el menú de tres puntos de la instancia para desgestionar.
+. Haga clic en el menú de tres puntos de la instancia que desea desgestionar.
 . Seleccione *Desgestionar*.
 
 

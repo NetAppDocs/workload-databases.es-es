@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-configurations.html 
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
-summary: El centro de cargas de trabajo de BlueXP  para bases de datos analiza las configuraciones de almacenamiento de Microsoft SQL Server y proporciona información y recomendaciones para ayudarle a lograr la excelencia operativa. 
+summary: La fábrica de cargas de trabajo de BlueXP  para bases de datos analiza las configuraciones de Microsoft SQL Server proporcionando información y recomendaciones para ayudarle a lograr la excelencia operativa. 
 ---
 = Optimice las configuraciones para puestas en marcha de Microsoft SQL Server
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: El centro de cargas de trabajo de BlueXP  para bases de datos analiza 
 
 
 [role="lead"]
-La fábrica de cargas de trabajo de BlueXP  para bases de datos analiza y evalúa continuamente las configuraciones de puesta en marcha de Microsoft SQL Server que se ejecutan en Amazon FSx para NetApp ONTAP. Las evaluaciones proporcionan información, recomendaciones y optimizaciones para que pueda lograr la excelencia operativa.
+La fábrica de cargas de trabajo de BlueXP  para bases de datos analiza y evalúa continuamente las configuraciones de puesta en marcha de Microsoft SQL Server que se ejecutan en Amazon FSx para NetApp ONTAP. Esta función ofrece información y recomendaciones con la opción de optimizar automáticamente configuraciones sin optimizar para que las cargas de trabajo de bases de datos puedan alcanzar la excelencia operativa.
 
 .Acerca de esta tarea
 La evaluación se ejecuta automáticamente y de forma continua una vez al día para las instancias de Microsoft SQL Server con almacenamiento FSx para ONTAP y gestionado en fábrica de cargas de trabajo. Los informes de evaluación están disponibles en el panel de optimización sólo si se ha ejecutado un trabajo programado diario después del despliegue o después de gestionar una instancia.
@@ -24,7 +24,8 @@ Qué se escanea:: Workload Factory evalúa el estado de optimización de las sig
 * Ajuste de tamaño del almacenamiento: Incluye nivel de almacenamiento, margen adicional del sistema de archivos, tamaño de la unidad de registro y tamaño de la unidad TempDB
 * Distribución de almacenamiento: Incluye la ubicación de los archivos de datos del usuario, la ubicación de los archivos de registro y la ubicación de TempDB
 * Configuración del almacenamiento: Incluye la gestión de la capacidad, el thin provisioning, la política de organización en niveles, la snapshot y el estado de I/O multivía, la política y las sesiones, etc.
-* Computación: Incluye el ajuste de tamaño
+* Informática: Incluye ajustes de tamaño y parches del sistema operativo
+* Aplicaciones: Incluye licencias de Microsoft SQL Server
 
 
 --
@@ -38,19 +39,18 @@ Qué se escanea:: Workload Factory evalúa el estado de optimización de las sig
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir a Inventario de Bases de Datos*.
-. En Bases de datos, seleccione la pestaña *Inventario*.
-. Haga clic en la flecha desplegable para expandir la fila del host y ver sus instancias gestionadas.
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. En la pestaña *Inventario*, seleccione la flecha desplegable para expandir la fila del host para ver sus instancias administradas.
 +
 El host se expande y aparecen las instancias del host.
 
-. Seleccione el menú de tres puntos de la instancia para escanear y luego seleccione *Optimizar*.
-. En la página Optimize Instance del host, revise los hallazgos de la evaluación del almacenamiento.
+. Seleccione el menú de tres puntos de la instancia y luego seleccione *Optimizar*.
+. En la página Optimizar Instancia para la instancia de SQL Server, revise las conclusiones de la evaluación.
 +
-Los filtros están disponibles para ordenar por categorías, subcategorías, estado, gravedad y etiquetas.
+Puede filtrar por categorías, subcategorías, estado, gravedad y etiquetas.
 
 +
-Si es necesario, puede descargar un informe de los hallazgos seleccionando *Exportar PDF*.
+También puede descargar un informe de los resultados de la evaluación seleccionando *Exportar PDF*.
 
 . Seleccione la flecha desplegable para ver la recomendación de cualquier configuración. Asegúrese de revisar la recomendación cuidadosamente.
 +
