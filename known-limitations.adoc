@@ -100,6 +100,12 @@ Workload Factory no admite la creación o el almacenamiento de configuraciones p
 
 
 
-== Disponibilidad regional para la instalación de Microsoft SQL Server en una red privada con Terraform
+== Evaluación de parches del sistema operativo para la optimización
 
-La implementación de Microsoft SQL Server en una red privada sin conectividad saliente mediante Terraform solo es compatible con la región US-east-1 (N. Virginia). PostgreSQL no es compatible con Amazon CloudWatch ni con la implementación en una red privada.
+La evaluación de parches del sistema operativo que se realiza con fines de optimización puede no funcionar en una red privada. La evaluación se basa en AWS Patch Manager. Para saber cómo aplicar parches a las instancias de Windows EC2 en una red privada, consulte link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["El blog de operaciones en la nube de AWS «Cómo aplicar parches a instancias de Windows EC2 en subredes privadas con AWS Systems Manager»"^].
+
+
+
+== Optimización del tamaño de la computación
+
+Al cambiar a determinados tipos de instancias, se puede restablecer la configuración de red, lo que puede provocar un fallo de conexión de nodo durante la optimización y provocar un fallo en el trabajo. Es posible que se necesite intervención manual para comprobar y actualizar la configuración de DNS y las sesiones iSCSI. Consulte link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Documentación de Amazon Elastic Compute Cloud"^]para obtener más información sobre las limitaciones de cambio de tamaño de EC2.
