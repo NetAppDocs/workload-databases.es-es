@@ -16,7 +16,7 @@ La fábrica de cargas de trabajo de BlueXP  para bases de datos analiza y eval�
 .Acerca de esta tarea
 La evaluación se ejecuta automáticamente y de forma continua una vez al día para las instancias de Microsoft SQL Server con almacenamiento FSx para ONTAP y gestionado en fábrica de cargas de trabajo. Los informes de evaluación están disponibles en el panel de optimización sólo si se ha ejecutado un trabajo programado diario después del despliegue o después de gestionar una instancia.
 
-La fábrica de cargas de trabajo proporciona recomendaciones detalladas para optimizar las configuraciones basadas en prácticas recomendadas para el almacenamiento de FSx para ONTAP.
+La fábrica de cargas de trabajo proporciona recomendaciones detalladas para optimizar las configuraciones basadas en prácticas recomendadas para el almacenamiento de FSx para ONTAP. Puede revisar las recomendaciones y optar por optimizar las configuraciones no optimizadas.
 
 Qué se escanea:: Workload Factory evalúa el estado de optimización de las siguientes configuraciones para las instancias de Microsoft SQL Server:
 +
@@ -24,8 +24,8 @@ Qué se escanea:: Workload Factory evalúa el estado de optimización de las sig
 * Ajuste de tamaño del almacenamiento: Incluye nivel de almacenamiento, margen adicional del sistema de archivos, tamaño de la unidad de registro y tamaño de la unidad TempDB
 * Distribución de almacenamiento: Incluye la ubicación de los archivos de datos del usuario, la ubicación de los archivos de registro y la ubicación de TempDB
 * Configuración del almacenamiento: Incluye la gestión de la capacidad, el thin provisioning, la política de organización en niveles, la snapshot y el estado de I/O multivía, la política y las sesiones, etc.
-* Informática: Incluye ajustes de tamaño y parches del sistema operativo
-* Aplicaciones: Incluye licencias de Microsoft SQL Server
+* Informática: Incluye ajustes de tamaño, parches del sistema operativo y ajustes de adaptadores de red como escalado lateral de recepción (RSS) y descarga de TCP
+* Aplicaciones: Incluye licencias de Microsoft SQL Server, parche de Microsoft SQL Server y configuración de MAXDOP
 
 
 --
@@ -34,8 +34,11 @@ Qué se escanea:: Workload Factory evalúa el estado de optimización de las sig
 .Antes de empezar
 * Debe tener credenciales con permisos de lectura o automatización.
 * Para evaluar el almacenamiento de una instancia de Microsoft SQL Server, la instancia debe gestionarse mediante fábrica de cargas de trabajo y el tipo de almacenamiento debe ser FSx para ONTAP.
-* Asegúrese de revisar cada recomendación cuidadosamente antes de seleccionar para optimizar un ajuste o una configuración.
+* Asegúrese de revisar cada recomendación cuidadosamente antes de seleccionar para optimizar un ajuste o una configuración. Para la configuración de RSS y MAXDOP, le sugerimos que pruebe la configuración recomendada para determinar las mejoras de rendimiento antes de realizar cambios en su entorno de producción.
 
+
+
+NOTE: El proceso de optimización puede causar tiempos de inactividad de instancias o interrupciones del servicio. Asegúrese de revisar el resumen de optimización y los elementos de acción antes de optimizar una configuración.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
