@@ -958,4 +958,9 @@
   <block id="7a4fa85db3c457278cffd34e817477ab" category="list-text">Asegúrese de revisar cada recomendación cuidadosamente antes de seleccionar para optimizar un ajuste o una configuración. Para la configuración de RSS y MAXDOP, le sugerimos que pruebe la configuración recomendada para determinar las mejoras de rendimiento antes de realizar cambios en su entorno de producción.</block>
   <block id="926cb4c482170392f69cc268b20f8346" category="admonition">El proceso de optimización puede causar tiempos de inactividad de instancias o interrupciones del servicio. Asegúrese de revisar el resumen de optimización y los elementos de acción antes de optimizar una configuración.</block>
   <block id="1c8d307950dbef59ce61b6bc729fdb52" category="section-title">03 de febrero de 2025</block>
+  <block id="382e51924c0a806fea2a0017322199a5" category="section-title">Limitaciones de optimización</block>
+  <block id="d65e48d2f6a810cde4c31e5a88aecedb" category="section-title">Optimización de la configuración de ONTAP y SO</block>
+  <block id="8e29c0a71b0719e3f6ed28d4a7c0b30d" category="paragraph">La optimización masiva para más de una instancia de SQL Server no se admite para la configuración de ONTAP y del sistema operativo.</block>
+  <block id="7dd6090f4d4627220763b41db74bb898" category="section-title">Cálculo del ahorro en las instalaciones</block>
+  <block id="9fb10d1d0413bc062aa3f807aa200e53" category="paragraph">No se tienen en cuenta los cálculos de ahorro de costes y porcentajes del tamaño de volumen para el sistema de almacenamiento local de Microsoft SQL Server.</block>
 </blocks>
