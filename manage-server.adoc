@@ -43,6 +43,14 @@ Para administrar una instancia de host en una red privada sin conectividad exter
 * `fsx`
 
 
+Si utiliza un servidor proxy para todas las conexiones salientes de instancias EC2, debe permitir el acceso a los siguientes dominios para que las operaciones de gestión funcionen:
+
+* ``.microsoft.com``
+* ``.powershellgallery.com``
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
+
+
 .Antes de empezar
 Complete los siguientes requisitos previos antes de comenzar:
 

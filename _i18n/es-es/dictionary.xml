@@ -963,4 +963,9 @@
   <block id="8e29c0a71b0719e3f6ed28d4a7c0b30d" category="paragraph">La optimización masiva para más de una instancia de SQL Server no se admite para la configuración de ONTAP y del sistema operativo.</block>
   <block id="7dd6090f4d4627220763b41db74bb898" category="section-title">Cálculo del ahorro en las instalaciones</block>
   <block id="9fb10d1d0413bc062aa3f807aa200e53" category="paragraph">No se tienen en cuenta los cálculos de ahorro de costes y porcentajes del tamaño de volumen para el sistema de almacenamiento local de Microsoft SQL Server.</block>
+  <block id="79dda14ccc601407ccb09f0fe3d93259" category="paragraph">Si utiliza un servidor proxy para todas las conexiones salientes de instancias EC2, debe permitir el acceso a los siguientes dominios para que las operaciones de gestión funcionen:</block>
+  <block id="d9f9431d48e0b55421e9c9376798d722" category="list-text"><block ref="c202a4052bc97ff0191552ea4c2c865c" prefix="" category="inline-code"></block></block>
+  <block id="9aa0a44ed97cfd5357fb393a8de57dc7" category="list-text"><block ref="1f378775539050b7c7b5e1cdfe121e2f" prefix="" category="inline-code"></block></block>
+  <block id="4bd2e14395b83906b0838bbcc78df388" category="list-text"><block ref="3e51061ec4171070ff2ffdabfbd63cc3" prefix="" category="inline-code"></block></block>
+  <block id="9b6e1103f46b83b38494e5b294e2c410" category="list-text"><block ref="c1eaf26c3b755ad5252456a5d3f34a2f" prefix="" category="inline-code"></block></block>
 </blocks>
