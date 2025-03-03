@@ -14,9 +14,7 @@ summary: Cree un nuevo servidor Microsoft SQL Server en el centro de cargas de t
 Para crear un nuevo servidor de Microsoft SQL Server, o host de base de datos, en la fábrica de cargas de trabajo de BlueXP  para bases de datos se requiere la puesta en marcha del sistema de archivos FSx para ONTAP y recursos para Active Directory.
 
 .Acerca de esta tarea
-Necesitará las credenciales de la cuenta de AWS y los permisos _automate_.
-
-Antes de comenzar, obtenga información sobre los tipos de implementación de almacenamiento disponibles para la configuración del host de la base de datos, la implementación de Active Directory, los modos de operación de fábrica de carga de trabajo, y los requisitos para completar esta operación.
+Antes de crear Microsoft SQL Server a partir de la fábrica de cargas de trabajo, obtenga información sobre los tipos de implementación de almacenamiento disponibles para la configuración del host de base de datos, la implementación de Active Directory, los modos de operación de fábrica de cargas de trabajo y los requisitos para completar esta operación.
 
 Después de la implementación, deberá <<Paso 2: Habilite la conexión remota en Microsoft SQL Server,Active la conexión remota en Microsoft SQL Server>>.
 

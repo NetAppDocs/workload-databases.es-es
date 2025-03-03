@@ -17,13 +17,21 @@ Explora el ahorro en la fábrica de cargas de trabajo de BlueXP  para las bases
 
 == Acerca de esta tarea
 
-La fábrica de cargas de trabajo ofrece una calculadora de ahorro para que puedas comparar distintos componentes de coste al ejecutar cargas de trabajo de Microsoft SQL Server, como el almacenamiento, la computación, la licencia de SQL, los snapshots y los clones para las cargas de trabajo de tus bases de datos en sistemas de archivos FSx para ONTAP en Elastic Block Store (EBS), FSx para el servidor de archivos de Windows y el almacenamiento on-premises. Dependiendo de sus requisitos de almacenamiento, puede darse cuenta de que los sistemas de archivos de FSx para ONTAP son los más rentables para las cargas de trabajo de sus bases de datos.
+La fábrica de cargas de trabajo tiene varias formas de explorar el ahorro de las cargas de trabajo de base de datos que se ejecutan en Amazon Elastic Block Store (EBS), FSx para el servidor de archivos de Windows y el almacenamiento en las instalaciones: Desde la consola, desde la pestaña Inventario y desde la pestaña Explorar ahorros. En todos los casos, puede utilizar la calculadora de ahorro para comparar diversos componentes de coste de la ejecución de cargas de trabajo de Microsoft SQL Server como el almacenamiento, la computación, la licencia de SQL, los snapshots y los clones para las cargas de trabajo de bases de datos en sistemas de archivos FSx para ONTAP frente a Elastic Block Store (EBS), FSx para el servidor de archivos de Windows y el almacenamiento en las instalaciones.
 
-La calculadora muestra si el almacenamiento para las cargas de trabajo de base de datos en estos servidores Microsoft SQL Server costaría menos si se utiliza un sistema de archivos FSx para ONTAP.
+Si la fábrica de carga de trabajo determina que podría ahorrar dinero ejecutando estas cargas de trabajo en un sistema de archivos FSx para ONTAP, puede poner en marcha Microsoft SQL over FSx para ONTAP directamente desde la calculadora de ahorro del centro de cargas de trabajo. Si tienes varias instancias de Microsoft SQL Server en Elastic Block Store, FSx para Windows File Server o almacenamiento on-premises, te recomendaremos una configuración de FSx para ONTAP con una única instancia de SQL.
 
-image:screenshot-ebs-savings-calculator.png["Una captura de pantalla de la página de la calculadora de ahorro muestra la configuración seleccionada de Microsoft SQL Server en Amazon Elastic Block Store a la izquierda con la opción de personalizar los valores de instantánea y clonación. El ahorro de costes en la cantidad de dólares y los porcentajes, así como la visualización de almacenamiento del coste mensual total para utilizar Microsoft SQL Server on FSx para ONTAP y Elastic Block Store, en la parte izquierda."]
+.Ahorro potencial para todas las cargas de trabajo de las bases de datos
+Vaya a la base de datos *Dashboard* desde la consola de fábrica de cargas de trabajo para obtener una visión general de los ahorros potenciales de costos por ejecutar todas sus cargas de trabajo de base de datos en FSx para ONTAP. En el mosaico *Ahorro potencial*, puede ver el número de todas las cargas de trabajo de base de datos que tiene en Elastic Block Store y FSx para Windows File Server, el ahorro de costes potencial, el porcentaje de ahorro y la representación visual en el gráfico de barras.
 
-Si la fábrica de carga de trabajo determina que podría ahorrar dinero ejecutando estas cargas de trabajo en un sistema de archivos FSx for ONTAP, puede poner en marcha Microsoft SQL over FSx para ONTAP directamente desde la calculadora del centro de cargas de trabajo. Si tienes varias instancias de Microsoft SQL Server en Elastic Block Store, FSx para Windows File Server o almacenamiento on-premises, te recomendaremos una configuración de FSx para ONTAP con una única instancia de SQL.
+image:screenshot-dashboard-potential-savings-tile.png["Una captura de pantalla del icono de ahorro potencial de la consola de bases de datos de la consola de la fábrica de cargas de trabajo. El icono de ahorro potencial muestra el número de todas las cargas de trabajo de base de datos que tiene en Elastic Block Store y FSx para servidor de archivos de Windows, el ahorro en costes potencial, el porcentaje de ahorro y la representación visual en el gráfico de barras."]
+
+.Calculadora de ahorro
+Puede utilizar la calculadora de ahorro para comparar distintos componentes de coste de la ejecución de cargas de trabajo de Microsoft SQL Server como el almacenamiento, la computación, la licencia de SQL, los snapshots y los clones para las cargas de trabajo de bases de datos en sistemas de archivos FSx para ONTAP en Elastic Block Store (EBS), FSx para el servidor de archivos de Windows y el almacenamiento en las instalaciones. Dependiendo de sus requisitos de almacenamiento, puede darse cuenta de que los sistemas de archivos de FSx para ONTAP son los más rentables para las cargas de trabajo de sus bases de datos.
+
+La calculadora muestra si el almacenamiento para las cargas de trabajo de base de datos en estos servidores Microsoft SQL Server costaría menos si se utiliza un sistema de archivos FSx para ONTAP. <<Opciones de calculadora,Aprende a usar la calculadora.>>
+
+image:screenshot-ebs-savings-calculator-update.png["Una captura de pantalla de la página de la calculadora de ahorro muestra la configuración seleccionada de Microsoft SQL Server en Amazon Elastic Block Store a la izquierda con la opción de personalizar los valores de instantánea y clonación. El ahorro de costes en la cantidad de dólares y los porcentajes, así como la visualización de almacenamiento del coste mensual total para utilizar Microsoft SQL Server on FSx para ONTAP y Elastic Block Store, en la parte izquierda."]
 
 
 
@@ -66,6 +74,8 @@ Explore el ahorro mediante la personalización: Proporcione los ajustes de confi
 
 Explore el ahorro para los hosts detectados: La fábrica de cargas de trabajo se enlaza con sus servidores Microsoft SQL existentes y extrae los detalles de la calculadora para la comparación automática. Tendrás que conceder permisos de automatización para usar esta opción de calculadora. Puede cambiar el caso de uso, pero todos los demás detalles se determinan automáticamente en el cálculo.
 
+Además, puede link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Añada las credenciales de AWS"^]mejorar la precisión del análisis de la calculadora. Selecciona *Calcular los ahorros en función de los recursos existentes*. Se le redirigirá a la página Agregar credenciales. Después de agregar credenciales, seleccione los recursos existentes para comparar con FSx para ONTAP y seleccione *Explorar ahorros*.
+
 
 
 === Explora el ahorro a través de la personalización
@@ -105,10 +115,6 @@ Siga los pasos de la pestaña para su tipo de almacenamiento.
 .. Si seleccionó el modelo de implementación de disponibilidad permanente, proporcione detalles para las especificaciones *Secondary EC2* y *Volume Types*.
 
 
-. Revise los cálculos y recomendaciones proporcionados en la página.
-+
-Además, desplácese hacia abajo hasta la parte inferior de la página hasta *Exportar PDF* o *Ver cálculos*.
-
 
 
 --
@@ -138,14 +144,21 @@ Además, desplácese hacia abajo hasta la parte inferior de la página hasta *Ex
 .. En las especificaciones de EC2, seleccione el *tipo de instancia* en el menú desplegable.
 
 
-. Revise los cálculos y recomendaciones proporcionados en la página.
-+
-Además, desplácese hacia abajo hasta la parte inferior de la página hasta *Exportar PDF* o *Ver cálculos*.
-
 
 
 --
 ====
+Después de proporcionar detalles para la configuración del host de la base de datos, revise los cálculos y las recomendaciones que se proporcionan en la página.
+
+Además, desplácese hasta la parte inferior de la página para ver el informe seleccionando una de las siguientes opciones:
+
+* *Exportar PDF*
+* *Enviar por correo electrónico*
+* *Ver los cálculos*
+
+
+Para cambiar a FSX para ONTAP, siga las instrucciones a <<Pon en marcha Microsoft SQL Server en AWS EC2 mediante FSx para ONTAP,Implemente Microsoft SQL Server en AQS EC2 utilizando FSx para sistemas de archivos ONTAP>>.
+
 
 
 === Explora el ahorro para los hosts detectados
@@ -180,10 +193,6 @@ Si la fábrica de cargas de trabajo detecta hosts EBS, se le redirigirá a la pe
 .. *Tasa de cambio mensual*: Ingrese el porcentaje que los datos de clonación y instantánea cambian en promedio por mes.
 
 
-. Revise los cálculos y recomendaciones proporcionados en la página.
-+
-Además, desplácese hacia abajo hasta la parte inferior de la página hasta *Exportar PDF* o *Ver cálculos*.
-
 
 
 --
@@ -206,10 +215,6 @@ Si se detectan las copias de sombra de FSX para Windows, el valor predeterminado
 .. *Número de copias clonadas*: Introduce el número de copias clonadas en la configuración de FSX para Windows.
 .. *Tasa de cambio mensual*: Ingrese el porcentaje que los datos de clonación y instantánea cambian en promedio por mes.
 
-
-. Revise los cálculos y recomendaciones proporcionados en la página.
-+
-Además, desplácese hacia abajo hasta la parte inferior de la página hasta *Exportar PDF* o *Ver cálculos*.
 
 
 
@@ -246,14 +251,21 @@ Si se detectan las copias de sombra de FSX para Windows, el valor predeterminado
 .. *Tasa de cambio mensual*: Ingrese el porcentaje que los datos de clonación y instantánea cambian en promedio por mes.
 
 
-. Revise los cálculos y recomendaciones proporcionados en la página.
-+
-Además, desplácese hacia abajo hasta la parte inferior de la página hasta *Exportar PDF* o *Ver cálculos*.
-
 
 
 --
 ====
+Después de proporcionar detalles para la configuración del host de la base de datos, revise los cálculos y las recomendaciones que se proporcionan en la página.
+
+Además, desplácese hasta la parte inferior de la página para ver el informe seleccionando una de las siguientes opciones:
+
+* *Exportar PDF*
+* *Enviar por correo electrónico*
+* *Ver los cálculos*
+
+
+Para cambiar a FSX para ONTAP, siga las instrucciones a <<Pon en marcha Microsoft SQL Server en AWS EC2 mediante FSx para ONTAP,Implemente Microsoft SQL Server en AQS EC2 utilizando FSx para sistemas de archivos ONTAP>>.
+
 
 
 == Pon en marcha Microsoft SQL Server en AWS EC2 mediante FSx para ONTAP

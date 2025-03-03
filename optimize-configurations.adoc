@@ -26,6 +26,7 @@ Qué se escanea:: Workload Factory evalúa el estado de optimización de las sig
 * Configuración del almacenamiento: Incluye la gestión de la capacidad, el thin provisioning, la política de organización en niveles, la snapshot y el estado de I/O multivía, la política y las sesiones, etc.
 * Informática: Incluye ajustes de tamaño, parches del sistema operativo y ajustes de adaptadores de red como escalado lateral de recepción (RSS) y descarga de TCP
 * Aplicaciones: Incluye licencias de Microsoft SQL Server, parche de Microsoft SQL Server y configuración de MAXDOP
+* Resiliencia: Incluye snapshots locales
 
 
 --
