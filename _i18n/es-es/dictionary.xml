@@ -619,9 +619,7 @@
   <block id="cfa54b7dd19dd91bb87ede68126951eb" category="list-text"><block ref="25f6388206f436c2d1de63216302b13d" prefix="" category="inline-code"></block></block>
   <block id="8d461d34b0f2c02565383f3301044282" category="list-text"><block ref="fea0543b0b4b9d4c240c6219de0db41c" prefix="" category="inline-code"></block></block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">29 de septiembre de 2024</block>
-  <block id="9a178ca3815f6aeb284a65e10447f086" category="paragraph"><block ref="9a178ca3815f6aeb284a65e10447f086" category="inline-link-macro-rx"></block></block>
   <block id="7d6d6d8a97f883d860bff04c0be1019c" category="inline-link-macro">Explora el ahorro con FSx para ONTAP para tus cargas de trabajo de base de datos</block>
-  <block id="293758d509326f8da42abf75db2d37e6" category="paragraph"><block ref="293758d509326f8da42abf75db2d37e6" category="inline-link-macro-rx"></block></block>
   <block id="fbcbba8054f71f57fa8e2b950179bb23" category="paragraph">El número máximo de clones de sandbox que se pueden crear desde un servidor de base de datos es 90.</block>
   <block id="0928468cb2283b21e6802a78c6a64e3a" category="doc">Optimice de forma continua sus cargas de trabajo de Microsoft SQL Server con bases de datos</block>
   <block id="e73fa899152fb6836032fef4e1c95da4" category="paragraph">La fábrica de cargas de trabajo de BlueXP  presenta directrices y barreras continuas para garantizar una optimización continua y el cumplimiento de las prácticas recomendadas para el componente de almacenamiento de tus cargas de trabajo de Microsoft SQL Server en Amazon FSx para NetApp ONTAP. Esta función analiza continuamente su estado de Microsoft SQL Server sin conexión, lo que le proporciona un informe completo de información, oportunidades y recomendaciones para ayudarle a lograr el máximo rendimiento, rentabilidad y cumplimiento.</block>
@@ -629,9 +627,7 @@
   <block id="72d1af9ffdd277a1cf7789b588da9b4d" category="paragraph"><block ref="72d1af9ffdd277a1cf7789b588da9b4d" category="inline-link-macro-rx"></block></block>
   <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Soporte de terraform</block>
   <block id="822802a1673e79cb7dbd54947e4dc32c" category="paragraph">Ahora puede utilizar Terraform desde CodeBox para implementar Microsoft SQL Server.</block>
-  <block id="d83b54de9b50110195e4bf3c1f3c6a67" category="list-text"><block ref="d83b54de9b50110195e4bf3c1f3c6a67" category="inline-link-macro-rx"></block></block>
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">Utilice Terraform de CodeBox</block>
-  <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">Aprende a usar CodeBox para la automatización</block>
   <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">*Optimización continua*: Analiza continuamente su estado de Microsoft SQL Server sin conexión, proporcionándole un informe completo de ideas, oportunidades y recomendaciones para ayudarle a alcanzar la excelencia operativa.</block>
   <block id="13025ba9f92de77af2aeaf1af07a4aa8" category="doc">Optimice las configuraciones para puestas en marcha de Microsoft SQL Server</block>
@@ -669,7 +665,6 @@
   <block id="35c4b7b7975b86786b96de60f8d9159c" category="doc">Lanzamiento inicial de la fábrica de cargas de trabajo de BlueXP  para bases de datos</block>
   <block id="fe582581097e432c4b1b3f3135f39b72" category="paragraph">La versión inicial incluye la funcionalidad de explorar el ahorro con Amazon FSx para NetApp ONTAP como entorno de almacenamiento para sus cargas de trabajo de bases de datos, detectar, gestionar e implementar servidores de Microsoft SQL Server, implementar y clonar bases de datos, y supervisar estos trabajos en la fábrica de cargas de trabajo.</block>
   <block id="e5d3c7248ff4540f88c13fbf9252d0a3" category="inline-link-macro">consola de fábrica de carga de trabajo</block>
-  <block id="e93e8519fa9c34d76ec0735119a46866" category="paragraph">Ahora puede ir a la calculadora de ahorro desde la <block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block> página de inicio. Seleccione en Elastic Block Store y FSx para Windows File Server para comenzar.</block>
   <block id="ab1e050e49bbc49befbca952f74f0443" category="inline-image-macro">captura de pantalla de la página inicial de la consola de fábrica de carga de trabajo. La imagen muestra el mosaico de bases de datos con un nuevo botón Explorar ahorro. Haga clic en el botón para abrir un menú desplegable. El menú desplegable tiene dos opciones: Microsoft SQL Server en EBS y Microsoft SQL Server en FSx para Windows File Server.</block>
   <block id="923f11c15ceba3bc0e4d37309ab27ed2" category="paragraph"><block ref="923f11c15ceba3bc0e4d37309ab27ed2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8e73a65c2de8a6be7664465f03b5fb30" category="doc">Automatice con CodeBox en el centro de cargas de trabajo de BlueXP  para bases de datos</block>
@@ -963,7 +958,6 @@
   <block id="1414de2121340ce91492c56f7800fcc7" category="section-title">Soporte Terraform para la creación de servidores PostgreSQL</block>
   <block id="9156ac6cc60e32ed114af1a49af0ffed" category="paragraph">Ahora puede usar Terraform desde el CodeBox para implementar PostgreSQL.</block>
   <block id="7a5745faeabd31c33609adf25373d8a1" category="inline-link-macro">Cree un servidor de base de datos PostgreSQL</block>
-  <block id="61b5b69de9c821f5e486ec9c30a821a4" category="list-text"><block ref="61b5b69de9c821f5e486ec9c30a821a4" category="inline-link-macro-rx"></block></block>
   <block id="6a7893eb24462b3da7dd0a66586c5738" category="section-title">Evaluación de resiliencia para programación de snapshots local</block>
   <block id="677bceea5ebbea10cf85a91ebf42050e" category="paragraph">Existe una nueva evaluación de resiliencia disponible para las cargas de trabajo de bases de datos. Evaluamos si los volúmenes de sus instancias de Microsoft SQL Server tienen políticas de snapshot programadas válidas. Las copias Snapshot son copias de un momento específico de sus datos y ayudan a mantener la resiliencia de los entornos de base de datos en caso de pérdida de datos.</block>
   <block id="90814442b7f0694d712f43efffe9c178" category="section-title">Corrección de MAXDOP para cargas de trabajo de bases de datos</block>
@@ -1005,4 +999,9 @@
   <block id="593a4cc0b797fa5f4354bae99e3fa42d" category="list-text">Resiliencia: Incluye snapshots locales</block>
   <block id="4fbdcdf3c2d8694d5e358b3175b867da" category="section-title">03 de marzo de 2025</block>
   <block id="5b9ce98e8b3125f8d921be7829ab8a26" category="sidebar">Cree un servidor Microsoft SQL Server</block>
+  <block id="25b3aca23d0668827e396e11779fd3e8" category="paragraph"><block ref="25b3aca23d0668827e396e11779fd3e8" category="inline-link-macro-rx"></block></block>
+  <block id="0cff8121f4037cd80252c2bfd1bbc480" category="paragraph">Ahora puede ir a la calculadora de ahorro desde la <block ref="9086d555f1d70469f26e2dfccd9f366f" category="inline-link-macro-rx"></block> página de inicio. Seleccione en Elastic Block Store y FSx para Windows File Server para comenzar.</block>
+  <block id="05e1e00bdb39e9c766a6a0f69a222a3b" category="list-text"><block ref="05e1e00bdb39e9c766a6a0f69a222a3b" category="inline-link-macro-rx"></block></block>
+  <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
+  <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
 </blocks>

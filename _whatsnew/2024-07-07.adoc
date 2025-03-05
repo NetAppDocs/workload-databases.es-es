@@ -8,4 +8,4 @@
 
 La versión inicial incluye la funcionalidad de explorar el ahorro con Amazon FSx para NetApp ONTAP como entorno de almacenamiento para sus cargas de trabajo de bases de datos, detectar, gestionar e implementar servidores de Microsoft SQL Server, implementar y clonar bases de datos, y supervisar estos trabajos en la fábrica de cargas de trabajo.
 
-link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["Obtenga más información sobre las bases de datos"^]
+link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["Obtenga más información sobre las bases de datos"]

@@ -35,8 +35,8 @@ link:https://review.docs.netapp.com/us-en/workload-databases_explore-savings-upd
 
 Ahora puede usar Terraform desde el CodeBox para implementar PostgreSQL.
 
-* link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html["Cree un servidor de base de datos PostgreSQL"^]
-* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Utilice Terraform de CodeBox"^]
+* link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html["Cree un servidor de base de datos PostgreSQL"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Utilice Terraform de CodeBox"]
 
 
 
@@ -161,8 +161,8 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 Ahora puede utilizar Terraform desde CodeBox para implementar Microsoft SQL Server.
 
-* link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html["Cree un servidor de base de datos"^]
-* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Utilice Terraform de CodeBox"^]
+* link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html["Cree un servidor de base de datos"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Utilice Terraform de CodeBox"]
 
 
 
@@ -175,7 +175,7 @@ Ahora puede utilizar Terraform desde CodeBox para implementar Microsoft SQL Serv
 
 Ahora puedes explorar los ahorros de los servidores Microsoft SQL detectados en Amazon EC2 con el almacenamiento FSx para Windows File Server en la calculadora de ahorro. En función de tus requisitos de SQL Server y almacenamiento, puedes descubrir que el almacenamiento de FSx para ONTAP es el más rentable para tus cargas de trabajo de base de datos.
 
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explora el ahorro con FSx para ONTAP para tus cargas de trabajo de base de datos"^]
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explora el ahorro con FSx para ONTAP para tus cargas de trabajo de base de datos"]
 
 
 
@@ -187,13 +187,13 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Expl
 
 Ahora puede personalizar los ajustes de configuración para Microsoft SQL Server en Amazon EC2 con el almacenamiento FSx para Windows File Server y Elastic Block Store en la calculadora de ahorro. En función de sus requisitos de almacenamiento, puede darse cuenta de que el almacenamiento de FSx para ONTAP es el más rentable para las cargas de trabajo de sus bases de datos.
 
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explora el ahorro con FSx para ONTAP para tus cargas de trabajo de base de datos"^]
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explora el ahorro con FSx para ONTAP para tus cargas de trabajo de base de datos"]
 
 
 
 === Navega a la calculadora de ahorros desde la página de inicio
 
-Ahora puede ir a la calculadora de ahorro desde la link:https://console.workloads.netapp.com["consola de fábrica de carga de trabajo"^] página de inicio. Seleccione en Elastic Block Store y FSx para Windows File Server para comenzar.
+Ahora puede ir a la calculadora de ahorro desde la link:https://console.workloads.netapp.com["consola de fábrica de carga de trabajo"] página de inicio. Seleccione en Elastic Block Store y FSx para Windows File Server para comenzar.
 
 image:screenshot-explore-savings-home-small.png["captura de pantalla de la página inicial de la consola de fábrica de carga de trabajo. La imagen muestra el mosaico de bases de datos con un nuevo botón Explorar ahorro. Haga clic en el botón para abrir un menú desplegable. El menú desplegable tiene dos opciones: Microsoft SQL Server en EBS y Microsoft SQL Server en FSx para Windows File Server."]
 
@@ -227,7 +227,7 @@ Ahora puede personalizar la configuración de Microsoft SQL Server, Amazon EC2 y
 
 
 
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explora el ahorro con FSx para ONTAP para tus cargas de trabajo de base de datos"^]
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explora el ahorro con FSx para ONTAP para tus cargas de trabajo de base de datos"]
 
 
 
@@ -239,4 +239,4 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Expl
 
 La versión inicial incluye la funcionalidad de explorar el ahorro con Amazon FSx para NetApp ONTAP como entorno de almacenamiento para sus cargas de trabajo de bases de datos, detectar, gestionar e implementar servidores de Microsoft SQL Server, implementar y clonar bases de datos, y supervisar estos trabajos en la fábrica de cargas de trabajo.
 
-link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["Obtenga más información sobre las bases de datos"^]
+link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["Obtenga más información sobre las bases de datos"]
