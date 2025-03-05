@@ -58,12 +58,6 @@ La gestión de las configuraciones de grupos de disponibilidad permanente no es 
 
 
 
-== Grupos de seguridad de Active Directory gestionados por el usuario
-
-Si selecciona “Active Directory gestionado por el usuario” durante la implementación de Microsoft SQL Server en la fábrica de cargas de trabajo, debe proporcionar un grupo de seguridad que permita el tráfico entre las instancias EC2 al servicio de directorio para la implementación. La fábrica de cargas de trabajo no conecta automáticamente el grupo de seguridad para Active Directory gestionado por el usuario como lo hace para AWS Managed Microsoft AD.
-
-
-
 == Claves de cifrado personalizadas
 
 Las claves de cifrado personalizadas para FSx para ONTAP no figuran en la lista en función de la aplicabilidad del servicio. Debe elegir la clave adecuada. Las claves gestionadas de AWS se filtran según la aplicabilidad al servicio.

@@ -42,6 +42,14 @@ Active Directory:: Lo siguiente ocurre en Active Directory (AD) durante la imple
 
 
 --
+
+
+
+
+== Grupos de seguridad de Active Directory gestionados por el usuario
+
+Si selecciona “Active Directory gestionado por el usuario” durante la implementación de Microsoft SQL Server en la fábrica de cargas de trabajo, debe proporcionar un grupo de seguridad que permita el tráfico entre las instancias EC2 al servicio de directorio para la implementación. La fábrica de cargas de trabajo no conecta automáticamente el grupo de seguridad para Active Directory gestionado por el usuario como lo hace para AWS Managed Microsoft AD.
+
 Reversión de recursos:: Si decide revertir los recursos del sistema de nombres de dominio (DNS), los registros de recursos en AD y DNS no se eliminan automáticamente. Puede eliminar los registros del servidor DNS y AD de la siguiente manera.
 +
 --
@@ -258,10 +266,7 @@ Para implementaciones de FCI::
 --
 
 
-.. *Grupo de seguridad*: Seleccione un grupo de seguridad existente o cree un nuevo grupo de seguridad.
-+
-Tres grupos de seguridad se conectan a los nodos SQL (instancias EC2) durante el despliegue del nuevo servidor.
-
+.. *Grupo de seguridad*: Seleccione un grupo de seguridad existente o cree un nuevo grupo de seguridad. Tres grupos de seguridad se conectan a los nodos SQL (instancias EC2) durante el despliegue del nuevo servidor.
 +
 ... Se crea un grupo de seguridad de cargas de trabajo para permitir la comunicación de los puertos y protocolos necesarios para la comunicación de los clústeres de Microsoft SQL y Windows en los nodos.
 ... En el caso de Active Directory gestionado por AWS, el grupo de seguridad asociado al servicio de directorio se agrega automáticamente a los nodos de Microsoft SQL para permitir la comunicación con Active Directory.

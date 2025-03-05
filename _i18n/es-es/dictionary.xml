@@ -98,7 +98,6 @@
   <block id="8738f299dd52a2650f23bf1ae30694fa" category="list-text">En el campo *Configuración del clúster - Nodo 1*, seleccione una zona de disponibilidad de la *Zona de disponibilidad* del menú desplegable y una subred del menú desplegable *Subred*.</block>
   <block id="9c622025b2f6aaf628ede7de56df481b" category="list-text">Para implementaciones de FCI</block>
   <block id="5ac7c1b392927ce429f17a8855e854b5" category="list-text">*Grupo de seguridad*: Seleccione un grupo de seguridad existente o cree un nuevo grupo de seguridad.</block>
-  <block id="a2c08d4b7f2bbde30396036629003448" category="paragraph">Tres grupos de seguridad se conectan a los nodos SQL (instancias EC2) durante el despliegue del nuevo servidor.</block>
   <block id="ba4f09fe932ad91d759a5dd3636acec6" category="list-text">Se crea un grupo de seguridad de cargas de trabajo para permitir la comunicación de los puertos y protocolos necesarios para la comunicación de los clústeres de Microsoft SQL y Windows en los nodos.</block>
   <block id="1f653bdd2a02e3ebdc4f28328a96b00f" category="list-text">En el caso de Active Directory gestionado por AWS, el grupo de seguridad asociado al servicio de directorio se agrega automáticamente a los nodos de Microsoft SQL para permitir la comunicación con Active Directory.</block>
   <block id="84c62c2707904a024819612ef450ef1d" category="list-text">Para un sistema de archivos FSX for ONTAP existente, el grupo de seguridad asociado con él se agrega automáticamente a los nodos SQL, lo que permite la comunicación con el sistema de archivos. Cuando se crea un nuevo sistema FSx para ONTAP, se crea un nuevo grupo de seguridad para el sistema de archivos FSx para ONTAP y el mismo grupo de seguridad también se conecta a los nodos SQL.</block>
@@ -1004,4 +1003,5 @@
   <block id="05e1e00bdb39e9c766a6a0f69a222a3b" category="list-text"><block ref="05e1e00bdb39e9c766a6a0f69a222a3b" category="inline-link-macro-rx"></block></block>
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
   <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
+  <block id="b344730cd36668c36266c1d50c447eea" category="list-text">*Grupo de seguridad*: Seleccione un grupo de seguridad existente o cree un nuevo grupo de seguridad. Tres grupos de seguridad se conectan a los nodos SQL (instancias EC2) durante el despliegue del nuevo servidor.</block>
 </blocks>
