@@ -119,3 +119,17 @@ La evaluación de parches del sistema operativo que se realiza con fines de opti
 == Cálculo del ahorro en las instalaciones
 
 No se tienen en cuenta los cálculos de ahorro de costes y porcentajes del tamaño de volumen para el sistema de almacenamiento local de Microsoft SQL Server.
+
+
+
+== Evaluación de la replicación entre regiones
+
+* La evaluación de optimización no puede determinar si se está utilizando la replicación entre regiones (CRR) cuando el sistema de archivos de destino de FSx para ONTAP se encuentra en una cuenta de AWS diferente.
+* La fábrica de carga de trabajo evalúa solo la configuración de CRR del sistema de archivos FSX para ONTAP de origen.
+
+
+
+
+== Número de bases de datos en instancias de SQL Server
+
+En la pestaña Inventario y en la consola, la fábrica de carga de trabajo admite hasta 850 bases de datos en instancias de SQL Server.

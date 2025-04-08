@@ -48,11 +48,107 @@ Credenciales y permisos:: Debe link:https://docs.netapp.com/us-en/workload-setup
 
 == Cree un servidor de base de datos
 
-Puede utilizar el modo _Advanced create_ deployment para completar esta tarea en la fábrica de cargas de trabajo con permisos de modo _automate_. También puede usar las siguientes herramientas disponibles en CodeBox: API REST, CLI de AWS, AWS CloudFormation y Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Aprende a usar CodeBox para la automatización"^].
+Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ para completar esta tarea en la fábrica de cargas de trabajo con permisos de modo _automate_. También puede usar las siguientes herramientas disponibles en CodeBox: API REST, CLI de AWS, AWS CloudFormation y Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Aprende a usar CodeBox para la automatización"^].
 
 
 NOTE: Al usar Terraform de CodeBox, el código que copie o descargue oculta `fsxadmin` y `vsadmin` las contraseñas. Deberá volver a introducir las contraseñas cuando ejecute el código. Deberá incluir los siguientes permisos para la cuenta de usuario además de los permisos del modo _Automate_: `iam:TagRole` Y `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["Aprende a usar Terraform de CodeBox"^].
 
+[role="tabbed-block"]
+====
+.Creación rápida
+--
+
+NOTE: En _Quick create_, HA es el modelo de implementación predeterminado, Windows 2016 es la versión predeterminada de Windows y SQL 2019 Standard Edition es la versión predeterminada de SQL.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Bases de datos, seleccione *Deploy database host* y luego seleccione *PostgreSQL Server* en el menú desplegable.
+. Seleccione *Quick create*.
+. En *Zona de aterrizaje*, proporcione lo siguiente:
++
+.. *Credenciales de AWS*: Seleccione las credenciales de AWS con permisos automatizados para implementar el nuevo host de base de datos.
++
+Las credenciales de AWS con permisos _Automate_ permiten que la fábrica de cargas de trabajo implemente y administre el nuevo host de base de datos desde su cuenta de AWS dentro de la fábrica de cargas de trabajo.
+
++
+Las credenciales de AWS con permisos _read_ permiten que la fábrica de cargas de trabajo genere una plantilla de CloudFormation para que la utilice en la consola de AWS CloudFormation.
+
++
+Si no tiene las credenciales de AWS asociadas en la fábrica de cargas de trabajo y desea crear el nuevo servidor en la fábrica de cargas de trabajo, siga la opción *1* para ir a la página Credenciales. Agregue manualmente las credenciales y permisos necesarios para el modo _Automate_ para cargas de trabajo de base de datos.
+
++
+Si desea completar el formulario Crear nuevo servidor en la fábrica de cargas de trabajo para poder descargar una plantilla de archivo YAML completa para su implementación en AWS CloudFormation, siga *Opción 2* para asegurarse de que tiene los permisos necesarios para crear el nuevo servidor en AWS CloudFormation. Agregue manualmente las credenciales y los permisos necesarios para el modo _READ_ para las cargas de trabajo de la base de datos.
+
++
+Opcionalmente, puede descargar una plantilla de archivo YAML parcialmente completada desde CodeBox para crear la pila fuera de la fábrica de cargas de trabajo sin credenciales ni permisos. Seleccione *CloudFormation* en el menú desplegable del CodeBox para descargar el archivo YAML.
+
+.. *Región y VPC*: Seleccione una región y una red de VPC.
++
+Asegúrese de que los grupos de seguridad para un extremo de interfaz existente permiten el acceso al protocolo HTTPS (443) a las subredes seleccionadas.
+
++
+Extremos de la interfaz de servicio de AWS (SQS, FSx, EC2, CloudWatch, CloudFormation, SSM) y el punto final de la puerta de enlace S3 se crean durante el despliegue si no se encuentra.
+
++
+Los atributos DNS de VPC `EnableDnsSupport` y `EnableDnsHostnames` se modifican para activar la resolución de direcciones de punto final si aún no están establecidos en `true`.
+
+.. *Zonas de disponibilidad*: Seleccione zonas de disponibilidad y subredes.
++
+
+NOTE: Las implementaciones de HA solo se admiten en configuraciones FSx para ONTAP de varias zonas de disponibilidad (MAZ).
+
++
+Las subredes no deben compartir la misma tabla de rutas para alta disponibilidad.
+
++
+... En el campo *Configuración de clúster - Nodo 1*, seleccione la zona de disponibilidad principal para la configuración de MAZ FSX para ONTAP en el menú desplegable *Zona de disponibilidad* y una subred de la zona de disponibilidad principal desde el menú desplegable *Subred*.
+... En el campo *Configuración de clúster - Nodo 2*, seleccione la zona de disponibilidad secundaria para la configuración de MAZ FSX para ONTAP en el menú desplegable *Zona de disponibilidad* y una subred de la zona de disponibilidad secundaria desde el menú desplegable *Subred*.
+
+
+
+
+. En *Configuración de la aplicación*, introduzca un nombre de usuario y una contraseña para *Credenciales de la base de datos*.
+. En *Conectividad*, selecciona un par de claves para conectarte de forma segura a tu instancia.
+. En *Configuración de infraestructura*, proporcione lo siguiente:
++
+.. *FSX para el sistema ONTAP*: Crea un nuevo sistema de archivos FSX para ONTAP o usa un sistema de archivos FSX para ONTAP existente.
++
+... * Crear nuevo FSX para ONTAP*: Introduzca el nombre de usuario y la contraseña.
++
+Un nuevo sistema de archivos FSX para ONTAP puede agregar 30 minutos o más de tiempo de instalación.
+
+... *Seleccione un FSX para ONTAP*: Seleccione FSX para el nombre de ONTAP en el menú desplegable, e introduzca un nombre de usuario y una contraseña para el sistema de archivos.
++
+Para los sistemas de archivos FSx para ONTAP existentes, asegúrate de lo siguiente:
+
++
+**** El grupo de enrutamiento conectado a FSx para ONTAP permite que las rutas a las subredes se utilicen para la implementación.
+**** El grupo de seguridad permite el tráfico de las subredes utilizadas para la puesta en marcha, específicamente los puertos TCP HTTPS (443) e iSCSI (3260).
+
+
+
+
+.. *Tamaño de la unidad de datos*: Ingrese la capacidad de la unidad de datos y seleccione la unidad de capacidad.
+
+
+. Resumen:
++
+.. *Vista previa predeterminada*: Revise las configuraciones predeterminadas establecidas por Quick Create.
+.. *Costo estimado*: Proporciona una estimación de los cargos en los que podría incurrir si implementa los recursos mostrados.
+
+
+. Haga clic en *Crear*.
++
+Como alternativa, si desea cambiar cualquiera de estos valores por defecto ahora, cree el servidor de base de datos con Advanced CREATE.
+
++
+También puede seleccionar *Guardar configuración* para implementar el host más tarde.
+
+
+
+--
+.Creación avanzada
+--
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Deploy database host* y luego seleccione *PostgreSQL Server* en el menú desplegable.
@@ -189,5 +285,7 @@ También puede guardar la configuración.
 
 
 
+--
+====
 .El futuro
 Puede configurar manualmente usuarios, acceso remoto y bases de datos en el servidor PostgreSQL desplegado.
