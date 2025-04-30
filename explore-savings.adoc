@@ -72,7 +72,7 @@ Hay dos opciones de calculadora disponibles para comparar costes entre tus siste
 
 Explore el ahorro mediante la personalización: Proporcione los ajustes de configuración para Microsoft SQL Server en Amazon EC2 con EBS o FSx para Windows File Server, incluida la región, el modelo de implementación, la edición del servidor SQL, la tasa de cambio de datos mensual, la frecuencia de instantáneas y mucho más.
 
-Explore el ahorro para los hosts detectados: La fábrica de cargas de trabajo se enlaza con sus servidores Microsoft SQL existentes y extrae los detalles de la calculadora para la comparación automática. Tendrás que conceder permisos de automatización para usar esta opción de calculadora. Puede cambiar el caso de uso, pero todos los demás detalles se determinan automáticamente en el cálculo.
+Explore el ahorro para los hosts detectados: La fábrica de cargas de trabajo se enlaza con sus servidores Microsoft SQL existentes y extrae los detalles de la calculadora para la comparación automática. Tendrás que otorgar permisos _read-only_ o _read/write_ para usar esta opción de calculadora. Puede cambiar el caso de uso, pero todos los demás detalles se determinan automáticamente en el cálculo.
 
 Además, puede link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Añada las credenciales de AWS"^]mejorar la precisión del análisis de la calculadora. Selecciona *Calcular los ahorros en función de los recursos existentes*. Se le redirigirá a la página Agregar credenciales. Después de agregar credenciales, seleccione los recursos existentes para comparar con FSx para ONTAP y seleccione *Explorar ahorros*.
 
@@ -168,7 +168,7 @@ La fábrica de cargas de trabajo introduce las características de host de Elast
 .Antes de empezar
 Complete los siguientes requisitos previos antes de comenzar:
 
-* Asegúrate de que link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos _automatic_"^] en tu cuenta de AWS detectas los sistemas Elastic Block Store (EBS) y FSx para Windows en tu inventario de bases de datos.
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Otorgue los permisos _READ-ONLY_ o _READ/WRITE_"^] En su cuenta de AWS para detectar los sistemas Elastic Block Store (EBS) y FSx para Windows en la pestaña *Explorar ahorros* y para mostrar el cálculo del ahorro en la calculadora de ahorro.
 * Detecta hosts en almacenamiento de EBS y FSx para Windows en tu inventario de bases de datos. link:detect-host.html["Descubra cómo detectar hosts"].
 
 

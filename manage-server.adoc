@@ -58,14 +58,45 @@ Complete los siguientes requisitos previos antes de comenzar:
 * Se necesita PowerShell7 para gestionar la instancia de la base de datos. Instale PowerShell7 manualmente consultando link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4["Documentación de Microsoft PowerShell para Windows"^].
 * Todas las operaciones de gestión las ejecuta el agente de AWS System Manager mediante `NT Authority\SYSTEM` privilegios de usuario. Proporcione los siguientes permisos para `NT Authority\SYSTEM` el usuario en el servidor de bases de datos:
 +
-** `“ALTER SETTINGS”`
-** `“CONTROL SERVER”`
-** `“ALTER ANY DATABASE”`
-** `“VIEW ANY DEFINITION”`
-** `“CONNECT ANY DATABASE”`
-** `“CREATE ANY DATABASE”`
+[cols="2,2a"]
+|===
+| Acceder a Securables | Donde se requiere 
 
 
+| `VIEW ANY DEFINITION`  a| 
+Inventario, evaluación, resolución, creación de bases de datos, creación de clones de entornos aislados, análisis del ahorro
+
+
+
+| `CONNECT ANY DATABASE`  a| 
+Inventario, evaluación, corrección, creación de bases de datos, creación de clones de espacio aislado
+
+
+
+| `VIEW SERVER STATE`  a| 
+Inventario, evaluación, corrección, creación de bases de datos, creación de clones de espacio aislado
+
+
+
+| `CREATE ANY DATABASE`  a| 
+Cree una base de datos, cree un clon de sandbox
+
+
+
+| `CONTROL SERVER`  a| 
+Crear clon de sandbox
+
+
+
+| `ALTER ANY DATABASE`  a| 
+Crear clon de sandbox
+
+
+
+| `ALTER SETTINGS`  a| 
+Crear clon de sandbox, corrección para MAXDOP
+
+|===
 
 
 .Pasos
