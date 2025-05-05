@@ -633,7 +633,6 @@
   <block id="5f4f392649432d3064fdf2a04015472b" category="list-text">Seleccione la flecha desplegable para ver la recomendación de cualquier configuración. Asegúrese de revisar la recomendación cuidadosamente.</block>
   <block id="c9e425055996f71ecfc858708d926276" category="paragraph">La recomendación explica las prácticas recomendadas y las posibles dificultades de las configuraciones no optimizadas.</block>
   <block id="ea3bf0643d3540c97b9b92a3fb2bbf75" category="list-text">Seleccione para *Optimizar* configuraciones no optimizadas.</block>
-  <block id="fa01f4b57079f7ca82b8d852cbf4ed43" category="list-text">Revise el resumen de optimización y los elementos de acción que aparecen en el cuadro de diálogo de optimización para saber qué sucederá si decide optimizar. Algunas operaciones de optimización pueden provocar tiempos de inactividad de instancias o interrupciones del servicio.</block>
   <block id="78a5af6b8a486797f81f9b0dff06821e" category="list-text">Selecciona *Continuar* para optimizar la configuración.</block>
   <block id="c6ff3995f3c633f2808f96020f887fd9" category="paragraph">Se inicia el proceso de optimización. Seleccione la pestaña *Supervisión de trabajos* para ver el estado de la operación.</block>
   <block id="0c47496112bcf6ed0b29fe1fe1d65d62" category="summary">El centro de cargas de trabajo de BlueXP  para bases de datos proporciona una optimización continua para las puestas en marcha de Microsoft SQL Server en el almacenamiento de Amazon FSx para NetApp ONTAP.</block>
@@ -875,8 +874,6 @@
   <block id="10f9689e79d67ec4a1651805229939e6" category="list-text">Haga clic en el menú de tres puntos del trabajo y haga clic en *Ir a CloudFormation* para ver el registro de trabajo en la consola de AWS CloudFormation.</block>
   <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">La fábrica de cargas de trabajo de BlueXP  para bases de datos analiza las configuraciones de Microsoft SQL Server proporcionando información y recomendaciones para ayudarle a lograr la excelencia operativa.</block>
   <block id="d156d1de362b4c66bc3effc1835aafe1" category="paragraph">La fábrica de cargas de trabajo de BlueXP  para bases de datos analiza y evalúa continuamente las configuraciones de puesta en marcha de Microsoft SQL Server que se ejecutan en Amazon FSx para NetApp ONTAP. Esta función ofrece información y recomendaciones con la opción de optimizar automáticamente configuraciones sin optimizar para que las cargas de trabajo de bases de datos puedan alcanzar la excelencia operativa.</block>
-  <block id="53c8dd8acbb0f2913fab098279485e71" category="list-text">En la pestaña *Inventario*, seleccione la flecha desplegable para expandir la fila del host para ver sus instancias administradas.</block>
-  <block id="14237fbd8e1fcf850f132ae839f0337b" category="list-text">Seleccione el menú de tres puntos de la instancia y luego seleccione *Optimizar*.</block>
   <block id="162d1fe2bfd40fdaf4d1507dff7ac010" category="list-text">En la página Optimizar Instancia para la instancia de SQL Server, revise las conclusiones de la evaluación.</block>
   <block id="1d40c1f145e4257a51df779ce509811e" category="paragraph">Puede filtrar por categorías, subcategorías, estado, gravedad y etiquetas.</block>
   <block id="2c43db36710e9c59ec3e8117665a6dd6" category="paragraph">También puede descargar un informe de los resultados de la evaluación seleccionando *Exportar PDF*.</block>
@@ -1038,4 +1035,51 @@
   <block id="3f21b90f61021d5dd0aefe08d40a11a9" category="cell"><block ref="83a834b3af30dbb7c2007ab7f9bc913b" prefix="" category="inline-code"></block></block>
   <block id="eb0cdf74b605d67e1444197ac2f77c91" category="cell"><block ref="8fdca9c0332e9935139d7384c2a814df" prefix="" category="inline-code"></block></block>
   <block id="538b18c6800ad42458e0bf0bc8a311b6" category="paragraph">Crear clon de sandbox, corrección para MAXDOP</block>
+  <block id="25696569671071b8bd3db9a4c5f6613e" category="doc">Mejoras en la consola de</block>
+  <block id="04f9acced28b52e064ba8ccb957a615c" category="list-text">Las vistas entre cuentas y entre regiones están disponibles al navegar entre pestañas de la consola de fábrica de cargas de trabajo de BlueXP . Las nuevas vistas mejoran la gestión, supervisión y optimización de recursos.</block>
+  <block id="6e21267988cadc818dd398393c695465" category="list-text">Desde el mosaico *ahorros potenciales* en el panel de control, podrás revisar rápidamente lo que podrías ahorrar cambiando a FSX para ONTAP desde la Tienda de bloques elásticos de Amazon o Amazon FSx para el servidor de archivos de Windows.</block>
+  <block id="255a96bb0a74416846fbad7e40f8ddf4" category="section-title">Exploración ad hoc disponible para configuraciones de base de datos</block>
+  <block id="2b1a16b6cd72c9555872ec61d3334af5" category="paragraph">El centro de cargas de trabajo de BlueXP  para bases de datos analiza automáticamente las instancias gestionadas de Microsoft SQL Server con el almacenamiento FSx para ONTAP para detectar posibles problemas de configuración. Ahora, además de la exploración diaria, puede escanear en cualquier momento.</block>
+  <block id="365d8fe4130e8c12f4a3defc920178dd" category="section-title">Eliminación de registros de evaluación locales</block>
+  <block id="c4fd25bd6650f0eaedfd01e29fbecddd" category="paragraph">Después de analizar el ahorro de un host de Microsoft SQL Server en las instalaciones, tiene la opción de eliminar el registro de host en las instalaciones de la fábrica de cargas de trabajo de BlueXP .</block>
+  <block id="ae548505379d0043460d8c15540cb546" category="section-title">Limpieza de clones</block>
+  <block id="0d003b1e16a8cf8a4b6c0774ee3a0f41" category="paragraph">La evaluación y corrección de limpieza de los clones identifica y gestiona clones antiguos y costosos. Los clones que tengan más de 60 días se pueden actualizar o eliminar de la consola de fábrica de cargas de trabajo de BlueXP .</block>
+  <block id="6da89f0beda0fbec41b06125b0b7ad32" category="section-title">Posponer y descartar el análisis de configuración</block>
+  <block id="4a9a50cea48d9e2ded3becc284af4e41" category="paragraph">Es posible que algunas configuraciones no se apliquen a sus entornos de bases de datos. Ahora dispone de opciones para posponer un análisis de configuración en particular por 30 días o descartar el análisis.</block>
+  <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">Terminología de permisos actualizada</block>
+  <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">La documentación y la interfaz de usuario de fábrica de cargas de trabajo ahora utilizan «de solo lectura» para hacer referencia a los permisos de lectura y «de lectura-escritura» para referirse a los permisos de automatización.</block>
+  <block id="2d07fc9146d02690dffeffa52fbd2ec4" category="list-text">Eliminación de host en las instalaciones</block>
+  <block id="1c28fa92b25f4914c091b667402466d3" category="list-text">Después de analizar el ahorro de un host de Microsoft SQL Server en las instalaciones, tiene la opción de eliminar el registro de host en las instalaciones de la fábrica de cargas de trabajo de BlueXP . Seleccione el menú de tres puntos del host local de Microsoft SQL Server y, a continuación, seleccione * Eliminar *.</block>
+  <block id="d824014300a5fc7a6853a9182b4be5ef" category="list-text">Clones: Incluye opciones para actualizar y eliminar clones (sandboxes) con más de 60 días de antigüedad</block>
+  <block id="04467e563313dfe5a1da17bd70a4de75" category="list-text">En la pestaña *Inventario*, seleccione la pestaña *Instancias*.</block>
+  <block id="8e3db49aef4ba359c0140eea33f2459c" category="list-text">Seleccione el menú de tres puntos de la instancia para optimizar y luego seleccione *Optimizar*.</block>
+  <block id="77b2be525ee3461ec499242fca3978f8" category="list-text">Para todas las configuraciones, excepto la limpieza de clones, revise los detalles de optimización en el cuadro de diálogo de optimización para saber qué ocurrirá si decide optimizar. Algunas operaciones de optimización pueden provocar tiempos de inactividad de instancias o interrupciones del servicio.</block>
+  <block id="c5d0b906e655aeb0e712fdc99742d179" category="list-text">Para la limpieza de clones, seleccione Bases de datos clonadas (sandboxes) que desea actualizar o eliminar.</block>
+  <block id="64b911fb444d2ba4347dbcba8d839d9c" category="list-text">Al actualizar un clon, este se sincroniza con su base de datos de origen. La actualización solo está disponible para los clones creados en fábrica de cargas de trabajo.</block>
+  <block id="b11d77d1a514a3b0bdf01908bc4826e9" category="list-text">Eliminar un clon lo elimina de forma permanente, libera espacio de almacenamiento y reduce los costes. Puede eliminar clones creados dentro o fuera de la fábrica de cargas de trabajo.</block>
+  <block id="cf00508631c0415d4089fb10cbe0511d" category="summary">Posponga o ignore el análisis de configuraciones de base de datos específicas que no se aplican a su entorno de base de datos para evitar alertas innecesarias y resultados de optimización imprecisos.</block>
+  <block id="0cdf26a09e8e4cde6653e44f4abd73fb" category="doc">Posponer o descartar el análisis de las configuraciones de la base de datos</block>
+  <block id="77df5d7dfd76cd0e6a1a7a837c509672" category="paragraph">Posponga o ignore el análisis de configuraciones de base de datos específicas que no se aplican a su entorno de base de datos para evitar alertas innecesarias y resultados de optimización imprecisos. Puede volver a activar un análisis de configuración aplazado o descartado en cualquier momento.</block>
+  <block id="54498ab3155b38b14174ab9dd5caef5a" category="paragraph">Los requisitos de la aplicación para las configuraciones de base de datos varían. La fábrica de cargas de trabajo le ofrece dos opciones para omitir el análisis de configuraciones de bases de datos específicas, de modo que pueda supervisar solo los problemas relevantes y obtener una vista precisa del estado de las configuraciones relevantes. Cuando un análisis de configuración específico se pospone o se descarta, la configuración no se incluye en la puntuación de optimización total.</block>
+  <block id="47112685bf756c67c8ac297ef60e48dc" category="paragraph">Puede posponer, descartar y volver a activar el análisis de configuración en el nivel de configuración y en el nivel de instancia de SQL Server.</block>
+  <block id="8a219fba8bbd202ad1f7a47267ff5a2d" category="list-text">*Posponer durante 30 días*: Posponer el análisis detendrá el análisis durante 30 días. Transcurridos 30 días, el análisis se reiniciará automáticamente.</block>
+  <block id="71e07950d625dfcf829cac7019fb6f26" category="list-text">*Descartar*: Desestimar el análisis pospone el análisis indefinidamente. Puede reiniciar el análisis si es necesario.</block>
+  <block id="cd5a81e0d9eeff49759cb9a6eaa2e1e2" category="paragraph">Puede posponer o descartar las siguientes configuraciones para instancias de Microsoft SQL Server:</block>
+  <block id="999cc42b236c7aee1157ff02d6f1bcd5" category="list-text">Clones</block>
+  <block id="75d9a01908e416c932fa5ee3fa0c77a3" category="paragraph">En las siguientes instrucciones se describe cómo posponer, descartar o reactivar un análisis en el nivel de configuración. Para completar las siguientes tareas para instancias específicas de SQL Server, inicie en la pestaña *Dashboard*.</block>
+  <block id="43d86b2167e8a3464a552ee706d46d88" category="paragraph-title">Posponer</block>
+  <block id="38d07dc1916e6ca30a9f936368828d18" category="paragraph">Posponer para detener un análisis de configuración durante 30 días. Transcurridos 30 días, el análisis se reiniciará automáticamente.</block>
+  <block id="b8bad4787f04ab4d4933464f551ed74c" category="list-text">En la pestaña *Inventario*, desplácese hacia abajo hasta la configuración para posponer, seleccione el menú de tres puntos y luego seleccione *posponer durante 30 días*.</block>
+  <block id="136dc09835924029e4299fa28f17233d" category="list-text">Seleccione *continuar*.</block>
+  <block id="8dca288df860b62f4b631d87b4320f91" category="paragraph">El análisis de configuración se detiene durante 30 días.</block>
+  <block id="c8a59e7135a20b362f9c768b09454fdb" category="paragraph-title">Descartar</block>
+  <block id="26765b6cc82b68114c879d49f83b0e5a" category="paragraph">Ignorar para detener un análisis de configuración de forma indefinida. Puede reiniciar el análisis cuando sea necesario.</block>
+  <block id="fd9eed8a1f28cfe92f0d2d738455682b" category="list-text">En la pestaña *Inventario*, desplácese hacia abajo hasta la configuración que desea descartar, seleccione el menú de tres puntos y, a continuación, seleccione *Descartar*.</block>
+  <block id="bfc2ef5a56455cfacfde13cf1612e36b" category="paragraph">Se detiene el análisis de configuración.</block>
+  <block id="8e88e8d3ce1694ab82d525e91ae7c572" category="paragraph-title">Reactivar</block>
+  <block id="54a679b97854ca1a358ef23dc83cfce6" category="paragraph">Vuelva a activar un análisis de configuración aplazado o descartado en cualquier momento.</block>
+  <block id="58e2f7c25b65ba2e36fc6778b985ab34" category="list-text">En la pestaña *Inventario*, desplácese hacia abajo hasta la configuración que desea reactivar, seleccione el menú de tres puntos y luego seleccione *Reactivar*.</block>
+  <block id="f01282bfdabc9c97224d922f36d898b8" category="paragraph">El análisis de configuración se reactiva y se realiza diariamente en adelante.</block>
+  <block id="822748e99c70e9162ce5432b2e1eff5c" category="section-title">04 de mayo de 2025</block>
+  <block id="f865802ec5f0fe104a096589d51b39a4" category="sidebar">Posponer el análisis de configuración</block>
 </blocks>

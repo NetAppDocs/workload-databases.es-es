@@ -27,6 +27,7 @@ Qué se escanea:: Workload Factory evalúa el estado de optimización de las sig
 * Informática: Incluye ajustes de tamaño, parches del sistema operativo y ajustes de adaptadores de red como escalado lateral de recepción (RSS) y descarga de TCP
 * Aplicaciones: Incluye licencias de Microsoft SQL Server, parche de Microsoft SQL Server y configuración de MAXDOP
 * Resiliencia: Incluye snapshots locales, FSx para backups de ONTAP y replicación entre regiones (CRR)
+* Clones: Incluye opciones para actualizar y eliminar clones (sandboxes) con más de 60 días de antigüedad
 
 
 --
@@ -44,11 +45,8 @@ NOTE: El proceso de optimización puede causar tiempos de inactividad de instanc
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
-. En la pestaña *Inventario*, seleccione la flecha desplegable para expandir la fila del host para ver sus instancias administradas.
-+
-El host se expande y aparecen las instancias del host.
-
-. Seleccione el menú de tres puntos de la instancia y luego seleccione *Optimizar*.
+. En la pestaña *Inventario*, seleccione la pestaña *Instancias*.
+. Seleccione el menú de tres puntos de la instancia para optimizar y luego seleccione *Optimizar*.
 . En la página Optimizar Instancia para la instancia de SQL Server, revise las conclusiones de la evaluación.
 +
 Puede filtrar por categorías, subcategorías, estado, gravedad y etiquetas.
@@ -64,7 +62,16 @@ La recomendación explica las prácticas recomendadas y las posibles dificultade
 +
 *Seleccionar todo* es el valor predeterminado, pero puedes seleccionar recursos específicos para optimizarlos.
 
-. Revise el resumen de optimización y los elementos de acción que aparecen en el cuadro de diálogo de optimización para saber qué sucederá si decide optimizar. Algunas operaciones de optimización pueden provocar tiempos de inactividad de instancias o interrupciones del servicio.
++
+.. Para todas las configuraciones, excepto la limpieza de clones, revise los detalles de optimización en el cuadro de diálogo de optimización para saber qué ocurrirá si decide optimizar. Algunas operaciones de optimización pueden provocar tiempos de inactividad de instancias o interrupciones del servicio.
+.. Para la limpieza de clones, seleccione Bases de datos clonadas (sandboxes) que desea actualizar o eliminar.
++
+*** Al actualizar un clon, este se sincroniza con su base de datos de origen. La actualización solo está disponible para los clones creados en fábrica de cargas de trabajo.
+*** Eliminar un clon lo elimina de forma permanente, libera espacio de almacenamiento y reduce los costes. Puede eliminar clones creados dentro o fuera de la fábrica de cargas de trabajo.
+
+
+
+
 . Selecciona *Continuar* para optimizar la configuración.
 
 

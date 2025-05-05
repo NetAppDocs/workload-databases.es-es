@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: postpone-analysis.html 
+keywords: postpone configuration analysis, dismiss configuration analysis, postpone, dismiss, stop, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
+summary: Posponga o ignore el análisis de configuraciones de base de datos específicas que no se aplican a su entorno de base de datos para evitar alertas innecesarias y resultados de optimización imprecisos. 
+---
+= Posponer o descartar el análisis de las configuraciones de la base de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Posponga o ignore el análisis de configuraciones de base de datos específicas que no se aplican a su entorno de base de datos para evitar alertas innecesarias y resultados de optimización imprecisos. Puede volver a activar un análisis de configuración aplazado o descartado en cualquier momento.
+
+.Acerca de esta tarea
+Los requisitos de la aplicación para las configuraciones de base de datos varían. La fábrica de cargas de trabajo le ofrece dos opciones para omitir el análisis de configuraciones de bases de datos específicas, de modo que pueda supervisar solo los problemas relevantes y obtener una vista precisa del estado de las configuraciones relevantes. Cuando un análisis de configuración específico se pospone o se descarta, la configuración no se incluye en la puntuación de optimización total.
+
+Puede posponer, descartar y volver a activar el análisis de configuración en el nivel de configuración y en el nivel de instancia de SQL Server.
+
+* *Posponer durante 30 días*: Posponer el análisis detendrá el análisis durante 30 días. Transcurridos 30 días, el análisis se reiniciará automáticamente.
+* *Descartar*: Desestimar el análisis pospone el análisis indefinidamente. Puede reiniciar el análisis si es necesario.
+
+
+Puede posponer o descartar las siguientes configuraciones para instancias de Microsoft SQL Server:
+
+* Ajuste de tamaño del almacenamiento: Incluye nivel de almacenamiento, margen adicional del sistema de archivos, tamaño de la unidad de registro y tamaño de la unidad TempDB
+* Distribución de almacenamiento: Incluye la ubicación de los archivos de datos del usuario, la ubicación de los archivos de registro y la ubicación de TempDB
+* Configuración del almacenamiento: Incluye la gestión de la capacidad, el thin provisioning, la política de organización en niveles, la snapshot y el estado de I/O multivía, la política y las sesiones, etc.
+* Informática: Incluye ajustes de tamaño, parches del sistema operativo y ajustes de adaptadores de red como escalado lateral de recepción (RSS) y descarga de TCP
+* Aplicaciones: Incluye licencias de Microsoft SQL Server, parche de Microsoft SQL Server y configuración de MAXDOP
+* Resiliencia: Incluye snapshots locales, FSx para backups de ONTAP y replicación entre regiones (CRR)
+* Clones
+
+
+En las siguientes instrucciones se describe cómo posponer, descartar o reactivar un análisis en el nivel de configuración. Para completar las siguientes tareas para instancias específicas de SQL Server, inicie en la pestaña *Dashboard*.
+
+[role="tabbed-block"]
+====
+.Posponer
+Posponer para detener un análisis de configuración durante 30 días. Transcurridos 30 días, el análisis se reiniciará automáticamente.
+
+--
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. En la pestaña *Inventario*, desplácese hacia abajo hasta la configuración para posponer, seleccione el menú de tres puntos y luego seleccione *posponer durante 30 días*.
+. Seleccione *continuar*.
+
+
+.Resultado
+El análisis de configuración se detiene durante 30 días.
+
+--
+.Descartar
+Ignorar para detener un análisis de configuración de forma indefinida. Puede reiniciar el análisis cuando sea necesario.
+
+--
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. En la pestaña *Inventario*, desplácese hacia abajo hasta la configuración que desea descartar, seleccione el menú de tres puntos y, a continuación, seleccione *Descartar*.
+. Seleccione *continuar*.
+
+
+.Resultado
+Se detiene el análisis de configuración.
+
+--
+.Reactivar
+Vuelva a activar un análisis de configuración aplazado o descartado en cualquier momento.
+
+--
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. En la pestaña *Inventario*, desplácese hacia abajo hasta la configuración que desea reactivar, seleccione el menú de tres puntos y luego seleccione *Reactivar*.
+. Seleccione *continuar*.
+
+
+.Resultado
+El análisis de configuración se reactiva y se realiza diariamente en adelante.
+
+--
+====

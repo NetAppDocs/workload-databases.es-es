@@ -266,6 +266,9 @@ Además, desplácese hasta la parte inferior de la página para ver el informe s
 
 Para cambiar a FSX para ONTAP, siga las instrucciones a <<Pon en marcha Microsoft SQL Server en AWS EC2 mediante FSx para ONTAP,Implemente Microsoft SQL Server en AQS EC2 utilizando FSx para sistemas de archivos ONTAP>>.
 
+Eliminación de host en las instalaciones:: Después de analizar el ahorro de un host de Microsoft SQL Server en las instalaciones, tiene la opción de eliminar el registro de host en las instalaciones de la fábrica de cargas de trabajo de BlueXP . Seleccione el menú de tres puntos del host local de Microsoft SQL Server y, a continuación, seleccione * Eliminar *.
+
+
 
 
 == Pon en marcha Microsoft SQL Server en AWS EC2 mediante FSx para ONTAP
