@@ -68,19 +68,6 @@ La fábrica de cargas de trabajo para bases de datos ofrece las siguientes carac
 
 
 
-== Herramientas para utilizar la fábrica de cargas de trabajo
-
-Puede utilizar la fábrica de cargas de trabajo con las siguientes herramientas:
-
-* *Consola de fábrica de carga de trabajo*: La consola de fábrica de carga de trabajo proporciona una interfaz visual que le brinda una visión integral de sus aplicaciones y proyectos
-* *Consola BlueXP *: La consola BlueXP  proporciona una experiencia de interfaz híbrida para que pueda usar la fábrica de cargas de trabajo BlueXP  junto con otros servicios BlueXP
-* *API REST*: Las API REST DE la fábrica de cargas de trabajo le permiten implementar y administrar sus sistemas de archivos FSx para ONTAP y otros recursos de AWS
-* *CloudFormation*: El código CloudFormation de AWS le permite realizar las acciones que definió en la consola de la fábrica de cargas de trabajo para modelar, aprovisionar y administrar recursos de AWS y de terceros desde la pila CloudFormation en su cuenta de AWS.
-* * Proveedor de fábrica de cargas de trabajo Terraform BlueXP *: Terraform le permite crear y administrar flujos de trabajo de infraestructura generados en la consola de la fábrica de cargas de trabajo.
-
-
-
-
 == Beneficios de Amazon FSx para ONTAP para las bases de datos autogestionadas
 
 * * Durabilidad, disponibilidad y fiabilidad*: FSX for ONTAP ofrece múltiples características que mejoran la durabilidad y disponibilidad de las bases de datos autogestionadas alojadas en FSx for ONTAP, como la alta disponibilidad compatible con implementaciones de zonas de disponibilidad únicas y múltiples, instantáneas para aplicaciones, recuperación de desastres mejorada mediante replicación y copias de seguridad eficientes.
@@ -104,11 +91,13 @@ Más información sobre link:https://docs.netapp.com/us-en/workload-setup-admin/
 
 Puede utilizar la fábrica de cargas de trabajo de BlueXP  con las siguientes herramientas:
 
-* *Consola BlueXP *: La consola BlueXP  proporciona una experiencia de interfaz híbrida para que pueda usar la fábrica de cargas de trabajo BlueXP  junto con otros servicios BlueXP
-* *Consola de fábrica de carga de trabajo*: La consola de fábrica de carga de trabajo proporciona una interfaz visual que le brinda una visión integral de sus aplicaciones y proyectos
-* *API REST*: Las API REST DE la fábrica de cargas de trabajo le permiten implementar y administrar Microsoft SQL Server y otros recursos de AWS
-* *CloudFormation*: El código CloudFormation de AWS le permite realizar las acciones que definió en la consola de la fábrica de cargas de trabajo para modelar, aprovisionar y administrar recursos de AWS y de terceros desde la pila CloudFormation en su cuenta de AWS.
-* * Proveedor de fábrica de cargas de trabajo Terraform BlueXP *: Terraform le permite construir y administrar flujos de trabajo de infraestructura generados en la consola de la fábrica de cargas de trabajo.
+* *Consola de fábrica de carga de trabajo*: La consola de fábrica de carga de trabajo proporciona una visión visual y holística de sus aplicaciones y proyectos.
+* *Consola BlueXP *: La consola BlueXP  proporciona una experiencia de interfaz híbrida para que pueda usar la fábrica de cargas de trabajo BlueXP  junto con otros servicios BlueXP .
+* *Pregúntame*: Usa el asistente de Ask Me AI para hacer preguntas y aprender más sobre la fábrica de cargas de trabajo sin salir de la interfaz de usuario web de la fábrica de cargas de trabajo. Acceda a Preguntarme desde el menú de ayuda de fábrica de cargas de trabajo.
+* *CLI de CloudShell*: La fábrica de cargas de trabajo incluye una CLI de CloudShell para administrar y operar entornos de AWS y NetApp a través de cuentas desde una única CLI basada en navegador. Acceda a CloudShell desde la barra superior de la consola de fábrica de cargas de trabajo.
+* *API REST*: Usa las API REST DE fábrica de cargas de trabajo para implementar y administrar tus sistemas de archivos FSx para ONTAP y otros recursos de AWS.
+* *CloudFormation*: Utilice el código CloudFormation de AWS para realizar las acciones que definió en la consola de la fábrica de cargas de trabajo para modelar, aprovisionar y administrar recursos de AWS y de terceros desde la pila CloudFormation en su cuenta de AWS.
+* * Proveedor de fábrica de cargas de trabajo Terraform BlueXP *: Utilice Terraform para crear y administrar flujos de trabajo de infraestructura generados en la consola de la fábrica de cargas de trabajo.
 
 
 
