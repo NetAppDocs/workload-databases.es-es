@@ -38,9 +38,9 @@ En las siguientes instrucciones se describe cómo posponer, descartar o reactiva
 [role="tabbed-block"]
 ====
 .Posponer
+--
 Posponer para detener un análisis de configuración durante 30 días. Transcurridos 30 días, el análisis se reiniciará automáticamente.
 
---
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
@@ -53,9 +53,9 @@ El análisis de configuración se detiene durante 30 días.
 
 --
 .Descartar
+--
 Ignorar para detener un análisis de configuración de forma indefinida. Puede reiniciar el análisis cuando sea necesario.
 
---
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
@@ -68,9 +68,9 @@ Se detiene el análisis de configuración.
 
 --
 .Reactivar
+--
 Vuelva a activar un análisis de configuración aplazado o descartado en cualquier momento.
 
---
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
