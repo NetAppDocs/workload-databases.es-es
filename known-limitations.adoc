@@ -132,4 +132,4 @@ No se tienen en cuenta los cálculos de ahorro de costes y porcentajes del tama�
 
 == Número de bases de datos en instancias de SQL Server
 
-En la pestaña Inventario y en la consola, la fábrica de carga de trabajo admite hasta 850 bases de datos en instancias de SQL Server.
+En la pestaña Inventario y en la consola, la fábrica de carga de trabajo admite hasta 1.500 bases de datos en instancias de SQL Server.
