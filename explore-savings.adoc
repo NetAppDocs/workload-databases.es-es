@@ -169,7 +169,56 @@ La fábrica de cargas de trabajo introduce las características de host de Elast
 Complete los siguientes requisitos previos antes de comenzar:
 
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Otorgue los permisos _READ-ONLY_ o _READ/WRITE_"^] En su cuenta de AWS para detectar los sistemas Elastic Block Store (EBS) y FSx para Windows en la pestaña *Explorar ahorros* y para mostrar el cálculo del ahorro en la calculadora de ahorro.
-* Detecta hosts en almacenamiento de EBS y FSx para Windows en tu inventario de bases de datos. link:detect-host.html["Descubra cómo detectar hosts"].
+* Para obtener recomendaciones de tipos de instancia y mejorar la precisión de los costos, haga lo siguiente:
++
+.. Otorgar permisos a Amazon CloudWatch y AWS Compute Optimizer.
++
+... Inicie sesión en la consola de administración de AWS y abra el servicio IAM.
+... Edite la política para el rol de IAM. Copie y agregue los siguientes permisos de Amazon CloudWatch y AWS Compute Optimizer.
++
+[source, json]
+----
+{
+"Version": "2012-10-17",
+"Statement": [
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:GetEnrollmentStatus",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:PutRecommendationPreferences",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:GetEffectiveRecommendationPreferences",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:GetEC2InstanceRecommendations",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "autoscaling:DescribeAutoScalingGroups",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "autoscaling:DescribeAutoScalingInstances",
+   "Resource": "*"
+  }
+]
+}
+----
+
+
+.. Active la cuenta facturable de AWS en AWS Compute Optimizer.
+
+
 
 
 Siga los pasos de la pestaña para su tipo de almacenamiento.
