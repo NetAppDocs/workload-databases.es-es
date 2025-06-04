@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: learn-databases.html 
 keywords: Databases 
-summary: La fábrica de cargas de trabajo de BlueXP  para bases de datos es un servicio integral de implementación y mantenimiento de bases de datos con prácticas recomendadas integradas para capacidades de optimización, clonado automático de thin cloning, y supervisión y resolución. 
+summary: Workload factory for Databases es un servicio de implementación y mantenimiento de bases de datos de extremo a extremo con mejores prácticas integradas para optimización, clonación fina automática y capacidades de monitoreo y resolución. 
 ---
-= Aprenda sobre la fábrica de cargas de trabajo BlueXP  para las bases de datos
+= Obtenga información sobre la fábrica de cargas de trabajo para las bases de datos
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La fábrica de cargas de trabajo de BlueXP  para bases de datos es un servicio integral de implementación y mantenimiento de bases de datos con prácticas recomendadas integradas para capacidades de optimización, clonado automático de thin cloning, y supervisión y resolución.
+Workload factory for Databases es un servicio de implementación y mantenimiento de bases de datos de extremo a extremo con mejores prácticas integradas para optimización, clonación fina automática y capacidades de monitoreo y resolución.
 
 
 
-== ¿Qué es la fábrica de cargas de trabajo de BlueXP  para bases de datos?
+== ¿Qué es Workload Factory para bases de datos?
 
-La fábrica de cargas de trabajo de BlueXP  para bases de datos detecta, evalúa, planifica, aprovisiona y mueve datos de Microsoft SQL Server a implementaciones de Amazon FSx para NetApp ONTAP (FSx para ONTAP) optimizadas para satisfacer tus expectativas de rendimiento y costes a la vez que sigues las prácticas recomendadas del sector. A lo largo del ciclo de vida, el centro de cargas de trabajo ofrece una optimización y una gestión continuas para las bases de datos en FSx para ONTAP.
+Workload Factory para bases de datos detecta, evalúa, planifica, aprovisiona y mueve datos de Microsoft SQL Server a implementaciones de Amazon FSx para NetApp ONTAP (FSx para ONTAP) optimizadas para cumplir con sus expectativas de rendimiento y costos y, al mismo tiempo, adherirse a las mejores prácticas de la industria. A lo largo del ciclo de vida, el centro de cargas de trabajo ofrece una optimización y una gestión continuas para las bases de datos en FSx para ONTAP.
 
 Para obtener más información sobre la fábrica de cargas de trabajo, consulte la link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["información general de la fábrica de cargas de trabajo"^].
 
@@ -81,7 +81,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Obt�
 
 === Modos operativos en fábrica de cargas de trabajo
 
-Tres modos operativos diferentes - _BASIC_, _READ_ y _AUTOMATIC_ - ofrecen opciones flexibles para la implementación dentro y fuera de la fábrica de cargas de trabajo. Obtenga un valor inmediato en el modo de confianza cero en _BASIC_ con fragmentos de código para su uso fuera de la fábrica de cargas de trabajo. Obtenga valor incremental con confianza incremental en los modos _READ_ y _AUTOMATIC_.
+Tres modos operativos diferentes (básico, de solo lectura y de lectura/escritura) ofrecen opciones flexibles para la implementación dentro y fuera de la fábrica de cargas de trabajo. Obtenga un valor inmediato en el modo de confianza cero en _BASIC_ con fragmentos de código para su uso fuera de la fábrica de cargas de trabajo. Obtenga valor incremental con confianza incremental en los modos de solo lectura y de lectura/escritura.
 
 Más información sobre link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modos operativos en fábrica de cargas de trabajo"^].
 

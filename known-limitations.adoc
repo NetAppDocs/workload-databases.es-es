@@ -15,6 +15,12 @@ Las limitaciones conocidas identifican plataformas, dispositivos o funciones que
 
 
 
+== Soporte para detección de instancias de host
+
+La fábrica de carga de trabajo admite la detección de instancias de PostgreSQL que se ejecutan solo en sistemas operativos Amazon Linux y de instancias de Oracle que se ejecutan solo en Red Hat Enterprise Linux.
+
+
+
 == Compatibilidad con la versión de imagen AMI
 
 Solo mostramos hasta cuatro versiones recientes o revisiones de imágenes AMI para cada versión SQL. No permitimos la instalación desde una imagen AMI que sea más antigua que las últimas cuatro versiones.
@@ -127,9 +133,3 @@ No se tienen en cuenta los cálculos de ahorro de costes y porcentajes del tama�
 * La evaluación de optimización no puede determinar si se está utilizando la replicación entre regiones (CRR) cuando el sistema de archivos de destino de FSx para ONTAP se encuentra en una cuenta de AWS diferente.
 * La fábrica de carga de trabajo evalúa solo la configuración de CRR del sistema de archivos FSX para ONTAP de origen.
 
-
-
-
-== Número de bases de datos en instancias de SQL Server
-
-En la pestaña Inventario y en la consola, la fábrica de carga de trabajo admite hasta 1.500 bases de datos en instancias de SQL Server.

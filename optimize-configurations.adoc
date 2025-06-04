@@ -4,21 +4,21 @@ permalink: optimize-configurations.html
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
 summary: La fábrica de cargas de trabajo de BlueXP  para bases de datos analiza las configuraciones de Microsoft SQL Server proporcionando información y recomendaciones para ayudarle a lograr la excelencia operativa. 
 ---
-= Optimice las configuraciones para puestas en marcha de Microsoft SQL Server
+= Implementar configuraciones de base de datos bien diseñadas en la fábrica de carga de trabajo
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La fábrica de cargas de trabajo de BlueXP  para bases de datos analiza y evalúa continuamente las configuraciones de puesta en marcha de Microsoft SQL Server que se ejecutan en Amazon FSx para NetApp ONTAP. Esta función ofrece información y recomendaciones con la opción de optimizar automáticamente configuraciones sin optimizar para que las cargas de trabajo de bases de datos puedan alcanzar la excelencia operativa.
+Con la información y las recomendaciones del análisis de configuración, aproveche Workload Factory para implementar las mejores prácticas para las configuraciones de su base de datos. Puede identificar fácilmente los problemas y tomar medidas para mejorar la arquitectura de cualquier configuración que no esté optimizada en términos de confiabilidad, seguridad, eficiencia, rendimiento y costo.
 
 .Acerca de esta tarea
-La evaluación se ejecuta automáticamente y de forma continua una vez al día para las instancias de Microsoft SQL Server con almacenamiento FSx para ONTAP y gestionado en fábrica de cargas de trabajo. Los informes de evaluación están disponibles en el panel de optimización sólo si se ha ejecutado un trabajo programado diario después del despliegue o después de gestionar una instancia.
+Workload Factory analiza diariamente las configuraciones de la base de datos. Este análisis diario proporciona información y recomendaciones, con opciones para corregir automáticamente los problemas de configuración y que estas cumplan con las mejores prácticas.
 
-La fábrica de cargas de trabajo proporciona recomendaciones detalladas para optimizar las configuraciones basadas en prácticas recomendadas para el almacenamiento de FSx para ONTAP. Puede revisar las recomendaciones y optar por optimizar las configuraciones no optimizadas.
+Tiene opciones para revisar las recomendaciones de problemas de configuración y solucionar esos problemas desde el inventario de Bases de datos dentro de la consola de fábrica de carga de trabajo.
 
-Qué se escanea:: Workload Factory evalúa el estado de optimización de las siguientes configuraciones para las instancias de Microsoft SQL Server:
+Qué se analiza:: La fábrica de carga de trabajo analiza el estado de buena arquitectura de las siguientes configuraciones para instancias de Microsoft SQL Server:
 +
 --
 * Ajuste de tamaño del almacenamiento: Incluye nivel de almacenamiento, margen adicional del sistema de archivos, tamaño de la unidad de registro y tamaño de la unidad TempDB
@@ -27,43 +27,40 @@ Qué se escanea:: Workload Factory evalúa el estado de optimización de las sig
 * Informática: Incluye ajustes de tamaño, parches del sistema operativo y ajustes de adaptadores de red como escalado lateral de recepción (RSS) y descarga de TCP
 * Aplicaciones: Incluye licencias de Microsoft SQL Server, parche de Microsoft SQL Server y configuración de MAXDOP
 * Resiliencia: Incluye snapshots locales, FSx para backups de ONTAP y replicación entre regiones (CRR)
-* Clones: Incluye opciones para actualizar y eliminar clones (sandboxes) con más de 60 días de antigüedad
+* Clones: incluye opciones para actualizar y eliminar clones (sandboxes) que se crearon dentro o fuera de la fábrica de carga de trabajo y que tienen más de 60 días
 
 
 --
 
 
 .Antes de empezar
-* Debe tener credenciales con permisos de lectura o automatización.
-* Para evaluar el almacenamiento de una instancia de Microsoft SQL Server, la instancia debe gestionarse mediante fábrica de cargas de trabajo y el tipo de almacenamiento debe ser FSx para ONTAP.
-* Asegúrese de revisar cada recomendación cuidadosamente antes de seleccionar para optimizar un ajuste o una configuración. Para la configuración de RSS y MAXDOP, le sugerimos que pruebe la configuración recomendada para determinar las mejoras de rendimiento antes de realizar cambios en su entorno de producción.
+* Debes tener link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de lectura y escritura"^] para analizar las configuraciones de su base de datos.
+* Para evaluar el almacenamiento de una instancia de Microsoft SQL Server, la instancia debe estar registrada en Workload Factory y el tipo de almacenamiento debe ser FSx para ONTAP. link:register-instance.html["Aprenda cómo registrar una instancia de host."]
+* Asegúrese de revisar cada recomendación cuidadosamente antes de seleccionar para corregir una configuración o configuración. Para la configuración de RSS y MAXDOP, le sugerimos que pruebe la configuración recomendada para determinar las mejoras de rendimiento antes de realizar cambios en su entorno de producción.
 
 
 
-NOTE: El proceso de optimización puede causar tiempos de inactividad de instancias o interrupciones del servicio. Asegúrese de revisar el resumen de optimización y los elementos de acción antes de optimizar una configuración.
+NOTE: El proceso de corrección puede provocar tiempos de inactividad de instancias o interrupciones del servicio. Asegúrese de revisar la recomendación cuidadosamente antes de decidir arreglar una configuración.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En la pestaña *Inventario*, seleccione la pestaña *Instancias*.
-. Seleccione el menú de tres puntos de la instancia para optimizar y luego seleccione *Optimizar*.
-. En la página Optimizar Instancia para la instancia de SQL Server, revise las conclusiones de la evaluación.
+. Seleccione *Solucionar problemas* para ver los problemas de configuración de la instancia.
+. En la página de estado Bien diseñado de la instancia del host, revise los hallazgos del análisis.
 +
-Puede filtrar por categorías, subcategorías, estado, gravedad y etiquetas.
+Puede filtrar problemas de configuración por categorías, subcategorías, estado, gravedad y etiquetas.
 
 +
-También puede descargar un informe de los resultados de la evaluación seleccionando *Exportar PDF*.
+También puede descargar un informe de los hallazgos seleccionando *Exportar PDF*.
 
-. Seleccione la flecha desplegable para ver la recomendación de cualquier configuración. Asegúrese de revisar la recomendación cuidadosamente.
-+
-La recomendación explica las prácticas recomendadas y las posibles dificultades de las configuraciones no optimizadas.
-
-. Seleccione para *Optimizar* configuraciones no optimizadas.
+. Seleccione la flecha desplegable para ver la recomendación de cualquier configuración. Las recomendaciones incluyen las mejores prácticas, posibles riesgos de las configuraciones no optimizadas y consideraciones importantes. Asegúrese de revisar la recomendación cuidadosamente.
+. Seleccione *Ver y corregir* problemas de configuración cuando la opción esté disponible.
 +
 *Seleccionar todo* es el valor predeterminado, pero puedes seleccionar recursos específicos para optimizarlos.
 
 +
-.. Para todas las configuraciones, excepto la limpieza de clones, revise los detalles de optimización en el cuadro de diálogo de optimización para saber qué ocurrirá si decide optimizar. Algunas operaciones de optimización pueden provocar tiempos de inactividad de instancias o interrupciones del servicio.
+.. Para todas las configuraciones, excepto la limpieza de clones, revise los detalles de la recomendación para saber qué sucederá si elige optimizar. Algunas operaciones de remediación pueden causar tiempos de inactividad de las instancias o interrupciones del servicio.
 .. Para la limpieza de clones, seleccione Bases de datos clonadas (sandboxes) que desea actualizar o eliminar.
 +
 *** Al actualizar un clon, este se sincroniza con su base de datos de origen. La actualización solo está disponible para los clones creados en fábrica de cargas de trabajo.
@@ -72,8 +69,8 @@ La recomendación explica las prácticas recomendadas y las posibles dificultade
 
 
 
-. Selecciona *Continuar* para optimizar la configuración.
+. Seleccione *Continuar* para solucionar el problema de configuración.
 
 
 .Resultado
-Se inicia el proceso de optimización. Seleccione la pestaña *Supervisión de trabajos* para ver el estado de la operación.
+Se inicia el proceso de remediación. Seleccione la pestaña *Supervisión de trabajos* para ver el estado de la operación.

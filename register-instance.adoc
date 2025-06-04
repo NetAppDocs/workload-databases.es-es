@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: register-instance.html 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, manage host, view host, database host, database instance, manage, unregister 
+summary: Gestione instancias de Microsoft SQL Server en la fábrica de cargas de trabajo de BlueXP  para bases de datos. 
+---
+= Registrar instancias en la fábrica de carga de trabajo para bases de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Registre instancias de host para que pueda supervisar el estado de la instancia y la base de datos, la utilización de recursos, la protección y el rendimiento del almacenamiento en la fábrica de carga de trabajo para bases de datos.
+
+Las bases de datos solo pueden registrar instancias con FSx para el almacenamiento del sistema de archivos ONTAP.
+
+
+
+== Acerca de la tarea
+
+El registro de una instancia de host incluye dos pasos: autenticar la instancia y prepararla asegurándose de que todos los módulos de AWS, NetApp y PowerShell estén instalados en la instancia.
+
+Puede autenticar vínculos utilizando credenciales de SQL Server o con credenciales de Windows.
+
+
+NOTE: Workload Factory solo admite el registro y la administración de instancias de host de Microsoft SQL Server. Según las credenciales de la cuenta de AWS que seleccione en Workload Factory, los hosts de PostgreSQL y Oracle podrían aparecer en el inventario. Actualmente, Workload Factory admite instancias de PostgreSQL no registradas que se ejecutan solo en sistemas operativos Amazon Linux y instancias de Oracle que se ejecutan solo en Red Hat Enterprise Linux.
+
+
+
+== Registrar una instancia de host en una red privada
+
+Para registrar una instancia de host en una red privada sin conectividad externa, los siguientes puntos finales deben estar disponibles en la VPC con asociación a las subredes donde están presentes los servidores SQL. Asegúrese de que los extremos de interfaz permiten el puerto 443 en el grupo de seguridad conectado.
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
+
+
+Si utiliza un servidor proxy para todas las conexiones salientes de instancias EC2, debe permitir el acceso a los siguientes dominios para que las operaciones de gestión funcionen:
+
+* ``.microsoft.com``
+* ``.powershellgallery.com``
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
+
+
+
+
+== Antes de empezar
+
+El host de la instancia debe aparecer en la pestaña Inventario. Para que los hosts aparezcan en el inventario, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Debe agregar las credenciales de la cuenta de AWS y los permisos de modo _lectura_ o _automatización_"^] .
+
+
+
+== Registrar una instancia de host
+
+El registro de una instancia de host incluye la autenticación y preparación de la instancia.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. En Bases de datos, seleccione la pestaña *Inventario*.
+. En la pestaña Inventario, seleccione la pestaña *Instancias*.
+. Navegue hasta la instancia a administrar y seleccione *Registrar instancia*.
+. En la página Registrar instancia, ingrese el nombre de usuario y la contraseña de SQL Server, y el nombre de usuario y la contraseña del sistema de archivos FSx for ONTAP.
+. Seleccione *Siguiente*.
+. Prepare la instancia asegurándose de que cumpla con los prerrequisitos. Si todos los módulos necesarios están instalados y se cumplen los prerrequisitos, seleccione *Siguiente* para registrar la instancia. Si necesita realizar alguna acción, siga estos pasos.
++
+.. Si falta, seleccione la fábrica de carga de trabajo para *Instalar los módulos de AWS y NetApp PowerShell faltantes*.
+.. Si falta, seleccione la fábrica de cargas de trabajo para *Instalar el módulo PowerShell 7 faltante*. Para instalar el módulo PowerShell 7 faltante, es necesario reiniciar el sistema.
+.. Revise la lista de prerrequisitos para las siguientes capacidades. Se debe cumplir un prerrequisito para registrar la instancia.
++
+*** *Revisar problemas y recomendaciones bien diseñados*
+*** *Solucionar problemas bien diseñados*
+*** *Crear base de datos*
+*** *Crear copias de bases de datos (sandbox)*
++
+Para completar los requisitos previos se incluye actualizar los permisos de política de AWS IAM, los permisos de perfil de instancia de EC2 IAM, los permisos de SQL Server y los módulos de PowerShell.
+
+
+
+.. Complete al menos un requisito previo faltante para continuar.
+.. Cuando se cumplan uno o más requisitos previos y las comprobaciones estén *Listas*, puedes seleccionar *Registrar* la instancia.
+
+
+
+
+.Resultado
+Se inicia la solicitud de registro de la instancia. Seleccione la pestaña *Supervisión de trabajos* para seguir el progreso.

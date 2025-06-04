@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: manage-instance.html 
+keywords: host instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
+summary: Obtenga información sobre la gestión de instancias en la fábrica de carga de trabajo para bases de datos. 
+---
+= Gestión de instancias en la fábrica de carga de trabajo para bases de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La gestión de instancias de host registradas en Workload Factory incluye la implementación de recursos para sus instancias, como la creación de bases de datos y clones de bases de datos, y la supervisión del estado de las instancias y bases de datos, el uso de recursos, la protección y el rendimiento del almacenamiento. Además, puede analizar el estado de la arquitectura de las configuraciones de sus bases de datos e implementar las prácticas recomendadas de configuración para mejorar el rendimiento y reducir los costes operativos. La gestión de instancias solo está disponible para instancias con almacenamiento del sistema de archivos FSx for ONTAP.
+
+Usted debe link:register-instance.html["registrar una instancia de host"] realizar cualquiera de las siguientes tareas de gestión.
+
+Las tareas de gestión incluyen:
+
+* link:create-database.html["Creando una base de datos"]
+* link:create-sandbox-clone.html["Creación de un clon de base de datos (sandbox)"]
+* link:view-databases.html["Visualización de bases de datos"]
+* link:monitor-databases.html["Monitoreo de operaciones de bases de datos"]
+* link:optimize-configurations.html["Implementación de configuraciones de bases de datos bien diseñadas"]
+

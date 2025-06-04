@@ -26,22 +26,12 @@ Los sistemas de archivos FSX para ONTAP tienen dos modelos de implementación de
 
 
 --
-Modos de operación de fábrica de carga de trabajo:: La fábrica de cargas de trabajo ofrece tres modos operativos en función de lo cómodo que sea al permitir que la fábrica de cargas de trabajo administre sus recursos de AWS.
-+
---
-*_Basic_ MODE*: En este modo de operación, no es necesario asociar ninguna credencial de cuenta de AWS en la fábrica de cargas de trabajo. Puede copiar o descargar una plantilla YAML parcialmente llena desde el CodeBox para que se complete fuera de la fábrica de cargas de trabajo.
-
-*_Read_ MODE*: En este modo de operación, proporciona credenciales de cuenta de AWS con permisos de lectura que le permite completar el formulario _Quick create_ o _Advanced create_ y luego copiarlo o descargarlo. También puede redirigir a CloudFormation desde la fábrica de cargas de trabajo con los detalles del formulario completado. Y podrá gestionar el servidor de bases de datos desplegado en la fábrica de cargas de trabajo.
-
-*_AUTOMATIC_ MODE*: En este modo de operación, proporciona credenciales de cuenta de AWS con permisos automatizados que le permiten crear y administrar recursos de AWS dentro de la fábrica de cargas de trabajo.
-
---
 
 
 .Antes de empezar
 Asegúrese de tener los siguientes requisitos previos antes de crear un nuevo host de base de datos.
 
-Credenciales y permisos:: Debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos del modo de automatización"^]crear un nuevo host de base de datos en la fábrica de cargas de trabajo.
+Credenciales y permisos:: Debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de modo de lectura/escritura"^]crear un nuevo host de base de datos en la fábrica de cargas de trabajo.
 
 
 
