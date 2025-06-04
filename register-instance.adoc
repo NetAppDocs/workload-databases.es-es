@@ -50,7 +50,7 @@ Si utiliza un servidor proxy para todas las conexiones salientes de instancias E
 
 == Antes de empezar
 
-El host de la instancia debe aparecer en la pestaña Inventario. Para que los hosts aparezcan en el inventario, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Debe agregar las credenciales de la cuenta de AWS y los permisos de modo _lectura_ o _automatización_"^] .
+El host de la instancia debe aparecer en la pestaña Inventario. Para que los hosts aparezcan en el inventario, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Debe agregar las credenciales de la cuenta de AWS y los permisos de modo _solo lectura_ o _lectura/escritura_"^] .
 
 
 

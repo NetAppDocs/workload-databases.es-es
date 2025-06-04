@@ -26,7 +26,7 @@ NOTE: Los servidores Microsoft SQL Server que utilizan el protocolo SMB no admit
 .Antes de empezar
 Asegúrese de completar los siguientes requisitos previos antes de crear una nueva base de datos.
 
-Credenciales y permisos:: Debe tener link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de cuenta de AWS y permisos de modo _read_ o _automate_"^]que crear una nueva base de datos en la fábrica de carga de trabajo.
+Credenciales y permisos:: Debe tener link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de modo _solo lectura_ o _lectura/escritura_"^]que crear una nueva base de datos en la fábrica de carga de trabajo.
 +
 --
 Como alternativa, puede utilizar CodeBox para copiar una plantilla de forma que pueda implementar una base de datos fuera de la fábrica de cargas de trabajo mediante la API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Obtenga más información sobre la automatización de CodeBox"^].
@@ -41,7 +41,7 @@ Administrador de sistemas de AWS:: Asegúrese de que `NT Authority\SYSTEM user` 
 
 == Cree una base de datos
 
-Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ para completar esta tarea en la fábrica de cargas de trabajo con permisos de modo _read_ o _automate_.
+Puede utilizar los modos de implementación _Creación rápida_ o _Creación avanzada_ para completar esta tarea en la fábrica de carga de trabajo con permisos de modo _solo lectura_ o _lectura/escritura_.
 
 [role="tabbed-block"]
 ====

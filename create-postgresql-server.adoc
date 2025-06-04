@@ -58,16 +58,16 @@ NOTE: En _Quick create_, HA es el modelo de implementación predeterminado, Wind
 +
 .. *Credenciales de AWS*: Seleccione las credenciales de AWS con permisos automatizados para implementar el nuevo host de base de datos.
 +
-Las credenciales de AWS con permisos _Automate_ permiten que la fábrica de cargas de trabajo implemente y administre el nuevo host de base de datos desde su cuenta de AWS dentro de la fábrica de cargas de trabajo.
+Las credenciales de AWS con permisos de _lectura/escritura_ permiten que Workload Factory implemente y administre el nuevo host de base de datos desde su cuenta de AWS dentro de Workload Factory.
 
 +
-Las credenciales de AWS con permisos _read_ permiten que la fábrica de cargas de trabajo genere una plantilla de CloudFormation para que la utilice en la consola de AWS CloudFormation.
+Las credenciales de AWS con permisos de _solo lectura_ permiten que la fábrica de carga de trabajo genere una plantilla de CloudFormation para que usted la use en la consola de AWS CloudFormation.
 
 +
-Si no tiene las credenciales de AWS asociadas en la fábrica de cargas de trabajo y desea crear el nuevo servidor en la fábrica de cargas de trabajo, siga la opción *1* para ir a la página Credenciales. Agregue manualmente las credenciales y permisos necesarios para el modo _Automate_ para cargas de trabajo de base de datos.
+Si no tiene las credenciales de AWS asociadas en la fábrica de cargas de trabajo y desea crear el nuevo servidor en la fábrica de cargas de trabajo, siga la opción *1* para ir a la página Credenciales. Agregue manualmente las credenciales y los permisos necesarios para el modo _lectura/escritura_ para las cargas de trabajo de la base de datos.
 
 +
-Si desea completar el formulario Crear nuevo servidor en la fábrica de cargas de trabajo para poder descargar una plantilla de archivo YAML completa para su implementación en AWS CloudFormation, siga *Opción 2* para asegurarse de que tiene los permisos necesarios para crear el nuevo servidor en AWS CloudFormation. Agregue manualmente las credenciales y los permisos necesarios para el modo _READ_ para las cargas de trabajo de la base de datos.
+Si desea completar el formulario Crear nuevo servidor en la fábrica de cargas de trabajo para poder descargar una plantilla de archivo YAML completa para su implementación en AWS CloudFormation, siga *Opción 2* para asegurarse de que tiene los permisos necesarios para crear el nuevo servidor en AWS CloudFormation. Agregue manualmente las credenciales y los permisos necesarios para el modo _solo lectura_ para las cargas de trabajo de la base de datos.
 
 +
 Opcionalmente, puede descargar una plantilla de archivo YAML parcialmente completada desde CodeBox para crear la pila fuera de la fábrica de cargas de trabajo sin credenciales ni permisos. Seleccione *CloudFormation* en el menú desplegable del CodeBox para descargar el archivo YAML.
@@ -151,13 +151,13 @@ También puede seleccionar *Guardar configuración* para implementar el host má
 Las credenciales de AWS con permisos _Automate_ permiten que la fábrica de cargas de trabajo implemente y administre el nuevo host de base de datos desde su cuenta de AWS dentro de la fábrica de cargas de trabajo.
 
 +
-Las credenciales de AWS con permisos _read_ permiten que la fábrica de cargas de trabajo genere una plantilla de CloudFormation para que la utilice en la consola de AWS CloudFormation.
+Las credenciales de AWS con permisos de _solo lectura_ permiten que la fábrica de carga de trabajo genere una plantilla de CloudFormation para que usted la use en la consola de AWS CloudFormation.
 
 +
-Si no tiene las credenciales de AWS asociadas en la fábrica de cargas de trabajo y desea crear el nuevo servidor en la fábrica de cargas de trabajo, siga la opción *1* para ir a la página Credenciales. Agregue manualmente las credenciales y permisos necesarios para el modo _Automate_ para cargas de trabajo de base de datos.
+Si no tiene las credenciales de AWS asociadas en la fábrica de cargas de trabajo y desea crear el nuevo servidor en la fábrica de cargas de trabajo, siga la opción *1* para ir a la página Credenciales. Agregue manualmente las credenciales y los permisos necesarios para el modo _lectura/escritura_ para las cargas de trabajo de la base de datos.
 
 +
-Si desea completar el formulario Crear nuevo servidor en la fábrica de cargas de trabajo para poder descargar una plantilla de archivo YAML completa para su implementación en AWS CloudFormation, siga *Opción 2* para asegurarse de que tiene los permisos necesarios para crear el nuevo servidor en AWS CloudFormation. Agregue manualmente las credenciales y los permisos necesarios para el modo _READ_ para las cargas de trabajo de la base de datos.
+Si desea completar el formulario Crear nuevo servidor en la fábrica de cargas de trabajo para poder descargar una plantilla de archivo YAML completa para su implementación en AWS CloudFormation, siga *Opción 2* para asegurarse de que tiene los permisos necesarios para crear el nuevo servidor en AWS CloudFormation. Agregue manualmente las credenciales y los permisos necesarios para el modo _solo lectura_ para las cargas de trabajo de la base de datos.
 
 +
 Opcionalmente, puede descargar una plantilla de archivo YAML parcialmente completada desde CodeBox para crear la pila fuera de la fábrica de cargas de trabajo sin credenciales ni permisos. Seleccione *CloudFormation* en el menú desplegable del CodeBox para descargar el archivo YAML.
