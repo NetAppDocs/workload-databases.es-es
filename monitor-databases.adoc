@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: Realice un seguimiento de los trabajos de base de datos y supervise las bases de datos en la fábrica de cargas de trabajo de BlueXP  para las 
+summary: Realice un seguimiento de los trabajos de la base de datos y supervise las bases de datos dentro de la fábrica de carga de trabajo para bases de datos. 
 ---
-= Supervisión de bases de datos en la fábrica de cargas de trabajo de BlueXP 
+= Supervisar trabajos de base de datos en la fábrica de carga de trabajo
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Realice un seguimiento de los trabajos de base de datos y supervise las bases de datos en la fábrica de cargas de trabajo de BlueXP  para las
+Realice un seguimiento de los trabajos de la base de datos y supervise las bases de datos dentro de la fábrica de carga de trabajo para bases de datos.
 
 .Acerca de esta tarea
 Database proporciona supervisión de trabajos para que pueda realizar un seguimiento del progreso de los trabajos, así como diagnosticar y solucionar problemas en caso de que se produzca algún fallo. Puede filtrar trabajos por tipo y estado, buscar trabajos mediante la función de búsqueda y descargar la tabla de trabajos.
