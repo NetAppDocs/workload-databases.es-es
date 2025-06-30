@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-configurations.html 
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
-summary: La fábrica de cargas de trabajo de BlueXP  para bases de datos analiza las configuraciones de Microsoft SQL Server proporcionando información y recomendaciones para ayudarle a lograr la excelencia operativa. 
+summary: Workload Factory para bases de datos escanea las configuraciones de Microsoft SQL Server y proporciona información y recomendaciones para ayudarle a lograr la excelencia operativa. 
 ---
 = Implementar configuraciones de base de datos bien diseñadas en la fábrica de carga de trabajo
 :allow-uri-read: 
@@ -23,7 +23,7 @@ Qué se analiza:: La fábrica de carga de trabajo analiza el estado de buena arq
 --
 * Ajuste de tamaño del almacenamiento: Incluye nivel de almacenamiento, margen adicional del sistema de archivos, tamaño de la unidad de registro y tamaño de la unidad TempDB
 * Distribución de almacenamiento: Incluye la ubicación de los archivos de datos del usuario, la ubicación de los archivos de registro y la ubicación de TempDB
-* Configuración del almacenamiento: Incluye la gestión de la capacidad, el thin provisioning, la política de organización en niveles, la snapshot y el estado de I/O multivía, la política y las sesiones, etc.
+* Configuración de almacenamiento: incluye administración de capacidad, aprovisionamiento fino, política de niveles, instantáneas, estado de E/S de múltiples rutas de Microsoft (MPIO) y configuración de tiempo de espera de MPIO
 * Informática: Incluye ajustes de tamaño, parches del sistema operativo y ajustes de adaptadores de red como escalado lateral de recepción (RSS) y descarga de TCP
 * Aplicaciones: Incluye licencias de Microsoft SQL Server, parche de Microsoft SQL Server y configuración de MAXDOP
 * Resiliencia: Incluye snapshots locales, FSx para backups de ONTAP y replicación entre regiones (CRR)
@@ -57,10 +57,10 @@ También puede descargar un informe de los hallazgos seleccionando *Exportar PDF
 . Seleccione la flecha desplegable para ver la recomendación de cualquier configuración. Las recomendaciones incluyen las mejores prácticas, posibles riesgos de las configuraciones no optimizadas y consideraciones importantes. Asegúrese de revisar la recomendación cuidadosamente.
 . Seleccione *Ver y corregir* problemas de configuración cuando la opción esté disponible.
 +
-*Seleccionar todo* es el valor predeterminado, pero puedes seleccionar recursos específicos para optimizarlos.
+*Seleccionar todo* es la opción predeterminada, pero puedes seleccionar recursos específicos para arreglarlos.
 
 +
-.. Para todas las configuraciones, excepto la limpieza de clones, revise los detalles de la recomendación para saber qué sucederá si elige optimizar. Algunas operaciones de remediación pueden causar tiempos de inactividad de las instancias o interrupciones del servicio.
+.. Para todas las configuraciones excepto la limpieza de clones, revise los detalles de la recomendación para saber qué sucederá si decide solucionar el problema. Algunas operaciones de remediación pueden causar tiempos de inactividad de las instancias o interrupciones del servicio.
 .. Para la limpieza de clones, seleccione Bases de datos clonadas (sandboxes) que desea actualizar o eliminar.
 +
 *** Al actualizar un clon, este se sincroniza con su base de datos de origen. La actualización solo está disponible para los clones creados en fábrica de cargas de trabajo.
@@ -73,4 +73,4 @@ También puede descargar un informe de los hallazgos seleccionando *Exportar PDF
 
 
 .Resultado
-Se inicia el proceso de remediación. Seleccione la pestaña *Supervisión de trabajos* para ver el estado de la operación.
+La fábrica de carga de trabajo comienza a solucionar los problemas. Seleccione la pestaña *Supervisión de trabajos* para ver el estado de la operación.

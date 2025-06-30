@@ -87,6 +87,8 @@ Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ p
 
 NOTE: Al usar Terraform de CodeBox, el código que copie o descargue oculta `fsxadmin` y `vsadmin` las contraseñas. Deberá volver a introducir las contraseñas cuando ejecute el código. Deberá incluir los siguientes permisos para la cuenta de usuario además de los permisos del modo _Automate_: `iam:TagRole` Y `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["Aprende a usar Terraform de CodeBox"^].
 
+Durante la implementación, Workload Factory habilita CredSSP para la delegación de credenciales a scripts para el aprovisionamiento de SQL. Cuando la delegación de CredSSP está bloqueada para todos los equipos del dominio con la directiva de grupo, la implementación falla. Después de la implementación, Workload Factory deshabilita CredSSP.
+
 [role="tabbed-block"]
 ====
 .Creación rápida

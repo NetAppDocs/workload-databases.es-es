@@ -11,7 +11,7 @@ summary: Gestione instancias de Microsoft SQL Server en la fábrica de cargas de
 
 
 [role="lead"]
-Registre instancias de host para que pueda supervisar el estado de la instancia y la base de datos, la utilización de recursos, la protección y el rendimiento del almacenamiento en la fábrica de carga de trabajo para bases de datos.
+Registre instancias para que pueda supervisar el estado de las instancias y de la base de datos, la utilización de recursos, la protección y el rendimiento del almacenamiento en la fábrica de carga de trabajo para bases de datos.
 
 Las bases de datos solo pueden registrar instancias con FSx para el almacenamiento del sistema de archivos ONTAP.
 
@@ -19,18 +19,18 @@ Las bases de datos solo pueden registrar instancias con FSx para el almacenamien
 
 == Acerca de la tarea
 
-El registro de una instancia de host incluye dos pasos: autenticar la instancia y prepararla asegurándose de que todos los módulos de AWS, NetApp y PowerShell estén instalados en la instancia.
+El registro de una instancia incluye dos pasos: autenticar la instancia y prepararla asegurándose de que todos los módulos de AWS, NetApp y PowerShell estén instalados en la instancia.
 
 Puede autenticar vínculos utilizando credenciales de SQL Server o con credenciales de Windows.
 
 
-NOTE: Workload Factory solo admite el registro y la administración de instancias de host de Microsoft SQL Server. Según las credenciales de la cuenta de AWS que seleccione en Workload Factory, los hosts de PostgreSQL y Oracle podrían aparecer en el inventario. Actualmente, Workload Factory admite instancias de PostgreSQL no registradas que se ejecutan solo en sistemas operativos Amazon Linux y instancias de Oracle que se ejecutan solo en Red Hat Enterprise Linux.
+NOTE: La fábrica de carga de trabajo solo admite el registro y la administración de instancias de Microsoft SQL Server. Según las credenciales de la cuenta de AWS que seleccione en Workload Factory, los hosts de PostgreSQL y Oracle podrían aparecer en el inventario. Actualmente, Workload Factory admite instancias de PostgreSQL no registradas que se ejecutan solo en sistemas operativos Amazon Linux y instancias de Oracle que se ejecutan solo en Red Hat Enterprise Linux.
 
 
 
-== Registrar una instancia de host en una red privada
+== Registrar una instancia en una red privada
 
-Para registrar una instancia de host en una red privada sin conectividad externa, los siguientes puntos finales deben estar disponibles en la VPC con asociación a las subredes donde están presentes los servidores SQL. Asegúrese de que los extremos de interfaz permiten el puerto 443 en el grupo de seguridad conectado.
+Para registrar una instancia en una red privada sin conectividad externa, los siguientes puntos finales deben estar disponibles en la VPC con asociación a las subredes donde están presentes los servidores SQL. Asegúrese de que los extremos de interfaz permiten el puerto 443 en el grupo de seguridad conectado.
 
 * `S3 Gateway/endpoint`
 * `ssm`
@@ -50,23 +50,44 @@ Si utiliza un servidor proxy para todas las conexiones salientes de instancias E
 
 == Antes de empezar
 
-El host de la instancia debe aparecer en la pestaña Inventario. Para que los hosts aparezcan en el inventario, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Debe agregar las credenciales de la cuenta de AWS y los permisos de modo _solo lectura_ o _lectura/escritura_"^] .
+Tenga en cuenta lo siguiente antes de registrar una instancia:
+
+* El host de la instancia debe aparecer en la pestaña Inventario. Para que los hosts aparezcan en el inventario, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Debe agregar las credenciales de la cuenta de AWS y los permisos de modo _solo lectura_ o _lectura/escritura_"^] .
+* Al usar credenciales de usuario de dominio de Windows para autenticarse en las operaciones de administración de SQL Server, la fábrica de cargas de trabajo habilita la delegación de CredSSP en los nodos de SQL. Si la delegación de CredSSP está bloqueada para todos los equipos del dominio con la directiva de grupo, la autenticación con credenciales de usuario de Windows no funcionará.
 
 
 
-== Registrar una instancia de host
 
-El registro de una instancia de host incluye la autenticación y preparación de la instancia.
+== Registrar una instancia
+
+El registro de una instancia incluye la autenticación y preparación de la instancia.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . En la pestaña Inventario, seleccione la pestaña *Instancias*.
-. Navegue hasta la instancia a administrar y seleccione *Registrar instancia*.
-. En la página Registrar instancia, ingrese el nombre de usuario y la contraseña de SQL Server, y el nombre de usuario y la contraseña del sistema de archivos FSx for ONTAP.
-. Seleccione *Siguiente*.
-. Prepare la instancia asegurándose de que cumpla con los prerrequisitos. Si todos los módulos necesarios están instalados y se cumplen los prerrequisitos, seleccione *Siguiente* para registrar la instancia. Si necesita realizar alguna acción, siga estos pasos.
+. Seleccione para registrar una sola instancia o registrar varias instancias.
++
+.. Registro de instancia única: navegue hasta la instancia que desea administrar y seleccione *Registrar instancia*.
+.. Registro de múltiples instancias: seleccione el botón *Registrar múltiples instancias*.
++
+Hay dos opciones disponibles para registrar varias instancias. En ambos casos, las instancias deben compartir el mismo estado de autenticación (autenticado o no autenticado).
+
++
+*** Instancias no autenticadas: Seleccione varias instancias no autenticadas para registrarlas. Estas instancias deben compartir las mismas credenciales de autenticación y las credenciales de FSx for ONTAP. Seleccione *Aplicar* y luego *Siguiente*.
+*** Instancias autenticadas: seleccione varias instancias autenticadas para registrar y luego seleccione *Siguiente*.
+
+
+
+
+. En el paso 2 de la página "Registrar instancias", seleccione el modo de autenticación de la instancia, introduzca los siguientes datos y seleccione *Siguiente*. Si las instancias ya están autenticadas, seleccione *Siguiente*.
++
+** *Autenticación de SQL Server*: ingrese el nombre de usuario y la contraseña de SQL Server, y el nombre de usuario y la contraseña del sistema de archivos FSx para ONTAP.
+** *Autenticación de Windows*: Ingrese el nombre de usuario y la contraseña de Windows, y el nombre de usuario y la contraseña del sistema de archivos FSx for ONTAP.
+
+
+. En el paso 3, prepare la instancia asegurándose de que cumpla con los requisitos previos requeridos. Si todos los módulos necesarios están instalados y se cumplen los prerrequisitos, seleccione *Siguiente* para registrar la instancia. Si necesita realizar alguna acción, siga estos pasos.
 +
 .. Si falta, seleccione la fábrica de carga de trabajo para *Instalar los módulos de AWS y NetApp PowerShell faltantes*.
 .. Si falta, seleccione la fábrica de cargas de trabajo para *Instalar el módulo PowerShell 7 faltante*. Para instalar el módulo PowerShell 7 faltante, es necesario reiniciar el sistema.

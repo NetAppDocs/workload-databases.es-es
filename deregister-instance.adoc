@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: deregister-instance.html 
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, deregister instance, unregister instance, remove instance 
-summary: Anule el registro de una instancia de host si ya no desea implementar ni supervisar los recursos de la instancia. 
+summary: Anule el registro de una instancia si ya no desea implementar ni supervisar los recursos de la instancia. 
 ---
-= Anular el registro de una instancia de host en la fábrica de carga de trabajo
+= Anular el registro de una instancia en la fábrica de carga de trabajo
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Anule el registro de una instancia de host si ya no desea implementar ni supervisar sus recursos. Al anular el registro de instancias, también se elimina la capacidad de almacenamiento que utiliza la instancia de host.
+Anule el registro de una instancia si ya no desea implementar ni supervisar sus recursos. Al anular el registro de instancias, también se elimina la capacidad de almacenamiento que utiliza.
 
 Puedes volver a registrar la instancia más tarde.
 
@@ -19,13 +19,13 @@ Puedes volver a registrar la instancia más tarde.
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
-. Haga clic en la flecha desplegable para expandir la fila de la instancia de host que desea cancelar el registro.
+. Haga clic en la flecha desplegable para expandir la fila de la instancia que desea cancelar el registro.
 +
-El host se expande y aparecen las instancias del host.
+El host se expande y aparecen las instancias.
 
 . Haga clic en el menú de tres puntos de la instancia para cancelar el registro.
 . Seleccione *Cancelar registro*.
 
 
 .Resultado
-La instancia del host ya no está registrada. Puede volver a registrarla más tarde.
+La instancia ahora está anulada. Puede volver a registrarla más tarde.
