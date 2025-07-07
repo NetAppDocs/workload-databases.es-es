@@ -26,24 +26,23 @@ Puede autenticar vínculos utilizando credenciales de SQL Server o con credencia
 
 NOTE: La fábrica de carga de trabajo solo admite el registro y la administración de instancias de Microsoft SQL Server. Según las credenciales de la cuenta de AWS que seleccione en Workload Factory, los hosts de PostgreSQL y Oracle podrían aparecer en el inventario. Actualmente, Workload Factory admite instancias de PostgreSQL no registradas que se ejecutan solo en sistemas operativos Amazon Linux y instancias de Oracle que se ejecutan solo en Red Hat Enterprise Linux.
 
-
-
-== Registrar una instancia en una red privada
-
-Para registrar una instancia en una red privada sin conectividad externa, los siguientes puntos finales deben estar disponibles en la VPC con asociación a las subredes donde están presentes los servidores SQL. Asegúrese de que los extremos de interfaz permiten el puerto 443 en el grupo de seguridad conectado.
-
+Registrar una instancia en una red privada:: Para registrar una instancia en una red privada sin conectividad externa, los siguientes puntos finales deben estar disponibles en la VPC con asociación a las subredes donde están presentes los servidores SQL. Asegúrese de que los extremos de interfaz permiten el puerto 443 en el grupo de seguridad conectado.
++
+--
 * `S3 Gateway/endpoint`
 * `ssm`
 * `ssmmessages`
 * `fsx`
-
-
++
 Si utiliza un servidor proxy para todas las conexiones salientes de instancias EC2, debe permitir el acceso a los siguientes dominios para que las operaciones de gestión funcionen:
 
 * ``.microsoft.com``
 * ``.powershellgallery.com``
 * ``.aws.amazon.com``
 * ``.amazonaws.com``
+
+
+--
 
 
 

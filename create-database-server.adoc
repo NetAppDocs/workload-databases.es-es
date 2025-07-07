@@ -13,7 +13,10 @@ summary: Cree un nuevo servidor Microsoft SQL Server en el centro de cargas de t
 [role="lead"]
 Para crear un nuevo Microsoft SQL Server o un host de base de datos en una fábrica de carga de trabajo para bases de datos, se requiere una implementación del sistema de archivos FSx para ONTAP y recursos para Active Directory.
 
-.Acerca de esta tarea
+
+
+== Acerca de esta tarea
+
 Antes de crear un Microsoft SQL Server desde una fábrica de carga de trabajo, obtenga información sobre los tipos de implementación de almacenamiento disponibles para la configuración del host de base de datos, la configuración de E/S de múltiples rutas de Microsoft, la implementación de Active Directory, los detalles de red y los requisitos para completar esta operación.
 
 Después de la implementación, deberá <<Paso 2: Habilite la conexión remota en Microsoft SQL Server,Active la conexión remota en Microsoft SQL Server>>.
@@ -42,14 +45,7 @@ Active Directory:: Lo siguiente ocurre en Active Directory (AD) durante la imple
 
 
 --
-
-
-
-
-== Grupos de seguridad de Active Directory gestionados por el usuario
-
-Si selecciona “Active Directory gestionado por el usuario” durante la implementación de Microsoft SQL Server en la fábrica de cargas de trabajo, debe proporcionar un grupo de seguridad que permita el tráfico entre las instancias EC2 al servicio de directorio para la implementación. La fábrica de cargas de trabajo no conecta automáticamente el grupo de seguridad para Active Directory gestionado por el usuario como lo hace para AWS Managed Microsoft AD.
-
+Grupos de seguridad de Active Directory gestionados por el usuario:: Si selecciona “Active Directory gestionado por el usuario” durante la implementación de Microsoft SQL Server en la fábrica de cargas de trabajo, debe proporcionar un grupo de seguridad que permita el tráfico entre las instancias EC2 al servicio de directorio para la implementación. La fábrica de cargas de trabajo no conecta automáticamente el grupo de seguridad para Active Directory gestionado por el usuario como lo hace para AWS Managed Microsoft AD.
 Reversión de recursos:: Si decide revertir los recursos del sistema de nombres de dominio (DNS), los registros de recursos en AD y DNS no se eliminan automáticamente. Puede eliminar los registros del servidor DNS y AD de la siguiente manera.
 +
 --
@@ -60,7 +56,10 @@ Reversión de recursos:: Si decide revertir los recursos del sistema de nombres 
 --
 
 
-.Antes de empezar
+
+
+== Antes de empezar
+
 Asegúrese de tener los siguientes requisitos previos antes de crear un nuevo host de base de datos.
 
 Credenciales y permisos:: Debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de modo de lectura/escritura"^]crear un nuevo host de base de datos en la fábrica de cargas de trabajo.
