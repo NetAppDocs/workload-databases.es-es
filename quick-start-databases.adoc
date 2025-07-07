@@ -36,6 +36,6 @@ Si opera en modo _solo lectura_ o _lectura/escritura_, necesitará link:https://
 Por último, si elige operar en modo _lectura/escritura_, debe link:create-database-server.html["implementar un servidor host"] o link:register-instance.html["registrar una instancia"] para administrar los recursos de su host y antes de agregar bases de datos de usuarios.
 
 .El futuro
-Cuando haya registrado instancias de host con FSx para el almacenamiento del sistema de archivos ONTAP en su inventario de bases de datos, podrá link:create-database.html["crear una base de datos de usuario"] o link:create-sandbox-clone.html["clone el host para crear un espacio de pruebas"] .
+Cuando haya registrado instancias con FSx para el almacenamiento del sistema de archivos ONTAP en su inventario de bases de datos, podrá link:create-database.html["crear una base de datos de usuario"] o link:create-sandbox-clone.html["clone el host para crear un espacio de pruebas"] .
 
 Cuando tienes hosts de Elastic Block Store o FSx para Windows File Server en tu inventario de bases de datos, puedes link:explore-savings.html["explora el ahorro con la calculadora de ahorro"].

@@ -14,8 +14,8 @@ summary: Para obtener un resumen de los recursos de la base de datos en Workload
 Para obtener un resumen de los recursos de la base de datos en Workload Factory, consulte todas las bases de datos en el inventario. También puede ver las bases de datos por cada instancia registrada.
 
 .Antes de empezar
-* Las instancias de host que contienen recursos de base de datos deben tener FSx para el almacenamiento del sistema de archivos ONTAP.
-* Las instancias de host deben estar registradas en la fábrica de carga de trabajo. Aprenda a link:register-instance.html["registrar instancias de host"].
+* Las instancias que contienen recursos de base de datos deben tener FSx para el almacenamiento del sistema de archivos ONTAP.
+* Las instancias deben registrarse en la fábrica de carga de trabajo. Aprenda a link:register-instance.html["registrar una instancia"].
 
 
 .Pasos
@@ -28,7 +28,7 @@ Para obtener un resumen de los recursos de la base de datos en Workload Factory,
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . Haga clic en la flecha desplegable para expandir la fila del host para ver sus bases de datos.
 +
-El host se expande y aparecen las instancias del host.
+El host se expande y aparecen las instancias.
 
 . Haga clic en el menú de tres puntos de la instancia que contiene las bases de datos que desea ver.
 . Seleccione *Ver bases de datos*.
@@ -42,7 +42,7 @@ El host se expande y aparecen las instancias del host.
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . Haga clic en la flecha desplegable para expandir la fila del host para ver sus bases de datos.
 +
-El host se expande y aparecen las instancias del host.
+El host se expande y aparecen las instancias.
 
 . Haga clic en el menú de tres puntos de la instancia que contiene las bases de datos que desea ver.
 . Seleccione *Ver bases de datos*.

@@ -48,9 +48,9 @@ Alcance del análisis:: El alcance de la optimización es diferente dependiendo 
 
 == Requisitos de análisis
 
-Para un análisis completo del entorno de base de datos, las instancias del host deben estar registradas y en línea.
+Para un análisis completo del entorno de base de datos, las instancias deben estar registradas y en línea.
 
-link:register-instance.html["Aprenda cómo registrar una instancia de host."]
+link:register-instance.html["Aprenda cómo registrar una instancia."]
 
 .El futuro
 link:optimize-configurations.html["Implementar configuraciones de bases de datos bien diseñadas"]

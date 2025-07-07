@@ -15,7 +15,7 @@ Las limitaciones conocidas identifican plataformas, dispositivos o funciones que
 
 
 
-== Soporte para detección de instancias de host
+== Soporte de detección de instancias
 
 La fábrica de carga de trabajo admite la detección de instancias de PostgreSQL que se ejecutan solo en sistemas operativos Amazon Linux y de instancias de Oracle que se ejecutan solo en Red Hat Enterprise Linux.
 
