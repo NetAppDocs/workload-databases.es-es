@@ -20,6 +20,8 @@ indexpage:
       url: "/explore-savings.html"
     - title: Registrar una instancia
       url: "/register-instance.html"
+    - title: Visualice el estado de buena arquitectura de sus instancias
+      url: "/optimize-configurations.html"
     - title: Cree un servidor Microsoft SQL Server
       url: "/create-database-server.html"
     - title: Crear un servidor PostgreSQL

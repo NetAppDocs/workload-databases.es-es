@@ -11,10 +11,12 @@ summary: Workload Factory para bases de datos escanea las configuraciones de Mic
 
 
 [role="lead"]
-Con la información y las recomendaciones del análisis de configuración, aproveche Workload Factory para implementar las mejores prácticas para las configuraciones de su base de datos. Puede identificar fácilmente los problemas y tomar medidas para mejorar la arquitectura de cualquier configuración que no esté optimizada en términos de confiabilidad, seguridad, eficiencia, rendimiento y costo.
+Con la información y las recomendaciones del análisis de configuración, aproveche Workload Factory para implementar las mejores prácticas para las configuraciones de su base de datos. Puede revisar fácilmente el estado de la arquitectura, conocer los problemas con las configuraciones de la base de datos y tomar medidas para mejorar cualquier configuración que no esté optimizada en términos de confiabilidad, seguridad, eficiencia, rendimiento y costo.
+
+link:optimize-overview.html["Obtenga información sobre el análisis de configuración y el estado de buena arquitectura en la fábrica de carga de trabajo."]
 
 .Acerca de esta tarea
-Workload Factory analiza diariamente las configuraciones de la base de datos. Este análisis diario proporciona información y recomendaciones, con opciones para corregir automáticamente los problemas de configuración y que estas cumplan con las mejores prácticas.
+Workload Factory analiza diariamente las configuraciones de la base de datos. El análisis diario proporciona un estado bien diseñado, además de información y recomendaciones con opciones para corregir automáticamente los problemas de configuración para que sus configuraciones cumplan con las mejores prácticas.
 
 Tiene opciones para revisar las recomendaciones de problemas de configuración y solucionar esos problemas desde el inventario de Bases de datos dentro de la consola de fábrica de carga de trabajo.
 
