@@ -133,3 +133,9 @@ No se tienen en cuenta los cálculos de ahorro de costes y porcentajes del tama�
 * La evaluación de optimización no puede determinar si se está utilizando la replicación entre regiones (CRR) cuando el sistema de archivos de destino de FSx para ONTAP se encuentra en una cuenta de AWS diferente.
 * La fábrica de carga de trabajo evalúa solo la configuración de CRR del sistema de archivos FSX para ONTAP de origen.
 
+
+
+
+== Autenticación del host de base de datos en Explore los ahorros
+
+En algunos casos con permisos limitados, la página de exploración de ahorros no carga datos después de una autenticación exitosa.

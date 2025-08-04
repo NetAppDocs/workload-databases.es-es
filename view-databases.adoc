@@ -15,7 +15,7 @@ Para obtener un resumen de los recursos de la base de datos en Workload Factory,
 
 .Antes de empezar
 * Las instancias que contienen recursos de base de datos deben tener FSx para el almacenamiento del sistema de archivos ONTAP.
-* Las instancias deben registrarse en la fábrica de carga de trabajo. Aprenda a link:register-instance.html["registrar una instancia"].
+* Debe registrar instancias en la fábrica de carga de trabajo para ver las bases de datos. Aprenda a... link:register-instance.html["registrar una instancia"] .
 
 
 .Pasos
@@ -26,13 +26,10 @@ Para obtener un resumen de los recursos de la base de datos en Workload Factory,
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
-. Haga clic en la flecha desplegable para expandir la fila del host para ver sus bases de datos.
-+
-El host se expande y aparecen las instancias.
+. Haga clic en el menú de tres puntos de la instancia y luego seleccione *Ver bases de datos*.
 
-. Haga clic en el menú de tres puntos de la instancia que contiene las bases de datos que desea ver.
-. Seleccione *Ver bases de datos*.
 
+Las bases de datos se muestran para la instancia única en la pestaña Bases de datos.
 
 --
 .Ver bases de datos para todas las instancias
@@ -40,15 +37,11 @@ El host se expande y aparecen las instancias.
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
-. Haga clic en la flecha desplegable para expandir la fila del host para ver sus bases de datos.
+. Seleccione la pestaña *Bases de datos*.
 +
-El host se expande y aparecen las instancias.
+Las bases de datos se muestran para todas las instancias registradas.
 
-. Haga clic en el menú de tres puntos de la instancia que contiene las bases de datos que desea ver.
-. Seleccione *Ver bases de datos*.
 
 
 --
 ====
-.Resultado
-Ha visto los recursos de la base de datos dentro de la fábrica de carga de trabajo.

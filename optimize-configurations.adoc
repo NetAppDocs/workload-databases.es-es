@@ -28,7 +28,7 @@ Qué se analiza:: La fábrica de carga de trabajo analiza el estado de buena arq
 * Configuración de almacenamiento: incluye administración de capacidad, aprovisionamiento fino, política de niveles, instantáneas, estado de E/S de múltiples rutas de Microsoft (MPIO) y configuración de tiempo de espera de MPIO
 * Informática: Incluye ajustes de tamaño, parches del sistema operativo y ajustes de adaptadores de red como escalado lateral de recepción (RSS) y descarga de TCP
 * Aplicaciones: Incluye licencias de Microsoft SQL Server, parche de Microsoft SQL Server y configuración de MAXDOP
-* Resiliencia: Incluye snapshots locales, FSx para backups de ONTAP y replicación entre regiones (CRR)
+* Resiliencia: incluye instantáneas locales, copias de seguridad de FSx para ONTAP , replicación entre regiones (CRR) y alta disponibilidad de Microsoft SQL.
 * Clones: incluye opciones para actualizar y eliminar clones (sandboxes) que se crearon dentro o fuera de la fábrica de carga de trabajo y que tienen más de 60 días
 
 

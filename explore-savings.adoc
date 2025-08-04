@@ -234,10 +234,14 @@ Siga los pasos de la pestaña para su tipo de almacenamiento.
 Si la fábrica de cargas de trabajo detecta hosts EBS, se le redirigirá a la pestaña Explorar ahorro. Si la fábrica de cargas de trabajo no detecta hosts EBS, se le redirigirá a la calculadora a <<Explora el ahorro a través de la personalización,explora el ahorro a través de la personalización>>.
 
 . En la pestaña Explorar ahorros, haga clic en *Explorar ahorros* del servidor de base de datos usando el almacenamiento de EBS.
+. Si es necesario, autentique el host de la base de datos con credenciales de SQL Server, credenciales de Windows o agregando los permisos faltantes de SQL Server.
++
+Si la página Explorar ahorros no carga datos después de una autenticación exitosa, seleccione la pestaña *Inventario* para volver a cargar los datos y luego seleccione la pestaña *Explorar ahorros* nuevamente.
+
 . De forma opcional, en la calculadora de ahorro proporciona los siguientes detalles sobre los clones y las copias Snapshot en el almacenamiento de EBS para obtener una estimación más precisa del ahorro de costes.
 +
-.. *Frecuencia de instantánea*: Seleccione una frecuencia de instantánea en el menú desplegable.
-.. *Clonar frecuencia de actualización*: Seleccione la frecuencia con la que los clones refrescan desde el menú desplegable.
+.. *Frecuencia de instantáneas*: seleccione una frecuencia de instantáneas en el menú.
+.. *Frecuencia de actualización de clones*: seleccione la frecuencia con la que se actualizan los clones en el menú.
 .. *Número de copias clonadas*: Introduzca el número de copias clonadas en la configuración de EBS.
 .. *Tasa de cambio mensual*: Ingrese el porcentaje que los datos de clonación y instantánea cambian en promedio por mes.
 
@@ -249,18 +253,22 @@ Si la fábrica de cargas de trabajo detecta hosts EBS, se le redirigirá a la pe
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Explorar ahorros* y luego *Microsoft SQL Server en FSx para Windows* en el menú desplegable.
+. En el mosaico Bases de datos, seleccione *Explorar ahorros* y luego *Microsoft SQL Server en FSx para Windows* en el menú.
 +
 Si la fábrica de cargas de trabajo detecta hosts FSx para Windows, se te redirigirá a la pestaña Explorar ahorro. Si la fábrica de cargas de trabajo no detecta FSX para hosts de Windows, se le redirigirá a la calculadora a <<Explora el ahorro a través de la personalización,explora el ahorro a través de la personalización>>.
 
-. En la pestaña Explorar ahorros, haga clic en *Explorar ahorros* del servidor de bases de datos usando FSx para el almacenamiento del servidor de archivos de Windows.
+. En la pestaña Explorar ahorros, seleccione *Explorar ahorros* del host de base de datos que utiliza FSx para el almacenamiento del servidor de archivos de Windows.
+. Si es necesario, autentique el host de la base de datos con credenciales de SQL Server, credenciales de Windows o agregando los permisos faltantes de SQL Server.
++
+Si la página Explorar ahorros no carga datos después de una autenticación exitosa, seleccione la pestaña *Inventario* para volver a cargar los datos y luego seleccione la pestaña *Explorar ahorros* nuevamente.
+
 . En la calculadora de ahorro, opcionalmente, proporciona los siguientes detalles sobre los clones (copias en la sombra) y las copias Snapshot en el almacenamiento de FSx para Windows para obtener una estimación más precisa del ahorro en costes.
 +
-.. *Frecuencia de instantánea*: Seleccione una frecuencia de instantánea en el menú desplegable.
+.. *Frecuencia de instantáneas*: seleccione una frecuencia de instantáneas en el menú.
 +
 Si se detectan las copias de sombra de FSX para Windows, el valor predeterminado es *daily*. Si no se detectan copias de sombra, el valor predeterminado es *Sin frecuencia de instantánea*.
 
-.. *Clonar frecuencia de actualización*: Seleccione la frecuencia con la que los clones refrescan desde el menú desplegable.
+.. *Frecuencia de actualización de clones*: seleccione la frecuencia con la que se actualizan los clones en el menú.
 .. *Número de copias clonadas*: Introduce el número de copias clonadas en la configuración de FSX para Windows.
 .. *Tasa de cambio mensual*: Ingrese el porcentaje que los datos de clonación y instantánea cambian en promedio por mes.
 
@@ -272,7 +280,7 @@ Si se detectan las copias de sombra de FSX para Windows, el valor predeterminado
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Explorar ahorros* y luego *Microsoft SQL Server on-premises* en el menú desplegable.
+. En el mosaico Bases de datos, seleccione *Explorar ahorros* y luego *Microsoft SQL Server local* en el menú.
 . En la pestaña local de SQL Server, descargue el script para evaluar sus entornos de SQL Server locales.
 +
 .. Descargue el script de evaluación. El script es una herramienta de recopilación de datos basada en PowerShell. Recopila y luego carga los datos de configuración y rendimiento de SQL Server en la fábrica de cargas de trabajo de BlueXP . El asesor de migración evalúa los datos y planifica la puesta en marcha de FSx para ONTAP para su entorno SQL Server.
@@ -291,11 +299,11 @@ image:screenshot-upload-script-on-premises.png["Una captura de pantalla del sepa
 . Para obtener resultados más precisos, actualice la información de computación y los detalles de almacenamiento y rendimiento.
 . De manera opcional, proporciona la siguiente información sobre los clones (copias redundantes) y las copias Snapshot en tu entorno de bases de datos on-premises para obtener una estimación más precisa del ahorro en costes.
 +
-.. *Frecuencia de instantánea*: Seleccione una frecuencia de instantánea en el menú desplegable.
+.. *Frecuencia de instantáneas*: seleccione una frecuencia de instantáneas en el menú.
 +
 Si se detectan las copias de sombra de FSX para Windows, el valor predeterminado es *daily*. Si no se detectan copias de sombra, el valor predeterminado es *Sin frecuencia de instantánea*.
 
-.. *Clonar frecuencia de actualización*: Seleccione la frecuencia con la que los clones refrescan desde el menú desplegable.
+.. *Frecuencia de actualización de clones*: seleccione la frecuencia con la que se actualizan los clones en el menú.
 .. *Número de copias clonadas*: Introduzca el número de copias clonadas en la configuración local.
 .. *Tasa de cambio mensual*: Ingrese el porcentaje que los datos de clonación y instantánea cambian en promedio por mes.
 
