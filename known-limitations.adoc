@@ -139,3 +139,9 @@ No se tienen en cuenta los cálculos de ahorro de costes y porcentajes del tama�
 == Autenticación del host de base de datos en Explore los ahorros
 
 En algunos casos con permisos limitados, la página de exploración de ahorros no carga datos después de una autenticación exitosa.
+
+
+
+== Integración con la BlueXP backup and recovery
+
+Después de agregar hosts a la copia de seguridad y recuperación de BlueXP para protección, la detección de la base de datos a veces falla.

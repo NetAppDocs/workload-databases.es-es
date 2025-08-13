@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: protect-sql-server.html 
+keywords: protect, server, Microsoft SQL Server, SQL Server, protect instance, protect database 
+summary: Proteja las instancias y bases de datos de Microsoft SQL Server. 
+---
+= Proteger las cargas de trabajo de Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Proteja los datos de sus aplicaciones de Microsoft SQL Server mediante la BlueXP backup and recovery desde la consola de fábrica de carga de trabajo.  Las copias de seguridad se generan automáticamente y se almacenan en un almacén de objetos en su cuenta de nube pública o privada según las políticas que cree.
+
+
+
+== Acerca de esta tarea
+
+La BlueXP backup and recovery aprovecha la tecnología de replicación de datos SnapMirror de NetApp para garantizar que todas las copias de seguridad estén completamente sincronizadas mediante la creación de copias instantáneas y su transferencia a las ubicaciones de copia de seguridad.
+
+Para obtener detalles sobre la protección con la BlueXP backup and recovery, consulte lalink:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html["Proteja la descripción general de las cargas de trabajo de Microsoft SQL con la BlueXP backup and recovery"^] .
+
+
+
+== Antes de empezar
+
+Los siguientes son los requisitos para comenzar a proteger las cargas de trabajo de Microsoft SQL Server con la BlueXP backup and recovery:
+
+* Un conector BlueXP
++
+Referirse alink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Aprenda a configurar un conector BlueXP"^] ylink:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Requisitos estándar de BlueXP"^] .
+
++
+Se requiere el sistema operativo Ubuntu 22.04 LTS para el Conector.
+
+* Una licencia para BlueXP backup and recovery
++
+link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["Configurar la licencia para la BlueXP backup and recovery"^]
+
+* Configuración de la resolución del host en el conector
++
+Para descubrir bases de datos, debe configurar la resolución del host en el Conector.  En el dispositivo alojado, agregue la asignación de la dirección IP al nombre de host en el `/etc/hosts` archivo.
+
+
+
+
+
+== Proteja las instancias y bases de datos de Microsoft SQL Server
+
+La protección de instancias y bases de datos de Microsoft SQL Server implica el descubrimiento de recursos, la validación de requisitos previos y la configuración e instalación del complemento para Microsoft SQL Server.  El complemento es un componente del lado del host del software NetApp que le permite proteger sus cargas de trabajo de Microsoft SQL Server.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. En Bases de datos, seleccione la pestaña *Inventario*.
+. Filtra el *Tipo de motor* a *Microsoft SQL Server*.
+. Seleccione *Proteger* en el menú correspondiente a la instancia que desea proteger.
+. Seleccione el *Conector* donde desea que se registre y proteja la carga de trabajo.
+. Para prepararse para la protección de datos, Workload Factory registra automáticamente sus recursos de SQL Server en BlueXP backup and recovery, configura e instala el complemento para Microsoft SQL Server y descubre recursos para cumplir con los requisitos previos para proteger su instancia de SQL Server.  Seleccione *Iniciar* para comenzar el proceso.
+. Una vez cumplidos los requisitos previos, seleccione *Redirigir* para ser redirigido a la BlueXP backup and recovery.
+
+
+.El futuro
+Desde la BlueXP backup and recovery, cree una política para proteger su instancia y bases de datos de Microsoft SQL Server.
+
+link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-policies-create.html["Aprenda a crear una política para proteger su instancia y bases de datos de Microsoft SQL Server"^] .
+
+Para obtener información relacionada, consulte lalink:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html["Documentación de BlueXP backup and recovery"^] para administrar cargas de trabajo de Microsoft SQL Server.
