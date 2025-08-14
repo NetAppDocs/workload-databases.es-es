@@ -11,11 +11,13 @@ summary: Proteja las instancias y bases de datos de Microsoft SQL Server.
 
 
 [role="lead"]
-Proteja los datos de sus aplicaciones de Microsoft SQL Server mediante la BlueXP backup and recovery desde la consola de fábrica de carga de trabajo.  Las copias de seguridad se generan automáticamente y se almacenan en un almacén de objetos en su cuenta de nube pública o privada según las políticas que cree.
+Proteja los datos de sus aplicaciones de Microsoft SQL Server mediante la BlueXP backup and recovery desde la consola de fábrica de carga de trabajo. Con esta integración, puede lograr los siguientes objetivos de protección: realizar copias de seguridad de cargas de trabajo con instantáneas locales en el almacenamiento principal local de Amazon FSx for NetApp ONTAP (FSx for ONTAP) y replicar cargas de trabajo en el almacenamiento secundario de FSx para ONTAP .
 
 
 
 == Acerca de esta tarea
+
+La fábrica de carga de trabajo ayuda a automatizar el proceso de descubrimiento de recursos de instancias y bases de datos, validación de requisitos previos y configuración e instalación del complemento para Microsoft SQL Server, todo lo cual forma parte del proceso de preparación para proteger sus cargas de trabajo de Microsoft SQL Server con la BlueXP backup and recovery. El complemento es un componente del lado del host del software NetApp que le permite proteger sus cargas de trabajo de Microsoft SQL Server.
 
 La BlueXP backup and recovery aprovecha la tecnología de replicación de datos SnapMirror de NetApp para garantizar que todas las copias de seguridad estén completamente sincronizadas mediante la creación de copias instantáneas y su transferencia a las ubicaciones de copia de seguridad.
 
@@ -46,9 +48,9 @@ Para descubrir bases de datos, debe configurar la resolución del host en el Con
 
 
 
-== Proteja las instancias y bases de datos de Microsoft SQL Server
+== Prepárese para la protección con la BlueXP backup and recovery
 
-La protección de instancias y bases de datos de Microsoft SQL Server implica el descubrimiento de recursos, la validación de requisitos previos y la configuración e instalación del complemento para Microsoft SQL Server.  El complemento es un componente del lado del host del software NetApp que le permite proteger sus cargas de trabajo de Microsoft SQL Server.
+Complete el proceso de preparación para proteger sus recursos de Microsoft SQL Server con la BlueXP backup and recovery.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
