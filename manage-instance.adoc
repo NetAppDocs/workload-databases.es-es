@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: manage-instance.html 
 keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
-summary: Obtenga información sobre la gestión de instancias en la fábrica de carga de trabajo para bases de datos. 
+summary: Obtenga información sobre la gestión de instancias y bases de datos en la fábrica de carga de trabajo para bases de datos. 
 ---
-= Gestión de instancias en la fábrica de carga de trabajo para bases de datos
+= Gestión de recursos en la fábrica de carga de trabajo para bases de datos
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La administración de instancias registradas en la fábrica de carga de trabajo incluye la implementación de recursos para sus instancias, como la creación de bases de datos y clones de bases de datos, y la supervisión del estado de la instancia y la base de datos, la utilización de recursos, la protección y el rendimiento del almacenamiento. Además, puede analizar el estado de la arquitectura de las configuraciones de sus bases de datos e implementar las prácticas recomendadas de configuración para mejorar el rendimiento y reducir los costes operativos. La gestión de instancias solo está disponible para instancias con almacenamiento del sistema de archivos FSx for ONTAP.
+La administración de recursos en la fábrica de carga de trabajo le permite utilizar funciones avanzadas, incluida la creación de bases de datos y clones, la utilización y el monitoreo de recursos.  Además, puede analizar el estado de la arquitectura de sus configuraciones de base de datos e implementar las mejores prácticas de configuración para mejorar el rendimiento y reducir los costos operativos.  La administración de recursos es solo para entornos Microsoft SQL Server y Oracle que se ejecutan en FSx para el almacenamiento del sistema de archivos ONTAP .
 
-Usted debe link:register-instance.html["registrar una instancia"] realizar cualquiera de las siguientes tareas de gestión.
+Usted debelink:register-instance.html["registrar recursos"] realizar cualquiera de las siguientes tareas de gestión.
 
 Las tareas de gestión incluyen:
 
+* Visualización de bases de datos desde el inventario
 * link:create-database.html["Creando una base de datos"]
 * link:create-sandbox-clone.html["Creación de un clon de base de datos (sandbox)"]
-* link:view-databases.html["Visualización de bases de datos"]
 * link:optimize-configurations.html["Implementación de configuraciones de bases de datos bien diseñadas"]
 

@@ -1,31 +1,24 @@
 ---
 sidebar: sidebar 
 permalink: deregister-instance.html 
-keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle instance, deregister instance, unregister instance, remove instance 
-summary: Anule el registro de una instancia si ya no desea implementar ni supervisar los recursos de la instancia. 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, deregister instance, unregister instance, remove instance 
+summary: Anule el registro de un recurso si ya no desea implementar ni supervisar recursos desde la consola de fábrica de carga de trabajo. 
 ---
-= Anular el registro de una instancia en la fábrica de carga de trabajo
+= Anular el registro de un recurso en la fábrica de carga de trabajo
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Anule el registro de una instancia si ya no desea implementar ni supervisar sus recursos. Al anular el registro de instancias, también se elimina la capacidad de almacenamiento que utiliza.
+Anule el registro de un recurso, como una instancia de Microsoft SQL Server o una base de datos de Oracle, si ya no desea implementar ni supervisar recursos desde la consola de fábrica de carga de trabajo.  Al anular el registro de recursos también se elimina la cantidad de capacidad de almacenamiento de FSx para ONTAP utilizada por la instancia.
 
-Puedes volver a registrar la instancia más tarde.
+Puedes registrar el recurso nuevamente.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
-. Haga clic en la flecha desplegable para expandir la fila de la instancia que desea cancelar el registro.
-+
-El host se expande y aparecen las instancias.
+. En el inventario, seleccione el tipo de motor: Microsoft SQL Server, Oracle o PostgreSQL.
+. Localice el recurso que desea cancelar, seleccione el menú de tres puntos y luego seleccione *Cancelar registro*.
 
-. Haga clic en el menú de tres puntos de la instancia para cancelar el registro.
-. Seleccione *Cancelar registro*.
-
-
-.Resultado
-La instancia ahora está anulada. Puede volver a registrarla más tarde.

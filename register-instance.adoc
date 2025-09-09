@@ -1,49 +1,30 @@
 ---
 sidebar: sidebar 
 permalink: register-instance.html 
-keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle instance, manage host, view host, database host, database instance, manage, unregister 
-summary: Gestione instancias de Microsoft SQL Server en la fábrica de cargas de trabajo de BlueXP  para bases de datos. 
+keywords: manage, register, Microsoft SQL Server instance, Oracle database, manage database, manage instance 
+summary: Registre recursos para que pueda supervisar el estado de los recursos, la utilización de los recursos, la protección y el rendimiento del almacenamiento en la fábrica de carga de trabajo para bases de datos. 
 ---
-= Registrar instancias en la fábrica de carga de trabajo para bases de datos
+= Registrar recursos en la fábrica de carga de trabajo para bases de datos
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Registre instancias para que pueda supervisar el estado de las instancias y de la base de datos, la utilización de recursos, la protección y el rendimiento del almacenamiento en la fábrica de carga de trabajo para bases de datos.
+Registre instancias para Microsoft SQL Server y bases de datos para Oracle para que pueda supervisar el estado de las instancias y las bases de datos, la utilización de recursos, la protección y el rendimiento del almacenamiento en la fábrica de carga de trabajo para bases de datos.
 
-Las bases de datos solo pueden registrar instancias con FSx para el almacenamiento del sistema de archivos ONTAP.
+El registro solo es posible para motores de bases de datos que se ejecutan en FSx para el almacenamiento del sistema de archivos ONTAP .
 
 
 
 == Acerca de la tarea
 
-El registro de una instancia incluye dos pasos: autenticar la instancia y prepararla asegurándose de que todos los módulos de AWS, NetApp y PowerShell estén instalados en la instancia.
+El registro de una instancia (SQL Server) o una base de datos (Oracle) incluye dos pasos: autenticación y preparación.  La preparación implica asegurarse de que todos los módulos de AWS, NetApp y PowerShell estén instalados en la instancia.
 
-Puede autenticar vínculos utilizando credenciales de SQL Server o con credenciales de Windows.
-
-
-NOTE: La fábrica de carga de trabajo solo admite el registro y la administración de instancias de Microsoft SQL Server. Según las credenciales de la cuenta de AWS que seleccione en Workload Factory, los hosts de PostgreSQL y Oracle podrían aparecer en el inventario. Actualmente, Workload Factory admite instancias de PostgreSQL no registradas que se ejecutan solo en sistemas operativos Amazon Linux y instancias de Oracle que se ejecutan solo en Red Hat Enterprise Linux.
-
-Registrar una instancia en una red privada:: Para registrar una instancia en una red privada sin conectividad externa, los siguientes puntos finales deben estar disponibles en la VPC con asociación a las subredes donde están presentes los servidores SQL. Asegúrese de que los extremos de interfaz permiten el puerto 443 en el grupo de seguridad conectado.
-+
---
-* `S3 Gateway/endpoint`
-* `ssm`
-* `ssmmessages`
-* `fsx`
-+
-Si utiliza un servidor proxy para todas las conexiones salientes de instancias EC2, debe permitir el acceso a los siguientes dominios para que las operaciones de gestión funcionen:
-
-* ``.microsoft.com``
-* ``.powershellgallery.com``
-* ``.aws.amazon.com``
-* ``.amazonaws.com``
+Puede autenticarse utilizando credenciales de SQL Server o con credenciales de Windows.
 
 
---
-
+NOTE: La fábrica de carga de trabajo solo admite el registro y la administración de instancias de Microsoft SQL Server y de bases de datos Oracle.  Según las credenciales de la cuenta de AWS que seleccione en la fábrica de carga de trabajo, los hosts PostgreSQL podrían aparecer en el Inventario.  Actualmente, Workload Factory admite instancias de PostgreSQL no registradas que se ejecutan únicamente en sistemas operativos Amazon Linux.
 
 
 
@@ -51,13 +32,30 @@ Si utiliza un servidor proxy para todas las conexiones salientes de instancias E
 
 Tenga en cuenta lo siguiente antes de registrar una instancia:
 
-* El host de la instancia debe aparecer en la pestaña Inventario. Para que los hosts aparezcan en el inventario, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Debe agregar las credenciales de la cuenta de AWS y los permisos de modo _solo lectura_ o _lectura/escritura_"^] .
-* Al usar credenciales de usuario de dominio de Windows para autenticarse en las operaciones de administración de SQL Server, la fábrica de cargas de trabajo habilita la delegación de CredSSP en los nodos de SQL. Si la delegación de CredSSP está bloqueada para todos los equipos del dominio con la directiva de grupo, la autenticación con credenciales de usuario de Windows no funcionará.
+El host de la instancia o base de datos debe aparecer en la pestaña Inventario.  Para que los hosts aparezcan en el inventario,link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Debe agregar las credenciales de la cuenta de AWS y los permisos de modo _solo lectura_ o _lectura/escritura_"^] .
+
+
+
+=== Registrar una instancia en una red privada
+
+Para registrar una instancia (SQL Server) o una base de datos (Oracle) en una red privada sin conectividad externa, los siguientes puntos finales deben estar disponibles en la VPC con asociación a las subredes donde están presentes los servidores SQL.  Asegúrese de que los puntos finales de la interfaz permitan el puerto 443 en el grupo de seguridad adjunto.
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
++
+Si utiliza un servidor proxy para todas las conexiones salientes de instancias EC2, debe permitir el acceso a los siguientes dominios para que las operaciones de gestión funcionen:
+
+* ``.microsoft.com``(Servidor SQL)
+* ``.powershellgallery.com``(Servidor SQL)
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
 
 
 
 
-== Registrar una instancia
+== Registrar una instancia de SQL Server
 
 El registro de una instancia incluye la autenticación y preparación de la instancia.
 
@@ -65,8 +63,9 @@ El registro de una instancia incluye la autenticación y preparación de la inst
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
 . En Bases de datos, seleccione la pestaña *Inventario*.
-. En la pestaña Inventario, seleccione la pestaña *Instancias*.
-. Seleccione para registrar una sola instancia o registrar varias instancias.
+. Seleccione *Microsoft SQL Server* como tipo de motor.
+. Seleccione la pestaña *Instancias*.
+. Seleccione para registrar una sola instancia o varias instancias.
 +
 .. Registro de instancia única: navegue hasta la instancia que desea administrar y seleccione *Registrar instancia*.
 .. Registro de múltiples instancias: seleccione el botón *Registrar múltiples instancias*.
@@ -90,7 +89,7 @@ Hay dos opciones disponibles para registrar varias instancias. En ambos casos, l
 +
 .. Si falta, seleccione la fábrica de carga de trabajo para *Instalar los módulos de AWS y NetApp PowerShell faltantes*.
 .. Si falta, seleccione la fábrica de cargas de trabajo para *Instalar el módulo PowerShell 7 faltante*. Para instalar el módulo PowerShell 7 faltante, es necesario reiniciar el sistema.
-.. Revise la lista de prerrequisitos para las siguientes capacidades. Se debe cumplir un prerrequisito para registrar la instancia.
+.. Revise la lista de requisitos previos para las siguientes capacidades.  Asegúrese de cumplir con todos los requisitos previos por capacidad para registrar la instancia.
 +
 *** *Revisar problemas y recomendaciones bien diseñados*
 *** *Solucionar problemas bien diseñados*
@@ -101,11 +100,74 @@ Para completar los requisitos previos se incluye actualizar los permisos de pol�
 
 
 
-.. Complete al menos un requisito previo faltante para continuar.
-.. Cuando se cumplan uno o más requisitos previos y las comprobaciones estén *Listas*, puedes seleccionar *Registrar* la instancia.
+.. Cuando se cumplan los requisitos previos y las comprobaciones estén *Listas*, puedes seleccionar *Registrar* la instancia.
 
 
 
 
 .Resultado
-Se inicia la solicitud de registro de la instancia. Seleccione la pestaña *Supervisión de trabajos* para seguir el progreso.
+Se inicia el registro de instancia.  Seleccione la pestaña *Supervisión de trabajos* para realizar un seguimiento del progreso.
+
+
+
+== Registrar una base de datos Oracle
+
+El registro de una base de datos incluye la autenticación y preparación de la instancia.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. En Bases de datos, seleccione la pestaña *Inventario*.
+. En la pestaña Inventario, seleccione *Oracle* como motor de base de datos.
+. Seleccione la pestaña *Bases de datos*.
+. Seleccione para registrar una sola base de datos o varias bases de datos.
++
+.. Registro de base de datos única: navegue hasta la base de datos que desea administrar y seleccione *Registrar base de datos*.
+.. Registro de múltiples bases de datos: seleccione el botón *Registrar múltiples bases de datos*.
++
+Hay dos opciones disponibles para registrar varias bases de datos.  En ambos casos, las bases de datos deben compartir el mismo estado de autenticación (no autenticado o autenticado).
+
++
+*** Bases de datos no autenticadas: seleccione varias bases de datos no autenticadas para registrar.  Estas bases de datos deben compartir las mismas credenciales de autenticación y FSx para las credenciales de ONTAP .  Seleccione *Aplicar* y luego *Siguiente*.
+*** Bases de datos autenticadas: seleccione varias bases de datos autenticadas para registrar y luego seleccione *Siguiente*.
+
+
+
+
+. En el paso 2 de la página Registrar bases de datos, seleccione el modo de autenticación de la base de datos, ingrese los siguientes detalles y seleccione *Siguiente*.  Si las bases de datos ya están autenticadas, seleccione *Siguiente*.
++
+** *Autenticación de usuario de Oracle*: ingrese el nombre de usuario y la contraseña de Oracle, y el nombre de usuario y la contraseña del sistema de archivos FSx for ONTAP .
+** *Autenticación de usuario de Oracle ASM*: Opcional.  Si la base de datos Oracle utiliza Gestión automática de almacenamiento (ASM), ingrese el nombre de usuario y la contraseña de Oracle ASM (grid).
+
+
+. En el paso 3, prepare la base de datos asegurándose de que cumpla con los requisitos previos requeridos.  Si todos los módulos necesarios están instalados y se cumplen los requisitos previos, seleccione *Siguiente* para registrar la base de datos.  Si necesita tomar alguna acción, siga estos pasos.
++
+.. Revise la lista de requisitos previos para la siguiente capacidad.  Se deben cumplir todos los requisitos previos para una única capacidad para poder registrar la base de datos.
++
+*** *Revisar problemas y recomendaciones bien diseñados*
+
+
+.. Complete los siguientes requisitos previos:
++
+*** *Permisos de política de AWS IAM*: copie y actualice los permisos de AWS en la consola de AWS.
+*** *Permisos de perfil de instancia de IAM de EC2*: copie y actualice los permisos de perfil de instancia de IAM de EC2 en la instancia de Amazon EC2 en la consola de AWS.
+*** *Módulos de implementación*: si es necesario, seleccione instalar módulos dependientes que incluyen la interfaz de línea de comandos de AWS (AWS CLI), jq (procesador JSON de línea de comandos) y Python 3.12, si la versión 3.6 o superior aún no está instalada.  Workload Factory instala automáticamente estos módulos como parte del proceso de registro.
+*** *Permisos de usuario de Oracle*: si es necesario, actualice los permisos para el usuario de Oracle.
+
+
+.. Cuando se cumplan los requisitos previos y las comprobaciones estén *Listas*, puede seleccionar *Registrar* la base de datos.
+
+
+
+
+.Resultado
+Se inicia el registro de la base de datos.  Seleccione la pestaña *Supervisión de trabajos* para realizar un seguimiento del progreso.
+
+.El futuro
+Después de registrar el recurso, puede realizar las siguientes tareas.
+
+* Ver bases de datos desde el inventario
+* link:create-database.html["Cree una base de datos"]
+* link:create-sandbox-clone.html["Crear un clon de base de datos (sandbox)"]
+* link:optimize-configurations.html["Implementar configuraciones de bases de datos bien diseñadas"]
+

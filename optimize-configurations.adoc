@@ -11,38 +11,59 @@ summary: Workload Factory para bases de datos escanea las configuraciones de Mic
 
 
 [role="lead"]
-Con la información y las recomendaciones del análisis de configuración, aproveche Workload Factory para implementar las mejores prácticas para las configuraciones de su base de datos. Puede revisar fácilmente el estado de la arquitectura, conocer los problemas con las configuraciones de la base de datos y tomar medidas para mejorar cualquier configuración que no esté optimizada en términos de confiabilidad, seguridad, eficiencia, rendimiento y costo.
+Utilizando los conocimientos y las recomendaciones del análisis de configuración, aproveche Workload Factory para implementar las mejores prácticas para sus configuraciones de base de datos con Microsoft SQL Server y Oracle.  Puede revisar fácilmente el estado de la arquitectura, conocer los problemas con las configuraciones de la base de datos y tomar medidas para mejorar cualquier configuración que no esté optimizada en términos de confiabilidad, seguridad, eficiencia, rendimiento y costo.
+
+También puede descartar el análisis de configuraciones específicas que no se apliquen a su entorno para evitar alertas innecesarias y resultados de optimización inexactos.
 
 link:optimize-overview.html["Obtenga información sobre el análisis de configuración y el estado de buena arquitectura en la fábrica de carga de trabajo."]
 
-.Acerca de esta tarea
+
+
+== Acerca de esta tarea
+
 Workload Factory analiza diariamente las configuraciones de la base de datos. El análisis diario proporciona un estado bien diseñado, además de información y recomendaciones con opciones para corregir automáticamente los problemas de configuración para que sus configuraciones cumplan con las mejores prácticas.
 
 Tiene opciones para revisar las recomendaciones de problemas de configuración y solucionar esos problemas desde el inventario de Bases de datos dentro de la consola de fábrica de carga de trabajo.
 
-Qué se analiza:: La fábrica de carga de trabajo analiza el estado de buena arquitectura de las siguientes configuraciones para instancias de Microsoft SQL Server:
-+
---
+.Qué se analiza
+La fábrica de carga de trabajo analiza el estado de buena arquitectura de las siguientes configuraciones:
+
+Para instancias de Microsoft SQL Server:
+
 * Ajuste de tamaño del almacenamiento: Incluye nivel de almacenamiento, margen adicional del sistema de archivos, tamaño de la unidad de registro y tamaño de la unidad TempDB
 * Distribución de almacenamiento: Incluye la ubicación de los archivos de datos del usuario, la ubicación de los archivos de registro y la ubicación de TempDB
 * Configuración de almacenamiento: incluye administración de capacidad, aprovisionamiento fino, política de niveles, instantáneas, estado de E/S de múltiples rutas de Microsoft (MPIO) y configuración de tiempo de espera de MPIO
-* Informática: Incluye ajustes de tamaño, parches del sistema operativo y ajustes de adaptadores de red como escalado lateral de recepción (RSS) y descarga de TCP
+* Computación: incluye ajuste de tamaño, parches del sistema operativo y configuraciones del adaptador de red como escalamiento del lado de recepción (RSS), descarga de TCP y alineación de MTU
 * Aplicaciones: Incluye licencias de Microsoft SQL Server, parche de Microsoft SQL Server y configuración de MAXDOP
 * Resiliencia: incluye instantáneas locales, copias de seguridad de FSx para ONTAP , replicación entre regiones (CRR) y alta disponibilidad de Microsoft SQL.
 * Clones: incluye opciones para actualizar y eliminar clones (sandboxes) que se crearon dentro o fuera de la fábrica de carga de trabajo y que tienen más de 60 días
 
 
---
+Para bases de datos Oracle:
+
+* Configuración de almacenamiento: incluye administración de capacidad, aprovisionamiento fino, política de niveles, instantáneas y eficiencias de almacenamiento
 
 
-.Antes de empezar
+
+
+== Antes de empezar
+
 * Debes tener link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de lectura y escritura"^] para analizar las configuraciones de su base de datos.
-* Para evaluar el almacenamiento de una instancia de Microsoft SQL Server, la instancia debe estar registrada en Workload Factory y el tipo de almacenamiento debe ser FSx para ONTAP. link:register-instance.html["Aprenda cómo registrar una instancia."]
+* Para evaluar el almacenamiento de una instancia de Microsoft SQL Server o una base de datos de Oracle, el recurso debe estar registrado en Workload Factory y el tipo de almacenamiento debe ser FSx para ONTAP.link:register-instance.html["Aprenda cómo registrar recursos."]
 * Asegúrese de revisar cada recomendación cuidadosamente antes de seleccionar para corregir una configuración o configuración. Para la configuración de RSS y MAXDOP, le sugerimos que pruebe la configuración recomendada para determinar las mejoras de rendimiento antes de realizar cambios en su entorno de producción.
 
 
 
 NOTE: El proceso de corrección puede provocar tiempos de inactividad de instancias o interrupciones del servicio. Asegúrese de revisar la recomendación cuidadosamente antes de decidir arreglar una configuración.
+
+
+
+== Solucionar un problema de configuración
+
+Solucione problemas de configuración para entornos SQL Server u Oracle que se ejecutan en FSx para almacenamiento ONTAP .
+
+
+NOTE: El proceso de remediación puede provocar tiempos de inactividad de las instancias o interrupciones del servicio.  Asegúrese de revisar la recomendación cuidadosamente antes de decidir solucionar un problema de configuración.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -76,3 +97,68 @@ También puede descargar un informe de los hallazgos seleccionando *Exportar PDF
 
 .Resultado
 La fábrica de carga de trabajo comienza a solucionar los problemas. Seleccione la pestaña *Supervisión de trabajos* para ver el estado de la operación.
+
+
+
+== Posponer o descartar el análisis de las configuraciones de la base de datos
+
+Posponga o ignore el análisis de configuraciones de base de datos específicas que no se aplican a su entorno de base de datos para evitar alertas innecesarias y resultados de optimización imprecisos. Puede volver a activar un análisis de configuración aplazado o descartado en cualquier momento.
+
+Los requisitos de la aplicación para las configuraciones de base de datos varían. La fábrica de cargas de trabajo le ofrece dos opciones para omitir el análisis de configuraciones de bases de datos específicas, de modo que pueda supervisar solo los problemas relevantes y obtener una vista precisa del estado de las configuraciones relevantes. Cuando un análisis de configuración específico se pospone o se descarta, la configuración no se incluye en la puntuación de optimización total.
+
+Puede posponer, descartar y reactivar el análisis de configuración en el nivel de configuración y en la instancia de SQL Server o en el nivel de base de datos de Oracle.
+
+* *Posponer durante 30 días*: Posponer el análisis detendrá el análisis durante 30 días. Transcurridos 30 días, el análisis se reiniciará automáticamente.
+* *Descartar*: Desestimar el análisis pospone el análisis indefinidamente. Puede reiniciar el análisis si es necesario.
+
+
+Las siguientes instrucciones describen cómo posponer, descartar o reactivar un análisis en el nivel de configuración.  Para completar las siguientes tareas para instancias específicas de SQL Server o bases de datos de Oracle, comience en la pestaña *Panel de control*.
+
+[role="tabbed-block"]
+====
+.Posponer
+--
+Posponer para detener un análisis de configuración durante 30 días. Transcurridos 30 días, el análisis se reiniciará automáticamente.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. En la pestaña *Inventario*, desplácese hacia abajo hasta la configuración para posponer, seleccione el menú de tres puntos y luego seleccione *posponer durante 30 días*.
+. Seleccione *continuar*.
+
+
+.Resultado
+El análisis de configuración se detiene durante 30 días.
+
+--
+.Descartar
+--
+Ignorar para detener un análisis de configuración de forma indefinida. Puede reiniciar el análisis cuando sea necesario.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. En la pestaña *Inventario*, desplácese hacia abajo hasta la configuración que desea descartar, seleccione el menú de tres puntos y, a continuación, seleccione *Descartar*.
+. Seleccione *continuar*.
+
+
+.Resultado
+Se detiene el análisis de configuración.
+
+--
+.Reactivar
+--
+Vuelva a activar un análisis de configuración aplazado o descartado en cualquier momento.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. En la pestaña *Inventario*, desplácese hacia abajo hasta la configuración que desea reactivar, seleccione el menú de tres puntos y luego seleccione *Reactivar*.
+. Seleccione *continuar*.
+
+
+.Resultado
+El análisis de configuración se reactiva y se realiza diariamente en adelante.
+
+--
+====

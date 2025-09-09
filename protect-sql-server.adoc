@@ -42,7 +42,6 @@ Para descubrir bases de datos, debe configurar la resolución del host en el Con
 
 
 * link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["Configurar la licencia para la BlueXP backup and recovery"^]
-* En la fábrica de carga de trabajo para bases de datos, asegúrese de registrar instancias utilizando credenciales de Windows.  Para proporcionar credenciales de Windows, vaya a la pestaña Instancias desde el Inventario.  Identifique la instancia, seleccione *Administrar instancias* y luego seleccione *Panel de instancias*.  Desde el panel de control de la instancia, seleccione el menú de tres puntos y luego seleccione *Actualizar contraseña de Microsoft SQL Server*.  Actualice la contraseña mediante la autenticación de Windows.
 
 
 
@@ -57,7 +56,11 @@ Complete el proceso de preparación para proteger sus recursos de Microsoft SQL 
 . En Bases de datos, seleccione la pestaña *Inventario*.
 . Filtra el *Tipo de motor* a *Microsoft SQL Server*.
 . Seleccione *Proteger* en el menú correspondiente a la instancia que desea proteger.
-. Seleccione el *Conector* donde desea que se registre y proteja la carga de trabajo.
+. Si se le solicita, proporcione credenciales de Windows con acceso administrativo.
++
+Para utilizar la BlueXP backup and recovery para protección, las instancias de SQL Server deben estar registradas en la fábrica de carga de trabajo con credenciales de Windows.
+
+. Si hay varios Conectores activos y disponibles, seleccione el *Conector* donde desea que se registre y proteja la carga de trabajo.
 . Para prepararse para la protección de datos, Workload Factory registra automáticamente sus recursos de SQL Server en BlueXP backup and recovery, configura e instala el complemento para Microsoft SQL Server y descubre recursos para cumplir con los requisitos previos para proteger su instancia de SQL Server.  Seleccione *Iniciar* para comenzar el proceso.
 . Después de cumplir con los requisitos previos, seleccione *Redirigir* para acceder a la BlueXP backup and recovery.
 
