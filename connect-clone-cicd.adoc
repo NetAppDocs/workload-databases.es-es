@@ -11,7 +11,7 @@ summary: Conecte un clon de sandbox a una canalización de CI/CD con código de 
 
 
 [role="lead"]
-Conecta un clon de sandbox a una canalización de integración y entrega continua (CI/CD) con el código de la API DE REST para mejorar la entrega de software a través de la automatización del centro de cargas de trabajo de BlueXP  para las bases de datos.
+Conecte un clon de sandbox a una canalización de integración continua y entrega continua (CI/CD) con código API REST para mejorar la entrega de software a través de la automatización en NetApp Workload Factory for Databases.
 
 .Acerca de esta tarea
 Para entregar una nueva versión del software automáticamente al clon de la base de datos, debe conectarse a una canalización de CI/CD. Utilice el código de API DE REST proporcionado desde esta operación para realizar la conexión.
@@ -19,8 +19,8 @@ Para entregar una nueva versión del software automáticamente al clon de la bas
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
-. En las bases de datos, seleccione la pestaña *sandboxes*.
-. En la pestaña sandboxes, haga clic en el menú de tres puntos del clon del sandbox para conectarse a las herramientas CI/CD.
+. Desde el menú Bases de datos, seleccione *Sandboxes*.
+. En Sandboxes, seleccione el menú de acciones del clon de sandbox para conectarse a las herramientas de CI/CD.
 . Selecciona *Conectar a las herramientas CI/CD*.
 . En el cuadro de diálogo CI/CD, copie o descargue el código de API DE REST que necesite para conectarse a las herramientas CI/CD.
 . Haga clic en *Cerrar*.

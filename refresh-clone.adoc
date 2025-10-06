@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: refresh-clone.html 
 keywords: refresh clone, sync, update, database, Microsoft SQL 
-summary: Actualice un clon de espacio aislado en la fábrica de cargas de trabajo de BlueXP  para las bases de datos. 
+summary: Actualice un clon de base de datos en NetApp Workload Factory for Databases para que sea equivalente a la base de datos de origen en el momento actual o en un punto anterior en el tiempo. 
 ---
-= Actualice un clon de espacio aislado en la fábrica de cargas de trabajo de BlueXP  para las bases de datos
+= Actualizar un clon de base de datos en NetApp Workload Factory for Databases
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Actualizar un clon de base de datos en la fábrica de cargas de trabajo de BlueXP  para las bases de datos de modo que sea equivalente a la base de datos de origen en el momento actual o en un momento específico anterior.
+Actualice un clon de base de datos (sandbox) en NetApp Workload Factory for Databases para que sea equivalente a la base de datos de origen en el momento actual o en un punto anterior en el tiempo.
 
 .Acerca de esta tarea
 Actualizar un clon actualiza el clon en la base de datos de origen en el momento actual o en una copia de Snapshot de la base de datos de origen realizada en un momento específico anterior. Se eliminarán todos los cambios realizados en el clon del sandbox.
@@ -24,8 +24,8 @@ Para actualizar un clon de base de datos a partir de una instantánea, la base d
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
-. En las bases de datos, seleccione la pestaña *sandboxes*.
-. En la pestaña sandboxes, haga clic en el menú de tres puntos del clon del sandbox que desea actualizar.
+. Desde el menú Bases de datos, seleccione *Sandboxes*.
+. En Sandboxes, seleccione el menú de acciones del clon del sandbox que desea actualizar.
 . Selecciona *Refrescar*.
 . En el cuadro de diálogo Refrescar, seleccione una de las siguientes opciones:
 +

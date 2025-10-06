@@ -4,20 +4,20 @@ permalink: known-limitations.html
 keywords: limitations, databases 
 summary: Las limitaciones conocidas identifican plataformas, dispositivos o funciones que no son compatibles con esta versión del producto o cuya interoperabilidad con esta no es óptima. Revise estas limitaciones detenidamente. 
 ---
-= Limitaciones conocidas del fábrica de cargas de trabajo de BlueXP  para bases de datos
+= Limitaciones conocidas de NetApp Workload Factory para bases de datos
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Las limitaciones conocidas identifican plataformas, dispositivos o funciones que no son compatibles con esta versión del producto o cuya interoperabilidad con esta no es óptima. Revise estas limitaciones detenidamente.
+Las limitaciones conocidas identifican plataformas, dispositivos o funciones que no son compatibles con NetApp Workload Factory for Databases o que no interactúan correctamente con él. Revise estas limitaciones cuidadosamente.
 
 
 
 == Soporte de detección de instancias
 
-La fábrica de carga de trabajo admite la detección de instancias de PostgreSQL que se ejecutan solo en sistemas operativos Amazon Linux y de instancias de Oracle que se ejecutan solo en Red Hat Enterprise Linux.
+Workload Factory admite la detección de instancias de PostgreSQL que se ejecutan solo en sistemas operativos Amazon Linux e instancias de Oracle que se ejecutan solo en Red Hat Enterprise Linux.
 
 
 
@@ -35,13 +35,13 @@ La implementación con una AMI personalizada supone que hay medios de instalaci�
 * Al seleccionar una intercalación distinta del conjunto de intercalación en la imagen para el despliegue independiente
 
 
-Como parte de la implantación, la fábrica de cargas de trabajo no instala una AMI personalizada con varias instancias de Microsoft SQL Server. Solo se selecciona y configura la instancia predeterminada de Microsoft SQL Server como parte de la implementación.
+Como parte de la implementación, Workload Factory no instala una AMI personalizada con múltiples instancias de Microsoft SQL Server.  Solo se selecciona y configura la instancia predeterminada de Microsoft SQL Server como parte de la implementación.
 
 
 
 == Realice un rollback y vuelva a intentarlo para los despliegues fallidos
 
-La reversión y los intentos de reversión para implementaciones con errores no se admiten en la fábrica de cargas de trabajo. Puede revertir o volver a intentar una pila fallida desde la consola de CloudFormation en AWS.
+En Workload Factory no se admiten la reversión ni el reintento de implementaciones fallidas.  Puede revertir o volver a intentar una pila fallida desde la consola de CloudFormation en AWS.
 
 
 
@@ -60,7 +60,7 @@ Tendrás que limpiarlos manualmente o esperar a que el dominio purgue las entrad
 
 == Soporte de configuración de grupos de disponibilidad permanente
 
-La gestión de las configuraciones de grupos de disponibilidad permanente no es compatible con la fábrica de cargas de trabajo.
+La administración de configuraciones de grupos de disponibilidad AlwaysOn no es compatible con Workload Factory.
 
 
 
@@ -84,7 +84,7 @@ El número máximo de clones de sandbox que se pueden crear desde un servidor de
 
 == Detección y gestión de Microsoft SQL Server
 
-La detección de Microsoft SQL Server no se ha guardado. Cada vez que accede a bases de datos en fábrica de cargas de trabajo, la detección de Microsoft SQL Server se ejecuta de nuevo para identificar las instalaciones de SQL en la región.
+La detección de Microsoft SQL Server no se guarda.  Cada vez que accede a las bases de datos en Workload Factory, la detección de Microsoft SQL Server se ejecuta nuevamente para identificar las instalaciones de SQL en la región.
 
 
 
@@ -118,7 +118,7 @@ La optimización masiva para más de una instancia de SQL Server no se admite pa
 
 === Evaluación de parches del sistema operativo para la optimización
 
-La evaluación de parches del sistema operativo que se realiza con fines de optimización puede no funcionar en una red privada. La evaluación se basa en AWS Patch Manager. Para saber cómo aplicar parches a las instancias de Windows EC2 en una red privada, consulte link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["El blog de operaciones en la nube de AWS «Cómo aplicar parches a instancias de Windows EC2 en subredes privadas con AWS Systems Manager»"^].
+Es posible que la evaluación del parche del sistema operativo que se realiza con fines de optimización no funcione en una red privada.  La evaluación se basa en AWS Patch Manager.  Para comprender cómo aplicar parches a las instancias EC2 de Windows en una red privada, consulte el blog de operaciones en la nube de AWS.link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["Cómo aplicar parches a instancias EC2 de Windows en subredes privadas mediante AWS Systems Manager"^] .
 
 
 
@@ -131,17 +131,35 @@ No se tienen en cuenta los cálculos de ahorro de costes y porcentajes del tama�
 == Evaluación de la replicación entre regiones
 
 * La evaluación de optimización no puede determinar si se está utilizando la replicación entre regiones (CRR) cuando el sistema de archivos de destino de FSx para ONTAP se encuentra en una cuenta de AWS diferente.
-* La fábrica de carga de trabajo evalúa solo la configuración de CRR del sistema de archivos FSX para ONTAP de origen.
+* Workload Factory evalúa únicamente la configuración CRR del sistema de archivos FSx de origen para ONTAP .
 
 
 
 
-== Autenticación del host de base de datos en Explore los ahorros
+== Autenticación del host de la base de datos al explorar ahorros
 
 En algunos casos con permisos limitados, la página de exploración de ahorros no carga datos después de una autenticación exitosa.
 
 
 
-== Integración con la BlueXP backup and recovery
+== Integración con NetApp Backup and Recovery
 
-Después de agregar hosts a la copia de seguridad y recuperación de BlueXP para protección, la detección de la base de datos a veces falla.
+Después de agregar hosts a NetApp Backup and Recovery para protección, la detección de bases de datos a veces falla.
+
+
+
+== Soporte regional
+
+No se admiten las siguientes regiones de AWS:
+
+* Regiones de China
+* Regiones GovCloud (EE. UU.
+* Cloud secreto
+* Ultrasecreto
+
+
+
+
+== Registro de Oracle en SUSE Linux Enterprise Server 12
+
+Al registrar Oracle Database en SUSE Linux Enterprise Server 12, Workload Factory no instala las dependencias de Python.  Debe configurar manualmente la versión de Python requerida.  Workload Factory requiere la versión mínima de 3.6; sin embargo, recomendamos la versión 3.11.

@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: deregister-instance.html 
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, deregister instance, unregister instance, remove instance 
-summary: Anule el registro de un recurso si ya no desea implementar ni supervisar recursos desde la consola de fábrica de carga de trabajo. 
+summary: Anule el registro de un recurso si ya no desea implementar ni supervisar recursos desde la consola de Workload Factory. 
 ---
-= Anular el registro de un recurso en la fábrica de carga de trabajo
+= Anular el registro de un recurso en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Anule el registro de un recurso, como una instancia de Microsoft SQL Server o una base de datos de Oracle, si ya no desea implementar ni supervisar recursos desde la consola de fábrica de carga de trabajo.  Al anular el registro de recursos también se elimina la cantidad de capacidad de almacenamiento de FSx para ONTAP utilizada por la instancia.
+Anule el registro de un recurso, como una instancia de Microsoft SQL Server o una base de datos de Oracle, si ya no desea implementar ni supervisar recursos desde la consola de NetApp Workload Factory. Al anular el registro de recursos también se elimina la cantidad de capacidad de almacenamiento de FSx para ONTAP utilizada por la instancia.
 
 Puedes registrar el recurso nuevamente.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
-. En Bases de datos, seleccione la pestaña *Inventario*.
-. En el inventario, seleccione el tipo de motor: Microsoft SQL Server, Oracle o PostgreSQL.
-. Localice el recurso que desea cancelar, seleccione el menú de tres puntos y luego seleccione *Cancelar registro*.
+. Desde el menú Bases de datos, seleccione *Inventario*.
+. En el Inventario, seleccione el tipo de motor: *Microsoft SQL Server*, *Oracle* o *PostgreSQL*.
+. Localice el recurso que desea cancelar el registro, seleccione el menú de acciones y luego seleccione *Cancelar registro*.
 

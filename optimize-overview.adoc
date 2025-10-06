@@ -11,7 +11,7 @@ summary: Workload Factory for Databases analiza periódicamente las configuracio
 
 
 [role="lead"]
-Workload Factory for Databases analiza periódicamente las configuraciones de las bases de datos para determinar si hay problemas con las implementaciones de Microsoft SQL Server y Oracle en Amazon FSx for NetApp ONTAP .  Cuando se detectan problemas, Workload Factory muestra cuáles son y explica qué es necesario cambiar para garantizar que las configuraciones de su base de datos alcancen el máximo rendimiento, rentabilidad y cumplimiento de las mejores prácticas.
+Workload Factory for Databases analiza periódicamente las configuraciones de las bases de datos para determinar si hay problemas con las implementaciones de Microsoft SQL Server y Oracle en Amazon FSx for NetApp ONTAP .  Cuando se detectan problemas, Workload Factory le muestra cuáles son y le explica qué debe cambiar para garantizar que las configuraciones de su base de datos alcancen el máximo rendimiento, rentabilidad y cumplimiento de las mejores prácticas.
 
 Estas son algunas funcionalidades clave:
 
@@ -27,7 +27,7 @@ Estas son algunas funcionalidades clave:
 
 == Estado bien diseñado
 
-En la consola de fábrica de cargas de trabajo, a nivel del sistema de archivos, se enumera el estado bien diseñado para todos los sistemas de archivos FSx para ONTAP. Los estados bien diseñados se clasifican como “problemas”, “no analizados” o “bien diseñados”. La selección del estado bien diseñado le redirige a la pestaña de estado bien diseñada dentro del sistema de archivos, donde puede encontrar la puntuación bien diseñada, las categorías de configuración y todas las configuraciones para el sistema de archivos.
+En la consola de Workload Factory, en el nivel del sistema de archivos, se muestra el estado de buena arquitectura para todos los sistemas de archivos FSx para ONTAP . Los estados bien diseñados se clasifican como "problemas", "no analizados" o "bien diseñados". Al seleccionar el estado de buena arquitectura, se le redirige a la pestaña de estado de buena arquitectura dentro del sistema de archivos, donde puede encontrar el puntaje de buena arquitectura, las categorías de configuración y todas las configuraciones para el sistema de archivos.
 
 
 

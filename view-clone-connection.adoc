@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: view-clone-connection.html 
 keywords: view clone connection, copy connection information 
-summary: Ver y copiar la información de conexión de un clon del entorno aislado en la fábrica de cargas de trabajo de BlueXP  para bases de datos. 
+summary: Ver y copiar la información de conexión de un clon de base de datos en NetApp Workload Factory for Databases. 
 ---
-= Ver información de conexión de un clon de sandbox
+= Ver información de conexión de un clon de base de datos
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Ver y copiar la información de conexión de un clon del entorno aislado en la fábrica de cargas de trabajo de BlueXP  para bases de datos.
+Ver y copiar la información de conexión de un clon de base de datos en NetApp Workload Factory for Databases.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
-. En las bases de datos, seleccione la pestaña *sandboxes*.
-. En la pestaña sandboxes, haga clic en el menú de tres puntos del clon del sandbox para ver la información de conexión.
+. Desde el menú Bases de datos, seleccione *Sandboxes*.
+. En Sandboxes, seleccione el menú de acciones del clon del sandbox para ver su información de conexión.
 . Selecciona *Mostrar información de conexión*.
 . En el cuadro de diálogo Mostrar información de conexión, copie la información de conexión si es necesario.
-. Haga clic en *Cerrar*.
+. Seleccione *Cerrar*.
 

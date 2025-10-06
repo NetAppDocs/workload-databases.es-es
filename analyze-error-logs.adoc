@@ -2,19 +2,22 @@
 sidebar: sidebar 
 permalink: analyze-error-logs.html 
 keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, smart analysis, Agentic AI 
-summary: Analizar registros de errores dentro de la fábrica de carga de trabajo para bases de datos. 
+summary: Analice los registros de errores dentro de Workload Factory para bases de datos. 
 ---
-= Analizar registros de errores en la fábrica de carga de trabajo
+= Analizar registros de errores en Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Utilice el analizador de registro de errores inteligente para interpretar automáticamente los registros de errores de Microsoft SQL Server para que pueda identificar y resolver problemas rápidamente.  El análisis basado en IA de Agentic requiere la integración de Amazon Bedrock.
+Utilice el analizador de registro de errores inteligente para interpretar automáticamente los registros de errores de Microsoft SQL Server para que pueda identificar y resolver problemas rápidamente. El análisis basado en IA de Agentic requiere la integración de Amazon Bedrock.
 
-.Acerca de esta tarea
-El análisis y la corrección del registro de errores ayudan a mantener la salud y el rendimiento de las instancias de SQL Server.  Para interpretar eficazmente los registros de errores de SQL Server se necesita un análisis cuidadoso y experiencia.  La supervisión manual, la detección de errores y el análisis de la causa raíz requieren mucho tiempo y son propensos a errores.  Estos desafíos pueden retrasar la resolución de problemas, aumentar el tiempo de inactividad y generar ineficiencias operativas.  El analizador de registro de errores inteligente aborda estos desafíos con estos beneficios clave:
+
+
+== Acerca de esta tarea
+
+El análisis y la corrección del registro de errores ayudan a mantener la salud y el rendimiento de las instancias de SQL Server. Para interpretar eficazmente los registros de errores de SQL Server se necesita un análisis cuidadoso y experiencia. La supervisión manual, la detección de errores y el análisis de la causa raíz requieren mucho tiempo y son propensos a errores. Estos desafíos pueden retrasar la resolución de problemas, aumentar el tiempo de inactividad y generar ineficiencias operativas. El analizador de registro de errores inteligente aborda estos desafíos con estos beneficios clave:
 
 * Agrupación inteligente: consolida de forma inteligente los errores por singularidad, gravedad y categoría, y simplifica el proceso de resolución de problemas para lograr resoluciones más rápidas y efectivas.
 * Investigación impulsada por IA: aprovecha la IA para analizar errores de forma proactiva, proporcionando información clara y práctica para acelerar la identificación de problemas sin necesidad de una gran experiencia.
@@ -22,24 +25,72 @@ El análisis y la corrección del registro de errores ayudan a mantener la salud
 * Solución de problemas de mejores prácticas: ofrece recomendaciones de solución personalizadas para cargas de trabajo de SQL Server que se ejecutan en FSx para ONTAP, lo que permite a los usuarios de todos los niveles resolver problemas con confianza.
 
 
-Siempre que utilice el analizador de registro de errores inteligente, mantendrá el control total sobre su entorno mientras se beneficia del análisis avanzado de inteligencia artificial.
+Siempre que utilice el analizador de registro de errores, mantendrá el control total sobre su entorno mientras se beneficia del análisis avanzado de IA.
 
-Para utilizar el analizador de registro de errores inteligente, debe activar Amazon Bedrock, seleccionar el modelo de carga de trabajo que utiliza la fábrica, crear un punto final privado para conectarse a Amazon Bedrock, agregar permisos y crear una licencia empresarial.
+Para utilizar el analizador de registros de errores, debe activar Amazon Bedrock, seleccionar el modelo que utiliza Workload Factory, crear un punto final privado para conectarse a Amazon Bedrock, agregar permisos y crear una licencia empresarial.
 
 link:https://aws.amazon.com/bedrock/pricing/["Precios de Amazon Bedrock"^]
 
-.Antes de empezar
-Para utilizar el analizador de registro de errores inteligente, debe cumplir los siguientes requisitos previos:
 
-* Debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de modo de lectura/escritura"^]crear un nuevo host de base de datos en la fábrica de cargas de trabajo.
-* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registrar una instancia de SQL Server"^]en fábrica de carga de trabajo. *
 
+=== Privacidad y seguridad de los datos
+
+La función garantiza la privacidad y seguridad de los datos con las siguientes medidas:
+
+.Soberanía de datos
+Los datos de registro y las agregaciones permanecen dentro de su cuenta de AWS, comunicados a través de un punto final de VPC privado (Amazon Bedrock), lo que garantiza que no haya exposición a Internet público.
+
+.Sin entrenamiento de IA
+Los datos del cliente no se utilizan para entrenar o mejorar los modelos.  Amazon Bedrock procesa registros en tiempo real, pero no se capacita con sus datos.  Los resultados se almacenan en su entorno solo como referencia.  Para más detalles, consulte lalink:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html["Documentación de protección de datos de Amazon Bedrock"^] .
+
+
+
+== Antes de empezar
+
+Para utilizar el analizador de registro de errores, debe cumplir los siguientes requisitos previos:
+
+* Debes tenerlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de modo de lectura/escritura"^] para crear un nuevo host de base de datos en Workload Factory.
+* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registrar una instancia de SQL Server"^]en Workload Factory.
+* También deben cumplirse los siguientes requisitos previos:  Se le pedirá que complete estos requisitos previos como parte de los pasos para analizar los errores de registro.
++
+** *Activación de Amazon Bedrock*
++
+Se requiere Amazon Bedrock para que el agente de IA que se ejecuta en el nodo SQL de Workload Factory pueda conectarse sin problemas con Bedrock y obtener información basada en IA para los registros de errores identificados.
+
+** *Redes*
++
+El punto final de VPC de Amazon Bedrock garantiza la comunicación privada de su nodo SQL con las API de Amazon Bedrock y elimina la exposición pública a Internet.  Asegúrese de que el punto final de Amazon Bedrock VPC esté asociado con la subred del nodo de SQL Server (ejemplo: vpce-050cb2f33a1380ffd).
+
+** *Permisos de AWS IAM*
++
+Los siguientes permisos son necesarios para la función de perfil de instancia EC2 asociada con el nodo SQL y para las credenciales de AWS asociadas con Workload Factory.
+
++
+*** Rol de perfil de instancia EC2 con permiso "bedrock:InvokeModel"
++
+Este permiso permite que la instancia EC2 en el nodo SQL correspondiente invoque modelos Bedrock para la investigación proactiva de errores y la orientación para su remediación.  Este perfil también garantiza un acceso seguro a la IA para obtener información personalizada.
+
+*** Credenciales de AWS asociadas con Workload Factory: permisos "bedrock:GetFoundationModelAvailability" y "bedrock:ListInferenceProfiles"
++
+Estos permisos verifican la disponibilidad y configuración del modelo en la región del nodo SQL y garantizan un rendimiento confiable y específico de la región.
+
+
+
+
+
+
+
+
+
+== Analizar registros de errores
+
+Utilice la consola de Workload Factory para analizar los registros de errores de SQL Server.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
-. En Bases de datos, seleccione la pestaña *Inventario*.
-. Seleccione *SQL Server* como motor de base de datos.
+. Desde el menú Bases de datos, seleccione *Inventario*.
+. En el Inventario, seleccione *Microsoft SQL Server* como tipo de motor de base de datos.
 . Desde la pestaña Instancias, ubique la instancia de SQL Server específica que desea analizar y luego seleccione *Investigar errores* en el menú.
 . Desde la pestaña *Investigación de errores*, complete los siguientes requisitos previos como se describe en la consola:
 +
@@ -49,7 +100,7 @@ Para utilizar el analizador de registro de errores inteligente, debe cumplir los
 ** Credenciales asociadas con la gestión de bases de datos de carga de trabajo (wlmdb)
 
 
-. Cuando se cumplan los requisitos previos, seleccione *Investigar ahora* para usar el analizador de registro de errores inteligente para obtener información sobre los registros de errores de SQL Server.
+. Cuando se cumplan los requisitos previos, seleccione *Investigar ahora* para usar el analizador de registro de errores para obtener información sobre los registros de errores de SQL Server.
 +
 Después del escaneo, los errores se muestran en la consola, proporcionando una vista completa de los problemas detectados por el analizador de registro de errores inteligente.
 

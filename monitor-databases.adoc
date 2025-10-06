@@ -2,43 +2,47 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: Realice un seguimiento de los trabajos de la base de datos y supervise las bases de datos dentro de la fábrica de carga de trabajo para bases de datos. 
+summary: Realice un seguimiento de los trabajos de la base de datos y monitoree las bases de datos dentro de NetApp Workload Factory for Databases. 
 ---
-= Supervisar trabajos de base de datos en la fábrica de carga de trabajo
+= Supervisar trabajos de bases de datos en Workload Factory for Databases
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Realice un seguimiento de los trabajos de la base de datos y supervise las bases de datos dentro de la fábrica de carga de trabajo para bases de datos.
+Realice un seguimiento de los trabajos de la base de datos y monitoree las bases de datos dentro de NetApp Workload Factory for Databases para obtener una mejor visibilidad y control sobre las operaciones de la base de datos.
 
-.Acerca de esta tarea
+
+
+== Acerca de esta tarea
+
 Database proporciona supervisión de trabajos para que pueda realizar un seguimiento del progreso de los trabajos, así como diagnosticar y solucionar problemas en caso de que se produzca algún fallo. Puede filtrar trabajos por tipo y estado, buscar trabajos mediante la función de búsqueda y descargar la tabla de trabajos.
 
 La supervisión de trabajos admite hasta tres niveles de supervisión en función del trabajo. Por ejemplo, para la creación de clones de una nueva base de datos y un espacio de pruebas, la supervisión de trabajos realiza un seguimiento de los trabajos primarios y los subtrabajos.
 
-Niveles de supervisión de trabajos::
-+
---
+.Niveles de supervisión de trabajos
 * Nivel 1 (trabajo principal): Realiza un seguimiento del trabajo de despliegue del host.
 * Nivel 2 (subtrabajo): Realiza un seguimiento de los subtrabajos relacionados con el trabajo padre de despliegue del host.
 * Nivel 3 (tarea): Enumera la secuencia de acciones realizadas en cada recurso.
 
 
---
-Estado del trabajo:: La función de supervisión de trabajos realiza un seguimiento de los trabajos _in progress_, _completed_, _completed with issues_ y _failed_ diarios, semanales, quincenales y mensuales.
-Retención de eventos de trabajo:: Los eventos de supervisión de trabajos se conservan en la interfaz de usuario durante 30 días.
+.Estado del trabajo
+La función de supervisión de trabajos realiza un seguimiento de los trabajos _in progress_, _completed_, _completed with issues_ y _failed_ diarios, semanales, quincenales y mensuales.
 
+.Retención de eventos de trabajo
+Los eventos de supervisión de trabajos se conservan en la interfaz de usuario durante 30 días.
 
 
 
 == Supervisar trabajos
 
+Supervisar trabajos para seguir el progreso de las operaciones de la base de datos y diagnosticar y solucionar problemas en caso de que ocurra alguna falla.
+
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
-. En Bases de datos, seleccione la pestaña *Supervisión de trabajos*.
-. En la pestaña Supervisión del trabajo, utilice los filtros o busque para restringir los resultados del trabajo. También es posible descargar un informe de trabajos.
-. Haga clic en el menú de tres puntos del trabajo y haga clic en *Ir a CloudFormation* para ver el registro de trabajo en la consola de AWS CloudFormation.
+. Desde el menú Bases de datos, seleccione *Supervisión de trabajos*.
+. En el seguimiento de trabajos, utilice los filtros o la búsqueda para limitar los resultados de trabajos. También puedes descargar un informe de trabajos.
+. Opcionalmente, seleccione el menú de acciones del trabajo y haga clic en *Ir a CloudFormation* para ver el registro del trabajo en la consola de AWS CloudFormation.
 

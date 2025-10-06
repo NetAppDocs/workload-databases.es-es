@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: register-instance.html 
 keywords: manage, register, Microsoft SQL Server instance, Oracle database, manage database, manage instance 
-summary: Registre recursos para que pueda supervisar el estado de los recursos, la utilización de los recursos, la protección y el rendimiento del almacenamiento en la fábrica de carga de trabajo para bases de datos. 
+summary: Registre recursos para poder supervisar el estado de los recursos, la utilización de los recursos, la protección y el rendimiento del almacenamiento en NetApp Workload Factory for Databases. 
 ---
-= Registrar recursos en la fábrica de carga de trabajo para bases de datos
+= Registrar recursos en NetApp Workload Factory para bases de datos
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Registre instancias para Microsoft SQL Server y bases de datos para Oracle para que pueda supervisar el estado de las instancias y las bases de datos, la utilización de recursos, la protección y el rendimiento del almacenamiento en la fábrica de carga de trabajo para bases de datos.
+Registre instancias para Microsoft SQL Server y bases de datos para Oracle para que pueda supervisar el estado de las instancias y las bases de datos, la utilización de recursos, la protección y el rendimiento del almacenamiento en NetApp Workload Factory for Databases.
 
 El registro solo es posible para motores de bases de datos que se ejecutan en FSx para el almacenamiento del sistema de archivos ONTAP .
 
@@ -24,7 +24,7 @@ El registro de una instancia (SQL Server) o una base de datos (Oracle) incluye d
 Puede autenticarse utilizando credenciales de SQL Server o con credenciales de Windows.
 
 
-NOTE: La fábrica de carga de trabajo solo admite el registro y la administración de instancias de Microsoft SQL Server y de bases de datos Oracle.  Según las credenciales de la cuenta de AWS que seleccione en la fábrica de carga de trabajo, los hosts PostgreSQL podrían aparecer en el Inventario.  Actualmente, Workload Factory admite instancias de PostgreSQL no registradas que se ejecutan únicamente en sistemas operativos Amazon Linux.
+NOTE: Workload Factory solo admite el registro y la administración de instancias de Microsoft SQL Server y de bases de datos Oracle.  Según las credenciales de la cuenta de AWS que seleccione en Workload Factory, los hosts PostgreSQL podrían aparecer en el Inventario.  Actualmente, Workload Factory admite instancias de PostgreSQL no registradas que se ejecutan únicamente en sistemas operativos Amazon Linux.
 
 
 
@@ -32,7 +32,7 @@ NOTE: La fábrica de carga de trabajo solo admite el registro y la administraci�
 
 Tenga en cuenta lo siguiente antes de registrar una instancia:
 
-El host de la instancia o base de datos debe aparecer en la pestaña Inventario.  Para que los hosts aparezcan en el inventario,link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Debe agregar las credenciales de la cuenta de AWS y los permisos de modo _solo lectura_ o _lectura/escritura_"^] .
+El host de la instancia o base de datos debe aparecer en el Inventario. Para que los hosts aparezcan en el inventario,link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Debe agregar las credenciales de la cuenta de AWS y los permisos de modo _solo lectura_ o _lectura/escritura_"^] .
 
 
 
@@ -62,8 +62,8 @@ El registro de una instancia incluye la autenticación y preparación de la inst
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
-. En Bases de datos, seleccione la pestaña *Inventario*.
-. Seleccione *Microsoft SQL Server* como tipo de motor.
+. Desde el menú Bases de datos, seleccione *Inventario*.
+. En el Inventario, seleccione *Microsoft SQL Server* como tipo de motor.
 . Seleccione la pestaña *Instancias*.
 . Seleccione para registrar una sola instancia o varias instancias.
 +
@@ -117,8 +117,8 @@ El registro de una base de datos incluye la autenticación y preparación de la 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
-. En Bases de datos, seleccione la pestaña *Inventario*.
-. En la pestaña Inventario, seleccione *Oracle* como motor de base de datos.
+. Desde el menú Bases de datos, seleccione *Inventario*.
+. En el Inventario, seleccione *Oracle* como motor de base de datos.
 . Seleccione la pestaña *Bases de datos*.
 . Seleccione para registrar una sola base de datos o varias bases de datos.
 +

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: check-clone-integrity.html 
 keywords: integrity check, data corruption 
-summary: Ejecutar una comprobación de integridad para determinar si los datos de clones de sandbox están intactos o dañados en la fábrica de cargas de trabajo de BlueXP  para las bases de datos. 
+summary: Ejecute una verificación de integridad para determinar si los datos del clon de sandbox están intactos o dañados en NetApp Workload Factory for Databases. 
 ---
 = Compruebe la integridad de los datos en un clon de sandbox
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Ejecutar una comprobación de integridad para determinar si los datos d
 
 
 [role="lead"]
-Ejecutar una comprobación de integridad para determinar si los datos de clones de sandbox están intactos o dañados en la fábrica de cargas de trabajo de BlueXP  para las bases de datos.
+Ejecute una verificación de integridad para determinar si los datos del clon de sandbox están intactos o dañados en NetApp Workload Factory for Databases.
 
 .Acerca de esta tarea
 Cuando crea un clon de sandbox desde una base de datos de origen mientras está ocupado, es posible que los datos del clon no estén sincronizados con la snapshot más reciente de la base de datos de origen. Esta operación comprueba la integridad de todos los objetos del clon del sandbox para determinar si los datos clonados del sandbox son actuales.
@@ -19,8 +19,8 @@ Cuando crea un clon de sandbox desde una base de datos de origen mientras está 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
-. En las bases de datos, seleccione la pestaña *sandboxes*.
-. En la pestaña sandboxes, haga clic en el menú de tres puntos del clon de sandbox para comprobar la integridad.
+. Desde el menú Bases de datos, seleccione *Sandboxes*.
+. En Sandboxes, seleccione el menú de acciones del clon de sandbox para verificar la integridad.
 . Selecciona *Ejecutar comprobación de integridad*.
 . En el cuadro de diálogo Comprobación de integridad, haga clic en *Comprobación de integridad*.
 . Compruebe el estado de la comprobación de integridad en sandboxes o en Supervisión de trabajos.

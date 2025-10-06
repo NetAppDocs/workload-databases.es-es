@@ -2,58 +2,55 @@
 sidebar: sidebar 
 permalink: create-database-server.html 
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
-summary: Cree un nuevo servidor Microsoft SQL Server en el centro de cargas de trabajo de BlueXP  para bases de datos. 
+summary: Cree un nuevo Microsoft SQL Server dentro de NetApp Workload Factory para bases de datos. 
 ---
-= Crear un servidor Microsoft SQL Server en una fábrica de carga de trabajo para bases de datos
+= Crear un servidor Microsoft SQL Server en Workload Factory para bases de datos
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Para crear un nuevo Microsoft SQL Server o un host de base de datos en una fábrica de carga de trabajo para bases de datos, se requiere una implementación del sistema de archivos FSx para ONTAP y recursos para Active Directory.
+Para crear un nuevo Microsoft SQL Server o un host de base de datos en Workload Factory for Databases se requiere una implementación del sistema de archivos FSx para ONTAP y recursos para Active Directory.
 
 
 
 == Acerca de esta tarea
 
-Antes de crear un Microsoft SQL Server desde una fábrica de carga de trabajo, obtenga información sobre los tipos de implementación de almacenamiento disponibles para la configuración del host de base de datos, la configuración de E/S de múltiples rutas de Microsoft, la implementación de Active Directory, los detalles de red y los requisitos para completar esta operación.
+Antes de crear un Microsoft SQL Server desde Workload Factory, obtenga información sobre los tipos de implementación de almacenamiento disponibles para la configuración del host de base de datos, la configuración de E/S de múltiples rutas de Microsoft, la implementación de Active Directory, los detalles de red y los requisitos para completar esta operación.
 
 Después de la implementación, deberá <<Paso 2: Habilite la conexión remota en Microsoft SQL Server,Active la conexión remota en Microsoft SQL Server>>.
 
-FSX para puestas en marcha del sistema de archivos ONTAP:: Para crear un nuevo servidor Microsoft SQL Server, se requiere un sistema de archivos FSx para ONTAP como back-end de almacenamiento. Puede utilizar un sistema de archivos FSX for ONTAP existente o crear un nuevo sistema de archivos. Si selecciona un sistema de archivos FSx para ONTAP existente como back-end de almacenamiento de servidor de bases de datos, creamos un nuevo equipo virtual de almacenamiento para las cargas de trabajo de Microsoft SQL.
-+
---
+.FSX para puestas en marcha del sistema de archivos ONTAP
+Para crear un nuevo servidor Microsoft SQL Server, se requiere un sistema de archivos FSx para ONTAP como back-end de almacenamiento. Puede utilizar un sistema de archivos FSX for ONTAP existente o crear un nuevo sistema de archivos. Si selecciona un sistema de archivos FSx para ONTAP existente como back-end de almacenamiento de servidor de bases de datos, creamos un nuevo equipo virtual de almacenamiento para las cargas de trabajo de Microsoft SQL.
+
 Los sistemas de archivos FSX para ONTAP tienen dos modelos de implementación de Microsoft SQL Server: _Failover Cluster Instance (FCI)_ o _Standalone_. Se crean distintos recursos para el sistema de archivos FSx para ONTAP en función del modelo de puesta en marcha de FSx para ONTAP que seleccione.
 
 * *Implementación de Microsoft SQL de instancia de clúster de conmutación por error (FCI): Se implementa un sistema de archivos FSX para NetApp ONTAP de zona de disponibilidad múltiple cuando se selecciona un nuevo sistema de archivos FSX para ONTAP para la implementación de FCI. Se crean volúmenes y LUN independientes para archivos de datos, registros y tempdb para una implementación de FCI. Se crean un volumen y LUN adicionales para el disco de quórum o de testigo para el clúster de Windows.
 * *Implementación independiente de Microsoft SQL*: Se crea un sistema de archivos FSX de zona de disponibilidad única para ONTAP cuando se crea un nuevo servidor Microsoft SQL. Además, se crean volúmenes y LUN independientes para archivos de datos, registros y tempdb.
 
 
---
-Configuración de E/S multirruta de Microsoft:: Ambos modelos de implementación de Microsoft SQL Server requieren la creación de LUN mediante el protocolo de almacenamiento iSCSI. La fábrica de cargas de trabajo configura la I/O multivía de Microsoft (MPIO) como parte de la configuración de LUN para SQL Server mediante FSx para ONTAP. MPIO se configura según las prácticas recomendadas de AWS y NetApp.
+.Configuración de E/S multirruta de Microsoft
+Ambos modelos de implementación de Microsoft SQL Server requieren la creación de LUN mediante el protocolo de almacenamiento iSCSI.  Workload Factory configura Microsoft Multi-path I/O (MPIO) como parte de la configuración de LUN para SQL Server sobre FSx para ONTAP.  MPIO se configura según las mejores prácticas de AWS y NetApp .
 
+Para obtener más información, consulte link:https://aws.amazon.com/blogs/modernizing-with-aws/sql-server-high-availability-amazon-fsx-for-netapp-ontap/["Implementaciones de alta disponibilidad de SQL Server con Amazon FSx for NetApp ONTAP"^] .
 
-Para obtener más información, consulte link:https://aws.amazon.com/blogs/modernizing-with-aws/sql-server-high-availability-amazon-fsx-for-netapp-ontap/["Implementaciones de alta disponibilidad de SQL Server mediante Amazon FSx para NetApp ONTAP"^].
+.Active Directory
+Lo siguiente ocurre en Active Directory (AD) durante la implementación:
 
-Active Directory:: Lo siguiente ocurre en Active Directory (AD) durante la implementación:
-+
---
 * Se crea una nueva cuenta de servicio de Microsoft SQL en el dominio si no proporciona una cuenta de servicio SQL existente.
 * El clúster de Windows, los nombres de host de nodo y el nombre de FCI de Microsoft SQL se agregan como equipos gestionados a la cuenta de servicio Microsoft SQL.
 * A la entrada del clúster de Windows se le asignan permisos para agregar equipos al dominio.
 
 
---
-Grupos de seguridad de Active Directory gestionados por el usuario:: Si selecciona “Active Directory gestionado por el usuario” durante la implementación de Microsoft SQL Server en la fábrica de cargas de trabajo, debe proporcionar un grupo de seguridad que permita el tráfico entre las instancias EC2 al servicio de directorio para la implementación. La fábrica de cargas de trabajo no conecta automáticamente el grupo de seguridad para Active Directory gestionado por el usuario como lo hace para AWS Managed Microsoft AD.
-Reversión de recursos:: Si decide revertir los recursos del sistema de nombres de dominio (DNS), los registros de recursos en AD y DNS no se eliminan automáticamente. Puede eliminar los registros del servidor DNS y AD de la siguiente manera.
-+
---
+.Grupos de seguridad de Active Directory gestionados por el usuario
+Si selecciona “Active Directory administrado por el usuario” durante la implementación de Microsoft SQL Server en Workload Factory, debe proporcionar un grupo de seguridad que permita el tráfico entre las instancias de EC2 al servicio de directorio para la implementación.  Workload Factory no adjunta automáticamente el grupo de seguridad para Active Directory administrado por el usuario como lo hace para AWS Managed Microsoft AD.
+
+.Reversión de recursos
+Si decide revertir los recursos del sistema de nombres de dominio (DNS), los registros de recursos en AD y DNS no se eliminan automáticamente. Puede eliminar los registros del servidor DNS y AD de la siguiente manera.
+
 * Para AD gestionado por el usuario, primero link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps["Extraiga el equipo AD"^]. A continuación, conéctese al servidor DNS desde el administrador DNS y link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records["Elimine los registros de recursos DNS"^].
 * Para AWS Managed Microsoft AD, link:https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_install_ad_tools.html["Instale las herramientas de administración de AD"^]. A continuación, link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps["Extraiga el equipo AD"^]. Por último, conéctese al servidor DNS desde el administrador DNS y link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records["Elimine los registros de recursos DNS"^].
-
-
---
 
 
 
@@ -62,10 +59,12 @@ Reversión de recursos:: Si decide revertir los recursos del sistema de nombres 
 
 Asegúrese de tener los siguientes requisitos previos antes de crear un nuevo host de base de datos.
 
-Credenciales y permisos:: Debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de modo de lectura/escritura"^]crear un nuevo host de base de datos en la fábrica de cargas de trabajo.
-Active Directory:: Al conectarse a Active Directory, debe tener acceso administrativo con permisos para hacer lo siguiente:
-+
---
+.Credenciales y permisos
+Debes tenerlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de modo de lectura/escritura"^] para crear un nuevo host de base de datos en Workload Factory.
+
+.Active Directory
+Al conectarse a Active Directory, debe tener acceso administrativo con permisos para hacer lo siguiente:
+
 * Únase al dominio
 * Crear objetos de computadora
 * Crear objetos en la unidad de organización (OU) por defecto
@@ -74,19 +73,16 @@ Active Directory:: Al conectarse a Active Directory, debe tener acceso administr
 * Cree un usuario de servicio de Microsoft SQL Server en AD, si aún no existe
 
 
---
-
-
 
 
 == Paso 1: Crear un servidor de base de datos
 
-Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ para completar esta tarea en la fábrica de cargas de trabajo con permisos de modo _automate_. También puede usar las siguientes herramientas disponibles en CodeBox: API REST, CLI de AWS, AWS CloudFormation y Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Aprende a usar CodeBox para la automatización"^].
+Puede utilizar los modos de implementación _Creación rápida_ o _Creación avanzada_ para completar esta tarea en Workload Factory con permisos del modo _Automatizar_.  También puede utilizar las siguientes herramientas disponibles en Codebox: API REST, AWS CLI, AWS CloudFormation y Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Aprende a usar CodeBox para la automatización"^] .
 
 
 NOTE: Al usar Terraform de CodeBox, el código que copie o descargue oculta `fsxadmin` y `vsadmin` las contraseñas. Deberá volver a introducir las contraseñas cuando ejecute el código. Deberá incluir los siguientes permisos para la cuenta de usuario además de los permisos del modo _Automate_: `iam:TagRole` Y `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["Aprende a usar Terraform de CodeBox"^].
 
-Durante la implementación, Workload Factory habilita CredSSP para la delegación de credenciales a scripts para el aprovisionamiento de SQL. Cuando la delegación de CredSSP está bloqueada para todos los equipos del dominio con la directiva de grupo, la implementación falla. Después de la implementación, Workload Factory deshabilita CredSSP.
+Durante la implementación, Workload Factory habilita CredSSP para la delegación de credenciales a scripts para aprovisionar SQL.  Cuando la delegación de CredSSP está bloqueada para todos los equipos del dominio con la política de grupo, la implementación falla.  Después de la implementación, Workload Factory deshabilita CredSSP.
 
 [role="tabbed-block"]
 ====
@@ -97,7 +93,7 @@ NOTE: En _Quick create_, FCI es el modelo de implementación predeterminado, Win
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Implementar host de base de datos* y luego seleccione *Microsoft SQL Server* en el menú desplegable.
+. En el mosaico Bases de datos, seleccione *Implementar host* y luego seleccione *Microsoft SQL Server* en el menú.
 . Seleccione *Quick create*.
 . En *AWS settings*, proporcione lo siguiente:
 +
@@ -106,16 +102,16 @@ NOTE: En _Quick create_, FCI es el modelo de implementación predeterminado, Win
 Las credenciales de AWS con permisos de _lectura/escritura_ permiten que Workload Factory implemente y administre el nuevo host de base de datos desde su cuenta de AWS dentro de Workload Factory.
 
 +
-Las credenciales de AWS con permisos de _solo lectura_ permiten que la fábrica de carga de trabajo genere una plantilla de CloudFormation para que usted la use en la consola de AWS CloudFormation.
+Las credenciales de AWS con permisos de _solo lectura_ permiten que Workload Factory genere una plantilla de CloudFormation para que usted la use en la consola de AWS CloudFormation.
 
 +
-Si no tiene las credenciales de AWS asociadas en la fábrica de cargas de trabajo y desea crear el nuevo servidor en la fábrica de cargas de trabajo, siga la opción *1* para ir a la página Credenciales. Agregue manualmente las credenciales y los permisos necesarios para el modo _lectura/escritura_ para las cargas de trabajo de la base de datos.
+Si no tiene credenciales de AWS asociadas en Workload Factory y desea crear el nuevo servidor en Workload Factory, siga la *Opción 1* para ir a la página Credenciales.  Agregue manualmente las credenciales y los permisos necesarios para el modo _lectura/escritura_ para las cargas de trabajo de la base de datos.
 
 +
-Si desea completar el formulario Crear nuevo servidor en la fábrica de cargas de trabajo para poder descargar una plantilla de archivo YAML completa para su implementación en AWS CloudFormation, siga *Opción 2* para asegurarse de que tiene los permisos necesarios para crear el nuevo servidor en AWS CloudFormation. Agregue manualmente las credenciales y los permisos necesarios para el modo _READ_ para las cargas de trabajo de la base de datos.
+Si desea completar el formulario de creación de nuevo servidor en Workload Factory para poder descargar una plantilla de archivo YAML completa para su implementación en AWS CloudFormation, siga la *Opción 2* para asegurarse de tener los permisos necesarios para crear el nuevo servidor dentro de AWS CloudFormation.  Agregue manualmente las credenciales y los permisos necesarios para el modo _lectura_ para las cargas de trabajo de la base de datos.
 
 +
-Opcionalmente, puede descargar una plantilla de archivo YAML parcialmente completada desde CodeBox para crear la pila fuera de la fábrica de cargas de trabajo sin credenciales ni permisos. Seleccione *CloudFormation* en el menú desplegable del CodeBox para descargar el archivo YAML.
+Opcionalmente, puede descargar una plantilla de archivo YAML parcialmente completada desde Codebox para crear la pila fuera de Workload Factory sin credenciales ni permisos.  Seleccione *CloudFormation* del menú desplegable en el cuadro de código para descargar el archivo YAML.
 
 .. *Región y VPC*: Seleccione una región y una red de VPC.
 +
@@ -205,8 +201,7 @@ También puede seleccionar *Guardar configuración* para implementar el host má
 .Creación avanzada
 --
 .Pasos
-. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Implementar host de base de datos* y luego seleccione *Microsoft SQL Server* en el menú desplegable.
+. Inicie sesión utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .  En el mosaico Bases de datos, seleccione *Implementar host* y luego seleccione *Microsoft SQL Server* en el menú.
 . Selecciona *Creación avanzada*.
 . Para *Modelo de implementación*, seleccione *Instancia de clúster de conmutación por error* o *Instancia única*.
 . En *AWS settings*, proporcione lo siguiente:
@@ -216,16 +211,16 @@ También puede seleccionar *Guardar configuración* para implementar el host má
 Las credenciales de AWS con permisos de _lectura/escritura_ permiten que Workload Factory implemente y administre el nuevo host de base de datos desde su cuenta de AWS dentro de Workload Factory.
 
 +
-Las credenciales de AWS con permisos de _solo lectura_ permiten que la fábrica de carga de trabajo genere una plantilla de CloudFormation para que usted la use en la consola de AWS CloudFormation.
+Las credenciales de AWS con permisos de _solo lectura_ permiten que Workload Factory genere una plantilla de CloudFormation para que usted la use en la consola de AWS CloudFormation.
 
 +
-Si no tiene las credenciales de AWS asociadas en la fábrica de cargas de trabajo y desea crear el nuevo servidor en la fábrica de cargas de trabajo, siga la opción *1* para ir a la página Credenciales. Agregue manualmente las credenciales y los permisos necesarios para el modo _lectura/escritura_ para las cargas de trabajo de la base de datos.
+Si no tiene credenciales de AWS asociadas en Workload Factory y desea crear el nuevo servidor en Workload Factory, siga la *Opción 1* para ir a la página Credenciales.  Agregue manualmente las credenciales y los permisos necesarios para el modo _lectura/escritura_ para las cargas de trabajo de la base de datos.
 
 +
-Si desea completar el formulario Crear nuevo servidor en la fábrica de cargas de trabajo para poder descargar una plantilla de archivo YAML completa para su implementación en AWS CloudFormation, siga *Opción 2* para asegurarse de que tiene los permisos necesarios para crear el nuevo servidor en AWS CloudFormation. Agregue manualmente las credenciales y los permisos necesarios para el modo _solo lectura_ para las cargas de trabajo de la base de datos.
+Si desea completar el formulario de creación de nuevo servidor en Workload Factory para poder descargar una plantilla de archivo YAML completa para su implementación en AWS CloudFormation, siga la *Opción 2* para asegurarse de tener los permisos necesarios para crear el nuevo servidor dentro de AWS CloudFormation.  Agregue manualmente las credenciales y los permisos necesarios para el modo _solo lectura_ para las cargas de trabajo de la base de datos.
 
 +
-Opcionalmente, puede descargar una plantilla de archivo YAML parcialmente completada desde CodeBox para crear la pila fuera de la fábrica de cargas de trabajo sin credenciales ni permisos. Seleccione *CloudFormation* en el menú desplegable del CodeBox para descargar el archivo YAML.
+Opcionalmente, puede descargar una plantilla de archivo YAML parcialmente completada desde Codebox para crear la pila fuera de Workload Factory sin credenciales ni permisos.  Seleccione *CloudFormation* del menú desplegable en el cuadro de código para descargar el archivo YAML.
 
 .. *Región y VPC*: Seleccione una región y una red de VPC.
 +
@@ -237,30 +232,23 @@ Extremos de la interfaz del servicio de AWS (SQS, FSx, EC2, CloudWatch, formaci�
 +
 Los atributos DNS de VPC `EnableDnsSupport` y `EnableDnsHostnames` se modifican para activar la resolución de la dirección de punto final si no se ha establecido ya en `true`.
 
-.. *Zonas de disponibilidad*: Selecciona zonas de disponibilidad y subredes según el modelo de implementación que hayas seleccionado.
+.. *Zonas de disponibilidad*: seleccione zonas de disponibilidad y subredes según el modelo de implementación que haya seleccionado.  Las subredes no deben compartir la misma tabla de rutas para lograr una alta disponibilidad.
 +
 
 NOTE: Las implementaciones de FCI solo se admiten en configuraciones FSx para ONTAP de varias zonas de disponibilidad (MAZ).
 
 +
-Las subredes no deben compartir la misma tabla de rutas para alta disponibilidad.
-
+*** Para implementaciones de instancia única:
 +
-Para implementaciones de instancia única::
+**** En el campo *Configuración del clúster - Nodo 1*, seleccione una zona de disponibilidad de la *Zona de disponibilidad* del menú desplegable y una subred del menú desplegable *Subred*.
+
+
+*** Para implementaciones de FCI:
 +
---
-... En el campo *Configuración del clúster - Nodo 1*, seleccione una zona de disponibilidad de la *Zona de disponibilidad* del menú desplegable y una subred del menú desplegable *Subred*.
+**** En el campo *Configuración de clúster - Nodo 1*, seleccione la zona de disponibilidad principal para la configuración de MAZ FSX para ONTAP en el menú desplegable *Zona de disponibilidad* y una subred de la zona de disponibilidad principal desde el menú desplegable *Subred*.
+**** En el campo *Configuración de clúster - Nodo 2*, seleccione la zona de disponibilidad secundaria para la configuración de MAZ FSX para ONTAP en el menú desplegable *Zona de disponibilidad* y una subred de la zona de disponibilidad secundaria desde el menú desplegable *Subred*.
 
 
---
-Para implementaciones de FCI::
-+
---
-... En el campo *Configuración de clúster - Nodo 1*, seleccione la zona de disponibilidad principal para la configuración de MAZ FSX para ONTAP en el menú desplegable *Zona de disponibilidad* y una subred de la zona de disponibilidad principal desde el menú desplegable *Subred*.
-... En el campo *Configuración de clúster - Nodo 2*, seleccione la zona de disponibilidad secundaria para la configuración de MAZ FSX para ONTAP en el menú desplegable *Zona de disponibilidad* y una subred de la zona de disponibilidad secundaria desde el menú desplegable *Subred*.
-
-
---
 
 
 .. *Grupo de seguridad*: Seleccione un grupo de seguridad existente o cree un nuevo grupo de seguridad. Tres grupos de seguridad se conectan a los nodos SQL (instancias EC2) durante el despliegue del nuevo servidor.
@@ -391,7 +379,7 @@ También puede guardar la configuración.
 
 == Paso 2: Habilite la conexión remota en Microsoft SQL Server
 
-Una vez que se despliega el servidor, la fábrica de cargas de trabajo no habilita la conexión remota en Microsoft SQL Server. Para activar la conexión remota, realice los siguientes pasos.
+Una vez implementado el servidor, Workload Factory no habilita la conexión remota en Microsoft SQL Server.  Para habilitar la conexión remota, complete los siguientes pasos.
 
 .Pasos
 . Utilice la identidad de equipo para NTLM consultando link:https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-local-system-to-use-computer-identity-for-ntlm["Seguridad de red: Permite que el sistema local utilice la identidad de equipo para NTLM"^] la documentación de Microsoft.
@@ -400,4 +388,4 @@ Una vez que se despliega el servidor, la fábrica de cargas de trabajo no habili
 
 
 .El futuro
-Ahora usted puede link:create-database.html["Crear una base de datos en la fábrica de cargas de trabajo de BlueXP  para bases de datos"].
+Ahora puedeslink:create-database.html["crear una base de datos en Workload Factory for Databases"] .
