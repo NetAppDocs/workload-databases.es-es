@@ -104,6 +104,6 @@ Utilice la consola de Workload Factory para analizar los registros de errores de
 +
 Después del escaneo, los errores se muestran en la consola, proporcionando una vista completa de los problemas detectados por el analizador de registro de errores inteligente.
 
-. Utilice filtros para refinar los errores mostrados según criterios como la gravedad, el período de tiempo y el código de error.
+. Utilice filtros para refinar los errores mostrados en función de criterios como la gravedad, el período de tiempo y el código de error, o mediante etiquetas orientadas a la infraestructura como computación, almacenamiento, red y seguridad.
 . Revise la información detallada del error, incluido el mensaje de error original, la explicación basada en IA y los pasos de solución sugeridos para resolver los errores.
 

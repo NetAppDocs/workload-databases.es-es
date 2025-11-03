@@ -41,7 +41,7 @@ Para instancias de Microsoft SQL Server:
 
 Para bases de datos Oracle:
 
-* Configuración de almacenamiento: incluye administración de capacidad, aprovisionamiento fino, política de niveles, instantáneas, eficiencias de almacenamiento y configuraciones del sistema operativo para implementaciones que utilizan iSCSI con o sin administración automática de almacenamiento (ASM), incluido el estado y la configuración de E/S de múltiples rutas (MPIO) de Microsoft.
+* Configuración de almacenamiento: incluye administración de capacidad, aprovisionamiento ligero, política de niveles, instantáneas, eficiencia de almacenamiento y configuraciones del sistema operativo para implementaciones que utilizan NFS o iSCSI con o sin Administración automática de almacenamiento (ASM), incluido el estado y la configuración de E/S de múltiples rutas (MPIO) de Microsoft.
 * Diseño de almacenamiento: incluye la ubicación del registro de rehacer, la ubicación del espacio de tabla temporal, la ubicación de los archivos de datos, la ubicación del registro de archivo, la ubicación de los archivos de control y la ubicación de los binarios, y el conteo de LUN de los grupos de discos ASM
 
 
