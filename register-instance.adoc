@@ -32,7 +32,7 @@ NOTE: Workload Factory solo admite el registro y la administración de instancia
 
 Tenga en cuenta lo siguiente antes de registrar una instancia:
 
-El host de la instancia o base de datos debe aparecer en el Inventario. Para que los hosts aparezcan en el inventario,link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Debe agregar las credenciales de la cuenta de AWS y los permisos de modo _solo lectura_ o _lectura/escritura_"^] .
+El host de la instancia o base de datos debe aparecer en el Inventario. Para que los hosts aparezcan en el inventario, debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de _visualización, planificación y análisis_"^] en su cuenta de AWS.
 
 
 

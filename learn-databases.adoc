@@ -144,9 +144,6 @@ Workload Factory admite los siguientes motores de bases de datos, versiones, sis
 | Microsoft SQL Server | SQL Server 2016, 2017, 2019, 2022 | Cualquier | FCI, instancia única 
 
 
-| Microsoft SQL Server | SQL Server 2016, 2019, 2022 | Cualquier | Grupos de disponibilidad siempre activos 
-
-
 | Oráculo | 19c | RHEL, SuSe Linux | Independiente (inquilino único o múltiple) 
 
 
@@ -163,12 +160,6 @@ Workload Factory admite los siguientes motores de bases de datos, versiones, sis
 
 
 | Oráculo | 21c | RHEL, SuSe Linux | Independiente con ASM (inquilino único o múltiple) 
-
-
-| Oráculo | 19c | RHEL, SuSe Linux | Guardia de datos 
-
-
-| Oráculo | 21c | RHEL, SuSe Linux | Guardia de datos 
 
 
 | PostgreSQL | PostgreSQL 15 | AMI de Amazon Linux 2023 | HA, instancia independiente 

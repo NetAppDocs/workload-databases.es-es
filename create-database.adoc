@@ -18,7 +18,7 @@ Tras la creación de la base de datos, se crean dos nuevos volúmenes en el sist
 
 Si desea segregar el almacenamiento para la base de datos, puede hacerlo mediante un _punto de montaje virtual_. El punto de montaje virtual permite consolidar bases de datos en unas pocas unidades comunes en el host.
 
-La creación de una base de datos en fábrica de cargas de trabajo requiere permisos de modo Automate. Como alternativa, en el modo básico, puede copiar o descargar una plantilla de código parcialmente completada para completar la operación fuera de la fábrica de cargas de trabajo. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Obtenga información sobre los modos operativos de fábrica de cargas de trabajo"^] para decidir qué modo desea utilizar.
+La creación de una base de datos en Workload Factory requiere permisos de _visualización, planificación y análisis_. Como alternativa, puede copiar o descargar una plantilla de código parcialmente completada para completar la operación fuera de la fábrica de cargas de trabajo. link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Obtenga información sobre los permisos de Workload Factory"^] para decidir qué modo desea utilizar.
 
 
 NOTE: Los servidores Microsoft SQL Server que utilizan el protocolo SMB no admiten la creación de bases de datos.
@@ -26,7 +26,7 @@ NOTE: Los servidores Microsoft SQL Server que utilizan el protocolo SMB no admit
 .Antes de empezar
 Asegúrese de completar los siguientes requisitos previos antes de crear una nueva base de datos.
 
-* *Credenciales y permisos*: Debes tenerlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de modo _solo lectura_ o _lectura/escritura_"^] para crear una nueva base de datos en la fábrica de carga de trabajo.
+* *Credenciales y permisos*: Debe tener link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de _visualización, planificación y análisis_"^] para crear una nueva base de datos en Workload Factory.
 +
 Como alternativa, puede utilizar CodeBox para copiar una plantilla de forma que pueda implementar una base de datos fuera de la fábrica de cargas de trabajo mediante la API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Obtenga más información sobre la automatización de CodeBox"^].
 
@@ -39,7 +39,7 @@ Como alternativa, puede utilizar CodeBox para copiar una plantilla de forma que 
 
 == Cree una base de datos
 
-Puede utilizar los modos de implementación _Creación rápida_ o _Creación avanzada_ para completar esta tarea en la fábrica de carga de trabajo con permisos de modo _solo lectura_ o _lectura/escritura_.
+Puede utilizar los modos de implementación _Creación rápida_ o _Creación avanzada_ para completar esta tarea en Workload Factory.
 
 [role="tabbed-block"]
 ====

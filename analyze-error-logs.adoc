@@ -49,7 +49,7 @@ Los datos del cliente no se utilizan para entrenar o mejorar los modelos.  Amazo
 
 Para utilizar el analizador de registro de errores, debe cumplir los siguientes requisitos previos:
 
-* Debes tenerlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de modo de lectura/escritura"^] para crear un nuevo host de base de datos en Workload Factory.
+* Usted debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de _visualización, planificación y análisis_"^] en su cuenta de AWS para crear un nuevo host de base de datos en Workload Factory.
 * link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registrar una instancia de SQL Server"^]en Workload Factory.
 * También deben cumplirse los siguientes requisitos previos:  Se le pedirá que complete estos requisitos previos como parte de los pasos para analizar los errores de registro.
 +

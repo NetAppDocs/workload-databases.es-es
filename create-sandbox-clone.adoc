@@ -19,7 +19,7 @@ Se crea un clon de sandbox a partir de la snapshot más reciente en la base de d
 .Antes de empezar
 Asegúrese de completar los siguientes requisitos previos antes de crear un clon de sandbox.
 
-* *Credenciales y permisos*: Debes tenerlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de modo _solo lectura_ o _lectura/escritura_"^] para crear un clon de sandbox en Workload Factory.
+* *Credenciales y permisos*: Debe tener link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de _visualización, planificación y análisis_"^] para crear un clon de entorno aislado en Workload Factory.
 +
 Como alternativa, puede utilizar Codebox para copiar una plantilla parcialmente completada o crear una plantilla completada para poder crear el clon de sandbox fuera de Workload Factory mediante la API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Obtenga más información sobre la automatización de CodeBox"^] .
 

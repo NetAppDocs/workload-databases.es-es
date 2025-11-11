@@ -60,7 +60,7 @@ Si decide revertir los recursos del sistema de nombres de dominio (DNS), los reg
 Asegúrese de tener los siguientes requisitos previos antes de crear un nuevo host de base de datos.
 
 .Credenciales y permisos
-Debes tenerlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de modo de lectura/escritura"^] para crear un nuevo host de base de datos en Workload Factory.
+Usted debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de creación de host de base de datos"^] en su cuenta de AWS para crear un nuevo host de base de datos en Workload Factory.
 
 .Active Directory
 Al conectarse a Active Directory, debe tener acceso administrativo con permisos para hacer lo siguiente:

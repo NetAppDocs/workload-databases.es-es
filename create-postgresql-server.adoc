@@ -32,7 +32,7 @@ Para crear un nuevo servidor PostgreSQL, se requiere un sistema de archivos FSx 
 
 == Antes de empezar
 
-Debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de modo de lectura/escritura"^]crear un nuevo host de base de datos en la fábrica de cargas de trabajo.
+Debes tener link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de creación de host de base de datos"^] en su cuenta de AWS para crear un nuevo host de base de datos en Workload Factory.
 
 
 

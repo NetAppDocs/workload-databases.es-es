@@ -72,3 +72,20 @@ Desde Copia de seguridad y recuperación, cree una política para proteger su in
 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["Aprenda a crear una política para proteger su instancia y bases de datos de Microsoft SQL Server"^].
 
 Para obtener información relacionada, consulte la link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["Documentación de copia de seguridad y recuperación"^] para administrar cargas de trabajo de Microsoft SQL Server.
+
+
+
+== Protección de edición para recursos de Microsoft SQL Server
+
+Puede editar la protección de las instancias y bases de datos de Microsoft SQL Server que ya están protegidas en NetApp Backup and Recovery. La edición de la protección le permite modificar la política o la programación de protección para sus instancias protegidas de SQL Server.
+
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Desde el menú Bases de datos, seleccione *Inventario*.
+. En el Inventario, seleccione *Microsoft SQL Server* como tipo de motor.
+. Seleccione la pestaña *Bases de datos*.
+. Localice la base de datos cuya protección desea editar y, a continuación, seleccione *Editar protección* en el menú.
++
+Se le redirigirá a Copia de seguridad y recuperación en la NetApp Console , donde podrá modificar la política de protección o la programación.
+
+
