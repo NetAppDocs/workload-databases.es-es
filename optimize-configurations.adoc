@@ -41,6 +41,7 @@ Para instancias de Microsoft SQL Server:
 
 Para bases de datos Oracle:
 
+* Dimensionamiento del almacenamiento: incluye la asignación de espacio de intercambio y el margen del sistema de archivos
 * Configuración de almacenamiento: incluye administración de capacidad, aprovisionamiento ligero, política de niveles, instantáneas, eficiencia de almacenamiento y configuraciones del sistema operativo para implementaciones que utilizan NFS o iSCSI con o sin Administración automática de almacenamiento (ASM), incluido el estado y la configuración de E/S de múltiples rutas (MPIO) de Microsoft.
 * Diseño de almacenamiento: incluye la ubicación del registro de rehacer, la ubicación del espacio de tabla temporal, la ubicación de los archivos de datos, la ubicación del registro de archivo, la ubicación de los archivos de control y la ubicación de los binarios, y el conteo de LUN de los grupos de discos ASM
 

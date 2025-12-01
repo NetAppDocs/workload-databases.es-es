@@ -79,14 +79,6 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Obte
 
 
 
-=== Modos operativos en Workload Factory
-
-Tres modos operativos diferentes - _básico_, _solo lectura_ y _lectura/escritura_ - ofrecen opciones flexibles para la implementación dentro y fuera de Workload Factory. Obtenga valor inmediato en modo de confianza cero en modo _básico_ con fragmentos de código para usar fuera de Workload Factory. Obtenga valor incremental con confianza incremental en los modos _solo lectura_ y _lectura/escritura_.
-
-Obtenga más información sobre link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modos operativos en Workload Factory"^] .
-
-
-
 == Herramientas para utilizar NetApp Workload Factory
 
 Puede utilizar NetApp Workload Factory con las siguientes herramientas:

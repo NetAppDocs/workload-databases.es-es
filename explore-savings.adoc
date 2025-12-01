@@ -219,11 +219,11 @@ Siga los pasos de la pestaña para su tipo de almacenamiento.
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Explorar ahorros* y luego *Microsoft SQL Server en FSx para Windows* en el menú desplegable.
+. En el mosaico Bases de datos, seleccione *Explorar ahorros* y luego *Microsoft SQL Server en FSx para Windows* en el menú.
 +
 Si Workload Factory detecta hosts EBS, se le redirigirá a la pestaña Explorar ahorros.  Si Workload Factory no detecta los hosts EBS, se le redirigirá a la calculadora para<<Explora el ahorro a través de la personalización,explora el ahorro a través de la personalización>> .
 
-. En la pestaña Explorar ahorros, haga clic en *Explorar ahorros* del servidor de base de datos usando el almacenamiento de EBS.
+. En *Explorar ahorros*, seleccione uno o más hosts de bases de datos que se ejecuten en EBS y luego seleccione *Explorar ahorros*.
 . Si es necesario, autentique el host de la base de datos con credenciales de SQL Server, credenciales de Windows o agregando los permisos faltantes de SQL Server.
 +
 Si la página Explorar ahorros no carga datos después de una autenticación exitosa, seleccione la pestaña *Inventario* para volver a cargar los datos y luego seleccione la pestaña *Explorar ahorros* nuevamente.
@@ -234,6 +234,10 @@ Si la página Explorar ahorros no carga datos después de una autenticación exi
 .. *Frecuencia de actualización de clones*: seleccione la frecuencia con la que se actualizan los clones en el menú.
 .. *Número de copias clonadas*: Introduzca el número de copias clonadas en la configuración de EBS.
 .. *Tasa de cambio mensual*: Ingrese el porcentaje que los datos de clonación y instantánea cambian en promedio por mes.
+.. *Agregar hosts*: opcionalmente, seleccione hasta cinco hosts EBS detectados para incluirlos en el cálculo de ahorro.
++
+Workload Factory consolida varios hosts de SQL Server en una única recomendación de configuración de FSx para ONTAP para optimizar el ahorro de costos a menos que los hosts EBS seleccionados excedan los límites de rendimiento, capacidad o IOPS para un único sistema de archivos FSx para ONTAP .
+
 
 
 
