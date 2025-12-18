@@ -1338,4 +1338,17 @@
   <block id="edb81fcd705508c0f4e0b66b31bfc44f" category="paragraph">Workload Factory consolida varios hosts de SQL Server en una única recomendación de configuración de FSx para ONTAP para optimizar el ahorro de costos a menos que los hosts EBS seleccionados excedan los límites de rendimiento, capacidad o IOPS para un único sistema de archivos FSx para ONTAP .</block>
   <block id="7bc5d760eb2707645670155d907850e9" category="list-text">Dimensionamiento del almacenamiento: incluye la asignación de espacio de intercambio y el margen del sistema de archivos</block>
   <block id="815e75619b370a1b845eccec6979ed74" category="section-title">27 de noviembre de 2025</block>
+  <block id="e75004bce0e2abb43e6673b8bd4bbd2f" category="doc">Mejoras en la integración de Active Directory</block>
+  <block id="4be7fbd19e77cc55e8637326f3cc569d" category="paragraph">Workload Factory for Databases incluye tres nuevos campos de Active Directory (AD) al implementar Microsoft SQL Server mediante la opción *Creación avanzada*. Estas mejoras le permiten especificar las preferencias de unión de Active Directory y utilizar una cuenta de servicio administrada.</block>
+  <block id="2d652258eef11b26b58d2ac1040af4fb" category="paragraph">Los nuevos campos de AD son:</block>
+  <block id="f069ee08ebc87aaad1c479cd4f54611c" category="list-text">Controlador de dominio preferido</block>
+  <block id="5a90d56c7caec61381ba4316f0a43849" category="list-text">Ruta de unidad organizativa preferida</block>
+  <block id="b535bc12ab7716de58cac2633cbe0ec8" category="list-text">Grupo de Active Directory de destino</block>
+  <block id="f43a09fcb5f30e27a88e58e1804f13d0" category="inline-link-macro">Implementar Microsoft SQL Server</block>
+  <block id="8139c8013582edc0d0eba7cc713f8ffd" category="paragraph"><block ref="8139c8013582edc0d0eba7cc713f8ffd" category="inline-link-macro-rx"></block></block>
+  <block id="568883356bf64941250150c47d023c85" category="paragraph">Opcional: seleccione *Usar cuenta de servicio administrada* para la cuenta de servicio de SQL Server. Utilice esta opción si su entorno utiliza MSA (cuenta de servicio administrada) o cuentas de servicio administradas por grupo (gMSA) donde la administración de contraseñas la gestiona Active Directory.</block>
+  <block id="b3c4527b66cf49711e0f4c425a9fdbe1" category="list-text">*Controlador de dominio preferido*: de manera opcional, ingrese el controlador de dominio preferido que se utilizará para unirse a Active Directory.</block>
+  <block id="ae41853f33cf42c1d6ea60e021ce20b3" category="list-text">*Ruta de unidad organizativa preferida*: de manera opcional, ingrese la unidad organizativa (OU) preferida en Active Directory a la que desea unirse.</block>
+  <block id="5da5a84735de60ec35b817899791d509" category="list-text">*Grupo de Active Directory de destino*: de manera opcional, ingrese el grupo de Active Directory de destino al que se agregarán las computadoras.</block>
+  <block id="bfcc9fa5a3178fd803540af87a6b6ab7" category="section-title">18 de diciembre de 2025</block>
 </blocks>

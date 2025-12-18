@@ -285,6 +285,9 @@ NOTE: Si el juego de intercalación seleccionado no es compatible para la instal
 
 .. *Nombre de la base de datos*: Introduzca el nombre del cluster de la base de datos.
 .. *Credenciales de la base de datos*: Introduzca un nombre de usuario y una contraseña para una nueva cuenta de servicio o utilice las credenciales de la cuenta de servicio existentes en Active Directory.
++
+Opcional: seleccione *Usar cuenta de servicio administrada* para la cuenta de servicio de SQL Server. Utilice esta opción si su entorno utiliza MSA (cuenta de servicio administrada) o cuentas de servicio administradas por grupo (gMSA) donde la administración de contraseñas la gestiona Active Directory.
+
 
 
 . En *Conectividad*, proporcione lo siguiente:
@@ -304,6 +307,9 @@ Para los directorios activos gestionados por AWS, las direcciones IP de DNS apar
 
 ... En el campo *Nombre de usuario*, introduzca el nombre de usuario para el dominio de Active Directory.
 ... En el campo *Contraseña*, introduzca una contraseña para el dominio de Active Directory.
+... *Controlador de dominio preferido*: de manera opcional, ingrese el controlador de dominio preferido que se utilizará para unirse a Active Directory.
+... *Ruta de unidad organizativa preferida*: de manera opcional, ingrese la unidad organizativa (OU) preferida en Active Directory a la que desea unirse.
+... *Grupo de Active Directory de destino*: de manera opcional, ingrese el grupo de Active Directory de destino al que se agregarán las computadoras.
 
 
 
