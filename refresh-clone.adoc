@@ -23,7 +23,7 @@ Para actualizar un clon de base de datos a partir de una instantánea, la base d
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
 . Desde el menú Bases de datos, seleccione *Sandboxes*.
 . En Sandboxes, seleccione el menú de acciones del clon del sandbox que desea actualizar.
 . Selecciona *Refrescar*.

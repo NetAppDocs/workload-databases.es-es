@@ -92,7 +92,7 @@ Utilice la consola de Workload Factory para analizar los registros de errores de
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
 . Desde el menú Bases de datos, seleccione *Inventario*.
 . En el Inventario, seleccione *Microsoft SQL Server* o *Oracle* como tipo de motor de base de datos.
 . Desde la pestaña Instancias, ubique la instancia de SQL Server o la base de datos de Oracle específica que desea analizar y luego seleccione *Investigar errores* en el menú.

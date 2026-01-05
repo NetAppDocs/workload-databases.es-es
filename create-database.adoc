@@ -47,7 +47,7 @@ Puede utilizar los modos de implementación _Creación rápida_ o _Creación ava
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
 . Desde el menú Bases de datos, seleccione *Inventario*.
 . En el Inventario, seleccione *Microsoft SQL Server* como tipo de motor de base de datos.
 . Seleccione un servidor de base de datos con una instancia de servidor SQL administrado para crear la base de datos.
@@ -81,7 +81,7 @@ Alternativamente, si desea cambiar cualquiera de estos ajustes predeterminados a
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
 . Desde el menú Bases de datos, seleccione *Inventario*.
 . En el Inventario, seleccione *Microsoft SQL Server* como tipo de motor de base de datos.
 . Seleccione un servidor de base de datos con una instancia de servidor SQL administrado para crear la base de datos.

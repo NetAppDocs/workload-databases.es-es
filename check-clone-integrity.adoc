@@ -18,7 +18,7 @@ Cuando crea un clon de sandbox desde una base de datos de origen mientras está 
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . Desde el menú Bases de datos, seleccione *Sandboxes*.
 . En Sandboxes, seleccione el menú de acciones del clon de sandbox para verificar la integridad.
 . Selecciona *Ejecutar comprobación de integridad*.

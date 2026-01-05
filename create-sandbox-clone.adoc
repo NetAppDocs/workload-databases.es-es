@@ -30,7 +30,7 @@ Como alternativa, puede utilizar Codebox para copiar una plantilla parcialmente 
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
 . En las bases de datos, seleccione la pestaña *sandboxes*.
 . En la pestaña sandboxes, selecciona *Crear nuevo sandbox*.
 . En la página Crear nuevo sandbox, en Origen de base de datos, proporcione lo siguiente:

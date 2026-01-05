@@ -61,7 +61,7 @@ El registro de una instancia incluye la autenticación y preparación de la inst
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
 . Desde el menú Bases de datos, seleccione *Inventario*.
 . En el Inventario, seleccione *Microsoft SQL Server* como tipo de motor.
 . Seleccione la pestaña *Instancias*.
@@ -116,7 +116,7 @@ El registro de una base de datos incluye la autenticación y preparación de la 
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
 . Desde el menú Bases de datos, seleccione *Inventario*.
 . En el Inventario, seleccione *Oracle* como motor de base de datos.
 . Seleccione la pestaña *Bases de datos*.

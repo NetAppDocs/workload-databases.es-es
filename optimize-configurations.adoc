@@ -69,7 +69,7 @@ NOTE: El proceso de remediación puede provocar tiempos de inactividad de las in
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
 . En el *Inventario*, seleccione el tipo de motor: Microsoft SQL Server u Oracle.
 . Seleccione recursos para reparar configuraciones específicas.
 +
@@ -130,7 +130,7 @@ Posponer para detener un análisis de configuración durante 30 días. Transcurr
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
 . Desde el menú Bases de datos, seleccione *Inventario*.
 . En el Inventario, seleccione el tipo de motor de base de datos: *Microsoft SQL Server* o *Oracle*.
 . Navegue a la instancia de SQL Server o a la base de datos de Oracle con la configuración que desea posponer, seleccione el menú de acciones y, a continuación, seleccione *Bien diseñado*.
@@ -148,7 +148,7 @@ Ignorar para detener un análisis de configuración de forma indefinida. Puede r
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
 . Desde el menú Bases de datos, seleccione *Inventario*.
 . En el Inventario, seleccione el tipo de motor de base de datos: *Microsoft SQL Server* o *Oracle*.
 . Navegue a la instancia de SQL Server o a la base de datos de Oracle con la configuración que desea posponer, seleccione el menú de acciones y, a continuación, seleccione *Bien diseñado*.
@@ -166,7 +166,7 @@ Vuelva a activar un análisis de configuración aplazado o descartado en cualqui
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
 . Desde el menú Bases de datos, seleccione *Inventario*.
 . En el Inventario, seleccione el tipo de motor de base de datos: *Microsoft SQL Server* o *Oracle*.
 . Navegue a la instancia de SQL Server o a la base de datos de Oracle con la configuración que desea posponer, seleccione el menú de acciones y, a continuación, seleccione *Bien diseñado*.

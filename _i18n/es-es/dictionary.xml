@@ -561,7 +561,6 @@
   <block id="5c89f4f6af1a71c2ed6cfac605e94c16" category="paragraph"><block ref="5c89f4f6af1a71c2ed6cfac605e94c16" category="inline-link-macro-rx"></block></block>
   <block id="fd3039d7fbe9d24b3141aca3c62383a2" category="section-title">Evaluación y optimización para licencias sobreaprovisionadas de Microsoft SQL Server</block>
   <block id="f90a806c02db45741274868bc065ab90" category="paragraph">La calculadora de ahorro evalúa ahora si la edición Enterprise es necesaria para la puesta en marcha de Microsoft SQL Server. Si una licencia está sobreaprovisionada, la calculadora recomienda la degradación. Podrá degradar automáticamente la licencia en las bases de datos mediante la optimización de la aplicación.</block>
-  <block id="f319ba887c03b66fa6a83807c78f65e9" category="list-text">En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.</block>
   <block id="770dee3f954306dca2e369d2ef823c94" category="section-title">Análisis de despliegue de SQL Server</block>
   <block id="1d93f11e5331c46990f076ad4257106e" category="paragraph">La calculadora realiza un análisis completo de la implementación de SQL Server para garantizar que los recursos y las funciones que se utilizan se correspondan con la edición de SQL Server. Estos son los factores y condiciones clave que la calculadora comprueba antes de recomendar una degradación a la edición estándar:</block>
   <block id="a0e3089d312c100208595d685b4104d2" category="list-text">Modelo de puesta en marcha</block>
@@ -1354,4 +1353,7 @@
   <block id="5e3b7f958129022f75fe2931c55615b2" category="doc">Integración de la página de inicio del asistente de IA de Ask Me</block>
   <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">La página de inicio de la consola Workload Factory incorpora el asistente de IA Ask me, que le permite hacer preguntas sobre su propio almacenamiento, obtener información personalizada directamente de su entorno y consultar conversaciones anteriores. Puede interactuar con Pregúnteme para comprender sus cargas de trabajo, solucionar problemas y obtener más información sobre Workload Factory, todo sin salir de la consola.</block>
   <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">04 de enero de 2026</block>
+  <block id="342a19841e494c61bf9c06a5879eaffa" category="inline-image-macro">El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración.</block>
+  <block id="1d59c9bea900e36e3d5b9ca53cd55587" category="list-text">Seleccione el menú <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> y luego seleccione *Bases de datos*.</block>
+  <block id="757a7ffb20a279d7239febb013141ad5" category="list-text">Seleccione el menú <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> y luego seleccione *Almacenamiento*.</block>
 </blocks>

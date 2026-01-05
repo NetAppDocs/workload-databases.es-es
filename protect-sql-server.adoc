@@ -53,7 +53,7 @@ Complete el proceso de preparación para proteger sus recursos de Microsoft SQL 
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
 . Desde el menú Bases de datos, seleccione *Inventario*.
 . En el Inventario, seleccione *Microsoft SQL Server* como tipo de motor.
 . Localice la instancia que desea proteger y luego seleccione *Proteger* en el menú.
@@ -80,7 +80,7 @@ Para obtener información relacionada, consulte la link:https://docs.netapp.com/
 Puede editar la protección de las instancias y bases de datos de Microsoft SQL Server que ya están protegidas en NetApp Backup and Recovery. La edición de la protección le permite modificar la política o la programación de protección para sus instancias protegidas de SQL Server.
 
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Bases de datos, seleccione *Ir al inventario de bases de datos*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
 . Desde el menú Bases de datos, seleccione *Inventario*.
 . En el Inventario, seleccione *Microsoft SQL Server* como tipo de motor.
 . Seleccione la pestaña *Bases de datos*.
