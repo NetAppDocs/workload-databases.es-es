@@ -13,24 +13,19 @@ summary: Registre recursos para poder supervisar el estado de los recursos, la u
 [role="lead"]
 Registre instancias para Microsoft SQL Server y bases de datos para Oracle para que pueda supervisar el estado de las instancias y las bases de datos, la utilización de recursos, la protección y el rendimiento del almacenamiento en NetApp Workload Factory for Databases.
 
-El registro solo es posible para motores de bases de datos que se ejecutan en FSx para el almacenamiento del sistema de archivos ONTAP .
+Solo puedes registrar tus recursos si se ejecutan en FSx para ONTAP file system storage.
 
 
 
 == Acerca de la tarea
 
-El registro de una instancia (SQL Server) o una base de datos (Oracle) incluye dos pasos: autenticación y preparación.  La preparación implica asegurarse de que todos los módulos de AWS, NetApp y PowerShell estén instalados en la instancia.
+Registrar una instancia (SQL Server) o base de datos (Oracle) tiene tres pasos: autenticación de la instancia o base de datos, autenticación de FSx para ONTAP y preparación. La preparación implica asegurarte de que todos los módulos de AWS, NetApp y PowerShell estén instalados en la instancia o base de datos, y que se cumplan los requisitos mínimos para las funciones de Workload Factory for Databases como link:analyze-error-logs.html["análisis de registros de errores"] o link:optimize-configurations.html["revisión well-architected"].
 
-Puede autenticarse utilizando credenciales de SQL Server o con credenciales de Windows.
-
-
-NOTE: Workload Factory solo admite el registro y la administración de instancias de Microsoft SQL Server y de bases de datos Oracle.  Según las credenciales de la cuenta de AWS que seleccione en Workload Factory, los hosts PostgreSQL podrían aparecer en el Inventario.  Actualmente, Workload Factory admite instancias de PostgreSQL no registradas que se ejecutan únicamente en sistemas operativos Amazon Linux.
+Workload Factory solo admite el registro y la administración de instancias de Microsoft SQL Server y de bases de datos Oracle.  Según las credenciales de la cuenta de AWS que seleccione en Workload Factory, los hosts PostgreSQL podrían aparecer en el Inventario.  Actualmente, Workload Factory admite instancias de PostgreSQL no registradas que se ejecutan únicamente en sistemas operativos Amazon Linux.
 
 
 
 == Antes de empezar
-
-Tenga en cuenta lo siguiente antes de registrar una instancia:
 
 El host de la instancia o base de datos debe aparecer en el Inventario. Para que los hosts aparezcan en el inventario, debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de _visualización, planificación y análisis_"^] en su cuenta de AWS.
 
@@ -55,9 +50,11 @@ Si utiliza un servidor proxy para todas las conexiones salientes de instancias E
 
 
 
-== Registrar una instancia de SQL Server
+== Registrar una instancia de Microsoft SQL Server
 
-El registro de una instancia incluye la autenticación y preparación de la instancia.
+Registrar una instancia tiene tres pasos: autenticación de la instancia, autenticación de FSx for ONTAP y preparación para completar los requisitos previos que falten. Puedes registrar una o varias instancias.
+
+Workload Factory admite el registro para Failover Cluster Instance (FCI) y la implementación autónoma para SQL Server.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -66,102 +63,92 @@ El registro de una instancia incluye la autenticación y preparación de la inst
 . En el Inventario, seleccione *Microsoft SQL Server* como tipo de motor.
 . Seleccione la pestaña *Instancias*.
 . Seleccione para registrar una sola instancia o varias instancias.
+. Para autenticar instancias (paso 1), haz lo siguiente y luego selecciona *Siguiente*:
 +
-.. Registro de instancia única: navegue hasta la instancia que desea administrar y seleccione *Registrar instancia*.
-.. Registro de múltiples instancias: seleccione el botón *Registrar múltiples instancias*.
+** Selecciona *usar las mismas credenciales para todas las instancias* o *gestionar credenciales manualmente*.
+** Autentica SQL Server y Windows proporcionando el nombre de usuario y la contraseña.
 +
-Hay dos opciones disponibles para registrar varias instancias. En ambos casos, las instancias deben compartir el mismo estado de autenticación (autenticado o no autenticado).
+Si las instancias están autenticadas, selecciona *Siguiente*.
+
+
+
+. Para autenticar FSx para ONTAP (paso 2), haz lo siguiente:
++
+** Selecciona *Usar las mismas credenciales para todos los recursos* o *Gestionar credenciales manualmente*.
+** Introduce el nombre de usuario y la contraseña del sistema de archivos FSx for ONTAP y luego selecciona *Next*.
++
+Si el sistema de archivos FSx para ONTAP está autenticado, selecciona *Siguiente*.
+
+
+
+. Para preparar (paso 3), asegúrate de que la(s) instancia(s) cumple(n) los requisitos mínimos.
++
+Para cumplir los requisitos mínimos, la instancia debe tener instalados los módulos de AWS y NetApp PowerShell y los módulos de PowerShell 7, y debes completar los requisitos previos para al menos una de las capacidades enumeradas en Prerequisite check. .. Revisa los requisitos previos en la vista *Prerequisite check*.
 
 +
-*** Instancias no autenticadas: Seleccione varias instancias no autenticadas para registrarlas. Estas instancias deben compartir las mismas credenciales de autenticación y las credenciales de FSx for ONTAP. Seleccione *Aplicar* y luego *Siguiente*.
-*** Instancias autenticadas: seleccione varias instancias autenticadas para registrar y luego seleccione *Siguiente*.
++ Debes completar todos los requisitos previos para una sola capacidad como *Revisar problemas y recomendaciones bien diseñados* para registrar la instancia.
 
-
-
-
-. En el paso 2 de la página "Registrar instancias", seleccione el modo de autenticación de la instancia, introduzca los siguientes datos y seleccione *Siguiente*. Si las instancias ya están autenticadas, seleccione *Siguiente*.
 +
-** *Autenticación de SQL Server*: ingrese el nombre de usuario y la contraseña de SQL Server, y el nombre de usuario y la contraseña del sistema de archivos FSx para ONTAP.
-** *Autenticación de Windows*: Ingrese el nombre de usuario y la contraseña de Windows, y el nombre de usuario y la contraseña del sistema de archivos FSx for ONTAP.
-
-
-. En el paso 3, prepare la instancia asegurándose de que cumpla con los requisitos previos requeridos. Si todos los módulos necesarios están instalados y se cumplen los prerrequisitos, seleccione *Siguiente* para registrar la instancia. Si necesita realizar alguna acción, siga estos pasos.
+.. Selecciona *Detalles de configuración* para cada capacidad para conocer los requisitos previos de la capacidad y sigue las instrucciones en pantalla para completar cualquier requisito previo que falte para una capacidad.
 +
-.. Si falta, seleccione la fábrica de carga de trabajo para *Instalar los módulos de AWS y NetApp PowerShell faltantes*.
-.. Si falta, seleccione la fábrica de cargas de trabajo para *Instalar el módulo PowerShell 7 faltante*. Para instalar el módulo PowerShell 7 faltante, es necesario reiniciar el sistema.
-.. Revise la lista de requisitos previos para las siguientes capacidades.  Asegúrese de cumplir con todos los requisitos previos por capacidad para registrar la instancia.
-+
-*** *Revisar problemas y recomendaciones bien diseñados*
-*** *Solucionar problemas bien diseñados*
-*** *Crear base de datos*
-*** *Crear copias de bases de datos (sandbox)*
-+
-Para completar los requisitos previos se incluye actualizar los permisos de política de AWS IAM, los permisos de perfil de instancia de EC2 IAM, los permisos de SQL Server y los módulos de PowerShell.
+Para tener Workload Factory en link:optimize-configurations.html["revisa y soluciona los problemas bien arquitectados"] para tus instancias, completa todos los requisitos previos que aparecen en *Review well-architected issues and recommendations* y *Fix well-architected issues* capabilities.
 
 
 
-.. Cuando se cumplan los requisitos previos y las comprobaciones estén *Listas*, puedes seleccionar *Registrar* la instancia.
-
-
+. Cuando los requisitos previos estén completos, *Registra* la(s) instancia(s).
 
 
 .Resultado
-Se inicia el registro de instancia.  Seleccione la pestaña *Supervisión de trabajos* para realizar un seguimiento del progreso.
+Se inicia el registro de la instancia. Selecciona la pestaña *Monitorización de trabajos* para seguir el progreso.
 
 
 
 == Registrar una base de datos Oracle
 
-El registro de una base de datos incluye la autenticación y preparación de la instancia.
+Registrar una instancia tiene tres pasos: autenticación de la base de datos, autenticación de FSx for ONTAP y preparación para completar los requisitos previos que faltan. Puedes registrar una o varias bases de datos.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
 . Desde el menú Bases de datos, seleccione *Inventario*.
-. En el Inventario, seleccione *Oracle* como motor de base de datos.
+. En el Inventario, selecciona *Oracle* como tipo de motor.
 . Seleccione la pestaña *Bases de datos*.
 . Seleccione para registrar una sola base de datos o varias bases de datos.
+. Para autenticar bases de datos (paso 1), haz lo siguiente:
 +
-.. Registro de base de datos única: navegue hasta la base de datos que desea administrar y seleccione *Registrar base de datos*.
-.. Registro de múltiples bases de datos: seleccione el botón *Registrar múltiples bases de datos*.
+** Selecciona *usar las mismas credenciales para todas las instancias* o *gestionar credenciales manualmente*.
+** Autentica al usuario de Oracle y al usuario de Automatic Storage Management (ASM) grid (si aplica) proporcionando el nombre de usuario y la contraseña.
 +
-Hay dos opciones disponibles para registrar varias bases de datos.  En ambos casos, las bases de datos deben compartir el mismo estado de autenticación (no autenticado o autenticado).
+Si las bases de datos están autenticadas, selecciona *Siguiente*.
 
+
+
+. Para autenticar FSx para ONTAP (paso 2), haz lo siguiente y luego selecciona *Siguiente*:
 +
-*** Bases de datos no autenticadas: seleccione varias bases de datos no autenticadas para registrar.  Estas bases de datos deben compartir las mismas credenciales de autenticación y FSx para las credenciales de ONTAP .  Seleccione *Aplicar* y luego *Siguiente*.
-*** Bases de datos autenticadas: seleccione varias bases de datos autenticadas para registrar y luego seleccione *Siguiente*.
-
-
-
-
-. En el paso 2 de la página Registrar bases de datos, seleccione el modo de autenticación de la base de datos, ingrese los siguientes detalles y seleccione *Siguiente*.  Si las bases de datos ya están autenticadas, seleccione *Siguiente*.
+** Selecciona *Usar las mismas credenciales para todos los recursos* o *Gestionar credenciales manualmente*.
+** Ingresa el nombre de usuario y la contraseña del sistema de archivos FSx for ONTAP.
 +
-** *Autenticación de usuario de Oracle*: ingrese el nombre de usuario y la contraseña de Oracle, y el nombre de usuario y la contraseña del sistema de archivos FSx for ONTAP .
-** *Autenticación de usuario de Oracle ASM*: Opcional.  Si la base de datos Oracle utiliza Gestión automática de almacenamiento (ASM), ingrese el nombre de usuario y la contraseña de Oracle ASM (grid).
+Si el sistema de archivos FSx para ONTAP está autenticado, selecciona *Siguiente*.
 
 
-. En el paso 3, prepare la base de datos asegurándose de que cumpla con los requisitos previos requeridos.  Si todos los módulos necesarios están instalados y se cumplen los requisitos previos, seleccione *Siguiente* para registrar la base de datos.  Si necesita tomar alguna acción, siga estos pasos.
+
+. Para preparar (paso 3), asegúrate de que la(s) base(s) de datos cumple(n) los requisitos previos. Si todos los módulos requeridos están instalados y se cumplen los requisitos previos, selecciona *Next* para registrar la base de datos. De lo contrario, sigue estos pasos.
 +
-.. Revise la lista de requisitos previos para la siguiente capacidad.  Se deben cumplir todos los requisitos previos para una única capacidad para poder registrar la base de datos.
+.. Revisa los prerrequisitos en la *Prerequisite check view*.
 +
-*** *Revisar problemas y recomendaciones bien diseñados*
+Debes completar todos los requisitos previos para una sola capacidad como *Revisar problemas y recomendaciones bien diseñados* para registrar la base de datos.
 
-
-.. Complete los siguientes requisitos previos:
+.. Selecciona *Detalles de configuración* para cada capacidad para conocer los requisitos previos de la capacidad y sigue las instrucciones en pantalla para completar cualquier requisito previo que falte para una capacidad.
 +
-*** *Permisos de política de AWS IAM*: copie y actualice los permisos de AWS en la consola de AWS.
-*** *Permisos de perfil de instancia de IAM de EC2*: copie y actualice los permisos de perfil de instancia de IAM de EC2 en la instancia de Amazon EC2 en la consola de AWS.
-*** *Módulos de implementación*: si es necesario, seleccione instalar módulos dependientes que incluyen la interfaz de línea de comandos de AWS (AWS CLI), jq (procesador JSON de línea de comandos) y Python 3.12, si la versión 3.6 o superior aún no está instalada.  Workload Factory instala automáticamente estos módulos como parte del proceso de registro.
-*** *Permisos de usuario de Oracle*: si es necesario, actualice los permisos para el usuario de Oracle.
+Para tener Workload Factory en link:optimize-configurations.html["revisa y soluciona los problemas bien arquitectados"] para tus bases de datos, completa todos los requisitos previos que aparecen en *Review well-architected issues and recommendations* y en las capacidades de *Fix well-architected issues*.
 
 
-.. Cuando se cumplan los requisitos previos y las comprobaciones estén *Listas*, puede seleccionar *Registrar* la base de datos.
 
-
+. Cuando termines los requisitos previos, *registra* la(s) base(s) de datos.
 
 
 .Resultado
-Se inicia el registro de la base de datos.  Seleccione la pestaña *Supervisión de trabajos* para realizar un seguimiento del progreso.
+Se inicia el registro de la base de datos. Selecciona la pestaña *Job monitoring* para seguir el progreso.
 
 .El futuro
 Después de registrar el recurso, puede realizar las siguientes tareas.

@@ -37,7 +37,7 @@ sidebar:
         url: "/create-database-server.html"
       - title: Crear servidor PostgreSQL
         url: "/create-postgresql-server.html"
-    - title: Administrar instancias
+    - title: Administra recursos
       entries:
       - title: Gestión de recursos
         url: manage-instance.html

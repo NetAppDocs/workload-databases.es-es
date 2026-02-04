@@ -17,7 +17,7 @@ indexpage:
     links:
     - title: Explora el ahorro
       url: "/explore-savings.html"
-    - title: Registrar una instancia
+    - title: Registrar recursos
       url: "/register-instance.html"
     - title: Visualice el estado de buena arquitectura de sus instancias
       url: "/optimize-configurations.html"

@@ -103,37 +103,37 @@ Workload Factory admite los siguientes motores de bases de datos, versiones, sis
 | Motor | Versión | Sistema operativo | Modelo de implementación 
 
 
-| Microsoft SQL Server | SQL Server 2016 | Windows Server 2016 | FCI, instancia única 
+| Microsoft SQL Server | SQL Server 2016 | Windows Server 2016 | FCI, autónomo 
 
 
-| Microsoft SQL Server | SQL Server 2019 | Windows Server 2016 | FCI, instancia única 
+| Microsoft SQL Server | SQL Server 2019 | Windows Server 2016 | FCI, autónomo 
 
 
-| Microsoft SQL Server | SQL Server 2022 | Windows Server 2016 | FCI, instancia única 
+| Microsoft SQL Server | SQL Server 2022 | Windows Server 2016 | FCI, autónomo 
 
 
-| Microsoft SQL Server | SQL Server 2016 | Windows Server 2019 | FCI, instancia única 
+| Microsoft SQL Server | SQL Server 2016 | Windows Server 2019 | FCI, autónomo 
 
 
-| Microsoft SQL Server | SQL Server 2019 | Windows Server 2019 | FCI, instancia única 
+| Microsoft SQL Server | SQL Server 2019 | Windows Server 2019 | FCI, autónomo 
 
 
-| Microsoft SQL Server | SQL Server 2022 | Windows Server 2019 | FCI, instancia única 
+| Microsoft SQL Server | SQL Server 2022 | Windows Server 2019 | FCI, autónomo 
 
 
-| Microsoft SQL Server | SQL Server 2016 | Windows Server 2022 | FCI, instancia única 
+| Microsoft SQL Server | SQL Server 2016 | Windows Server 2022 | FCI, autónomo 
 
 
-| Microsoft SQL Server | SQL Server 2019 | Windows Server 2022 | FCI, instancia única 
+| Microsoft SQL Server | SQL Server 2019 | Windows Server 2022 | FCI, autónomo 
 
 
-| Microsoft SQL Server | SQL Server 2022 | Windows Server 2022 | FCI, instancia única 
+| Microsoft SQL Server | SQL Server 2022 | Windows Server 2022 | FCI, autónomo 
 
 
-| Microsoft SQL Server | Servidor SQL 2017 | Cualquier | FCI, instancia única 
+| Microsoft SQL Server | Servidor SQL 2017 | Cualquier | FCI, autónomo 
 
 
-| Microsoft SQL Server | SQL Server 2016, 2017, 2019, 2022 | Cualquier | FCI, instancia única 
+| Microsoft SQL Server | SQL Server 2016, 2017, 2019, 2022 | Cualquier | FCI, autónomo 
 
 
 | Oráculo | 19c | RHEL, SuSe Linux | Independiente (inquilino único o múltiple) 

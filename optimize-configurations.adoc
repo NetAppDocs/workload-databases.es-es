@@ -11,7 +11,7 @@ summary: NetApp Workload Factory for Databases analiza las configuraciones de Mi
 
 
 [role="lead"]
-Utilizando los conocimientos y las recomendaciones del análisis de configuración, aproveche NetApp Workload Factory para implementar las mejores prácticas para sus configuraciones de bases de datos con Microsoft SQL Server y Oracle. Puede revisar fácilmente el estado de la arquitectura, conocer los problemas con las configuraciones de la base de datos y tomar medidas para mejorar cualquier configuración que no esté optimizada en términos de confiabilidad, seguridad, eficiencia, rendimiento y costo.
+Gracias a los conocimientos y las recomendaciones del análisis de configuraciones, aprovecha NetApp Workload Factory para aplicar las mejores prácticas en las configuraciones de tus bases de datos con Microsoft SQL Server y Oracle. Puedes revisar fácilmente el estado bien diseñado, conocer los problemas de las configuraciones de bases de datos y corregir las configuraciones que no están optimizadas para la fiabilidad, la seguridad, la eficiencia, el rendimiento y el coste.
 
 También puede descartar el análisis de configuraciones específicas que no se apliquen a su entorno para evitar alertas innecesarias y resultados de optimización inexactos.
 
@@ -42,7 +42,7 @@ Para instancias de Microsoft SQL Server:
 Para bases de datos Oracle:
 
 * Dimensionamiento del almacenamiento: incluye la asignación de espacio de intercambio y el margen del sistema de archivos
-* Configuración de almacenamiento: incluye administración de capacidad, aprovisionamiento ligero, política de niveles, instantáneas, eficiencia de almacenamiento y configuraciones del sistema operativo para implementaciones que utilizan NFS o iSCSI con o sin Administración automática de almacenamiento (ASM), incluido el estado y la configuración de E/S de múltiples rutas (MPIO) de Microsoft.
+* Configuración del almacenamiento: incluye la gestión de la capacidad, el aprovisionamiento fino, la política de niveles, las instantáneas, las eficiencias del almacenamiento y las configuraciones del sistema operativo para implementaciones que usan NFS o iSCSI con o sin Automatic Storage Management (ASM), incluyendo el estado y la configuración de Microsoft Multipath I/O (MPIO), y las siguientes configuraciones de dNFS: habilitación de dNFS, resolución IP coherente de dNFS, archivo de configuración de dNFS y dNFS `nosharecache`
 * Diseño de almacenamiento: incluye la ubicación del registro de rehacer, la ubicación del espacio de tabla temporal, la ubicación de los archivos de datos, la ubicación del registro de archivo, la ubicación de los archivos de control y la ubicación de los binarios, y el conteo de LUN de los grupos de discos ASM
 
 
