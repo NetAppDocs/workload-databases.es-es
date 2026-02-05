@@ -65,8 +65,8 @@ Workload Factory admite el registro para Failover Cluster Instance (FCI) y la im
 . Seleccione para registrar una sola instancia o varias instancias.
 . Para autenticar instancias (paso 1), haz lo siguiente y luego selecciona *Siguiente*:
 +
-** Selecciona *usar las mismas credenciales para todas las instancias* o *gestionar credenciales manualmente*.
-** Autentica SQL Server y Windows proporcionando el nombre de usuario y la contraseña.
+.. Selecciona *usar las mismas credenciales para todas las instancias* o *gestionar credenciales manualmente*.
+.. Autentica SQL Server y Windows proporcionando el nombre de usuario y la contraseña.
 +
 Si las instancias están autenticadas, selecciona *Siguiente*.
 
@@ -74,8 +74,8 @@ Si las instancias están autenticadas, selecciona *Siguiente*.
 
 . Para autenticar FSx para ONTAP (paso 2), haz lo siguiente:
 +
-** Selecciona *Usar las mismas credenciales para todos los recursos* o *Gestionar credenciales manualmente*.
-** Introduce el nombre de usuario y la contraseña del sistema de archivos FSx for ONTAP y luego selecciona *Next*.
+.. Selecciona *Usar las mismas credenciales para todos los recursos* o *Gestionar credenciales manualmente*.
+.. Introduce el nombre de usuario y la contraseña del sistema de archivos FSx for ONTAP y luego selecciona *Next*.
 +
 Si el sistema de archivos FSx para ONTAP está autenticado, selecciona *Siguiente*.
 
@@ -83,15 +83,16 @@ Si el sistema de archivos FSx para ONTAP está autenticado, selecciona *Siguient
 
 . Para preparar (paso 3), asegúrate de que la(s) instancia(s) cumple(n) los requisitos mínimos.
 +
-Para cumplir los requisitos mínimos, la instancia debe tener instalados los módulos de AWS y NetApp PowerShell y los módulos de PowerShell 7, y debes completar los requisitos previos para al menos una de las capacidades enumeradas en Prerequisite check. .. Revisa los requisitos previos en la vista *Prerequisite check*.
+Para cumplir los requisitos mínimos, la instancia debe tener instalados los módulos de AWS y NetApp PowerShell y los módulos de PowerShell 7, y debes completar los requisitos previos para al menos una de las capacidades enumeradas en Prerequisite check.
 
 +
-+ Debes completar todos los requisitos previos para una sola capacidad como *Revisar problemas y recomendaciones bien diseñados* para registrar la instancia.
-
+.. Revisa los prerrequisitos en la *Prerequisite check view*.
 +
+Debes completar todos los requisitos previos para una sola capacidad como *Revisar problemas y recomendaciones bien diseñados* para registrar la instancia.
+
 .. Selecciona *Detalles de configuración* para cada capacidad para conocer los requisitos previos de la capacidad y sigue las instrucciones en pantalla para completar cualquier requisito previo que falte para una capacidad.
 +
-Para tener Workload Factory en link:optimize-configurations.html["revisa y soluciona los problemas bien arquitectados"] para tus instancias, completa todos los requisitos previos que aparecen en *Review well-architected issues and recommendations* y *Fix well-architected issues* capabilities.
+Para tener Workload Factory link:optimize-configurations.html["revisa y soluciona los problemas bien arquitectados"] para tus instancias, completa todos los requisitos previos que aparecen en las capacidades *Revisar problemas y recomendaciones bien diseñados* y *Corregir problemas bien diseñados*.
 
 
 
@@ -140,7 +141,7 @@ Debes completar todos los requisitos previos para una sola capacidad como *Revis
 
 .. Selecciona *Detalles de configuración* para cada capacidad para conocer los requisitos previos de la capacidad y sigue las instrucciones en pantalla para completar cualquier requisito previo que falte para una capacidad.
 +
-Para tener Workload Factory en link:optimize-configurations.html["revisa y soluciona los problemas bien arquitectados"] para tus bases de datos, completa todos los requisitos previos que aparecen en *Review well-architected issues and recommendations* y en las capacidades de *Fix well-architected issues*.
+Para tener Workload Factory link:optimize-configurations.html["revisa y soluciona los problemas bien arquitectados"] para tus bases de datos, completa todos los requisitos previos que aparecen en *Revisar problemas y recomendaciones bien diseñados* y *Corregir problemas bien diseñados*.
 
 
 
