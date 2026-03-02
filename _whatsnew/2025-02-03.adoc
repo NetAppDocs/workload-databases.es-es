@@ -1,12 +1,12 @@
-= Los entornos de bases de datos on-premises analizan los costes y planifican las migraciones
+= Análisis de costes y planificación de migración de entornos de bases de datos on-premises SQL Server
 :allow-uri-read: 
 
 
 
 
-=== Los entornos de bases de datos on-premises analizan los costes y planifican las migraciones
+=== Análisis de costes y planificación de migración de entornos de bases de datos on-premises SQL Server
 
-La fábrica de cargas de trabajo de BlueXP  para bases de datos ahora detecta, analiza y ayuda a planificar la migración de bases de datos on-premises a Amazon FSx para NetApp ONTAP. Puedes utilizar la calculadora de ahorro para estimar el coste que supone ejecutar tu entorno de bases de datos on-premises en la nube y revisar las recomendaciones para migrar tu entorno de bases de datos on-premises a la nube.
+BlueXP Workload Factory para bases de datos ahora detecta, analiza y te ayuda a planificar la migración de bases de datos locales de SQL Server a Amazon FSx for NetApp ONTAP. Puedes usar la calculadora de ahorro para estimar el coste de ejecutar tu entorno de bases de datos locales de SQL Server en la nube y revisar recomendaciones para migrar tu entorno de bases de datos locales a la nube.
 
 link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explora el ahorro que puedes conseguir en entornos de bases de datos on-premises"]
 

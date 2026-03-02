@@ -19,9 +19,9 @@ Solo puedes registrar tus recursos si se ejecutan en FSx para ONTAP file system 
 
 == Acerca de la tarea
 
-Registrar una instancia (SQL Server) o base de datos (Oracle) tiene tres pasos: autenticación de la instancia o base de datos, autenticación de FSx para ONTAP y preparación. La preparación implica asegurarte de que todos los módulos de AWS, NetApp y PowerShell estén instalados en la instancia o base de datos, y que se cumplan los requisitos mínimos para las funciones de Workload Factory for Databases como link:analyze-error-logs.html["análisis de registros de errores"] o link:optimize-configurations.html["revisión well-architected"].
+Registrar una instancia (SQL Server) o una base de datos (Oracle) implica tres pasos: autenticación de la instancia o base de datos, autenticación de FSx for ONTAP y preparación. Para prepararte, instala los módulos de AWS, NetApp y PowerShell en la instancia o base de datos, y cumple los requisitos mínimos para las funciones de Workload Factory for Databases como link:analyze-error-logs.html["análisis de registros de errores"] o link:optimize-configurations.html["evaluación bien diseñada"].
 
-Workload Factory solo admite el registro y la administración de instancias de Microsoft SQL Server y de bases de datos Oracle.  Según las credenciales de la cuenta de AWS que seleccione en Workload Factory, los hosts PostgreSQL podrían aparecer en el Inventario.  Actualmente, Workload Factory admite instancias de PostgreSQL no registradas que se ejecutan únicamente en sistemas operativos Amazon Linux.
+Workload Factory solo admite el registro y la administración de instancias de Microsoft SQL Server y Oracle. Dependiendo de las credenciales de la cuenta de AWS que elijas en Workload Factory, los hosts PostgreSQL aparecen en el inventario. Actualmente, Workload Factory admite instancias PostgreSQL no registradas que se ejecutan solo en sistemas operativos Amazon Linux.
 
 
 
@@ -33,14 +33,14 @@ El host de la instancia o base de datos debe aparecer en el Inventario. Para que
 
 === Registrar una instancia en una red privada
 
-Para registrar una instancia (SQL Server) o una base de datos (Oracle) en una red privada sin conectividad externa, los siguientes puntos finales deben estar disponibles en la VPC con asociación a las subredes donde están presentes los servidores SQL.  Asegúrese de que los puntos finales de la interfaz permitan el puerto 443 en el grupo de seguridad adjunto.
+Para registrar una instancia o base de datos en una red privada sin conectividad externa, haz que los endpoints necesarios estén disponibles en la VPC y asígnalos a las subredes correspondientes. Permite el puerto 443 en el Security Group para los endpoints de interfaz.
 
 * `S3 Gateway/endpoint`
 * `ssm`
 * `ssmmessages`
 * `fsx`
 +
-Si utiliza un servidor proxy para todas las conexiones salientes de instancias EC2, debe permitir el acceso a los siguientes dominios para que las operaciones de gestión funcionen:
+Si usas un servidor proxy para las conexiones EC2 salientes, permite el acceso a estos dominios para las operaciones de gestión:
 
 * ``.microsoft.com``(Servidor SQL)
 * ``.powershellgallery.com``(Servidor SQL)
@@ -92,11 +92,11 @@ Debes completar todos los requisitos previos para una sola capacidad como *Revis
 
 .. Selecciona *Detalles de configuración* para cada capacidad para conocer los requisitos previos de la capacidad y sigue las instrucciones en pantalla para completar cualquier requisito previo que falte para una capacidad.
 +
-Para tener Workload Factory link:optimize-configurations.html["revisa y soluciona los problemas bien arquitectados"] para tus instancias, completa todos los requisitos previos que aparecen en las capacidades *Revisar problemas y recomendaciones bien diseñados* y *Corregir problemas bien diseñados*.
+Para habilitar Workload Factory para link:optimize-configurations.html["revisa y soluciona los problemas bien arquitectados"], completa todos los requisitos previos en *Revisar problemas y recomendaciones bien diseñados* y *Corregir problemas bien diseñados*.
 
 
 
-. Cuando los requisitos previos estén completos, *Registra* la(s) instancia(s).
+. Después de completar todos los requisitos previos, *Registra* la(s) instancia(s).
 
 
 .Resultado
@@ -145,14 +145,14 @@ Para tener Workload Factory link:optimize-configurations.html["revisa y solucion
 
 
 
-. Cuando termines los requisitos previos, *registra* la(s) base(s) de datos.
+. Después de completar los requisitos previos, *Registra* la(s) base(s) de datos.
 
 
 .Resultado
 Se inicia el registro de la base de datos. Selecciona la pestaña *Job monitoring* para seguir el progreso.
 
 .El futuro
-Después de registrar el recurso, puede realizar las siguientes tareas.
+Después de registrarte, puedes realizar estas tareas.
 
 * Ver bases de datos desde el inventario
 * link:create-database.html["Cree una base de datos"]
