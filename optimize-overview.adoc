@@ -25,28 +25,238 @@ Estas son algunas funcionalidades clave:
 
 
 
-== Componentes del análisis de configuración
+== Cómo funciona
 
-El análisis de configuración incluye los siguientes componentes:
+Workload Factory analiza tus cargas de trabajo que se ejecutan diariamente en Amazon FSx for NetApp ONTAP file systems deployments. El análisis proporciona estado bien arquitectado, información y recomendaciones.
 
-Estado bien diseñado:: El estado de buena arquitectura se refiere al estado general de las configuraciones de su base de datos; las configuraciones se clasifican como "optimizadas", "no optimizadas" o "con exceso de aprovisionamiento". El estado de una configuración bien diseñada se consulta desde una instancia de Microsoft SQL Server o una base de datos Oracle en la consola de Workload Factory.
-Partitura bien diseñada:: La puntuación incluye todas las configuraciones analizadas actualmente y se muestra como un porcentaje. Una puntuación del 25% significa que el 25% de sus implementaciones de bases de datos están bien diseñadas. La puntuación de buena arquitectura se consulta desde la pantalla *Buena arquitectura* y desde una instancia de Microsoft SQL Server o una base de datos Oracle en la consola de Workload Factory.
-Categorías de configuración:: Las configuraciones se organizan en las siguientes categorías: almacenamiento, computación, aplicación, resiliencia y clonación. Cada categoría incluye evaluaciones de configuración específicas que se analizan periódicamente. Las categorías de configuración se referencian desde la pantalla *Bien arquitectónico* y desde dentro de una instancia de Microsoft SQL Server o una base de datos Oracle en la consola de Workload Factory.
+Después de que se complete el análisis diario, las configuraciones aparecen como "optimizadas" o "no optimizadas" en el panel Well-architected para la implementación. Encontrarás la puntuación total de optimización, los problemas de configuración por categoría y una lista de problemas de configuración y recomendaciones. Puedes revisar las recomendaciones para los problemas de configuración. Algunos problemas pueden solucionarse automáticamente por Workload Factory, mientras que otros requieren intervención manual. En este caso, Workload Factory te da instrucciones detalladas para ayudarte a implementar los cambios recomendados.
 
-
+Puedes descartar el análisis de configuraciones que no se aplican a tus entornos. Esto evita alertas innecesarias y resultados de optimización imprecisos. Cuando descartas el análisis de una configuración específica, Workload Factory no incluye la configuración en la puntuación total de optimización.
 
 
-== Alcance del análisis
 
-El alcance de la optimización es diferente dependiendo del componente que se esté evaluando. Por ejemplo, la optimización del almacenamiento se produce en el nivel de instancia de SQL mientras que la optimización de computación se produce en el nivel de host.
+== Por qué es importante
+
+Workload Factory aplica las mejores prácticas a grandes entornos de almacenamiento, bases de datos y VMware combinando la evaluación continua con recomendaciones y correcciones. Las correcciones automatizadas aplicadas en la consola de Workload Factory reducen los errores humanos, garantizan una gestión uniforme y preservan el rendimiento y la fiabilidad en todas tus infraestructuras de cargas de trabajo.
 
 
 
 == Requisitos de análisis
 
-Para un análisis completo del entorno de base de datos, los recursos deben estar registrados y en línea.
+Para realizar un análisis completo del entorno de bases de datos, tienes que hacer lo siguiente:
 
-link:register-instance.html["Aprenda cómo registrar recursos."]
+* link:register-instance.html["Registra tus recursos"] y asegúrate de que están en línea.
+* Asocia un enlace. La conectividad de enlaces permite que Workload Factory analice todas las configuraciones de despliegue de bases de datos como la distribución de almacenamiento y la resiliencia.
++
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprende cómo asociar un enlace existente o crear y asociar un nuevo enlace"].
+
+* Concede permisos de _vista, planificación y análisis_ en tu cuenta de AWS.
++
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprende cómo conceder permisos a una cuenta de AWS"^]
+
+
+
+
+
+== Mejores prácticas y recomendaciones para cargas de trabajo de bases de datos
+
+Workload Factory proporciona un conjunto de mejores prácticas y recomendaciones para operar cargas de trabajo de bases de datos bien arquitecturadas. El análisis bien arquitecturado evalúa las configuraciones y ajustes de Microsoft SQL Server y Oracle Database relacionados con el dimensionamiento del almacenamiento, la distribución de almacenamiento, la configuración del almacenamiento, el cómputo, la aplicación (SQL Server) y la resiliencia.
+
+
+
+=== Microsoft SQL Server
+
+
+
+==== Dimensionamiento del almacenamiento
+
+* *Nivel de almacenamiento*
++
+Usa el nivel primario de SSD para volúmenes FSx para ONTAP para asegurar un rendimiento óptimo. El nivel de grupo de capacidad puede reducir el rendimiento y aumentar la latencia. El nivel primario de SSD está diseñado para cargas de trabajo de alto rendimiento, mientras que el nivel de grupo de capacidad está optimizado para la eficiencia de costos y puede que no cumpla con los requisitos de rendimiento de las cargas de trabajo de SQL Server.
+
+* *Espacio libre del sistema de archivos*
++
+Mantén suficiente capacidad del sistema de archivos por encima del tamaño total de tu volumen. Un margen demasiado pequeño causa problemas de rendimiento; demasiado desperdicia almacenamiento y aumenta los costos.
+
+* *Tamaño de la unidad de log*
++
+Dimensiona y supervisa adecuadamente tu unidad de registro de SQL Server para evitar reversiones de transacciones, indisponibilidad de la base de datos, corrupción de datos y problemas de rendimiento causados por una unidad de registro llena.
+
+* *Tamaño de la unidad TempDB*
++
+Dimensiona y supervisa TempDB adecuadamente para mantener un rendimiento óptimo y la estabilidad del sistema. Un espacio insuficiente en TempDB puede causar ralentizaciones en las consultas, tiempos de espera de las aplicaciones y caídas del sistema.
+
+
+
+
+
+==== Distribución de almacenamiento
+
+* *Colocación de archivos de datos (.mdf)* y *colocación de archivos de registro (.ldf)*
++
+Coloca los archivos de datos y de registro en unidades independientes para mejorar el rendimiento y permitir operaciones independientes de copia de seguridad y restauración.
+
+* *Colocación de TempDB*
++
+Coloca TempDB en una unidad dedicada para evitar la contención de E/S y mejorar el rendimiento y la estabilidad de SQL Server. De lo contrario, puedes experimentar cuellos de botella de E/S, consultas más lentas e inestabilidad del sistema.
+
+
+
+
+
+==== Configuración de almacenamiento
+
+* *Configuración de ONTAP*
++
+Habilita el aprovisionamiento fino, el tamaño automático y la gestión de espacio para los volúmenes de FSx for ONTAP para optimizar la eficiencia del almacenamiento y la rentabilidad. Configura las políticas de asignación de niveles para mover las instantáneas más antiguas al nivel de capacidad mientras mantienes un alto rendimiento para los datos activos. Para los LUNs, asegúrate de que el tipo de sistema operativo coincida con tu esquema de particionado del sistema operativo para una alineación correcta de E/S, habilita la reserva de espacio para evitar fallos de escritura y habilita la asignación de espacio para permitir la reclamación automática de espacio y notificaciones al host cuando el almacenamiento esté lleno.
+
+* *Sistema operativo*
++
+Habilita y configura Microsoft Multipath I/O (MPIO) con los ajustes de tiempo de espera adecuados para asegurar la alta disponibilidad y la coherencia en el acceso a los datos para las bases de datos de SQL Server en EC2 con FSx para ONTAP. MPIO proporciona rutas redundantes para mejorar la resiliencia y el rendimiento durante las conmutaciones por error. Configura el tamaño de la unidad de asignación NTFS de manera adecuada para una utilización y un rendimiento óptimos del disco.
+
+
+
+
+
+==== Cómputo
+
+* *Ajuste correcto de recursos de cómputo*
++
+Redimensiona tu instancia EC2 de SQL Server según las demandas de carga de trabajo para equilibrar el rendimiento y la eficiencia de costos. Si tu instancia actual está infraaprovisionada, actualizarla puede mejorar la capacidad de CPU, memoria y E/S. Si está sobreaprovisionada, reducirla puede mantener el rendimiento mientras disminuyes los costos.
+
+* *Parche del sistema operativo*
++
+Aplica los últimos parches del sistema operativo para mejorar la seguridad y la fiabilidad del sistema.
+
+* *Configuración del adaptador de red*
++
+Configura Receive Side Scaling (RSS) para distribuir el procesamiento de red entre varios procesadores y mejorar el rendimiento de la red. Prueba la configuración antes de aplicarla en producción.
+
+* *Alineación de MTU*
++
+Alinea la configuración de la unidad de transmisión máxima (MTU) de la instancia EC2 con FSx para ONTAP para evitar la fragmentación de la red y optimizar el rendimiento de SQL Server. Corregir la desalineación de MTU asegura una configuración de MTU coherente en todos los nodos y rutas de red.
+
+
+
+
+
+==== Aplicación (SQL Server)
+
+* *Licencia*
++
+La evaluación y la recomendación de la licencia de SQL Server se proporcionan a nivel de host. Workload Factory considera una licencia "no optimizada" cuando detecta que tu infraestructura de bases de datos no usa ninguna de las características de la licencia de software comercial por las que estás pagando. Una licencia no optimizada puede resultar en costes innecesarios. Revisa el uso de tu licencia de SQL Server para asegurarte de que estás utilizando todas las características por las que pagas.
+
+* *Parche de Microsoft SQL Server*
++
+Aplica los últimos parches de SQL Server para mejorar la seguridad, protegerte contra vulnerabilidades y mejorar la fiabilidad del sistema.
+
+* *MAXDOP*
++
+Configura MAXDOP para optimizar el rendimiento de las consultas. Los valores de 4, 8 o 16 suelen funcionar bien. Prueba tu carga de trabajo y monitorea los tipos de espera de paralelismo como CXPACKET.
+
+
+
+
+
+==== Fiabilidad
+
+* *Programa instantáneas locales*
++
+Programa instantáneas periódicas para copias de seguridad en un momento específico y recuperación rápida ante eliminaciones accidentales, corrupción de datos y otros problemas.
+
+* *Configuración de backup*
++
+Configura FSx para ONTAP backups o AWS Backup para cumplir los requisitos de retención de datos y cumplimiento. Evita backups redundantes.
+
+* *Replicación interregional*
++
+Habilita la replicación entre regiones (CRR) para mejorar la disponibilidad de datos y la recuperación ante desastres. Usa CRR para protegerte contra interrupciones regionales y asegurar la continuidad del negocio.
+
+* *Microsoft SQL Server alta disponibilidad*
++
+Asegúrate de que la alta disponibilidad esté configurada para SQL Server comprobando que todo el almacenamiento compartido sea accesible por todos los nodos del clúster, que las letras de unidad sean las mismas en todos los nodos para evitar conflictos durante la conmutación por error, que el quórum esté configurado para la salud del clúster, que los umbrales de heartbeat estén establecidos para entornos de nube y que los servicios de SQL Server estén configurados para el inicio automático y la conmutación por error.
+
+* *Limpieza de clones*
++
+Revisa y elimina periódicamente los clones obsoletos para reducir los costos de almacenamiento. Los clones antiguos y no utilizados generan costos altos.
+
+
+
+
+
+=== Oráculo
+
+
+
+==== Dimensionamiento del almacenamiento
+
+* *Espacio libre del sistema de archivos*
++
+Mantén una capacidad adecuada del sistema de archivos para optimizar el rendimiento del almacenamiento y evitar la degradación del rendimiento. Un margen suficiente permite una gestión eficiente del almacenamiento y apoya el crecimiento de la base de datos.
+
+* *Espacio de intercambio*
++
+Configura el espacio de intercambio según la cantidad de RAM para que el sistema pueda manejar la presión de memoria y evitar ralentizaciones o bloqueos.
+
+
+
+
+
+==== Distribución de almacenamiento
+
+* *Colocación binaria de Oracle*
++
+Coloca los binarios de Oracle en un volumen dedicado para asegurar un rendimiento y una estabilidad óptimos al reducir la contención de E/S. Esta separación simplifica las actualizaciones de software y minimiza el riesgo de modificaciones accidentales o corrupción.
+
+* *Ubicación de los archivos de datos*
++
+Coloca los archivos de datos en un volumen dedicado o con archivos de control para aislar la E/S aleatoria y mejorar el rendimiento. Esta separación permite personalizar las configuraciones de instantáneas, las políticas de niveles y los mecanismos de eficiencia para optimizar el rendimiento y el coste.
+
+* *Colocación de archivos de control*
++
+Almacena copias de los archivos de control en diferentes volúmenes o discos para evitar un punto único de fallo y añadir redundancia. Coloca los archivos de control en un volumen dedicado o compártelos con redo logs o archivos de datos, pero no los coloques en volúmenes escalonados al almacenamiento de objetos debido a los requisitos de rendimiento.
+
+* *Colocación de redo logs*
++
+Coloca los registros de recuperación en un volumen dedicado o compártelos adecuadamente con archivos temporales o de control para aislar las operaciones de E/S de alta escritura y mejorar el rendimiento. Guarda cada copia del registro de recuperación en un volumen separado para redundancia. No pongas los registros de recuperación en instantáneas de volumen ni en volúmenes escalonados al almacenamiento de objetos porque se actualizan con frecuencia.
+
+* *Colocación temporal*
++
+Coloca los archivos temporales en un volumen dedicado o compártelos apropiadamente con los archivos de redo o de control para aislar las operaciones de E/S de alta escritura y mejorar el rendimiento. Cada copia temporal multiplexada debe residir en un volumen separado para redundancia. Los archivos temporales no deben colocarse en instantáneas de volumen o en volúmenes escalonados a almacenamiento de objetos debido a sus frecuentes patrones de actualización.
+
+* *Colocación de archivos*
++
+Coloca los registros de archivo en un volumen dedicado para mejorar el rendimiento y los procesos de recuperación, evitando que las demandas elevadas de E/S interfieran con otras operaciones de la base de datos.
+
+* *Configuraciones solo ASM: LUNs del grupo de discos de datos ASM, LUNs del grupo de discos de registros ASM y LUNs del grupo de discos de archivo ASM*
++
+Distribuye los LUN entre los grupos de discos de datos, registro de recuperación y registro de archivo de Automatic Storage Management (ASM) para un rendimiento y una redundancia óptimos.
+
+
+
+
+
+==== Configuración de almacenamiento
+
+* *ONTAP*
++
+Optimiza la configuración de FSx for ONTAP para bases de datos Oracle habilitando thin provisioning, autosize y gestión de espacio para volúmenes. Configura políticas de snapshot y estrategias de tiering adecuadas para equilibrar el rendimiento y el costo. Para LUNs, asegúrate de que la alineación del tipo de OS, la reserva de espacio y los ajustes de asignación de espacio sean los adecuados para evitar fallos de escritura y habilitar la reclamación automática de espacio.
+
+* *Sistema operativo*
++
+Configura los ajustes del sistema operativo para un rendimiento óptimo de la base de datos Oracle, incluyendo la optimización de los parámetros del kernel para las cargas de trabajo de la base de datos y la configuración adecuada de NFS o dNFS para el acceso al sistema de archivos de red.
+
+
+
+
+
+==== Cómputo
+
+* *Parche del sistema operativo*
++
+Aplica los parches del sistema operativo con regularidad para asegurar la seguridad, la estabilidad y las mejoras de rendimiento de tu entorno de bases de datos Oracle.
+
+
 
 .El futuro
 link:optimize-configurations.html["Implementar configuraciones de bases de datos bien diseñadas"]
