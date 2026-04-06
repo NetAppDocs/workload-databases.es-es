@@ -348,6 +348,9 @@ Si NetApp Workload Factory detecta shadow copies de Amazon FSx for Windows, esta
 
 
 . Para obtener resultados más precisos, actualice la información de computación y los detalles de almacenamiento y rendimiento.
++
+Workload Factory consolida varias bases de datos locales de Oracle en una única recomendación de configuración de FSx para ONTAP para optimizar el ahorro de costes, a menos que las bases de datos locales seleccionadas superen los límites de rendimiento, capacidad o IOPS de un único sistema de archivos FSx para ONTAP.
+
 
 
 --
