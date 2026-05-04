@@ -170,7 +170,7 @@ Configura MAXDOP para optimizar el rendimiento de las consultas. Los valores de 
 
 
 
-==== Fiabilidad
+==== Resiliencia
 
 * *Programa instantáneas locales*
 +
@@ -291,6 +291,14 @@ Habilita la replicación entre regiones (CRR) para mejorar la disponibilidad de 
 * *Instantáneas consistentes con las aplicaciones*
 +
 Usa instantáneas consistentes con las aplicaciones con NetApp SnapCenter para tomar instantáneas precisas y fiables de tus datos de volumen en un momento específico. Esto mantiene tus aplicaciones funcionando sin problemas y tus datos seguros. SnapCenter facilita las copias de seguridad y te ayuda a restaurar los datos de forma rápida y correcta, reduciendo el tiempo de inactividad y protegiendo tus cargas de trabajo más importantes.
+
+* *Configuración de backup*
++
+Configura FSx para ONTAP backups o AWS Backup para cumplir los requisitos de retención de datos y cumplimiento. Evita backups redundantes.
+
+* *Limpieza de clones*
++
+Revisa y elimina periódicamente los clones obsoletos para reducir los costos de almacenamiento. Los clones antiguos y no utilizados generan costos altos.
 
 
 

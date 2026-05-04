@@ -37,7 +37,7 @@ Para instancias de Microsoft SQL Server:
 * Configuración de almacenamiento: incluye administración de capacidad, aprovisionamiento fino, política de niveles, instantáneas, estado de E/S de múltiples rutas de Microsoft (MPIO) y configuración de tiempo de espera de MPIO
 * Computación: incluye ajuste de tamaño, parches del sistema operativo y configuraciones del adaptador de red como escalamiento del lado de recepción (RSS), descarga de TCP y alineación de MTU
 * Aplicación: incluye licencias de Microsoft SQL Server, parche de Microsoft SQL Server y configuración de MAXDOP
-* Resiliencia: incluye instantáneas locales, copias de seguridad de FSx para ONTAP , replicación entre regiones (CRR) y alta disponibilidad de Microsoft SQL.
+* Resiliencia: incluye instantáneas locales, configuración de backup, replicación entre regiones (CRR), Microsoft SQL High Availability y limpieza de clones
 * Clones: incluye opciones para actualizar y eliminar clones (sandboxes) que se crearon dentro o fuera de Workload Factory y que tienen más de 60 días
 
 
@@ -48,7 +48,7 @@ Para bases de datos Oracle:
 * Diseño de almacenamiento: incluye la ubicación del registro de rehacer, la ubicación del espacio de tabla temporal, la ubicación de los archivos de datos, la ubicación del registro de archivo, la ubicación de los archivos de control y la ubicación de los binarios, y el conteo de LUN de los grupos de discos ASM
 * Compute: incluye parches del sistema operativo
 * Aplicación: incluye actualizaciones de parches críticos de Oracle
-* Resiliencia: incluye replicación entre regiones (CRR) e instantáneas consistentes con las aplicaciones
+* Resiliency: incluye replicación entre regiones (CRR), instantáneas consistentes con las aplicaciones, configuración de backup y limpieza de clones
 
 
 El análisis bien diseñado para Oracle te notifica cuando una configuración depende de otras y enumera acciones para optimizar las configuraciones vinculadas.

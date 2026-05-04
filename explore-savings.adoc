@@ -163,7 +163,7 @@ Para cambiar a FSX para ONTAP, siga las instrucciones a <<Pon en marcha Microsof
 
 === Explora el ahorro para los hosts detectados
 
-Workload Factory ingresa las características del host de Elastic Block Store y FSx para Windows File Server detectadas para que pueda explorar los ahorros automáticamente.
+Workload Factory introduce las características detectadas del host para que puedas explorar el ahorro automáticamente.
 
 .Antes de empezar
 Complete los siguientes requisitos previos antes de comenzar:
@@ -220,6 +220,10 @@ Complete los siguientes requisitos previos antes de comenzar:
 
 
 
+
+
+
+==== Explora el ahorro para hosts Microsoft SQL Server detectados
 
 Siga los pasos de la pestaña para su tipo de almacenamiento.
 
@@ -318,6 +322,59 @@ Workload Factory consolida varios hosts locales de SQL Server en una única reco
 
 
 
+.Eliminación de host en las instalaciones
+Después de explorar los ahorros para un host local de Microsoft SQL Server, tiene la opción de eliminar el registro del host local de Workload Factory.  Seleccione el menú de acciones del host local de Microsoft SQL Server y luego seleccione *Eliminar*.
+
+--
+====
+Después de proporcionar detalles para la configuración del host de la base de datos, revise los cálculos y las recomendaciones que se proporcionan en la página.
+
+Además, desplácese hasta la parte inferior de la página para ver el informe seleccionando una de las siguientes opciones:
+
+* *Exportar PDF*
+* *Enviar por correo electrónico*
+* *Ver los cálculos*
+
+
+Para cambiar a FSX para ONTAP, siga las instrucciones a <<Pon en marcha Microsoft SQL Server en AWS EC2 mediante FSx para ONTAP,Implemente Microsoft SQL Server en AQS EC2 utilizando FSx para sistemas de archivos ONTAP>>.
+
+
+
+==== Explora el ahorro para los hosts Oracle detectados
+
+Siga los pasos de la pestaña para su tipo de almacenamiento.
+
+[role="tabbed-block"]
+====
+.Elastic Block Store (EBS) de Amazon
+--
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Bases de datos*.
+. En el menú Bases de datos, selecciona *Explorar ahorros*.
+. En Explorar ahorros, selecciona la pestaña *Oracle en Elastic Block Store (EBS)*.
++
+Si Workload Factory detecta hosts EBS, te redirige a la pestaña Explore savings. Si no detecta hosts EBS, te redirige a la calculadora para <<Explora el ahorro a través de la personalización,explora el ahorro a través de la personalización>>.
+
+. En *Explorar ahorros*, seleccione uno o más hosts de bases de datos que se ejecuten en EBS y luego seleccione *Explorar ahorros*.
+. Si es necesario, autentica el host de la base de datos con credenciales de Oracle o añadiendo los permisos de Oracle que falten.
++
+Si la página Explorar ahorros no carga datos después de una autenticación exitosa, seleccione la pestaña *Inventario* para volver a cargar los datos y luego seleccione la pestaña *Explorar ahorros* nuevamente.
+
+. En la calculadora de ahorro, puedes dar los siguientes detalles sobre clones e instantáneas en tu almacenamiento EBS para una estimación de ahorro de costes más precisa.
++
+.. *Frecuencia de instantáneas*: seleccione una frecuencia de instantáneas en el menú.
+.. *Frecuencia de actualización de clones*: seleccione la frecuencia con la que se actualizan los clones en el menú.
+.. *Número de copias clonadas*: Introduzca el número de copias clonadas en la configuración de EBS.
+.. *Tasa de cambio mensual*: Ingrese el porcentaje que los datos de clonación y instantánea cambian en promedio por mes.
+.. *Agregar hosts*: opcionalmente, seleccione hasta cinco hosts EBS detectados para incluirlos en el cálculo de ahorro.
++
+Workload Factory consolida varios hosts Oracle en una única recomendación de configuración de FSx para ONTAP para optimizar el ahorro de costes, a menos que los hosts EBS seleccionados superen los límites de rendimiento, capacidad o IOPS de un único sistema de archivos FSx para ONTAP.
+
+
+
+
+
 --
 .Servidor Oracle en las instalaciones
 --
@@ -353,6 +410,9 @@ Workload Factory consolida varias bases de datos locales de Oracle en una única
 
 
 
+.Eliminación de host en las instalaciones
+Después de haber explorado los ahorros para un host local de Oracle, tienes la opción de eliminar el registro del host local de Workload Factory. Selecciona el menú de acciones del host local de Oracle y luego selecciona *Delete*.
+
 --
 ====
 Después de proporcionar detalles para la configuración del host de la base de datos, revise los cálculos y las recomendaciones que se proporcionan en la página.
@@ -365,9 +425,6 @@ Además, desplácese hasta la parte inferior de la página para ver el informe s
 
 
 Para cambiar a FSX para ONTAP, siga las instrucciones a <<Pon en marcha Microsoft SQL Server en AWS EC2 mediante FSx para ONTAP,Implemente Microsoft SQL Server en AQS EC2 utilizando FSx para sistemas de archivos ONTAP>>.
-
-.Eliminación de host en las instalaciones
-Después de explorar los ahorros para un host local de Microsoft SQL Server, tiene la opción de eliminar el registro del host local de Workload Factory.  Seleccione el menú de acciones del host local de Microsoft SQL Server y luego seleccione *Eliminar*.
 
 
 
