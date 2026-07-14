@@ -15,6 +15,7 @@ Realice un seguimiento de los trabajos de la base de datos y monitoree las bases
 
 
 
+[[about-this-task]]
 == Acerca de esta tarea
 
 Database proporciona supervisión de trabajos para que pueda realizar un seguimiento del progreso de los trabajos, así como diagnosticar y solucionar problemas en caso de que se produzca algún fallo. Puede filtrar trabajos por tipo y estado, buscar trabajos mediante la función de búsqueda y descargar la tabla de trabajos.
@@ -35,6 +36,7 @@ Los eventos de supervisión de trabajos se conservan en la interfaz de usuario d
 
 
 
+[[monitor-jobs]]
 == Supervisar trabajos
 
 Supervisar trabajos para seguir el progreso de las operaciones de la base de datos y diagnosticar y solucionar problemas en caso de que ocurra alguna falla.

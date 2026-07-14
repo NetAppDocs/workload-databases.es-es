@@ -4,6 +4,7 @@
 
 
 
+[[initial-release-of-bluexp-workload-factory-for-databases]]
 === Lanzamiento inicial de la fábrica de cargas de trabajo de BlueXP  para bases de datos
 
 La versión inicial incluye la funcionalidad de explorar el ahorro con Amazon FSx para NetApp ONTAP como entorno de almacenamiento para sus cargas de trabajo de bases de datos, detectar, gestionar e implementar servidores de Microsoft SQL Server, implementar y clonar bases de datos, y supervisar estos trabajos en la fábrica de cargas de trabajo.

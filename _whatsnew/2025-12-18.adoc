@@ -4,6 +4,7 @@
 
 
 
+[[active-directory-integration-enhancements]]
 === Mejoras en la integración de Active Directory
 
 Workload Factory for Databases incluye tres nuevos campos de Active Directory (AD) al implementar Microsoft SQL Server mediante la opción *Creación avanzada*. Estas mejoras le permiten especificar las preferencias de unión de Active Directory y utilizar una cuenta de servicio administrada.

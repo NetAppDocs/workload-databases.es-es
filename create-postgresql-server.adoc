@@ -15,6 +15,7 @@ Para crear un nuevo servidor PostgreSQL o un host de base de datos en NetApp Wor
 
 
 
+[[about-this-task]]
 == Acerca de esta tarea
 
 Antes de crear un servidor PostgreSQL desde Workload Factory, obtenga información sobre los tipos de implementación de almacenamiento disponibles para la configuración del host de la base de datos, los modos de operación de Workload Factory y los requisitos para completar esta operación.
@@ -30,12 +31,14 @@ Para crear un nuevo servidor PostgreSQL, se requiere un sistema de archivos FSx 
 
 
 
+[[before-you-begin]]
 == Antes de empezar
 
 Debes tener link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de creación de host de base de datos"^] en su cuenta de AWS para crear un nuevo host de base de datos en Workload Factory.
 
 
 
+[[create-a-postgresql-server]]
 == Crear un servidor PostgreSQL
 
 Puede utilizar los modos de implementación _Quick create_ o _Advanced create_ para completar esta tarea en la fábrica de cargas de trabajo con permisos de modo _automate_. También puede usar las siguientes herramientas disponibles en CodeBox: API REST, CLI de AWS, AWS CloudFormation y Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Aprende a usar CodeBox para la automatización"^].

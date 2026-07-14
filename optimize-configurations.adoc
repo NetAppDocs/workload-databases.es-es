@@ -19,6 +19,7 @@ link:optimize-overview.html["Obtenga información sobre el análisis de configur
 
 
 
+[[about-this-task]]
 == Acerca de esta tarea
 
 Workload Factory analiza diariamente las configuraciones de bases de datos. El análisis diario proporciona estado bien diseñado, ideas y recomendaciones. Puedes corregir automáticamente los problemas de configuración para cumplir con las mejores prácticas.
@@ -55,6 +56,7 @@ El análisis bien diseñado para Oracle te notifica cuando una configuración de
 
 
 
+[[perform-a-one-time-assessment-of-your-configurations]]
 == Realiza una evaluación única de tus configuraciones
 
 Realiza una evaluación única para conocer el estado bien arquitectado de tus instancias de Microsoft SQL Server o bases de datos Oracle sin almacenar credenciales ni registrar recursos.
@@ -102,6 +104,7 @@ Puedes ejecutar el script y subir los resultados varias veces. Workload Factory 
 ====
 
 
+[[before-you-begin-fixing-dismissing-and-re-activating-configurations]]
 == Antes de empezar a corregir, descartar y reactivar configuraciones
 
 Los siguientes requisitos son necesarios para la supervisión continua de tu entorno de bases de datos y la corrección automática de los problemas de configuración. Estos requisitos no son necesarios para la evaluación única.
@@ -113,6 +116,7 @@ Los siguientes requisitos son necesarios para la supervisión continua de tu ent
 
 
 
+[[fix-a-configuration-issue]]
 == Solucionar un problema de configuración
 
 Solucione problemas de configuración para entornos SQL Server u Oracle que se ejecutan en FSx para almacenamiento ONTAP .
@@ -161,6 +165,7 @@ Workload Factory comienza a solucionar los problemas.  Seleccione la pestaña *S
 
 
 
+[[dismiss-the-analysis-of-database-configurations]]
 == Descartar el análisis de configuraciones de bases de datos
 
 Descarta el análisis de configuraciones específicas de bases de datos que no aplican a tu entorno de bases de datos para evitar alertas innecesarias y resultados de optimización imprecisos. Puedes volver a activar un análisis de configuración descartado en cualquier momento.
@@ -182,6 +187,7 @@ Puedes reactivar el análisis en cualquier momento. La configuración ya no se i
 
 
 
+[[reactivate-a-dismissed-configuration-analysis]]
 == Reactivar un análisis de configuración descartado
 
 Reactiva en cualquier momento un análisis de configuración descartado. Puedes seleccionar una o varias configuraciones para reactivar.

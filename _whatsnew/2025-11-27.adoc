@@ -4,6 +4,7 @@
 
 
 
+[[optimize-savings-in-the-databases-calculator-for-amazon-elastic-block-store-ebs]]
 === Optimice los ahorros en la calculadora de bases de datos para Amazon Elastic Block Store (EBS)
 
 Dos nuevas funciones de la calculadora mejoran el análisis de ahorro de costos al ejecutar múltiples instancias con almacenamiento EBS para que pueda ahorrar más al cambiar a FSx para ONTAP.
@@ -16,12 +17,14 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explo
 
 
 
+[[excel-report-available-for-the-well-architected-dashboard]]
 === Informe de Excel disponible para el panel de control bien diseñado
 
 Puede descargar un informe de Excel del panel de control bien diseñado.  El informe proporciona el estado bien diseñado del recurso de base de datos y recomendaciones para todas las configuraciones de recursos, incluidas las subconfiguraciones para el sistema operativo y ONTAP.
 
 
 
+[[error-log-analyzer-available-for-oracle-databases]]
 === Analizador de registro de errores disponible para bases de datos Oracle
 
 El analizador de registros de errores impulsado por IA de Agentic está disponible para bases de datos Oracle.  La función aprovecha algoritmos avanzados de aprendizaje automático para detectar y analizar automáticamente errores en los archivos de registro. Esta herramienta tiene como objetivo agilizar el proceso de resolución de problemas al proporcionar a los desarrolladores información práctica y recomendaciones basadas en los patrones que identifica en los registros.
@@ -30,6 +33,7 @@ link:https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html["O
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Análisis bien diseñado para Oracle
 
 El análisis bien diseñado incluye dos nuevas configuraciones de tamaño de almacenamiento.  El análisis evalúa y corrige problemas de configuración relacionados con la asignación de espacio de intercambio y el margen del sistema de archivos para implementaciones de bases de datos Oracle existentes.

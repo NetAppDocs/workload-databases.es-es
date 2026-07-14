@@ -15,6 +15,7 @@ Utilice el analizador de registro de errores inteligente para interpretar autom�
 
 
 
+[[about-this-task]]
 == Acerca de esta tarea
 
 El análisis y la remediación del registro de errores ayudan a mantener la salud y el rendimiento de las instancias de SQL Server y las bases de datos de Oracle.  Para interpretar eficazmente los registros de errores se necesita un análisis cuidadoso y experiencia. La supervisión manual, la detección de errores y el análisis de la causa raíz requieren mucho tiempo y son propensos a errores. Estos desafíos pueden retrasar la resolución de problemas, aumentar el tiempo de inactividad y generar ineficiencias operativas.  El analizador de registro de errores inteligente aborda estos desafíos con estos beneficios clave:
@@ -33,6 +34,7 @@ link:https://aws.amazon.com/bedrock/pricing/["Precios de Amazon Bedrock"^]
 
 
 
+[[data-privacy-and-security]]
 === Privacidad y seguridad de los datos
 
 La función garantiza la privacidad y seguridad de los datos con las siguientes medidas:
@@ -45,6 +47,7 @@ Los datos del cliente no se utilizan para entrenar o mejorar los modelos.  Amazo
 
 
 
+[[before-you-begin]]
 == Antes de empezar
 
 Para utilizar el analizador de registro de errores, debe cumplir los siguientes requisitos previos:
@@ -86,6 +89,7 @@ El siguiente permiso otorga acceso de lectura a alertas de diagnóstico extendid
 
 
 
+[[analyze-error-logs]]
 == Analizar registros de errores
 
 Utilice la consola de Workload Factory para analizar los registros de errores de SQL Server.

@@ -4,6 +4,7 @@
 
 
 
+[[databases-dashboard-enhancements]]
 === Mejoras del panel de control de bases de datos
 
 Un nuevo diseño del panel incluye los siguientes gráficos y mejoras:
@@ -19,6 +20,7 @@ Un nuevo diseño del panel incluye los siguientes gráficos y mejoras:
 
 
 
+[[new-completed-with-issues-status-in-job-monitoring]]
 === Nuevo estado 'Finalizado con incidencias' en la supervisión de trabajos
 
 La función de supervisión de trabajos para bases de datos proporciona ahora el nuevo estado 'Terminado con problemas' para que pueda conocer qué subtrabajos tuvieron problemas y cuáles son los problemas.
@@ -27,6 +29,7 @@ link:https://docs.netapp.com/us-en/workload-databases/monitor-databases.html["Su
 
 
 
+[[assessment-and-optimization-for-over-provisioned-microsoft-sql-server-licenses]]
 === Evaluación y optimización para licencias sobreaprovisionadas de Microsoft SQL Server
 
 La calculadora de ahorro evalúa ahora si la edición Enterprise es necesaria para la puesta en marcha de Microsoft SQL Server. Si una licencia está sobreaprovisionada, la calculadora recomienda la degradación. Podrá degradar automáticamente la licencia en las bases de datos mediante la optimización de la aplicación.

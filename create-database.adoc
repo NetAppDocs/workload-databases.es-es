@@ -37,6 +37,7 @@ Como alternativa, puede utilizar CodeBox para copiar una plantilla de forma que 
 
 
 
+[[create-a-database]]
 == Cree una base de datos
 
 Puede utilizar los modos de implementación _Creación rápida_ o _Creación avanzada_ para completar esta tarea en Workload Factory.

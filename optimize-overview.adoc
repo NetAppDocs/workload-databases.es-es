@@ -25,6 +25,7 @@ Estas son algunas funcionalidades clave:
 
 
 
+[[how-it-works]]
 == Cómo funciona
 
 Workload Factory analiza tus cargas de trabajo que se ejecutan diariamente en Amazon FSx for NetApp ONTAP file systems deployments. El análisis proporciona estado bien arquitectado, información y recomendaciones.
@@ -35,12 +36,14 @@ Puedes descartar el análisis de configuraciones que no se aplican a tus entorno
 
 
 
+[[why-it-matters]]
 == Por qué es importante
 
 Workload Factory aplica las mejores prácticas a grandes entornos de almacenamiento, bases de datos y VMware combinando la evaluación continua con recomendaciones y correcciones. Las correcciones automatizadas aplicadas en la consola de Workload Factory reducen los errores humanos, garantizan una gestión uniforme y preservan el rendimiento y la fiabilidad en todas tus infraestructuras de cargas de trabajo.
 
 
 
+[[options-for-analyzing-your-database-environment]]
 == Opciones para analizar tu entorno de bases de datos
 
 Workload Factory ofrece las siguientes opciones para analizar tu entorno de bases de datos:
@@ -51,6 +54,7 @@ Workload Factory ofrece las siguientes opciones para analizar tu entorno de base
 
 
 
+[[analysis-requirements]]
 == Requisitos de análisis
 
 Para la evaluación única, solo tienes que proporcionar las credenciales una vez para las instancias de Microsoft SQL Server o la base de datos Oracle que quieras analizar.
@@ -70,12 +74,14 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Ap
 
 
 
+[[best-practices-and-recommendations-for-database-workloads]]
 == Mejores prácticas y recomendaciones para cargas de trabajo de bases de datos
 
 Workload Factory proporciona un conjunto de mejores prácticas y recomendaciones para operar cargas de trabajo de bases de datos bien arquitecturadas. El análisis bien arquitecturado evalúa las configuraciones y ajustes de Microsoft SQL Server y Oracle Database relacionados con el dimensionamiento del almacenamiento, la distribución de almacenamiento, la configuración del almacenamiento, el cómputo, la aplicación (SQL Server) y la resiliencia.
 
 
 
+[[microsoft-sql-server]]
 === Microsoft SQL Server
 
 
@@ -196,6 +202,7 @@ Revisa y elimina periódicamente los clones obsoletos para reducir los costos de
 
 
 
+[[oracle]]
 === Oráculo
 
 

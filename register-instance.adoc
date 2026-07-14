@@ -17,6 +17,7 @@ Solo puedes registrar tus recursos si se ejecutan en FSx para ONTAP file system 
 
 
 
+[[about-the-task]]
 == Acerca de la tarea
 
 Registrar una instancia (SQL Server) o una base de datos (Oracle) implica tres pasos: autenticación de la instancia o base de datos, autenticación de FSx for ONTAP y preparación. Para prepararte, instala los módulos de AWS, NetApp y PowerShell en la instancia o base de datos, y cumple los requisitos mínimos para las funciones de Workload Factory for Databases como link:analyze-error-logs.html["análisis de registros de errores"] o link:optimize-configurations.html["evaluación bien diseñada"].
@@ -27,12 +28,14 @@ Los usuarios de AWS GovCloud (US) deben utilizar AWS Secrets Manager para autent
 
 
 
+[[before-you-begin]]
 == Antes de empezar
 
 El host de la instancia o base de datos debe aparecer en el Inventario. Para que los hosts aparezcan en el inventario, debe link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de _visualización, planificación y análisis_"^] en su cuenta de AWS.
 
 
 
+[[registering-an-instance-in-a-private-network]]
 === Registrar una instancia en una red privada
 
 Para registrar una instancia o base de datos en una red privada sin conectividad externa, haz que los endpoints necesarios estén disponibles en la VPC y asígnalos a las subredes correspondientes. Permite el puerto 443 en el Security Group para los endpoints de interfaz.
@@ -52,6 +55,7 @@ Si usas un servidor proxy para las conexiones EC2 salientes, permite el acceso a
 
 
 
+[[register-a-microsoft-sql-server-instance]]
 == Registrar una instancia de Microsoft SQL Server
 
 Registrar una instancia tiene tres pasos: autenticación de la instancia, autenticación de FSx for ONTAP y preparación para completar los requisitos previos que falten. Puedes registrar una o varias instancias.
@@ -109,6 +113,7 @@ Se inicia el registro de la instancia. Selecciona la pestaña *Monitorización d
 
 
 
+[[register-an-oracle-database]]
 == Registrar una base de datos Oracle
 
 Registrar una instancia tiene tres pasos: autenticación de la base de datos, autenticación de FSx for ONTAP y preparación para completar los requisitos previos que faltan. Puedes registrar una o varias bases de datos.

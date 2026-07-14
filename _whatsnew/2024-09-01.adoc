@@ -4,6 +4,7 @@
 
 
 
+[[explore-savings-via-customization]]
 === Explora el ahorro a través de la personalización
 
 Ahora puede personalizar los ajustes de configuración para Microsoft SQL Server en Amazon EC2 con el almacenamiento FSx para Windows File Server y Elastic Block Store en la calculadora de ahorro. En función de sus requisitos de almacenamiento, puede darse cuenta de que el almacenamiento de FSx para ONTAP es el más rentable para las cargas de trabajo de sus bases de datos.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Expl
 
 
 
+[[navigate-to-the-savings-calculator-from-the-home-page]]
 === Navega a la calculadora de ahorros desde la página de inicio
 
 Ahora puede ir a la calculadora de ahorro desde la link:https://console.workloads.netapp.com["consola de fábrica de carga de trabajo"] página de inicio. Seleccione en Elastic Block Store y FSx para Windows File Server para comenzar.
