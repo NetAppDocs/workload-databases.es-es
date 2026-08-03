@@ -22,11 +22,15 @@ link:optimize-overview.html["Obtenga información sobre el análisis de configur
 [[about-this-task]]
 == Acerca de esta tarea
 
-Workload Factory analiza diariamente las configuraciones de bases de datos. El análisis diario proporciona estado bien diseñado, ideas y recomendaciones. Puedes corregir automáticamente los problemas de configuración para cumplir con las mejores prácticas.
+Workload Factory analiza diariamente las configuraciones de bases de datos. El análisis diario proporciona estado bien diseñado, ideas y recomendaciones.
 
-Puedes revisar y solucionar los problemas desde el inventario de bases de datos o desde el panel Well-architected dentro de la consola Workload Factory.
+Hay muchas recomendaciones disponibles cuando concedes permisos de _visualización, planificación y análisis_ a tu cuenta de AWS. Si concedes permisos de _operaciones y corrección_, todas las recomendaciones están disponibles y puedes solucionar automáticamente los problemas de configuración para cumplir con las mejores prácticas.
+
+Puedes revisar y solucionar problemas desde el inventario de bases de datos o desde el panel de control Well-architected dentro de la consola de Workload Factory. Porque los requisitos de configuración de bases de datos varían, puedes descartar el análisis de configuraciones específicas que no se apliquen a tu entorno de bases de datos. Esto te ayuda a evitar alertas innecesarias y resultados de optimización inexactos.
 
 Opcionalmente, puedes realizar una evaluación única para revisar las mejores prácticas para las configuraciones de tu base de datos sin almacenar credenciales ni registrar recursos.
+
+También puedes crear reglas personalizadas en lenguaje sencillo para validar tus entornos según las normas de tu organización y las mejores prácticas de NetApp. Prueba las reglas con una simulación y luego programa que se ejecuten en todos tus entornos. link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["Más información sobre las reglas personalizadas."^]
 
 .Qué se analiza
 Workload Factory analiza el estado de buena arquitectura de las siguientes configuraciones:
@@ -62,6 +66,8 @@ El análisis bien diseñado para Oracle te notifica cuando una configuración de
 Realiza una evaluación única para conocer el estado bien arquitectado de tus instancias de Microsoft SQL Server o bases de datos Oracle sin almacenar credenciales ni registrar recursos.
 
 Puedes ejecutar el script y subir los resultados varias veces. Workload Factory actualiza el estado bien diseñado y los insights con cada carga.
+
+Para cada configuración, puedes consultar el valor actual y el valor recomendado.
 
 [role="tabbed-block"]
 ====
@@ -104,13 +110,29 @@ Puedes ejecutar el script y subir los resultados varias veces. Workload Factory 
 ====
 
 
+[[perform-an-on-demand-assessment]]
+== Realiza una evaluación bajo demanda
+
+Si concedes permisos de _operaciones y corrección_ en tu cuenta de AWS, puedes realizar una evaluación bajo demanda de tus bases de datos Oracle. No tienes que registrar recursos para ejecutar esta evaluación.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Selecciona el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego selecciona *Bases de datos*.
+. En el *Inventario*, selecciona *Oracle* como tipo de motor.
+. Selecciona *Ver y corregir*.
+. En la pestaña Well-architected status, selecciona *Analizar ahora*.
+. Consulta la recomendación para cualquier configuración. Workload Factory incluye las mejores prácticas y los posibles problemas en las recomendaciones si las configuraciones no están optimizadas.
+
+
+
+
 [[before-you-begin-fixing-dismissing-and-re-activating-configurations]]
 == Antes de empezar a corregir, descartar y reactivar configuraciones
 
-Los siguientes requisitos son necesarios para la supervisión continua de tu entorno de bases de datos y la corrección automática de los problemas de configuración. Estos requisitos no son necesarios para la evaluación única.
+Los siguientes requisitos son necesarios para la evaluación continua de tu entorno de bases de datos y la corrección automática de problemas de configuración. Estos requisitos no son necesarios para la evaluación puntual.
 
 * Usted debelink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de _operaciones y remediación_"^] en su cuenta de AWS.
-* El recurso debe estar registrado en Workload Factory y el tipo de almacenamiento debe ser FSx for ONTAP. link:register-instance.html["Aprenda cómo registrar recursos."]
+* Debes registrar el recurso en Workload Factory y el tipo de almacenamiento debe ser FSx for ONTAP. link:register-instance.html["Aprenda cómo registrar recursos."]
 * Revisa cada recomendación antes de ajustar una configuración. Para RSS y MAXDOP, prueba los ajustes recomendados para comprobar el rendimiento antes de cambiar tu entorno de producción.
 
 
@@ -204,3 +226,13 @@ Reactiva en cualquier momento un análisis de configuración descartado. Puedes 
 
 .Resultado
 Workload Factory reactiva el análisis de la configuración y lo ejecuta todos los días a partir de ahora.
+
+
+
+[[related-information]]
+== Información relacionada
+
+* link:optimize-overview.html["Descubre el análisis de configuración de los recursos de bases de datos y el estado bien arquitectado en Workload Factory"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conéctate a un sistema de archivos FSx para ONTAP usando un enlace"^]
+* link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["Conoce las reglas personalizadas"^]
+

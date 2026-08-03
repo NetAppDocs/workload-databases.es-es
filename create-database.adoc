@@ -24,9 +24,9 @@ La creación de una base de datos en Workload Factory requiere permisos de _visu
 NOTE: Los servidores Microsoft SQL Server que utilizan el protocolo SMB no admiten la creación de bases de datos.
 
 .Antes de empezar
-Asegúrese de completar los siguientes requisitos previos antes de crear una nueva base de datos.
+Cumple los siguientes requisitos previos antes de crear una nueva base de datos.
 
-* *Credenciales y permisos*: Debe tener link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de _visualización, planificación y análisis_"^] para crear una nueva base de datos en Workload Factory.
+* *Credenciales y permisos*: Debes tener link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciales de la cuenta de AWS y permisos de _operaciones y remediación_"^] para crear una nueva base de datos en Workload Factory.
 +
 Como alternativa, puede utilizar CodeBox para copiar una plantilla de forma que pueda implementar una base de datos fuera de la fábrica de cargas de trabajo mediante la API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Obtenga más información sobre la automatización de CodeBox"^].
 

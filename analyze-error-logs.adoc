@@ -33,6 +33,9 @@ Para utilizar el analizador de registros de errores, debe activar Amazon Bedrock
 link:https://aws.amazon.com/bedrock/pricing/["Precios de Amazon Bedrock"^]
 
 
+NOTE: Si el administrador de tu cuenta ha desactivado las funciones de IA, aparecerá un mensaje y no podrás utilizar el análisis de IA. Ponte en contacto con tu administrador o link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["conoce la administración de IA"^].
+
+
 
 [[data-privacy-and-security]]
 === Privacidad y seguridad de los datos
