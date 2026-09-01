@@ -4,7 +4,6 @@
   <block id="2ea6aca63123969c1931cd33bf4619a0" category="doc">Automatice con CodeBox</block>
   <block id="bd282943a337f4287ca0d70f9a836261" category="inline-link-macro">Automatización de CodeBox</block>
   <block id="7954c9f6b266222ad558a397a97a8531" category="paragraph">Obtenga más información sobre <block ref="d6a91743d83ea88006a3d66c27289981" category="inline-link-macro-rx"></block> y cómo usarlo.</block>
-  <block id="7a5c12f2d0d30b237d1a31e54803d0f8" category="doc">Compruebe la integridad de los datos en un clon de sandbox</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Acerca de esta tarea</block>
   <block id="6a2235a7d08e9218e23793c114adf3a3" category="paragraph">Cuando crea un clon de sandbox desde una base de datos de origen mientras está ocupado, es posible que los datos del clon no estén sincronizados con la snapshot más reciente de la base de datos de origen. Esta operación comprueba la integridad de todos los objetos del clon del sandbox para determinar si los datos clonados del sandbox son actuales.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Pasos</block>
@@ -13,7 +12,6 @@
   <block id="655a2ef85749dcbb368e1b8b32300552" category="list-text">En el cuadro de diálogo Comprobación de integridad, haga clic en *Comprobación de integridad*.</block>
   <block id="d2212da19c03bb2b369faeaf9d65f109" category="list-text">Compruebe el estado de la comprobación de integridad en sandboxes o en Supervisión de trabajos.</block>
   <block id="8ea37d89915fca644158ae5283f70e68" category="paragraph">Si la comprobación de integridad falla, se recomienda no utilizar el clon de sandbox y crear un nuevo clon de sandbox.</block>
-  <block id="2af2cf99863645202599afd2708773e2" category="doc">Conecte un clon de entorno aislado a herramientas CI/CD</block>
   <block id="bc71cf96586c8edb703f886cce218a0c" category="paragraph">Para entregar una nueva versión del software automáticamente al clon de la base de datos, debe conectarse a una canalización de CI/CD. Utilice el código de API DE REST proporcionado desde esta operación para realizar la conexión.</block>
   <block id="452804eac893658bcf658126b3087551" category="list-text">Selecciona *Conectar a las herramientas CI/CD*.</block>
   <block id="8191f4b1aee7fafe827afe8814de01a6" category="list-text">En el cuadro de diálogo CI/CD, copie o descargue el código de API DE REST que necesite para conectarse a las herramientas CI/CD.</block>
@@ -809,7 +807,6 @@
   <block id="75851f48043c7a3877391f5330fb19c1" category="inline-link-macro">Explore los ahorros para los entornos de almacenamiento detectados en la consola de Workload Factory</block>
   <block id="a0766b901d28d8d972d369d556ae3e10" category="paragraph"><block ref="a0766b901d28d8d972d369d556ae3e10" category="inline-link-macro-rx"></block></block>
   <block id="c6ce33e049285b31d2f12d7b30e16106" category="summary">Analice los registros de errores dentro de Workload Factory para bases de datos.</block>
-  <block id="de5aa3916ae7d5763f4d4fe818491a77" category="doc">Analizar registros de errores en Workload Factory</block>
   <block id="3d573c7428ab9f849be508456eb81821" category="paragraph">Siempre que utilice el analizador de registro de errores, mantendrá el control total sobre su entorno mientras se beneficia del análisis avanzado de IA.</block>
   <block id="14f1fce00d2e95227126f5556a73ec6a" category="paragraph">Para utilizar el analizador de registros de errores, debe activar Amazon Bedrock, seleccionar el modelo que utiliza Workload Factory, crear un punto final privado para conectarse a Amazon Bedrock, agregar permisos y crear una licencia empresarial.</block>
   <block id="bf71ae5aa16f5632361df660e7d643c6" category="section-title">Privacidad y seguridad de los datos</block>
@@ -838,7 +835,6 @@
   <block id="6c66105ac3f36d7885800e03e5285fd9" category="paragraph">Conecte un clon de sandbox a una canalización de integración continua y entrega continua (CI/CD) con código API REST para mejorar la entrega de software a través de la automatización en NetApp Workload Factory for Databases.</block>
   <block id="db976ff1c57ed4bcfb284135455febc2" category="list-text">En Sandboxes, seleccione el menú de acciones del clon de sandbox para conectarse a las herramientas de CI/CD.</block>
   <block id="b95fa4e6e7b8f2168ad9a4d81e4e65cb" category="summary">Cree un nuevo Microsoft SQL Server dentro de NetApp Workload Factory para bases de datos.</block>
-  <block id="03f5b1a395b2051aedbbb6bf1bdb40e6" category="doc">Crear un servidor Microsoft SQL Server en Workload Factory para bases de datos</block>
   <block id="197df9493ba9fcc2016851ab07990409" category="paragraph">Para crear un nuevo Microsoft SQL Server o un host de base de datos en Workload Factory for Databases se requiere una implementación del sistema de archivos FSx para ONTAP y recursos para Active Directory.</block>
   <block id="a6955f3c1d9afee975ddac409c1488f3" category="paragraph">Antes de crear un Microsoft SQL Server desde Workload Factory, obtenga información sobre los tipos de implementación de almacenamiento disponibles para la configuración del host de base de datos, la configuración de E/S de múltiples rutas de Microsoft, la implementación de Active Directory, los detalles de red y los requisitos para completar esta operación.</block>
   <block id="bc032bc6a4cd520164072ac886f6e6fe" category="paragraph">Ambos modelos de implementación de Microsoft SQL Server requieren la creación de LUN mediante el protocolo de almacenamiento iSCSI.  Workload Factory configura Microsoft Multi-path I/O (MPIO) como parte de la configuración de LUN para SQL Server sobre FSx para ONTAP.  MPIO se configura según las mejores prácticas de AWS y NetApp .</block>
@@ -870,7 +866,6 @@
   <block id="33802730984f4af59a8f5644e1ba546a" category="list-text">Seleccione un servidor de base de datos con una instancia de servidor SQL administrado para crear la base de datos.</block>
   <block id="9b54a5b8ea82e880e1fd6cc2a1d063e7" category="list-text">Haga clic en el menú de acciones de la instancia administrada y luego seleccione *Crear base de datos de usuario*.</block>
   <block id="af3c6f6c1f47dc04d93d4779689c9eca" category="summary">Cree un nuevo servidor SQL PostgreSQL dentro de NetApp Workload Factory para bases de datos.</block>
-  <block id="3df8ab93e6ee66742b140a409805477c" category="doc">Cree un servidor PostgreSQL en NetApp Workload Factory</block>
   <block id="8b9f915cb2ecd69bdd7dd72955de0196" category="paragraph">Para crear un nuevo servidor PostgreSQL o un host de base de datos en NetApp Workload Factory for Databases se requiere una implementación del sistema de archivos FSx para ONTAP y recursos para Active Directory.</block>
   <block id="aee2d1bda2fa7a372599f9dc76274403" category="paragraph">Antes de crear un servidor PostgreSQL desde Workload Factory, obtenga información sobre los tipos de implementación de almacenamiento disponibles para la configuración del host de la base de datos, los modos de operación de Workload Factory y los requisitos para completar esta operación.</block>
   <block id="ff041d4f4cf4ed6c6abc6b5c4266cc8c" category="paragraph">+ FSx para sistemas de archivos ONTAP tiene dos modelos de implementación de servidor PostgreSQL: _Alta disponibilidad (HA)_ o _instancia única_.  Se crean diferentes recursos para el sistema de archivos FSx para ONTAP según el modelo de implementación de FSx para ONTAP que seleccione.</block>
@@ -885,11 +880,9 @@
   <block id="c4445bf1142f4fd36aa3139618ee4f3f" category="list-text">*Base de datos de origen*: necesita una base de datos de origen disponible para el clon.</block>
   <block id="969e7140d33129e87f01e95c59fed40f" category="list-text">*Montaje*: al clonar una base de datos SQL que tiene varios archivos de datos y/o registro, Workload Factory clona todos los archivos bajo la letra de unidad asignada automáticamente o definida.</block>
   <block id="e84beb556a76fd6484a39d4447262026" category="summary">Elimine un clon de sandbox en NetApp Workload Factory for Databases cuando ya no lo necesite y desee liberar capacidad de almacenamiento.</block>
-  <block id="b0a116a4eb9216062a5e5afb2cd40a82" category="doc">Eliminar un clon de base de datos en NetApp Workload Factory for Databases</block>
   <block id="e0c0b02aa121e916724ee28f460bc605" category="list-text">En Sandboxes, seleccione el menú de acciones del clon de sandbox que desea eliminar.</block>
   <block id="478b782141e49e75e5d4d0534bf71587" category="list-text">En el cuadro de diálogo Eliminar, seleccione *Eliminar* para confirmar la eliminación.</block>
   <block id="54be7afd7595249ed399278de89305fa" category="summary">Anule el registro de un recurso si ya no desea implementar ni supervisar recursos desde la consola de Workload Factory.</block>
-  <block id="5a2d38279bf5114017c85d3f5b74a52f" category="doc">Anular el registro de un recurso en NetApp Workload Factory</block>
   <block id="df442bf005a0d53e338d95bb9b23b0c2" category="paragraph">Anule el registro de un recurso, como una instancia de Microsoft SQL Server o una base de datos de Oracle, si ya no desea implementar ni supervisar recursos desde la consola de NetApp Workload Factory. Al anular el registro de recursos también se elimina la cantidad de capacidad de almacenamiento de FSx para ONTAP utilizada por la instancia.</block>
   <block id="5e515299dfd2f2c8ff923eaac6bbb1bf" category="list-text">En el Inventario, seleccione el tipo de motor: *Microsoft SQL Server*, *Oracle* o *PostgreSQL*.</block>
   <block id="e91df2086570d35902c167d64feb1a17" category="list-text">Localice el recurso que desea cancelar el registro, seleccione el menú de acciones y luego seleccione *Cancelar registro*.</block>
@@ -1002,7 +995,6 @@
   <block id="51bbd388cda4367b34d6dc50a5e134a5" category="list-text">En la página de análisis de buena arquitectura, seleccione *Configuración descartada* para mostrar solo las configuraciones descartadas.</block>
   <block id="bc4a349f7f95e73490c3e2f8aaabe892" category="list-text">Seleccione *Reactivar* para reiniciar el análisis de configuración de la configuración pospuesta o descartada.</block>
   <block id="7c6a7786a083c7d074bada76f0bcd33b" category="summary">Workload Factory for Databases analiza periódicamente las configuraciones de Microsoft SQL Server y Oracle para determinar si hay algún problema.</block>
-  <block id="8317ffd1a53e5d269aaac07d321b8dd0" category="doc">Análisis de configuración para entornos de bases de datos en Workload Factory</block>
   <block id="84ee3cc4e2a4f169585c115121112580" category="paragraph">Proteja los datos de sus aplicaciones de Microsoft SQL Server utilizando NetApp Backup and Recovery desde la consola de Workload Factory. Con esta integración, puede lograr los siguientes objetivos de protección: realizar copias de seguridad de cargas de trabajo con instantáneas locales en el almacenamiento principal local de Amazon FSx for NetApp ONTAP (FSx for ONTAP) y replicar cargas de trabajo en el almacenamiento secundario de FSx para ONTAP .</block>
   <block id="bb1b704677e0a9ac00a2bda88f85fe27" category="paragraph">Workload Factory automatiza el descubrimiento de recursos, la validación de requisitos previos y la configuración e instalación del complemento para Microsoft SQL Server a fin de prepararse para la protección de sus cargas de trabajo con NetApp Backup and Recovery. El complemento es un componente del lado del host del software NetApp que le permite proteger sus cargas de trabajo de Microsoft SQL Server.</block>
   <block id="e9575ae90b7ec054c43a9797544d0103" category="paragraph">NetApp Backup and Recovery aprovecha la tecnología de replicación de datos NetApp SnapMirror para garantizar que todas las copias de seguridad estén completamente sincronizadas mediante la creación de copias instantáneas y su transferencia a las ubicaciones de copia de seguridad.</block>
@@ -1044,7 +1036,6 @@
   <block id="b9b9dcaedb68518f618349de0f962cda" category="list-text">En Sandboxes, seleccione el menú de acciones del clon de base de datos que desea revertir.</block>
   <block id="6e9172aaf947b38ec5222c7fb3133fb6" category="list-text">En el cuadro de diálogo Volver a establecer línea base, seleccione *Volver a establecer línea base*.</block>
   <block id="9fb5614e3401e433c6a39f267483e3be" category="summary">Divida un clon de base de datos de la base de datos de origen para crear una nueva base de datos en NetApp Workload Factory for Databases.</block>
-  <block id="e56d0520400755a2305a399e4c431a50" category="doc">Dividir un clon de base de datos de la base de datos de origen</block>
   <block id="9d708cb240624cc1bb63ba25da0a742b" category="paragraph">En NetApp Workload Factory for Databases, al dividir un clon de base de datos de su base de datos de origen se crea una nueva base de datos que consumirá una cierta cantidad de capacidad de almacenamiento.  El clon se elimina cuando se completa la división y la nueva base de datos aparece en el Inventario.</block>
   <block id="98af8bdb2147926a0a4db45c478851f0" category="list-text">En Sandboxes, seleccione el menú de acciones del clon de base de datos que desea dividir.</block>
   <block id="2c9eebdddd5694f0300c1318fc1f439d" category="list-text">En el cuadro de diálogo Dividir, seleccione *Dividir*.</block>
@@ -1061,7 +1052,6 @@
   <block id="40eff8559acd41057187b6cb11fa1919" category="list-text">Asocie su nueva cuenta NSS con su inicio de sesión de la consola NetApp completando los pasos a continuación<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> .</block>
   <block id="f335678326583cea28377216c5515221" category="paragraph">Una vez que tenga su cuenta del sitio de soporte de NetApp , asocie la cuenta con su inicio de sesión de la consola de NetApp completando los pasos a continuación.<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> .</block>
   <block id="e4fded9c69219e4b9e3629dcc1d6ec81" category="summary">Ver y copiar la información de conexión de un clon de base de datos en NetApp Workload Factory for Databases.</block>
-  <block id="b5e7499b294ed4ae4fad36d6e70d1cdf" category="doc">Ver información de conexión de un clon de base de datos</block>
   <block id="cfb19a0ff7e382b29551267d52377e0f" category="list-text">En Sandboxes, seleccione el menú de acciones del clon del sandbox para ver su información de conexión.</block>
   <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">Seleccione *Cerrar*.</block>
   <block id="0b640c5e49490eb540208568a359492b" category="summary">Descubra las novedades de NetApp Workload Factory para bases de datos.</block>
@@ -1679,4 +1669,23 @@
   <block id="0270fd4391a6b334aa157faf0a6b7304" category="list-text">Selecciona el menú de acciones y luego selecciona *Editar y volver a intentarlo*.</block>
   <block id="a071e4310b0dbc18ec326c217f47692f" category="paragraph">Se te redirige a la página de la operación, donde puedes editar los parámetros y volver a intentar la operación.</block>
   <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">La operación se ha reiniciado. Ve a Tracker para ver el estado de la operación.</block>
+  <block id="619b54ce9e8c031c19256b4d8d750363" category="doc">Actualización de la calculadora de ahorro</block>
+  <block id="e5dcb68e9a92c735dc0967956647bc80" category="paragraph">Puedes comparar varios componentes de coste de ejecutar cargas de trabajo de Microsoft SQL Server, como almacenamiento, cómputo, licencia de SQL, instantáneas y clones para tus cargas de trabajo de bases de datos en sistemas de archivos FSx for ONTAP, frente a Elastic Block Store (EBS), FSx for Windows File Server y almacenamiento local, usando solo permisos de visualización, planificación y análisis.</block>
+  <block id="fa97573f07318758714d48498eeb8beb" category="inline-link-macro">Explora ahorros para cargas de trabajo de bases de datos</block>
+  <block id="99e479d341973e05fca0c15ab9ffdad2" category="list-text"><block ref="99e479d341973e05fca0c15ab9ffdad2" category="inline-link-macro-rx"></block></block>
+  <block id="a5ca0e96d815aa95d08fcc15e4dee05c" category="inline-link-macro">Permisos para cargas de trabajo de bases de datos</block>
+  <block id="6c371a91504dc6f98ab6ece596f7ab2f" category="list-text"><block ref="6c371a91504dc6f98ab6ece596f7ab2f" category="inline-link-macro-rx"></block></block>
+  <block id="82c635e3b100afc233299479fb3eda14" category="doc">Analiza los registros de errores en NetApp Workload Factory for Databases</block>
+  <block id="8b5884ee309b1732b4b26db4f1d9391b" category="doc">Comprueba la integridad de los datos del entorno de pruebas en NetApp Workload Factory for Databases</block>
+  <block id="0354b35f78b3b0a2abc4857046c8bb44" category="doc">Conecta un clon de sandbox a CI/CD en NetApp Workload Factory for Databases</block>
+  <block id="c4e3c9361d524348aecb1ccf6a70b736" category="doc">Crea un Microsoft SQL Server en NetApp Workload Factory for Databases</block>
+  <block id="1929af40476a50a593dc74fdadb92f44" category="doc">Crea un servidor PostgreSQL en NetApp Workload Factory for Databases</block>
+  <block id="0f1488f1cffdc496b17aa68133f45409" category="doc">Eliminar un clon de base de datos en NetApp Workload Factory for Databases</block>
+  <block id="06eec6f6dae375e43105994b315f1664" category="doc">Deregistra un recurso en NetApp Workload Factory for Databases</block>
+  <block id="5719a8b368e4d1cde735746b2f77b822" category="doc">Implementa configuraciones de bases de datos bien diseñadas en NetApp Workload Factory</block>
+  <block id="c845f87358189f25588e9dd9d9cf0101" category="doc">Conoce el análisis de configuración en NetApp Workload Factory for Databases</block>
+  <block id="b1ac22e25e1bec51612ad9e1ac8a5f03" category="doc">Protege las cargas de trabajo de Microsoft SQL Server con NetApp Workload Factory for Databases</block>
+  <block id="1251c2c3562b89a08c4f6e3d98cee073" category="doc">Divide un clon de base de datos en NetApp Workload Factory for Databases</block>
+  <block id="95d5b5a9387ddb73c562c266681172d5" category="doc">Ver la información de conexión de la réplica en NetApp Workload Factory for Databases</block>
+  <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">30 de agosto de 2026</block>
 </blocks>

@@ -4,7 +4,7 @@ permalink: deregister-instance.html
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, deregister instance, unregister instance, remove instance 
 summary: Anule el registro de un recurso si ya no desea implementar ni supervisar recursos desde la consola de Workload Factory. 
 ---
-= Anular el registro de un recurso en NetApp Workload Factory
+= Deregistra un recurso en NetApp Workload Factory for Databases
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
