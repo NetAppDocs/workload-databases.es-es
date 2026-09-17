@@ -27,60 +27,45 @@ sidebar:
       url: "/learn-databases.html"
     - title: Inicio rápido
       url: "/quick-start-databases.html"
-  - title: Usar cargas de trabajo de base de datos
+  - title: Utiliza NetApp Workload Factory para las cargas de trabajo de bases de
+      datos
     entries:
     - title: Explora el ahorro
       url: "/explore-savings.html"
-    - title: Cree un nuevo servidor de base de datos
+    - title: Crear recursos de base de datos
       entries:
       - title: Cree Microsoft SQL Server
         url: "/create-database-server.html"
       - title: Crear servidor PostgreSQL
         url: "/create-postgresql-server.html"
+      - title: Cree una base de datos
+        url: "/create-database.html"
+      - title: Cree un clon de sandbox
+        url: "/create-sandbox-clone.html"
     - title: Administra recursos
       entries:
       - title: Gestión de recursos
         url: "/manage-instance.html"
       - title: Registrar recursos
         url: "/register-instance.html"
-      - title: Cree una base de datos
-        url: "/create-database.html"
-      - title: Cree un clon de sandbox
-        url: "/create-sandbox-clone.html"
-    - title: Automatice con CodeBox
-      url: "/automate-codebox.html"
-    - title: Proteger las cargas de trabajo de Microsoft SQL Server
-      url: "/protect-sql-server.html"
-  - title: Administración y supervisión
+      - title: Gestionar clones
+        url: "/manage-clones.html"
+      - title: Dar de baja recursos
+        url: "/deregister-instance.html"
+  - title: Protege, supervisa y optimiza los recursos de las bases de datos
     entries:
-    - title: Supervisar trabajos de base de datos
-      url: "/monitor-databases.html"
+    - title: Analizar registros de errores
+      url: "/analyze-error-logs.html"
     - title: Implementar las mejores prácticas de configuración
       entries:
       - title: Análisis de configuración para bases de datos
         url: "/optimize-overview.html"
       - title: Implementar configuraciones de bases de datos bien diseñadas
         url: "/optimize-configurations.html"
-    - title: Analizar registros de errores
-      url: "/analyze-error-logs.html"
-    - title: Gestionar clones
-      entries:
-      - title: Comprobar la integridad de un clon de sandbox
-        url: "/check-clone-integrity.html"
-      - title: Revertir un clon de sandbox
-        url: "/revert-clone.html"
-      - title: Actualizar un clon de sandbox
-        url: "/refresh-clone.html"
-      - title: Conéctese a la canalización CI/CD
-        url: "/connect-clone-cicd.html"
-      - title: Ver información de conexión de clon
-        url: "/view-clone-connection.html"
-      - title: Dividir un clon de sandbox
-        url: "/split-clone.html"
-      - title: Eliminar un clon de sandbox
-        url: "/delete-clone.html"
-    - title: Dar de baja recursos
-      url: "/deregister-instance.html"
+    - title: Supervisar trabajos de base de datos
+      url: "/monitor-databases.html"
+    - title: Proteger las cargas de trabajo de Microsoft SQL Server
+      url: "/protect-sql-server.html"
   - title: Conocimiento y apoyo
     entries:
     - title: Regístrese para recibir soporte
