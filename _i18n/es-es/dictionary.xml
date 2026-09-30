@@ -1668,14 +1668,6 @@
   <block id="1251c2c3562b89a08c4f6e3d98cee073" category="doc">Divide un clon de base de datos en NetApp Workload Factory for Databases</block>
   <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">30 de agosto de 2026</block>
   <block id="b5ed82020518e1a667b7f42bf1da1877" category="paragraph"><block ref="b5ed82020518e1a667b7f42bf1da1877" category="inline-link-macro-rx"></block></block>
-  <block id="b3ae445fa637203f0dc17550b5c4a56c" category="doc">Configuraciones de bases de datos incluidas en el panel de control Well-Architected</block>
-  <block id="a04fc413f106e041524732d895e4258e" category="paragraph">El panel de control well-architected ahora incluye recomendaciones para las configuraciones de tu base de datos, lo que te permite evaluar y optimizar tu configuración según las mejores prácticas. Las primeras configuraciones incluyen:</block>
-  <block id="0ab265b548fdc40b21483e61ffde3aba" category="list-text">Jerarquización de datos inactivos</block>
-  <block id="4c0abf2d4c54820b8d33061abaf30759" category="list-text">Política de SnapVault</block>
-  <block id="6f5cf50fa90f8d99bf50f65e676c6cba" category="list-text">Margen de capacidad del SSD</block>
-  <block id="4dcac8e07a1246e665077c1572955236" category="paragraph">Encuentra el panel de control Well-architected seleccionando el menú principal en la consola de Workload Factory y selecciona *Well-architected*.</block>
-  <block id="2d647234501319107057acb4d3f8dfaf" category="inline-image-macro">Opción de menú bien estructurada en la consola de NetApp Workload Factory</block>
-  <block id="353cc99df6b21e74c805e74bdab4b8aa" category="paragraph"><block ref="353cc99df6b21e74c805e74bdab4b8aa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="06e2f75907573850abfa673fd6e8572a" category="list-text">*NetApp Terraform provider*: utiliza Terraform para crear y gestionar los flujos de trabajo de infraestructura generados en la consola de Workload Factory.</block>
   <block id="8ffaca7bd1131475769b15e5950997fd" category="summary">Gestiona tus clones de sandbox en NetApp Workload Factory for Databases para mantener tus entornos de desarrollo y pruebas fiables y rentables.</block>
   <block id="b4f39381f48079f073b43be17aadcceb" category="doc">Gestiona clones de bases de datos en NetApp Workload Factory for Databases</block>
@@ -1691,4 +1683,6 @@
   <block id="e30e82b6ba088958ce23ba4d6a33b01f" category="sidebar">Utiliza NetApp Workload Factory para las cargas de trabajo de bases de datos</block>
   <block id="573be33921395db38cda47a4830a127e" category="sidebar">Crear recursos de base de datos</block>
   <block id="33995eab65a0112a35f0233d5de5a0a6" category="sidebar">Protege, supervisa y optimiza los recursos de las bases de datos</block>
+  <block id="753d621a767f80f69e64e577e1856e54" category="doc">Compatibilidad con varios sistemas de archivos por una sola instancia</block>
+  <block id="6adeb7328ee4497e74b45036bf16ff9d" category="paragraph">Workload Factory for Databases admite varios sistemas de archivos por una sola instancia de Microsoft SQL Server. Puedes registrar varios sistemas de archivos en una instancia de SQL Server y solucionar al mismo tiempo un problema de configuración en varios sistemas de archivos de una instancia de SQL Server.</block>
 </blocks>
